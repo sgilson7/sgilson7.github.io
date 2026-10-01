@@ -520,3 +520,20 @@ img.portrait {
 
 /* A label that could not sit beside its own curve gets a thread back to it. */
 .kc-leader { stroke-width: 0.9; stroke-dasharray: 2 2; opacity: 0.75; }
+
+/* Provenance, directly under the definition, because that is the region a
+   snippet generator takes. */
+p.scope {
+  margin: -0.4rem 0 1rem;
+  padding-left: 0.9rem;
+  border-left: 3px solid var(--rule);
+  font-size: 0.93rem;
+  color: var(--grey);
+}
+p.neighbours {
+  margin: 1.5rem 0 0;
+  padding: 0.75rem 0.9rem;
+  background: var(--panel);
+  border-radius: 3px;
+  font-size: 0.93rem;
+}
