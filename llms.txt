@@ -10,10 +10,10 @@ ORCID: https://orcid.org/0009-0002-2394-8649
 
 - [LLMs' reshaping of people, processes, products, and society in software development: a qualitative exploration with early adopters](https://sgilson7.github.io/papers/tabarsi2026reshaping/) — Empirical Software Engineering, 2027 doi:10.1007/s10664-026-10917-0
 - [Adversarial Assignment Perturbation: Effects on Help-Seeking Behaviors in Student Generative AI Chatbot Use](https://sgilson7.github.io/papers/gilson2026perturbation/) — Artificial Intelligence in Education (AIED 2026), LNAI 16585, 2026 doi:10.1007/978-3-032-29770-9_48
-- [Applications of AI Literacy to GenAI-Assisted Game Development](https://sgilson7.github.io/papers/gilson2026csc484lecture/) — Guest lecture, CSC 484/584 Game AI, NC State University, 2026
+- Applications of AI Literacy to GenAI-Assisted Game Development — Guest lecture, CSC 484/584 Game AI, NC State University, 2026
 - [Confirming Correct, Missing the Rest: LLM Tutoring Agents Struggle Where Feedback Matters Most](https://sgilson7.github.io/papers/yasir2026confirming/) — BEA 2026, 2026 doi:10.18653/v1/2026.bea-1.56
 - [Designing AI-Resistant Assignments via Iterative Perturbation to Promote Interactive Learning](https://sgilson7.github.io/papers/gilson2026designing/) — Proceedings of the 57th ACM Technical Symposium on Computer Science Education V.2 (SIGCSE TS 2026), 2026 doi:10.1145/3770761.3777058
-- [When Verification Hurts: Asymmetric Effects of Multi-Agent Feedback in Logic Proof Tutoring](https://sgilson7.github.io/papers/yasir2026verification/), 2026
+- [When Verification Hurts: Asymmetric Effects of Multi-Agent Feedback in Logic Proof Tutoring](https://sgilson7.github.io/papers/yasir2026verification/), 2026 doi:10.48550/arXiv.2603.27076
 - [How Do Undergraduates Interested in Computer Science Use Online, On-Demand CS Coursework?](https://sgilson7.github.io/papers/gilson2025oodcs/) — Proceedings of the Twelfth ACM Conference on Learning @ Scale (L@S '25), 2025 doi:10.1145/3698205.3733938
 
 ## Concepts
