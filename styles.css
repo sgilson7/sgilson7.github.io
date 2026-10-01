@@ -202,6 +202,34 @@ a.t:hover { color: var(--ink); }
   color: var(--grey);
 }
 .pubs .by { margin-top: 0.2rem; }
+/* The studies list on the home page. Same bones as .pubs, with room for the
+   summary paragraph: the summary is the thing a reader came for, so it gets
+   body-text size rather than the metadata grey. */
+ul.studies { padding-left: 0; list-style: none; margin: 0; }
+.studies li {
+  padding: 1.15rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.studies li:last-child { border-bottom: 0; }
+.studies .t {
+  display: block;
+  font: 700 1.08rem/1.35 var(--serif);
+  color: var(--ink);
+  text-decoration: none;
+}
+.studies .vn {
+  display: block;
+  font-size: 0.93rem;
+  color: var(--grey);
+}
+.studies .summary {
+  margin: 0.55rem 0 0.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ink);
+  max-width: 62ch;
+}
+
 .pubs .tags {
   display: flex; flex-wrap: wrap; gap: 0.5rem 0.9rem;
   margin-top: 0.4rem; font-size: 0.85rem;
