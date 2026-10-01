@@ -220,3 +220,30 @@ footer .ids a { color: var(--page); }
   dl.facts { grid-template-columns: 1fr; gap: 0.1rem; }
   dl.facts dd { margin-bottom: 0.6rem; }
 }
+
+/* --- awards ----------------------------------------------------------- */
+
+ul.awards { padding-left: 0; list-style: none; margin: 0; }
+ul.awards li {
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+ul.awards li:last-child { border-bottom: 0; }
+ul.awards .t {
+  display: block;
+  font: 700 1.03rem/1.35 var(--serif);
+  color: var(--ink);
+}
+ul.awards .vn {
+  display: block;
+  font-size: 0.93rem;
+  color: var(--grey);
+  margin-top: 0.2rem;
+}
+ul.awards .basis {
+  margin: 0.5rem 0 0;
+  padding-left: 0.9rem;
+  border-left: 3px solid var(--green);
+  font-size: 0.93rem;
+  color: var(--ink);
+}
