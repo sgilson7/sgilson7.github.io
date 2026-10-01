@@ -456,3 +456,28 @@ ul.plain li { padding: 0.25rem 0; }
   li, .pubs li, ul.courses li { page-break-inside: avoid; }
   pre.bibtex { display: none; }
 }
+
+/* --- the portrait ------------------------------------------------------ */
+
+.intro {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+.intro h1 { margin: 0; }
+img.portrait {
+  width: 96px;
+  height: auto;
+  border-radius: 3px;
+  border: 1px solid var(--rule);
+  flex: none;
+}
+@media (max-width: 30rem) {
+  .intro { gap: 0.8rem; }
+  img.portrait { width: 72px; }
+}
+@media print { img.portrait { display: none; } }
+
+/* A label that could not sit beside its own curve gets a thread back to it. */
+.kc-leader { stroke-width: 0.9; stroke-dasharray: 2 2; opacity: 0.75; }
