@@ -47,10 +47,15 @@ PUBLICATIONS
 
 TEACHING
 ------------------------------------------------------------------------
-Spring 2026  CSC 151 — Introduction to Computing — Java
+Fall 2026, Spring 2026  CSC 151 — Java Programming
       Instructor of record, Central Carolina Community College
-Summer 2025, Summer 2026  CSC 226 — Discrete Mathematics for Computer Scientists
+      One teaching assistant
+Summer 2026, Summer 2025  CSC 226 — Discrete Mathematics
       Instructor of record, North Carolina State University
+      One teaching assistant
+Summer 2024  CSC 216 — Software Development Fundamentals
+      Instructor of record, North Carolina State University
+      One teaching assistant
 Fall 2026  CSC 484/584 — Game AI — guest lecture
       Guest lecturer, North Carolina State University
 
