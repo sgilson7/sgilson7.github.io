@@ -44,8 +44,19 @@
 
 :root {
   --ink: #1B2430;
-  --grey: #6B7680;
+  /* Was #6B7680, which measured 4.64:1 on white and would have been 3.93:1 on
+     the tinted band — under AA both ways once a tint existed. 6.03:1 and
+     5.11:1 now. */
+  --grey: #5A646E;
   --rule: #C9CFD3;
+  /* A pale Wolfpack Red. Chosen for LUMINANCE, not hue: it is 1.18:1 against
+     white, which is a 20-step difference out of 255 in greyscale, so the band
+     edge is visible to somebody who sees no colour at all. A 6% tint looked
+     nicer and was invisible in monochrome. */
+  --tint: #F7E9E9;
+  /* The band boundary, drawn as a line so the sections are still separable
+     with no colour perception whatsoever. */
+  --edge: #9AA4AB;
   --panel: #E6EAEC;
   --green: #2A6B4A;
   --red: #8B2E2E;
@@ -97,7 +108,8 @@ header.band .wrap {
 header.band nav { display: flex; flex-wrap: wrap; gap: 1rem; font-size: 0.95rem; }
 
 footer.band {
-  margin-top: 4rem;
+  /* The bands now provide the vertical rhythm; a margin here read as a stray
+     empty band between the last section and the footer. */
   padding: 2rem 0 2.5rem;
   font-size: 0.9rem;
 }
@@ -107,7 +119,34 @@ footer.band code { font-family: var(--mono); color: var(--page); }
 
 /* --- type ------------------------------------------------------------ */
 
-main { padding-top: 2.5rem; }
+/* --- alternating bands ------------------------------------------------
+   Sections alternate white and a pale red so a reader can tell where one part
+   of the page stops and the next begins. Colour is never the only cue: every
+   band also carries a rule along its top edge, and the two backgrounds differ
+   in lightness rather than only in hue. */
+
+main { padding-top: 0; }
+main.wide .wrap { max-width: 60rem; }
+
+.stripe { padding: 2.1rem 0; }
+.stripe:nth-of-type(even) { background: var(--tint); }
+.stripe + .stripe { border-top: 1px solid var(--edge); }
+.stripe > .wrap > :first-child { margin-top: 0; }
+.stripe:first-of-type { padding-top: 2.4rem; }
+.stripe:last-of-type { padding-bottom: 3rem; }
+
+/* Somebody who has asked their system for more contrast gets a stronger step
+   and a heavier edge. */
+@media (prefers-contrast: more) {
+  :root { --tint: #F2DEDE; --edge: #6E7880; }
+  .stripe + .stripe { border-top-width: 2px; }
+}
+
+/* Windows high-contrast mode drops background colours entirely, so the rule
+   is the only thing left holding the sections apart. Keep it. */
+@media (forced-colors: active) {
+  .stripe + .stripe { border-top: 1px solid CanvasText; }
+}
 
 h1 {
   font: 700 2.1rem/1.15 var(--serif);
@@ -316,9 +355,6 @@ p.backlink { margin-top: 2.5rem; font-size: 0.9rem; }
 
 /* --- the knowledge-component graph ------------------------------------ */
 
-/* The graph wants more room than the reading column. */
-.wrap.wide { max-width: 60rem; }
-
 .viewtoggle {
   display: flex;
   align-items: baseline;
@@ -445,6 +481,9 @@ ul.plain li { padding: 0.25rem 0; }
 
 @media print {
   header.band, footer.band, .cvactions, .viewtoggle, .skip, .backlink { display: none !important; }
+  /* Tinted bands waste ink and print grey. The rules keep the structure. */
+  .stripe { background: #fff !important; padding: 0.4rem 0; }
+  .stripe + .stripe { border-top: 1px solid #999; }
   body { font-size: 11pt; color: #000; }
   .wrap { max-width: none; padding: 0; }
   main { padding-top: 0; }
