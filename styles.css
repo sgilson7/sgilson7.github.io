@@ -307,3 +307,9 @@ ul.questions { padding-left: 1.1rem; }
 ul.questions li { margin-bottom: 0.4rem; }
 p.backlink { margin-top: 2.5rem; font-size: 0.9rem; }
 .defined-here { margin-top: 0.4rem; }
+
+/* The opening paragraph carries the page, so it gets the lede's weight. */
+.lede-body > p:first-child {
+  font-size: 1.14rem;
+  color: var(--ink);
+}

@@ -7,7 +7,7 @@
 <meta name="description" content="Redact student names and strip all metadata from PDFs, entirely in your browser. Nothing is uploaded.">
 <link rel="canonical" href="https://sgilson7.github.io/projects/pdf-redactor/">
 
-<link rel="stylesheet" href="/styles.css?v=cbc7ffbc">
+<link rel="stylesheet" href="/styles.css?v=791f26c7">
 <link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
 
 <script type="application/ld+json">
@@ -54,20 +54,20 @@
   <dt>Source</dt><dd><a href="https://github.com/sgilson7/pdf-redactor">https://github.com/sgilson7/pdf-redactor</a></dd>
 </dl>
 
-<p>Built for the obligation that comes with studying student work: a corpus has to
-be de-identified before anybody else sees it, and you have to be able to show,
+<p>Studying student work comes with an obligation: the corpus has to be
+de-identified before anyone else sees it, and you have to be able to show,
 months later, that it was.</p>
-<p>It rebuilds the PDF from scratch rather than covering things up. Redaction
-boxes are painted into the page bitmap before it is encoded, so the covered
-pixels do not exist in the output — there is no black rectangle to delete and
-no earlier revision left in the file. Metadata goes the same way: the output
-contains only what the writer chose to emit.</p>
+<p>It rebuilds the PDF from scratch. Redaction boxes are painted into the page
+bitmap before it is encoded, so the covered pixels are gone from the output —
+there is no black rectangle to peel off and no earlier revision left in the
+file. Metadata goes the same way: the output contains only what the writer
+chose to emit.</p>
 <p>The text layer survives. The original text is re-attached as invisible text
 after every span touching a redaction box has been dropped, so a redacted
 corpus is still searchable. Content streams are left uncompressed so you can
 check the tool’s work yourself.</p>
 
-<h2>Questions this page answers</h2>
+<h2>What people usually want to know</h2>
 <ul class="questions">
   <li>How do I de-identify student PDFs for a study without uploading them anywhere?</li>
   <li>How do I strip metadata from a PDF before sharing it with a collaborator?</li>
@@ -90,9 +90,9 @@ check the tool’s work yourself.</p>
       <a href="https://github.com/sgilson7">GitHub</a>
     </p>
     <p class="meta">
-      Text on this site is CC&nbsp;BY&nbsp;4.0; papers keep their publishers' terms.
-      No analytics, no third-party requests, fonts vendored.
-      Build <code>cbc7ffbc</code>.
+      Everything I've written here is CC&nbsp;BY&nbsp;4.0. The papers belong to
+      their publishers. This page loads from this site alone and keeps nothing
+      about your visit. Build <code>791f26c7</code>.
     </p>
   </div>
 </footer>

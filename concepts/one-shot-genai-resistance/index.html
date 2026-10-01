@@ -7,7 +7,7 @@
 <meta name="description" content="One-Shot GenAI Resistance is a property of an assignment question: a target chatbot scores below 60% on it across three separate attempts with the same prompt.">
 <link rel="canonical" href="https://sgilson7.github.io/concepts/one-shot-genai-resistance/">
 
-<link rel="stylesheet" href="/styles.css?v=cbc7ffbc">
+<link rel="stylesheet" href="/styles.css?v=791f26c7">
 <link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
 
 <script type="application/ld+json">
@@ -57,20 +57,18 @@
   <dt>Tool</dt><dd><a href="/projects/perturbation-workbench/">Perturbation Workbench</a></dd>
 </dl>
 
-<p>The threshold is 60%, and it was not chosen for neatness. The paper grounds it
-at the point where a student in the United States typically stops receiving
-course credit, so a question that holds a model below it is a question a
-student cannot outsource and still pass.</p>
-<p>Resistance is a property of a question against a <em>named model at a named time</em>,
-not a permanent quality. The AIED 2026 study tested against Google Gemini
+<p>Sixty percent is where a student in the United States typically stops receiving
+course credit. That’s why it’s the line. Hold a chatbot below it and a student
+who outsources the whole question fails the assignment.</p>
+<p>Resistance has an expiry date. The AIED 2026 study tested against Google Gemini
 2.0-flash, the free tier available to students through the university during
-Summer 2025. A question resistant to that model may not be resistant to the
-next one, which is why the protocol records which model it was run against.</p>
-<p>One attempt is not enough to claim it. A model that fails once may pass on a
-re-roll, so the classification requires three failures of the exact same query
-against fresh instances.</p>
+Summer 2025. The next model may well solve the same question, which is why the
+protocol records which model it was run against.</p>
+<p>A single failure is luck. A model that fails once may pass on a re-roll, so the
+classification requires three failures of the exact same query against fresh
+instances.</p>
 
-<h2>Related concepts</h2>
+<h2>Related terms</h2>
 <ul class="concepts">
   <li><a class="t" href="/concepts/iterative-perturbation-process/">iterative perturbation process</a></li>
   <li><a class="t" href="/concepts/spatial-injection/">Spatial Injection</a></li>
@@ -81,7 +79,7 @@ against fresh instances.</p>
   <li><a class="t" href="/concepts/genai-dependence/">GenAI dependence</a></li>
   <li><a class="t" href="/concepts/drive-framework/">DRIVE framework</a></li>
 </ul>
-<h2>Cite the source</h2>
+<h2>Where this comes from</h2>
 <p>
   Sam Gilson, Benyamin Tabarsi and Tiffany Barnes. &ldquo;Adversarial Assignment Perturbation: Effects on Help-Seeking Behaviors in Student Generative AI Chatbot Use&rdquo;.
   Artificial Intelligence in Education (AIED 2026), LNAI 16585, 2026.
@@ -94,7 +92,7 @@ against fresh instances.</p>
   year = {2026},
   doi = {10.1007/978-3-032-29770-9_48}
 }</code></pre>
-<h2>Questions this page answers</h2>
+<h2>What people usually want to know</h2>
 <ul class="questions">
   <li>What is a one-shot GenAI-resistant assignment?</li>
   <li>What score should a chatbot fall below before an assignment counts as AI-resistant?</li>
@@ -118,9 +116,9 @@ against fresh instances.</p>
       <a href="https://github.com/sgilson7">GitHub</a>
     </p>
     <p class="meta">
-      Text on this site is CC&nbsp;BY&nbsp;4.0; papers keep their publishers' terms.
-      No analytics, no third-party requests, fonts vendored.
-      Build <code>cbc7ffbc</code>.
+      Everything I've written here is CC&nbsp;BY&nbsp;4.0. The papers belong to
+      their publishers. This page loads from this site alone and keeps nothing
+      about your visit. Build <code>791f26c7</code>.
     </p>
   </div>
 </footer>

@@ -7,7 +7,7 @@
 <meta name="description" content="Run the AIED 2026 iterative perturbation protocol in the browser. Nothing is uploaded.">
 <link rel="canonical" href="https://sgilson7.github.io/projects/perturbation-workbench/">
 
-<link rel="stylesheet" href="/styles.css?v=cbc7ffbc">
+<link rel="stylesheet" href="/styles.css?v=791f26c7">
 <link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
 
 <script type="application/ld+json">
@@ -55,23 +55,25 @@
   <dt>Implements</dt><dd><a href="/papers/gilson2026perturbation/">Adversarial Assignment Perturbation: Effects on Help-Seeking Behaviors in Student Generative AI Chatbot Use</a></dd>
 </dl>
 
-<p>The Workbench runs the paper’s Table 1 protocol and produces two artefacts a
-collaborator at another institution can check: the assignment, and a run
-manifest that is a proof of execution.</p>
-<p>It calls no model. The tool has no API key and no code that could use one — you
-are the transport between the workbench and the chatbot. It gives you the exact
-query, you paste it into a fresh instance, you paste the response back, and you
-grade it against your rubric. What the tool guarantees is that the protocol was
+<p>If you want to run the protocol from the AIED paper on your own assignment,
+this is the thing that runs it.</p>
+<p>It walks you through Table 1 and produces two artefacts a collaborator at
+another institution can check: the assignment, and a run manifest that is a
+proof of execution.</p>
+<p>You are the transport between the workbench and the chatbot. The tool has no
+API key and no code that could use one, so it hands you the exact query, you
+paste it into a fresh instance, you paste the response back, and you grade it
+against your rubric. What the tool guarantees is that the protocol was
 followed: the same bytes were prompted three times, the rubric was fixed before
 grading, and nothing was stamped resistant that did not earn it.</p>
-<p>The manifest is deliberately not the assignment. It carries counts, ordinals,
+<p>The manifest leaves the questions out, on purpose. It carries counts, ordinals,
 settings, hashes and timestamps, and there is no field through which question
-text could arrive — a record that leaked the questions it certifies would
+text could arrive. A record that leaked the questions it certifies would
 destroy the thing it was made to protect.</p>
 
 <h2>How to cite it</h2>
-<p>Cite the paper this implements. If the tool itself needs citing in a
-methods section, name it and link this page alongside.</p>
+<p>Cite the paper. If you need the tool itself in a methods section, name it
+and link this page next to the citation.</p>
 <pre class="bibtex"><code>@inproceedings{gilson2026perturbation,
   title = {{Adversarial Assignment Perturbation: Effects on Help-Seeking Behaviors in Student Generative AI Chatbot Use}},
   author = {Sam Gilson and Benyamin Tabarsi and Tiffany Barnes},
@@ -80,7 +82,7 @@ methods section, name it and link this page alongside.</p>
   year = {2026},
   doi = {10.1007/978-3-032-29770-9_48}
 }</code></pre>
-<h2>Questions this page answers</h2>
+<h2>What people usually want to know</h2>
 <ul class="questions">
   <li>Is there a tool for testing whether an assignment resists ChatGPT or Gemini?</li>
   <li>How do I produce evidence that an assignment was tested against a chatbot?</li>
@@ -103,9 +105,9 @@ methods section, name it and link this page alongside.</p>
       <a href="https://github.com/sgilson7">GitHub</a>
     </p>
     <p class="meta">
-      Text on this site is CC&nbsp;BY&nbsp;4.0; papers keep their publishers' terms.
-      No analytics, no third-party requests, fonts vendored.
-      Build <code>cbc7ffbc</code>.
+      Everything I've written here is CC&nbsp;BY&nbsp;4.0. The papers belong to
+      their publishers. This page loads from this site alone and keeps nothing
+      about your visit. Build <code>791f26c7</code>.
     </p>
   </div>
 </footer>

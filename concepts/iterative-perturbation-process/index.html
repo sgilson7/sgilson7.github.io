@@ -7,7 +7,7 @@
 <meta name="description" content="The iterative perturbation process is an eight-step, instructor-led loop that rewrites an assignment question until a target chatbot fails it three times running.">
 <link rel="canonical" href="https://sgilson7.github.io/concepts/iterative-perturbation-process/">
 
-<link rel="stylesheet" href="/styles.css?v=cbc7ffbc">
+<link rel="stylesheet" href="/styles.css?v=791f26c7">
 <link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
 
 <script type="application/ld+json">
@@ -64,15 +64,14 @@ of the three perturbation strategies and try again against a <em>fresh</em> inst
 so nothing carries over from the last exchange. Each pass also updates the
 rubric, so the hallucinations the model produced become things the grading
 scheme explicitly penalises.</p>
-<p>The process is instructor-led rather than automated. The paper is direct about
-why: choosing which perturbation to apply relies on domain expertise to
-identify and target a specific failure point, and that judgement is the part a
-script cannot supply.</p>
-<p>A version that has been perturbed keeps the attempts recorded against its
-earlier form. Those attempts are evidence about <em>those</em> bytes, and they stay
-attached to them.</p>
+<p>A person has to drive this, and the paper says why: choosing which perturbation
+to apply relies on domain expertise to identify and target a specific failure
+point. That judgement is the part a script cannot supply.</p>
+<p>When a question gets perturbed, the attempts recorded against its earlier form
+stay with that form. They are evidence about <em>those</em> bytes, and they belong to
+them.</p>
 
-<h2>Related concepts</h2>
+<h2>Related terms</h2>
 <ul class="concepts">
   <li><a class="t" href="/concepts/one-shot-genai-resistance/">One-Shot GenAI Resistance</a></li>
   <li><a class="t" href="/concepts/spatial-injection/">Spatial Injection</a></li>
@@ -83,7 +82,7 @@ attached to them.</p>
   <li><a class="t" href="/concepts/genai-dependence/">GenAI dependence</a></li>
   <li><a class="t" href="/concepts/drive-framework/">DRIVE framework</a></li>
 </ul>
-<h2>Cite the source</h2>
+<h2>Where this comes from</h2>
 <p>
   Sam Gilson, Benyamin Tabarsi and Tiffany Barnes. &ldquo;Adversarial Assignment Perturbation: Effects on Help-Seeking Behaviors in Student Generative AI Chatbot Use&rdquo;.
   Artificial Intelligence in Education (AIED 2026), LNAI 16585, 2026.
@@ -96,7 +95,7 @@ attached to them.</p>
   year = {2026},
   doi = {10.1007/978-3-032-29770-9_48}
 }</code></pre>
-<h2>Questions this page answers</h2>
+<h2>What people usually want to know</h2>
 <ul class="questions">
   <li>How do I make an existing assignment resistant to ChatGPT?</li>
   <li>Is there a protocol for testing whether an assignment resists a chatbot?</li>
@@ -120,9 +119,9 @@ attached to them.</p>
       <a href="https://github.com/sgilson7">GitHub</a>
     </p>
     <p class="meta">
-      Text on this site is CC&nbsp;BY&nbsp;4.0; papers keep their publishers' terms.
-      No analytics, no third-party requests, fonts vendored.
-      Build <code>cbc7ffbc</code>.
+      Everything I've written here is CC&nbsp;BY&nbsp;4.0. The papers belong to
+      their publishers. This page loads from this site alone and keeps nothing
+      about your visit. Build <code>791f26c7</code>.
     </p>
   </div>
 </footer>
