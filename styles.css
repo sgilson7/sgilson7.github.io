@@ -592,3 +592,26 @@ dl.sources dd .why {
   font-size: 0.9rem;
   margin-top: 0.15rem;
 }
+
+/* The materials directory. Each row is a file somebody is about to download,
+   so the title is the link and the format and length sit beside it. */
+ul.materials { padding-left: 0; list-style: none; margin: 0; }
+.materials li { padding: 1.1rem 0; border-bottom: 1px solid var(--rule); }
+.materials li:last-child { border-bottom: 0; }
+.materials .mhead { margin: 0; }
+.materials .t { display: block; font: 700 1.05rem/1.35 var(--serif); }
+.materials .vn { display: block; font-size: 0.92rem; color: var(--grey); }
+.materials .summary { margin: 0.5rem 0 0.45rem; max-width: 62ch; line-height: 1.6; }
+.materials details { margin: 0.3rem 0 0.5rem; }
+.materials details summary { font-size: 0.92rem; color: var(--grey); cursor: pointer; }
+ul.objectives { margin: 0.4rem 0 0 1.1rem; font-size: 0.95rem; line-height: 1.55; }
+
+/* A submission says so before anything else on the page. Not a warning colour:
+   it is a statement of where the work is, not a problem. */
+.submitted {
+  border-left: 3px solid var(--edge);
+  padding: 0.1rem 0 0.1rem 0.9rem;
+  margin: 0 0 1.2rem;
+}
+.submitted p { margin: 0.5rem 0; color: var(--grey); font-size: 0.95rem; }
+.submitted strong { color: var(--ink); }

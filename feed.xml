@@ -4,7 +4,7 @@
   <link href="https://sgilson7.github.io/feed.xml"/>
   <id>https://sgilson7.github.io</id>
   <updated>2027-01-01T00:00:00Z</updated>
-  <generator version="d7ba132e">site-cli</generator>
+  <generator version="59e89986">site-cli</generator>
   <entry>
     <title>How Do Undergraduates Interested in Computer Science Use Online, On-Demand CS Coursework?</title>
     <link href="https://sgilson7.github.io/papers/gilson2025oodcs/"/>
@@ -25,6 +25,20 @@
     <id>https://sgilson7.github.io/papers/gilson2026designing/</id>
     <updated>2026-02-01T00:00:00Z</updated>
     <summary>Sam Gilson — Proceedings of the 57th ACM Technical Symposium on Computer Science Education V.2 (SIGCSE TS 2026)</summary>
+  </entry>
+  <entry>
+    <title>Free-tier Large Language Models on the MATH Benchmark: Implications for AI Literacy Instruction</title>
+    <link href="https://sgilson7.github.io/papers/gilson-math-benchmark/"/>
+    <id>https://sgilson7.github.io/papers/gilson-math-benchmark/</id>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Sam Gilson — AERA 2027 annual meeting</summary>
+  </entry>
+  <entry>
+    <title>Perturbed Assignments and Subgoal-Labeled AI Literacy Instruction in Undergraduate Discrete Mathematics</title>
+    <link href="https://sgilson7.github.io/papers/gilson-summer2026/"/>
+    <id>https://sgilson7.github.io/papers/gilson-summer2026/</id>
+    <updated>2026-10-01T00:00:00Z</updated>
+    <summary>Sam Gilson — SIGCSE TS 2027 Student Research Competition</summary>
   </entry>
   <entry>
     <title>LLMs' reshaping of people, processes, products, and society in software development: a qualitative exploration with early adopters</title>

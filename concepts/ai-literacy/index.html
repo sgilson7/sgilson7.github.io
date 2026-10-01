@@ -21,7 +21,7 @@
 <meta name="twitter:description" content="AI Literacy is the set of competencies that let a person critically evaluate AI technologies, and communicate and collaborate effectively with AI.">
 <meta name="author" content="Sam Gilson">
 
-<link rel="stylesheet" href="/styles.css?v=d7ba132e">
+<link rel="stylesheet" href="/styles.css?v=59e89986">
 <link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
 
 <script type="application/ld+json">
@@ -32,6 +32,7 @@
   "description": "AI Literacy is the set of competencies that let a person critically evaluate AI technologies, and communicate and collaborate effectively with AI.",
   "url": "https://sgilson7.github.io/concepts/ai-literacy/",
   "alternateName": ["artificial intelligence literacy"],
+  "citation": {"@type": "ScholarlyArticle", "identifier": "https://doi.org/10.1007/978-3-032-29770-9_48"},
   "inDefinedTermSet": {"@type": "DefinedTermSet", "name": "Sam Gilson concepts", "url": "https://sgilson7.github.io/concepts/"}
 }
 </script>
@@ -48,6 +49,7 @@
       <a href="/concepts/">Concepts</a>
       <a href="/projects/">Tools</a>
       <a href="/teaching/">Teaching</a>
+      <a href="/materials/">Materials</a>
       <a href="/cv/">CV</a>
       <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google&nbsp;Scholar</a>
     </nav>
@@ -67,24 +69,29 @@
 <p class="scope">A definition from the AI literacy literature. A review of 124 AI literacy studies found only two critical-literacy interventions for AI tools, neither deployed in an educational setting.</p>
 <p class="alts">Also written: artificial intelligence literacy</p>
 
-<dl class="facts">
-  <dt>Defined in</dt>
-  <dd>Gilson, 2026 &middot; 
-    <a href="/talks/gilson2026csc484lecture/">Applications of AI Literacy to GenAI-Assisted Game Development</a>, Procedure C, step C6
-  </dd>
-</dl>
-
 
 <dl class="sources">
   <dt>Introduced in</dt>
   <dd><a href="https://doi.org/10.1145/3313831.3376727">Duri Long, Brian Magerko. 2020. What is AI Literacy? Competencies and Design Considerations. Proceedings of CHI &#39;20, 1-16.</a>
   </dd>
+  <dt>Introduced in</dt>
+  <dd><a href="https://doi.org/10.1007/978-3-032-29770-9_48">Sam Gilson, Benyamin Tabarsi, Tiffany Barnes. Adversarial Assignment Perturbation: Effects on Help-Seeking Behaviors in Student Generative AI Chatbot Use. Artificial Intelligence in Education (AIED 2026), LNAI 16585.</a><span class="why">The framing the paper works from: differentiating help-seeking that supports learning from cognitive outsourcing is an AI literacy problem.</span>
+  </dd>
   <dt>Builds on</dt>
   <dd><a href="https://doi.org/10.1145/3702652.3744217">Xingjian Gu, Barbara J. Ericson. 2025. AI Literacy in K-12 and Higher Education in the Wake of Generative AI: An Integrative Review. Proceedings of ICER &#39;25, 125-140.</a><span class="why">The review that measured how little of this literature is a deployed intervention: two of 124 studies, neither in an educational setting.</span>
   </dd>
   <dt>Used in</dt>
-  <dd><a href="/talks/gilson2026csc484lecture/">Sam Gilson. Applications of AI Literacy to GenAI-Assisted Game Development. Guest lecture, CSC 484/584 Game AI, NC State University.</a><span class="why">Step C6, questioning the system, is the critical-evaluation competency.</span>
+  <dd><a href="/talks/gilson2026csc484lecture/">Sam Gilson. Applications of AI Literacy to GenAI-Assisted Game Development. Guest lecture, CSC 484/584 Game AI, NC State University.</a><span class="why">Step C6 of the collaboration procedure, as taught in the guest lecture.</span>
   </dd>
+</dl>
+
+<dl class="facts">
+  <dt>Described in</dt>
+  <dd>Gilson et al., 2026 &middot; 
+    <a href="/papers/gilson2026perturbation/">Adversarial Assignment Perturbation: Effects on Help-Seeking Behaviors in Student Generative AI Chatbot Use</a>, Introduction and motivation
+  </dd>
+  <dt>Publisher</dt><dd>Springer Nature Switzerland</dd>
+  <dt>DOI</dt><dd><a href="https://doi.org/10.1007/978-3-032-29770-9_48">https://doi.org/10.1007/978-3-032-29770-9_48</a></dd>
 </dl>
 
 <p>Students arrive already using chatbots. That is the starting condition, not a
@@ -108,49 +115,55 @@ front of students is small.</p>
 
 <ul class="concepts">
   <li>
-    <a class="t" href="/concepts/hallucination-autopsy-procedure/">Hallucination Autopsy Procedure</a>
-    <p class="def">The Hallucination Autopsy Procedure is a seven-step routine for finding where a chatbot&#39;s proof leaves the claim it was given, and naming why it left.</p>
+    <a class="t" href="/concepts/one-shot-genai-resistance/">One-Shot GenAI Resistance</a>
+    <p class="def">One-Shot GenAI Resistance is a property of an assignment question: a target chatbot scores below 60% on it across three separate attempts with the same prompt.</p>
   </li>
   <li>
-    <a class="t" href="/concepts/axiom-reversion/">Axiom Reversion</a>
-    <p class="def">Axiom Reversion is a failure mode in which a chatbot swaps in the textbook theorem that the problem was perturbed away from.</p>
+    <a class="t" href="/concepts/iterative-perturbation-process/">iterative perturbation process</a>
+    <p class="def">The iterative perturbation process is an eight-step, instructor-led loop that rewrites an assignment question until a target chatbot fails it three times running.</p>
   </li>
   <li>
-    <a class="t" href="/concepts/invalid-syntactic-shortcut/">Invalid Syntactic Shortcut</a>
-    <p class="def">An Invalid Syntactic Shortcut is a failure mode in which a chatbot manipulates a form as though a rule applied, producing a step that is well-formed and false.</p>
+    <a class="t" href="/concepts/spatial-injection/">Spatial Injection</a>
+    <p class="def">Spatial Injection is a perturbation strategy that adds reasoning requiring visual or geometric interpretation to a question, so a model must track layout as well as arithmetic.</p>
   </li>
   <li>
-    <a class="t" href="/concepts/spatial-counting-miscount/">Spatial or Counting Miscount</a>
-    <p class="def">A Spatial or Counting Miscount is a failure mode in which a chatbot counts placements that break the constraint, or counts the same one twice.</p>
+    <a class="t" href="/concepts/axiomatic-replacement/">Axiomatic Replacement</a>
+    <p class="def">Axiomatic Replacement is a perturbation strategy that alters a question&#39;s fundamental logical premises or axioms to prevent a model retrieving a memorised proof.</p>
   </li>
   <li>
-    <a class="t" href="/concepts/strong-prompt-structure/">Strong Prompt Structure</a>
-    <p class="def">Strong Prompt Structure is a four-part shape for a prompt: establish context, require justification at every step, build in self-questioning, and plan the correction.</p>
+    <a class="t" href="/concepts/contextual-embedding/">Contextual Embedding</a>
+    <p class="def">Contextual Embedding is a perturbation strategy that places a question inside unfamiliar, class-specific context which the grading rubric then requires the answer to use.</p>
   </li>
   <li>
-    <a class="t" href="/concepts/collaborative-prompting/">Collaborative Prompting</a>
-    <p class="def">Collaborative Prompting is a six-step routine in which a student forbids the final answer, takes one step at a time, and checks each against cases computed by hand.</p>
+    <a class="t" href="/concepts/three-attempt-consistency-protocol/">Three-Attempt Consistency Protocol</a>
+    <p class="def">The Three-Attempt Consistency Protocol re-prompts a model with the exact query two further times, and classifies a question resistant only if all three attempts fail.</p>
   </li>
   <li>
-    <a class="t" href="/concepts/genai-assisted-prototyping-procedure/">GenAI-Assisted Prototyping Procedure</a>
-    <p class="def">The GenAI-Assisted Prototyping Procedure is a nine-stage pipeline, brief to handoff, in which a person reads the plan, plays the build, and deploys it.</p>
+    <a class="t" href="/concepts/cognitive-scaffolding/">Cognitive Scaffolding</a>
+    <p class="def">Cognitive Scaffolding is an engagement pattern in which a student recognises that a chatbot has hallucinated and supplies context to steer it toward a correct answer.</p>
   </li>
   <li>
-    <a class="t" href="/concepts/subgoal-label/">Subgoal Label</a>
-    <p class="def">A Subgoal Label names the function a step serves in any problem of its type, so a learner can separate a solution&#39;s structure from one example&#39;s surface details.</p>
+    <a class="t" href="/concepts/genai-dependence/">GenAI dependence</a>
+    <p class="def">GenAI dependence is an engagement pattern in which a student accepts a chatbot&#39;s hallucinated answer without critically evaluating it.</p>
+  </li>
+  <li>
+    <a class="t" href="/concepts/drive-framework/">DRIVE framework</a>
+    <p class="def">The DRIVE framework is a taxonomy for generative AI interactions that separates how a student steers an exchange from how they articulate what they know.</p>
   </li>
 </ul>
 </div></section><section class="stripe"><div class="wrap">
 <h2>Where this comes from</h2>
 <p>
-  Sam Gilson. &ldquo;Applications of AI Literacy to GenAI-Assisted Game Development&rdquo;.
-  Guest lecture, CSC 484/584 Game AI, NC State University, 2026.
+  Sam Gilson, Benyamin Tabarsi and Tiffany Barnes. &ldquo;Adversarial Assignment Perturbation: Effects on Help-Seeking Behaviors in Student Generative AI Chatbot Use&rdquo;.
+  Artificial Intelligence in Education (AIED 2026), LNAI 16585, 2026.
 </p>
-<pre class="bibtex"><code>@misc{gilson2026csc484lecture,
-  title = {{Applications of AI Literacy to GenAI-Assisted Game Development}},
-  author = {Sam Gilson},
-  howpublished = {Guest lecture, CSC 484/584 Game AI, NC State University},
-  year = {2026}
+<pre class="bibtex"><code>@inproceedings{gilson2026perturbation,
+  title = {{Adversarial Assignment Perturbation: Effects on Help-Seeking Behaviors in Student Generative AI Chatbot Use}},
+  author = {Sam Gilson and Benyamin Tabarsi and Tiffany Barnes},
+  booktitle = {Artificial Intelligence in Education (AIED 2026), LNAI 16585},
+  pages = {440--449},
+  year = {2026},
+  doi = {10.1007/978-3-032-29770-9_48}
 }</code></pre>
 </div></section><section class="stripe"><div class="wrap">
 <h2>What people usually want to know</h2>
@@ -178,7 +191,7 @@ front of students is small.</p>
     <p class="meta">
       Everything I've written here is CC&nbsp;BY&nbsp;4.0. The papers belong to
       their publishers. This page loads from this site alone and keeps nothing
-      about your visit. Build <code>d7ba132e</code>.
+      about your visit. Build <code>59e89986</code>.
     </p>
   </div>
 </footer>
