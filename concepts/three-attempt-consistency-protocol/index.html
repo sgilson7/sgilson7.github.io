@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="The Three-Attempt Consistency Protocol re-prompts a model with the exact query two further times, and classifies a question resistant only if all three attempts fail.">
 <meta name="author" content="Sam Gilson">
 
-<link rel="stylesheet" href="/styles.css?v=0a552c10">
+<link rel="stylesheet" href="/styles.css?v=71affaa0">
 <link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
 
 <script type="application/ld+json">
@@ -71,10 +71,10 @@
   <dt>Tool</dt><dd><a href="/projects/perturbation-workbench/">Perturbation Workbench</a></dd>
 </dl>
 
-<p>Ask a chatbot the same question twice and you can get two different answers.
-So a question it fluffs once it may well answer on the next try, and one
-failure tells you very little.</p>
-<p>So after the first failure the model is re-prompted with the exact query two
+<p>Ask a chatbot the same question twice and you can get two different answers, so
+a question it fails once it may answer on a second attempt. One failure tells
+you very little.</p>
+<p>After the first failure the model is re-prompted with the exact query two
 more times. Only if it fails across all three trials is the prompt classified
 as GenAI resistant. If a later attempt passes, that’s a false negative caught,
 and the record keeps it.</p>
@@ -128,7 +128,7 @@ and the record keeps it.</p>
     <p class="meta">
       Everything I've written here is CC&nbsp;BY&nbsp;4.0. The papers belong to
       their publishers. This page loads from this site alone and keeps nothing
-      about your visit. Build <code>0a552c10</code>.
+      about your visit. Build <code>71affaa0</code>.
     </p>
   </div>
 </footer>

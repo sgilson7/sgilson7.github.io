@@ -10,6 +10,16 @@ RESEARCH
 ------------------------------------------------------------------------
 Sam Gilson is a computer science education researcher interested in how undergraduates use generative AI to learn: in writing proofs, in discrete mathematics, and in game AI.
 
+EDUCATION
+------------------------------------------------------------------------
+Undergraduate degree, Georgia Institute of Technology
+      GPA 3.96
+
+INDUSTRY EXPERIENCE
+------------------------------------------------------------------------
+Software Engineer II, Microsoft — Azure Linux
+Software Engineer I, Microsoft — Azure Linux
+
 PUBLICATIONS
 ------------------------------------------------------------------------
 2027  LLMs' reshaping of people, processes, products, and society in software development: a qualitative exploration with early adopters
