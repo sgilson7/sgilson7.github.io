@@ -12,13 +12,14 @@ Sam Gilson is a computer science education researcher interested in how undergra
 
 EDUCATION
 ------------------------------------------------------------------------
-Undergraduate degree, Georgia Institute of Technology
+2023–2026  PhD in Computer Science, North Carolina State University
+2016–2020  Undergraduate, College of Computing, Georgia Institute of Technology
       GPA 3.96
 
-INDUSTRY EXPERIENCE
+APPOINTMENTS
 ------------------------------------------------------------------------
-Software Engineer II, Microsoft — Azure Linux
-Software Engineer I, Microsoft — Azure Linux
+2023–2026  Graduate Student Research Fellow, North Carolina State University — Game2Learn lab
+2020–2023  Software Engineer I–II, Microsoft — Azure Linux Image Builder
 
 PUBLICATIONS
 ------------------------------------------------------------------------
@@ -71,8 +72,9 @@ Fall 2026  CSC 484/584 — Game AI — guest lecture
 
 AWARDS
 ------------------------------------------------------------------------
-2026  Excellence in Teaching Award for STEM, Central Carolina Community College, 2026
+Excellence in Teaching Award for STEM, Central Carolina Community College, 2026
       for CSC 151, Spring 2026
+      https://www.cccc.edu/news/new-cccc-excellence-teaching-awards-honor-exceptional-faculty
 
 SOFTWARE
 ------------------------------------------------------------------------
