@@ -1,0 +1,73 @@
+========================================================================
+SAM GILSON
+========================================================================
+PhD student in computer science, Game2Learn lab, North Carolina State University
+https://sgilson7.github.io
+ORCID 0009-0002-2394-8649
+https://github.com/sgilson7
+
+RESEARCH
+------------------------------------------------------------------------
+Sam Gilson is a computer science education researcher interested in how undergraduates use generative AI to learn: in writing proofs, in discrete mathematics, and in game AI.
+
+PUBLICATIONS
+------------------------------------------------------------------------
+2027  LLMs' reshaping of people, processes, products, and society in software development: a qualitative exploration with early adopters
+      Benyamin Tabarsi, Heidi Reichert, Sam Gilson, Ally Limke, Sandeep Kuttal and Tiffany Barnes
+      Empirical Software Engineering
+      doi:10.1007/s10664-026-10917-0
+
+2026  Adversarial Assignment Perturbation: Effects on Help-Seeking Behaviors in Student Generative AI Chatbot Use
+      Sam Gilson, Benyamin Tabarsi and Tiffany Barnes
+      Artificial Intelligence in Education (AIED 2026), LNAI 16585, pp. 440-449
+      doi:10.1007/978-3-032-29770-9_48
+
+2026  Applications of AI Literacy to GenAI-Assisted Game Development
+      Sam Gilson
+      Guest lecture, CSC 484/584 Game AI, NC State University
+
+2026  Confirming Correct, Missing the Rest: LLM Tutoring Agents Struggle Where Feedback Matters Most
+      Tahreem Yasir, Wenbo Li, Sam Gilson, Sutapa Dey Tithi, Xiaoyi Tian and Tiffany Barnes
+      BEA 2026, pp. 819-840
+      doi:10.18653/v1/2026.bea-1.56
+
+2026  Designing AI-Resistant Assignments via Iterative Perturbation to Promote Interactive Learning
+      Sam Gilson
+      Proceedings of the 57th ACM Technical Symposium on Computer Science Education V.2 (SIGCSE TS 2026), p. 1745
+      doi:10.1145/3770761.3777058
+
+2026  When Verification Hurts: Asymmetric Effects of Multi-Agent Feedback in Logic Proof Tutoring
+      Tahreem Yasir, Sutapa Dey Tithi, Benyamin Tabarsi, Dmitri Droujkov, Sam Gilson, Yasitha Rajapaksha, Xiaoyi Tian, Arun Ramesh, DongKuan Xu and Tiffany Barnes
+      doi:10.48550/arXiv.2603.27076
+
+2025  How Do Undergraduates Interested in Computer Science Use Online, On-Demand CS Coursework?
+      Sam Gilson, Tiffany Barnes, Mahzabin Tamanna and Saminur Islam
+      Proceedings of the Twelfth ACM Conference on Learning @ Scale (L@S '25), pp. 271-275
+      doi:10.1145/3698205.3733938
+
+TEACHING
+------------------------------------------------------------------------
+Spring 2026  CSC 151 — Introduction to Computing — Java
+      Instructor of record, Central Carolina Community College
+Summer 2025, Summer 2026  CSC 226 — Discrete Mathematics for Computer Scientists
+      Instructor of record, North Carolina State University
+Fall 2026  CSC 484/584 — Game AI — guest lecture
+      Guest lecturer, North Carolina State University
+
+AWARDS
+------------------------------------------------------------------------
+2026  Excellence in Teaching Award for STEM, Central Carolina Community College, 2026
+      for CSC 151, Spring 2026
+
+SOFTWARE
+------------------------------------------------------------------------
+Perturbation Workbench  (Rust)
+      Run the AIED 2026 iterative perturbation protocol in the browser. Nothing is uploaded.
+      https://github.com/sgilson7/perturbation-workbench
+PDF Redactor  (Rust)
+      Redact student names and strip all metadata from PDFs, entirely in your browser. Nothing is uploaded.
+      https://github.com/sgilson7/pdf-redactor
+
+------------------------------------------------------------------------
+Generated from https://sgilson7.github.io/cv/ — the publications, teaching and awards on this CV
+are the same records the site renders, so the two cannot disagree.

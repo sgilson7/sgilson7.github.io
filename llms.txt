@@ -39,6 +39,13 @@ ORCID: https://orcid.org/0009-0002-2394-8649
 - [DRIVE framework](https://sgilson7.github.io/concepts/drive-framework/): The DRIVE framework is a taxonomy for generative AI interactions that separates how a student steers an exchange from how they articulate what they know.
   Also written: Deep Reasoning in Virtual Education, DRIVE taxonomy
 
+## Other pages
+
+         - [Dissertation](https://sgilson7.github.io/dissertation/) — how the published work fits together
+         - [Concepts](https://sgilson7.github.io/concepts/) — a knowledge-component graph of the terms, with the relations written out
+         - [Teaching](https://sgilson7.github.io/teaching/) — courses taught, and a teaching award
+         - [CV](https://sgilson7.github.io/cv/) — also at https://sgilson7.github.io/cv.txt as plain text
+
 ## Tools and games
 
 - [Perturbation Workbench](https://sgilson7.github.io/projects/perturbation-workbench/): Run the AIED 2026 iterative perturbation protocol in the browser. Nothing is uploaded. (Research tool)

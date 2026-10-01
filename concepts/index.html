@@ -4,10 +4,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Concepts — Sam Gilson</title>
-<meta name="description" content="Definitions of the terms Sam Gilson works on, each with the paper it is defined in.">
+<meta name="description" content="A knowledge-component graph of the terms Sam Gilson works on: 10 concepts and 14 typed relations, each with the paper it comes from.">
 <link rel="canonical" href="https://sgilson7.github.io/concepts/">
 
-<link rel="stylesheet" href="/styles.css?v=791f26c7">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sam Gilson">
+<meta property="og:title" content="Concepts — Sam Gilson">
+<meta property="og:description" content="A knowledge-component graph of the terms Sam Gilson works on: 10 concepts and 14 typed relations, each with the paper it comes from.">
+<meta property="og:url" content="https://sgilson7.github.io/concepts/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Concepts — Sam Gilson">
+<meta name="twitter:description" content="A knowledge-component graph of the terms Sam Gilson works on: 10 concepts and 14 typed relations, each with the paper it comes from.">
+<meta name="author" content="Sam Gilson">
+
+<link rel="stylesheet" href="/styles.css?v=d90d1a8d">
 <link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
 
 </head>
@@ -19,75 +30,434 @@
     <nav aria-label="Sections">
       <a href="/">Home</a>
       <a href="/publications/">Publications</a>
+      <a href="/dissertation/">Dissertation</a>
       <a href="/concepts/">Concepts</a>
       <a href="/projects/">Tools</a>
+      <a href="/teaching/">Teaching</a>
+      <a href="/cv/">CV</a>
       <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google&nbsp;Scholar</a>
     </nav>
   </div>
 </header>
 
-<main id="main" class="wrap">
+<main id="main" class="wrap wide">
 
 <h1>Concepts</h1>
 <p class="lede">
-  Every term my papers introduce or lean on, one page each, with the definition
-  up front and the paper it came from underneath. Several of these go by more
-  than one name in the literature. Each page lists the other spellings, so if
-  you searched for one of them you're in the right place.
+  Every term my papers introduce or lean on, written as a knowledge component:
+  given some situation, here is what you can then do. The picture below shows
+  how they hang off each other. Each box is a term, each arrow is a relation
+  somebody could state out loud, and both are links.
 </p>
 
-<ul class="concepts">
-  <li>
-    <a class="t" href="/concepts/one-shot-genai-resistance/">One-Shot GenAI Resistance</a>
-    <p class="def">One-Shot GenAI Resistance is a property of an assignment question: a target chatbot scores below 60% on it across three separate attempts with the same prompt.</p>
-    <span class="alts">Also written: One-Shot Generative AI Resistance · One-Shot GenAI-Resistant · One-Shot GenAI Resistant · AI-resistant assignment</span>
-  </li>
-  <li>
-    <a class="t" href="/concepts/iterative-perturbation-process/">iterative perturbation process</a>
-    <p class="def">The iterative perturbation process is an eight-step, instructor-led loop that rewrites an assignment question until a target chatbot fails it three times running.</p>
-    <span class="alts">Also written: Adversarial Iterative Perturbation · Adversarial Assignment Perturbation · iterative perturbation method</span>
-  </li>
-  <li>
-    <a class="t" href="/concepts/spatial-injection/">Spatial Injection</a>
-    <p class="def">Spatial Injection is a perturbation strategy that adds reasoning requiring visual or geometric interpretation to a question, so a model must track layout as well as arithmetic.</p>
-    <span class="alts">Also written: spatial constraint</span>
-  </li>
-  <li>
-    <a class="t" href="/concepts/axiomatic-replacement/">Axiomatic Replacement</a>
-    <p class="def">Axiomatic Replacement is a perturbation strategy that alters a question&#39;s fundamental logical premises or axioms to prevent a model retrieving a memorised proof.</p>
-    <span class="alts">Also written: axiom replacement</span>
-  </li>
-  <li>
-    <a class="t" href="/concepts/contextual-embedding/">Contextual Embedding</a>
-    <p class="def">Contextual Embedding is a perturbation strategy that places a question inside unfamiliar, class-specific context which the grading rubric then requires the answer to use.</p>
-    <span class="alts">Also written: contextual embedding strategy</span>
-  </li>
-  <li>
-    <a class="t" href="/concepts/three-attempt-consistency-protocol/">Three-Attempt Consistency Protocol</a>
-    <p class="def">The Three-Attempt Consistency Protocol re-prompts a model with the exact query two further times, and classifies a question resistant only if all three attempts fail.</p>
-    <span class="alts">Also written: three-attempt protocol · result validity check</span>
-  </li>
-  <li>
-    <a class="t" href="/concepts/cognitive-scaffolding/">Cognitive Scaffolding</a>
-    <p class="def">Cognitive Scaffolding is an engagement pattern in which a student recognises that a chatbot has hallucinated and supplies context to steer it toward a correct answer.</p>
-    <span class="alts">Also written: cognitive scaffolding strategy · collaborative repair</span>
-  </li>
-  <li>
-    <a class="t" href="/concepts/genai-dependence/">GenAI dependence</a>
-    <p class="def">GenAI dependence is an engagement pattern in which a student accepts a chatbot&#39;s hallucinated answer without critically evaluating it.</p>
-    <span class="alts">Also written: Dependency · Dependence · cognitive outsourcing</span>
-  </li>
-  <li>
-    <a class="t" href="/concepts/online-on-demand-cs-coursework/">online, on-demand CS coursework</a>
-    <p class="def">Online, on-demand CS coursework is computing coursework a student takes outside a degree programme, on their own schedule, to supplement that programme.</p>
-    <span class="alts">Also written: OOD CS coursework · OODCS · on-demand computer science coursework</span>
-  </li>
-  <li>
-    <a class="t" href="/concepts/drive-framework/">DRIVE framework</a>
-    <p class="def">The DRIVE framework is a taxonomy for generative AI interactions that separates how a student steers an exchange from how they articulate what they know.</p>
-    <span class="alts">Also written: Deep Reasoning in Virtual Education · DRIVE taxonomy</span>
-  </li>
-</ul>
+
+<div class="viewtoggle">
+  <input type="checkbox" id="asgraph" checked>
+  <label for="asgraph">Show the graph. Untick for the list, which is easier to search.</label>
+</div>
+
+<section class="graphview" aria-label="Knowledge-component graph">
+  <figure class="kcfig">
+    <div class="kcscroll">
+      <svg class="kcgraph" viewBox="0 0 708 627" width="708" height="627" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Knowledge-component graph of the concepts, with 10 nodes and 14 relations">
+<defs>
+  <marker id="a-prerequisite" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#555555"/></marker>
+  <marker id="a-relational" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#1f77b4"/></marker>
+  <marker id="a-integrative" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d62728"/></marker>
+  <marker id="a-strategy" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#2ca02c"/></marker>
+</defs>
+<path class="kc-edge" d="M 112.0 66.0 C 112.0 175.8, 475.0 200.2, 475.0 310.0" stroke="#555555" fill="none" stroke-width="1.6" marker-end="url(#a-prerequisite)"/>
+<path class="kc-edge" d="M 112.0 66.0 C 112.0 109.2, 475.0 118.8, 475.0 162.0" stroke="#555555" fill="none" stroke-width="1.6" marker-end="url(#a-prerequisite)"/>
+<path class="kc-edge" d="M 475.0 214.0 C 475.0 257.2, 475.0 266.8, 475.0 310.0" stroke="#555555" fill="none" stroke-width="1.6" marker-end="url(#a-prerequisite)"/>
+<path class="kc-edge" d="M 112.0 66.0 C 112.0 109.2, 233.0 118.8, 233.0 162.0" stroke="#2ca02c" fill="none" stroke-width="1.6" marker-end="url(#a-strategy)"/>
+<path class="kc-edge" d="M 112.0 66.0 C 112.0 175.8, 233.0 200.2, 233.0 310.0" stroke="#2ca02c" fill="none" stroke-width="1.6" marker-end="url(#a-strategy)"/>
+<path class="kc-edge" d="M 112.0 66.0 C 112.0 235.7, 233.0 273.4, 233.0 443.0" stroke="#2ca02c" fill="none" stroke-width="1.6" marker-end="url(#a-strategy)"/>
+<path class="kc-edge" d="M 233.0 199.0 C 233.0 248.9, 233.0 260.1, 233.0 310.0" stroke="#1f77b4" fill="none" stroke-width="1.6" marker-end="url(#a-relational)"/>
+<path class="kc-edge" d="M 233.0 347.0 C 233.0 390.2, 233.0 399.8, 233.0 443.0" stroke="#1f77b4" fill="none" stroke-width="1.6" marker-end="url(#a-relational)"/>
+<path class="kc-edge" d="M 475.0 347.0 C 475.0 390.2, 475.0 399.8, 475.0 443.0" stroke="#d62728" fill="none" stroke-width="1.6" marker-end="url(#a-integrative)"/>
+<path class="kc-edge" d="M 475.0 347.0 C 475.0 450.1, 354.0 472.9, 354.0 576.0" stroke="#d62728" fill="none" stroke-width="1.6" marker-end="url(#a-integrative)"/>
+<path class="kc-edge" d="M 596.0 51.0 C 596.0 227.4, 475.0 266.6, 475.0 443.0" stroke="#2ca02c" fill="none" stroke-width="1.6" marker-end="url(#a-strategy)"/>
+<path class="kc-edge" d="M 596.0 51.0 C 596.0 287.2, 354.0 339.8, 354.0 576.0" stroke="#2ca02c" fill="none" stroke-width="1.6" marker-end="url(#a-strategy)"/>
+<path class="kc-edge" d="M 475.0 480.0 C 475.0 523.2, 354.0 532.8, 354.0 576.0" stroke="#1f77b4" fill="none" stroke-width="1.6" marker-end="url(#a-relational)"/>
+<path class="kc-edge" d="M 354.0 66.0 C 354.0 295.5, 354.0 346.5, 354.0 576.0" stroke="#1f77b4" fill="none" stroke-width="1.6" marker-end="url(#a-relational)"/>
+<a href="#rel-1" aria-label="prerequisite relation: produces">
+  <rect class="kc-elabel" x="181.0" y="98.3" width="58.8" height="18.0" rx="3"/>
+  <text class="kc-etext" x="186.0" y="108.3" fill="#555555">produces</text>
+</a>
+<a href="#rel-2" aria-label="prerequisite relation: ends in">
+  <rect class="kc-elabel" x="273.5" y="98.3" width="52.7" height="18.0" rx="3"/>
+  <text class="kc-etext" x="278.5" y="108.3" fill="#555555">ends in</text>
+</a>
+<a href="#rel-3" aria-label="prerequisite relation: qualifies">
+  <rect class="kc-elabel" x="484.0" y="246.3" width="64.9" height="18.0" rx="3"/>
+  <text class="kc-etext" x="489.0" y="256.3" fill="#555555">qualifies</text>
+</a>
+<a href="#rel-4" aria-label="strategy relation: selects">
+  <rect class="kc-elabel" x="343.6" y="98.3" width="52.7" height="18.0" rx="3"/>
+  <text class="kc-etext" x="348.6" y="108.3" fill="#2ca02c">selects</text>
+</a>
+<a href="#rel-5" aria-label="strategy relation: selects">
+  <rect class="kc-elabel" x="415.8" y="98.3" width="52.7" height="18.0" rx="3"/>
+  <text class="kc-etext" x="420.8" y="108.3" fill="#2ca02c">selects</text>
+</a>
+<a href="#rel-6" aria-label="strategy relation: selects">
+  <rect class="kc-elabel" x="477.4" y="98.3" width="52.7" height="18.0" rx="3"/>
+  <text class="kc-etext" x="482.4" y="108.3" fill="#2ca02c">selects</text>
+</a>
+<a href="#rel-7" aria-label="relational relation: sibling strategy">
+  <rect class="kc-elabel" x="242.0" y="246.3" width="107.6" height="18.0" rx="3"/>
+  <text class="kc-etext" x="247.0" y="256.3" fill="#1f77b4">sibling strategy</text>
+</a>
+<a href="#rel-8" aria-label="relational relation: sibling strategy">
+  <rect class="kc-elabel" x="242.0" y="379.3" width="107.6" height="18.0" rx="3"/>
+  <text class="kc-etext" x="247.0" y="389.3" fill="#1f77b4">sibling strategy</text>
+</a>
+<a href="#rel-9" aria-label="integrative relation: makes visible">
+  <rect class="kc-elabel" x="484.0" y="379.3" width="89.3" height="18.0" rx="3"/>
+  <text class="kc-etext" x="489.0" y="389.3" fill="#d62728">makes visible</text>
+</a>
+<a href="#rel-10" aria-label="integrative relation: makes visible">
+  <rect class="kc-elabel" x="144.8" y="379.3" width="89.3" height="18.0" rx="3"/>
+  <text class="kc-etext" x="149.8" y="389.3" fill="#d62728">makes visible</text>
+</a>
+<a href="#rel-11" aria-label="strategy relation: separates out">
+  <rect class="kc-elabel" x="59.4" y="98.3" width="89.3" height="18.0" rx="3"/>
+  <text class="kc-etext" x="64.4" y="108.3" fill="#2ca02c">separates out</text>
+</a>
+<a href="#rel-12" aria-label="strategy relation: separates out">
+  <rect class="kc-elabel" x="577.5" y="98.3" width="89.3" height="18.0" rx="3"/>
+  <text class="kc-etext" x="582.5" y="108.3" fill="#2ca02c">separates out</text>
+</a>
+<a href="#rel-13" aria-label="relational relation: independent pair">
+  <rect class="kc-elabel" x="307.6" y="512.3" width="107.6" height="18.0" rx="3"/>
+  <text class="kc-etext" x="312.6" y="522.3" fill="#1f77b4">independent pair</text>
+</a>
+<a href="#rel-14" aria-label="relational relation: led here">
+  <rect class="kc-elabel" x="363.0" y="118.3" width="58.8" height="18.0" rx="3"/>
+  <text class="kc-etext" x="368.0" y="128.3" fill="#1f77b4">led here</text>
+</a>
+<a href="/concepts/iterative-perturbation-process/" aria-label="iterative perturbation process">
+  <rect class="kc-node kc-strategy" x="14.0" y="14.0" width="196.0" height="52.0" rx="5"/>
+  <text class="kc-ntext" x="112.0" y="36.2">iterative perturbation</text>
+  <text class="kc-ntext" x="112.0" y="51.2">process</text>
+</a>
+<a href="/concepts/online-on-demand-cs-coursework/" aria-label="online, on-demand CS coursework">
+  <rect class="kc-node" x="256.0" y="14.0" width="196.0" height="52.0" rx="5"/>
+  <text class="kc-ntext" x="354.0" y="36.2">online, on-demand CS</text>
+  <text class="kc-ntext" x="354.0" y="51.2">coursework</text>
+</a>
+<a href="/concepts/drive-framework/" aria-label="DRIVE framework">
+  <rect class="kc-node kc-strategy" x="498.0" y="14.0" width="196.0" height="37.0" rx="5"/>
+  <text class="kc-ntext" x="596.0" y="36.2">DRIVE framework</text>
+</a>
+<a href="/concepts/spatial-injection/" aria-label="Spatial Injection">
+  <rect class="kc-node" x="135.0" y="162.0" width="196.0" height="37.0" rx="5"/>
+  <text class="kc-ntext" x="233.0" y="184.2">Spatial Injection</text>
+</a>
+<a href="/concepts/three-attempt-consistency-protocol/" aria-label="Three-Attempt Consistency Protocol">
+  <rect class="kc-node kc-strategy" x="377.0" y="162.0" width="196.0" height="52.0" rx="5"/>
+  <text class="kc-ntext" x="475.0" y="184.2">Three-Attempt Consistency</text>
+  <text class="kc-ntext" x="475.0" y="199.2">Protocol</text>
+</a>
+<a href="/concepts/axiomatic-replacement/" aria-label="Axiomatic Replacement">
+  <rect class="kc-node" x="135.0" y="310.0" width="196.0" height="37.0" rx="5"/>
+  <text class="kc-ntext" x="233.0" y="332.2">Axiomatic Replacement</text>
+</a>
+<a href="/concepts/one-shot-genai-resistance/" aria-label="One-Shot GenAI Resistance">
+  <rect class="kc-node" x="377.0" y="310.0" width="196.0" height="37.0" rx="5"/>
+  <text class="kc-ntext" x="475.0" y="332.2">One-Shot GenAI Resistance</text>
+</a>
+<a href="/concepts/contextual-embedding/" aria-label="Contextual Embedding">
+  <rect class="kc-node" x="135.0" y="443.0" width="196.0" height="37.0" rx="5"/>
+  <text class="kc-ntext" x="233.0" y="465.2">Contextual Embedding</text>
+</a>
+<a href="/concepts/cognitive-scaffolding/" aria-label="Cognitive Scaffolding">
+  <rect class="kc-node" x="377.0" y="443.0" width="196.0" height="37.0" rx="5"/>
+  <text class="kc-ntext" x="475.0" y="465.2">Cognitive Scaffolding</text>
+</a>
+<a href="/concepts/genai-dependence/" aria-label="GenAI dependence">
+  <rect class="kc-node" x="256.0" y="576.0" width="196.0" height="37.0" rx="5"/>
+  <text class="kc-ntext" x="354.0" y="598.2">GenAI dependence</text>
+</a>
+</svg>
+
+    </div>
+    <figcaption>
+      10 concepts and 14 relations.
+      Arrow colours mark the kind of relation:
+      <span class="key" style="--c:#555555">prerequisite</span>
+      <span class="key" style="--c:#1f77b4">relational</span>
+      <span class="key" style="--c:#d62728">integrative</span>
+      <span class="key" style="--c:#2ca02c">strategy</span>.
+      A green box is a strategy rather than a piece of domain knowledge.
+    </figcaption>
+  </figure>
+
+  <h2>The relations, written out</h2>
+  <p>Each arrow in the picture carries a sentence. Clicking an arrow brings you
+  to its row here.</p>
+  <ol class="relations">
+    <li id="rel-1">
+      <p class="pair">
+        <a href="/concepts/iterative-perturbation-process/">iterative perturbation process</a>
+        <span class="arrow" style="--c:#555555">&rarr;</span>
+        <a href="/concepts/one-shot-genai-resistance/">One-Shot GenAI Resistance</a>
+        <span class="chip" style="--c:#555555">prerequisite</span>
+      </p>
+      <p class="sentence">You run the iterative perturbation process on a question, and what comes out of it is a question that is One-Shot GenAI Resistant.</p>
+      <p class="src">
+        <a href="/papers/gilson2026perturbation/">Table 1</a>
+      </p>
+    </li>
+    <li id="rel-2">
+      <p class="pair">
+        <a href="/concepts/iterative-perturbation-process/">iterative perturbation process</a>
+        <span class="arrow" style="--c:#555555">&rarr;</span>
+        <a href="/concepts/three-attempt-consistency-protocol/">Three-Attempt Consistency Protocol</a>
+        <span class="chip" style="--c:#555555">prerequisite</span>
+      </p>
+      <p class="sentence">The last step of the iterative perturbation process is where the Three-Attempt Consistency Protocol runs.</p>
+      <p class="src">
+        <a href="/papers/gilson2026perturbation/">Table 1, step 8</a>
+      </p>
+    </li>
+    <li id="rel-3">
+      <p class="pair">
+        <a href="/concepts/three-attempt-consistency-protocol/">Three-Attempt Consistency Protocol</a>
+        <span class="arrow" style="--c:#555555">&rarr;</span>
+        <a href="/concepts/one-shot-genai-resistance/">One-Shot GenAI Resistance</a>
+        <span class="chip" style="--c:#555555">prerequisite</span>
+      </p>
+      <p class="sentence">A question only counts as One-Shot GenAI Resistant once the Three-Attempt Consistency Protocol has failed it on three separate trials.</p>
+      <p class="src">
+        <a href="/papers/gilson2026perturbation/">Table 1, step 8</a>
+      </p>
+    </li>
+    <li id="rel-4">
+      <p class="pair">
+        <a href="/concepts/iterative-perturbation-process/">iterative perturbation process</a>
+        <span class="arrow" style="--c:#2ca02c">&rarr;</span>
+        <a href="/concepts/spatial-injection/">Spatial Injection</a>
+        <span class="chip" style="--c:#2ca02c">strategy</span>
+      </p>
+      <p class="sentence">When a question&#39;s reasoning is purely symbolic, the process reaches for Spatial Injection.</p>
+      <p class="src">
+        <a href="/papers/gilson2026perturbation/">Table 1, step 5</a>
+      </p>
+    </li>
+    <li id="rel-5">
+      <p class="pair">
+        <a href="/concepts/iterative-perturbation-process/">iterative perturbation process</a>
+        <span class="arrow" style="--c:#2ca02c">&rarr;</span>
+        <a href="/concepts/axiomatic-replacement/">Axiomatic Replacement</a>
+        <span class="chip" style="--c:#2ca02c">strategy</span>
+      </p>
+      <p class="sentence">When a question can be answered by reciting a standard proof, the process reaches for Axiomatic Replacement.</p>
+      <p class="src">
+        <a href="/papers/gilson2026perturbation/">Table 1, step 5</a>
+      </p>
+    </li>
+    <li id="rel-6">
+      <p class="pair">
+        <a href="/concepts/iterative-perturbation-process/">iterative perturbation process</a>
+        <span class="arrow" style="--c:#2ca02c">&rarr;</span>
+        <a href="/concepts/contextual-embedding/">Contextual Embedding</a>
+        <span class="chip" style="--c:#2ca02c">strategy</span>
+      </p>
+      <p class="sentence">When a question is stated in general terms, the process reaches for Contextual Embedding.</p>
+      <p class="src">
+        <a href="/papers/gilson2026perturbation/">Table 1, step 5</a>
+      </p>
+    </li>
+    <li id="rel-7">
+      <p class="pair">
+        <a href="/concepts/spatial-injection/">Spatial Injection</a>
+        <span class="arrow" style="--c:#1f77b4">&rarr;</span>
+        <a href="/concepts/axiomatic-replacement/">Axiomatic Replacement</a>
+        <span class="chip" style="--c:#1f77b4">relational</span>
+      </p>
+      <p class="sentence">Spatial Injection changes what the question asks you to picture; Axiomatic Replacement changes what it lets you assume. They are two of the three strategies step 5 chooses between.</p>
+      <p class="src">
+        <a href="/papers/gilson2026perturbation/">Table 1, step 5</a>
+      </p>
+    </li>
+    <li id="rel-8">
+      <p class="pair">
+        <a href="/concepts/axiomatic-replacement/">Axiomatic Replacement</a>
+        <span class="arrow" style="--c:#1f77b4">&rarr;</span>
+        <a href="/concepts/contextual-embedding/">Contextual Embedding</a>
+        <span class="chip" style="--c:#1f77b4">relational</span>
+      </p>
+      <p class="sentence">Axiomatic Replacement changes what the question lets you assume; Contextual Embedding changes the setting it has to be answered in. They are two of the three strategies step 5 chooses between.</p>
+      <p class="src">
+        <a href="/papers/gilson2026perturbation/">Table 1, step 5</a>
+      </p>
+    </li>
+    <li id="rel-9">
+      <p class="pair">
+        <a href="/concepts/one-shot-genai-resistance/">One-Shot GenAI Resistance</a>
+        <span class="arrow" style="--c:#d62728">&rarr;</span>
+        <a href="/concepts/cognitive-scaffolding/">Cognitive Scaffolding</a>
+        <span class="chip" style="--c:#d62728">integrative</span>
+      </p>
+      <p class="sentence">Handing students a One-Shot GenAI-Resistant assignment is what puts a hallucination in front of them, which is what makes Cognitive Scaffolding something you can see in a transcript.</p>
+      <p class="src">
+        <a href="/papers/gilson2026perturbation/">Section 3</a>
+      </p>
+    </li>
+    <li id="rel-10">
+      <p class="pair">
+        <a href="/concepts/one-shot-genai-resistance/">One-Shot GenAI Resistance</a>
+        <span class="arrow" style="--c:#d62728">&rarr;</span>
+        <a href="/concepts/genai-dependence/">GenAI dependence</a>
+        <span class="chip" style="--c:#d62728">integrative</span>
+      </p>
+      <p class="sentence">The same assignment makes GenAI dependence visible, because a student who accepts the hallucinated answer hands in a different piece of work from one who catches it.</p>
+      <p class="src">
+        <a href="/papers/gilson2026perturbation/">Section 3</a>
+      </p>
+    </li>
+    <li id="rel-11">
+      <p class="pair">
+        <a href="/concepts/drive-framework/">DRIVE framework</a>
+        <span class="arrow" style="--c:#2ca02c">&rarr;</span>
+        <a href="/concepts/cognitive-scaffolding/">Cognitive Scaffolding</a>
+        <span class="chip" style="--c:#2ca02c">strategy</span>
+      </p>
+      <p class="sentence">Coding a transcript with the DRIVE framework is what separates Cognitive Scaffolding out of it as a component.</p>
+      <p class="src">
+        <a href="/papers/gilson2026perturbation/">Section 3.2</a>
+      </p>
+    </li>
+    <li id="rel-12">
+      <p class="pair">
+        <a href="/concepts/drive-framework/">DRIVE framework</a>
+        <span class="arrow" style="--c:#2ca02c">&rarr;</span>
+        <a href="/concepts/genai-dependence/">GenAI dependence</a>
+        <span class="chip" style="--c:#2ca02c">strategy</span>
+      </p>
+      <p class="sentence">The same coding separates GenAI dependence out as the other component.</p>
+      <p class="src">
+        <a href="/papers/gilson2026perturbation/">Section 3.2</a>
+      </p>
+    </li>
+    <li id="rel-13">
+      <p class="pair">
+        <a href="/concepts/cognitive-scaffolding/">Cognitive Scaffolding</a>
+        <span class="arrow" style="--c:#1f77b4">&rarr;</span>
+        <a href="/concepts/genai-dependence/">GenAI dependence</a>
+        <span class="chip" style="--c:#1f77b4">relational</span>
+      </p>
+      <p class="sentence">Cognitive Scaffolding and GenAI dependence are the two statistically independent components the analysis found, so a student&#39;s score on one does not fix their score on the other.</p>
+      <p class="src">
+        <a href="/papers/gilson2026perturbation/">Section 3.2</a>
+      </p>
+    </li>
+    <li id="rel-14">
+      <p class="pair">
+        <a href="/concepts/online-on-demand-cs-coursework/">online, on-demand CS coursework</a>
+        <span class="arrow" style="--c:#1f77b4">&rarr;</span>
+        <a href="/concepts/genai-dependence/">GenAI dependence</a>
+        <span class="chip" style="--c:#1f77b4">relational</span>
+      </p>
+      <p class="sentence">Students gave up online, on-demand coursework partly because large language models replaced it, which is the same behaviour the later study went looking for inside transcripts.</p>
+      <p class="src">
+        <a href="/papers/gilson2025oodcs/">Abstract</a>
+      </p>
+    </li>
+  </ol>
+</section>
+
+<section class="listview" aria-label="Concepts as a list">
+  <h2>Every concept</h2>
+  <h3>Designing the assignment</h3>
+  <ul class="concepts">
+    <li>
+      <a class="t" href="/concepts/one-shot-genai-resistance/">One-Shot GenAI Resistance</a>
+      <p class="def">One-Shot GenAI Resistance is a property of an assignment question: a target chatbot scores below 60% on it across three separate attempts with the same prompt.</p>
+      <p class="kc"><span>Given</span> an assignment question and a chatbot the class can actually reach, <span>you can</span> decide whether the question is resistant by testing it three times against the 60% threshold.</p>
+      <span class="alts">Also written: One-Shot Generative AI Resistance · One-Shot GenAI-Resistant · One-Shot GenAI Resistant · AI-resistant assignment</span>
+    </li>
+    <li>
+      <a class="t" href="/concepts/iterative-perturbation-process/">iterative perturbation process</a>
+      <p class="def">The iterative perturbation process is an eight-step, instructor-led loop that rewrites an assignment question until a target chatbot fails it three times running.</p>
+      <p class="kc"><span>Given</span> a question the chatbot already answers well, <span>you can</span> run the eight-step loop until it fails, choosing a perturbation each pass.</p>
+      <span class="alts">Also written: Adversarial Iterative Perturbation · Adversarial Assignment Perturbation · iterative perturbation method</span>
+    </li>
+    <li>
+      <a class="t" href="/concepts/spatial-injection/">Spatial Injection</a>
+      <p class="def">Spatial Injection is a perturbation strategy that adds reasoning requiring visual or geometric interpretation to a question, so a model must track layout as well as arithmetic.</p>
+      <p class="kc"><span>Given</span> a question whose reasoning is purely symbolic, <span>you can</span> add a visual or geometric constraint the model has to track.</p>
+      <span class="alts">Also written: spatial constraint</span>
+    </li>
+    <li>
+      <a class="t" href="/concepts/axiomatic-replacement/">Axiomatic Replacement</a>
+      <p class="def">Axiomatic Replacement is a perturbation strategy that alters a question&#39;s fundamental logical premises or axioms to prevent a model retrieving a memorised proof.</p>
+      <p class="kc"><span>Given</span> a question answerable by reciting a standard proof, <span>you can</span> replace the axioms with an unfamiliar system of the same structure.</p>
+      <span class="alts">Also written: axiom replacement</span>
+    </li>
+    <li>
+      <a class="t" href="/concepts/contextual-embedding/">Contextual Embedding</a>
+      <p class="def">Contextual Embedding is a perturbation strategy that places a question inside unfamiliar, class-specific context which the grading rubric then requires the answer to use.</p>
+      <p class="kc"><span>Given</span> a question stated in general terms, <span>you can</span> embed it in class-specific context the rubric requires the answer to use.</p>
+      <span class="alts">Also written: contextual embedding strategy</span>
+    </li>
+    <li>
+      <a class="t" href="/concepts/three-attempt-consistency-protocol/">Three-Attempt Consistency Protocol</a>
+      <p class="def">The Three-Attempt Consistency Protocol re-prompts a model with the exact query two further times, and classifies a question resistant only if all three attempts fail.</p>
+      <p class="kc"><span>Given</span> a chatbot that has failed a question once, <span>you can</span> re-prompt twice with the exact query and classify only on three failures.</p>
+      <span class="alts">Also written: three-attempt protocol · result validity check</span>
+    </li>
+  </ul>
+  <h3>Reading the transcript</h3>
+  <ul class="concepts">
+    <li>
+      <a class="t" href="/concepts/cognitive-scaffolding/">Cognitive Scaffolding</a>
+      <p class="def">Cognitive Scaffolding is an engagement pattern in which a student recognises that a chatbot has hallucinated and supplies context to steer it toward a correct answer.</p>
+      <p class="kc"><span>Given</span> a student&#39;s chat transcript on a perturbed assignment, <span>you can</span> identify where the student caught the model and steered it to a correct answer.</p>
+      <span class="alts">Also written: cognitive scaffolding strategy · collaborative repair</span>
+    </li>
+    <li>
+      <a class="t" href="/concepts/genai-dependence/">GenAI dependence</a>
+      <p class="def">GenAI dependence is an engagement pattern in which a student accepts a chatbot&#39;s hallucinated answer without critically evaluating it.</p>
+      <p class="kc"><span>Given</span> a student&#39;s chat transcript on a perturbed assignment, <span>you can</span> identify where the student accepted output without evaluating it.</p>
+      <span class="alts">Also written: Dependency · Dependence · cognitive outsourcing</span>
+    </li>
+    <li>
+      <a class="t" href="/concepts/drive-framework/">DRIVE framework</a>
+      <p class="def">The DRIVE framework is a taxonomy for generative AI interactions that separates how a student steers an exchange from how they articulate what they know.</p>
+      <p class="kc"><span>Given</span> a query-response pair from a student-chatbot transcript, <span>you can</span> tag it on directive reasoning and visible expertise.</p>
+      <span class="alts">Also written: Deep Reasoning in Virtual Education · DRIVE taxonomy</span>
+    </li>
+  </ul>
+  <h3>Why students study outside class</h3>
+  <ul class="concepts">
+    <li>
+      <a class="t" href="/concepts/online-on-demand-cs-coursework/">online, on-demand CS coursework</a>
+      <p class="def">Online, on-demand CS coursework is computing coursework a student takes outside a degree programme, on their own schedule, to supplement that programme.</p>
+      <p class="kc"><span>Given</span> a student&#39;s account of studying outside their degree programme, <span>you can</span> recognise it as online, on-demand CS coursework and ask what made them start and stop.</p>
+      <span class="alts">Also written: OOD CS coursework · OODCS · on-demand computer science coursework</span>
+    </li>
+  </ul>
+</section>
+
+<h2>Where this comes from</h2>
+<p>
+  The way these are written down — knowledge components in condition-response
+  form, typed and labelled edges between them, a rule that an edge you cannot
+  write a sentence for is not an edge — is a method I built for curriculum
+  work, described in <em>Building and Analysing a Knowledge-Component Graph for
+  a Course Unit</em> (September 2026). It rests on the knowledge-learning-instruction
+  framework of Koedinger, Corbett and Perfetti. Here it is pointed at my own
+  research terms instead of a course.
+</p>
+<p class="note">
+  One thing this picture does not carry. In a course graph, each edge has a
+  weight: the number of graded items that make a student use both of its ends,
+  and an edge with no such item gets flagged. There are no items here, so there
+  are no weights, and nothing on this page should be read as a measurement of
+  how well-connected these ideas are in anybody's head.
+</p>
 
 </main>
 
@@ -105,7 +475,7 @@
     <p class="meta">
       Everything I've written here is CC&nbsp;BY&nbsp;4.0. The papers belong to
       their publishers. This page loads from this site alone and keeps nothing
-      about your visit. Build <code>791f26c7</code>.
+      about your visit. Build <code>d90d1a8d</code>.
     </p>
   </div>
 </footer>
