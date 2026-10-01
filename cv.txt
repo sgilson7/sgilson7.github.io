@@ -33,10 +33,6 @@ PUBLICATIONS
       Artificial Intelligence in Education (AIED 2026), LNAI 16585, pp. 440-449
       doi:10.1007/978-3-032-29770-9_48
 
-2026  Applications of AI Literacy to GenAI-Assisted Game Development
-      Sam Gilson
-      Guest lecture, CSC 484/584 Game AI, NC State University
-
 2026  Confirming Correct, Missing the Rest: LLM Tutoring Agents Struggle Where Feedback Matters Most
       Tahreem Yasir, Wenbo Li, Sam Gilson, Sutapa Dey Tithi, Xiaoyi Tian and Tiffany Barnes
       BEA 2026, pp. 819-840
@@ -55,6 +51,11 @@ PUBLICATIONS
       Sam Gilson, Tiffany Barnes, Mahzabin Tamanna and Saminur Islam
       Proceedings of the Twelfth ACM Conference on Learning @ Scale (L@S '25), pp. 271-275
       doi:10.1145/3698205.3733938
+
+TALKS
+------------------------------------------------------------------------
+2026  Applications of AI Literacy to GenAI-Assisted Game Development
+      Guest lecture, CSC 484/584 Game AI, NC State University
 
 TEACHING
 ------------------------------------------------------------------------
