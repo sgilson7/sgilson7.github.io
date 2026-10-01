@@ -3,22 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Strong Prompt Structure — Sam Gilson</title>
-<meta name="description" content="Strong Prompt Structure is a four-part shape for a prompt: establish context, require justification at every step, build in self-questioning, and plan the correction.">
-<link rel="canonical" href="https://sgilson7.github.io/concepts/strong-prompt-structure/">
+<title>Subgoal Label — Sam Gilson</title>
+<meta name="description" content="A Subgoal Label names the function a step serves in any problem of its type, so a learner can separate a solution&#39;s structure from one example&#39;s surface details.">
+<link rel="canonical" href="https://sgilson7.github.io/concepts/subgoal-label/">
 
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Sam Gilson">
-<meta property="og:title" content="Strong Prompt Structure">
-<meta property="og:description" content="Strong Prompt Structure is a four-part shape for a prompt: establish context, require justification at every step, build in self-questioning, and plan the correction.">
-<meta property="og:url" content="https://sgilson7.github.io/concepts/strong-prompt-structure/">
+<meta property="og:title" content="Subgoal Label">
+<meta property="og:description" content="A Subgoal Label names the function a step serves in any problem of its type, so a learner can separate a solution&#39;s structure from one example&#39;s surface details.">
+<meta property="og:url" content="https://sgilson7.github.io/concepts/subgoal-label/">
 <meta property="og:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
 <meta property="og:image:alt" content="Sam Gilson">
 <meta name="twitter:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Strong Prompt Structure">
-<meta name="twitter:description" content="Strong Prompt Structure is a four-part shape for a prompt: establish context, require justification at every step, build in self-questioning, and plan the correction.">
+<meta name="twitter:title" content="Subgoal Label">
+<meta name="twitter:description" content="A Subgoal Label names the function a step serves in any problem of its type, so a learner can separate a solution&#39;s structure from one example&#39;s surface details.">
 <meta name="author" content="Sam Gilson">
 
 <link rel="stylesheet" href="/styles.css?v=d7ba132e">
@@ -28,10 +28,10 @@
 {
   "@context": "https://schema.org",
   "@type": "DefinedTerm",
-  "name": "Strong Prompt Structure",
-  "description": "Strong Prompt Structure is a four-part shape for a prompt: establish context, require justification at every step, build in self-questioning, and plan the correction.",
-  "url": "https://sgilson7.github.io/concepts/strong-prompt-structure/",
-  "alternateName": ["Procedure B", "structure of a strong prompt"],
+  "name": "Subgoal Label",
+  "description": "A Subgoal Label names the function a step serves in any problem of its type, so a learner can separate a solution's structure from one example's surface details.",
+  "url": "https://sgilson7.github.io/concepts/subgoal-label/",
+  "alternateName": ["subgoal labelling", "subgoal-labeled instruction"],
   "inDefinedTermSet": {"@type": "DefinedTermSet", "name": "Sam Gilson concepts", "url": "https://sgilson7.github.io/concepts/"}
 }
 </script>
@@ -59,47 +59,48 @@
 <section class="stripe"><div class="wrap">
 
 <p class="kicker">Concept</p>
-<h1>Strong Prompt Structure</h1>
+<h1>Subgoal Label</h1>
 
 
-<p class="lede definition">Strong Prompt Structure is a four-part shape for a prompt: establish context, require justification at every step, build in self-questioning, and plan the correction.</p>
+<p class="lede definition">A Subgoal Label names the function a step serves in any problem of its type, so a learner can separate a solution&#39;s structure from one example&#39;s surface details.</p>
 
-<p class="scope">A teaching routine from one guest lecture, taught alongside a worked weak-to-strong rewrite. It has not been evaluated as an intervention.</p>
-<p class="alts">Also written: Procedure B · structure of a strong prompt</p>
+<p class="scope">A construct from the computing education literature, where it was studied for procedures a learner performs. The three procedures on this site apply it to appraising a chatbot&#39;s solution instead, which is a different target.</p>
+<p class="alts">Also written: subgoal labelling · subgoal-labeled instruction</p>
 
 <dl class="facts">
   <dt>Defined in</dt>
   <dd>Gilson, 2026 &middot; 
-    <a href="/talks/gilson2026csc484lecture/">Applications of AI Literacy to GenAI-Assisted Game Development</a>, Procedure B, slide 19
+    <a href="/talks/gilson2026csc484lecture/">Applications of AI Literacy to GenAI-Assisted Game Development</a>, Procedures A, B and C
   </dd>
 </dl>
 
 
 <dl class="sources">
   <dt>Introduced in</dt>
-  <dd><a href="/talks/gilson2026csc484lecture/">Sam Gilson. Applications of AI Literacy to GenAI-Assisted Game Development. Guest lecture, CSC 484/584 Game AI, NC State University.</a>
+  <dd><a href="https://doi.org/10.1145/2787622.2787733">Briana B. Morrison, Lauren E. Margulieux, Mark Guzdial. 2015. Subgoals, Context, and Worked Examples in Learning Computing Problem Solving. Proceedings of ICER &#39;15, 21-29.</a>
   </dd>
-  <dt>Builds on</dt>
-  <dd><a href="https://doi.org/10.1145/2787622.2787733">Briana B. Morrison, Lauren E. Margulieux, Mark Guzdial. 2015. Subgoals, Context, and Worked Examples in Learning Computing Problem Solving. Proceedings of ICER &#39;15, 21-29.</a><span class="why">B1-B4 are subgoal labels.</span>
+  <dt>Used in</dt>
+  <dd><a href="/talks/gilson2026csc484lecture/">Sam Gilson. Applications of AI Literacy to GenAI-Assisted Game Development. Guest lecture, CSC 484/584 Game AI, NC State University.</a><span class="why">A0-A6, B1-B4 and C1-C6 are subgoal labels, and each appears three times: in a reference box, in a worked example, and in the student&#39;s own task.</span>
   </dd>
 </dl>
 
-<p>Most prompts a student writes are the problem pasted in with “solve this” in
-front of it. What comes back is an answer, which is the one thing that does not
-help them.</p>
-<p>Four parts change that. Say which course and which module and what the claim
-is, so the chatbot is working in the right subject rather than a plausible one.
-Require every step to name the rule or the earlier line it rests on, which is
-what makes an invalid step visible instead of smooth. Ask it to list its
-assumptions and check them before it finishes. And decide in advance what you
-will say when you find an error, because writing that sentence under time
-pressure is how students end up accepting the answer instead.</p>
-<p>The last one is the part people skip. It is also the only part that is about
-the student rather than the machine.</p>
+<p>A worked example shows a student one solved problem. The trouble is that a
+student looking at it cannot always tell which parts are the method and which
+parts are this particular question, so what they take away is the question.</p>
+<p>A subgoal label names what a step is for. Not “substitute k+1”, but “test a
+small case” — a description that still makes sense on a problem with different
+numbers in it. The labels are repeated in three places on purpose: a box the
+student can refer to, a worked example where they can see the step being done,
+and the task where they do it themselves. Same label, same words, all three
+times.</p>
+<p>The computing education work on this studied procedures a learner performs, and
+the procedures on this site point them somewhere else: at judging what a chatbot
+has written. That is a different target, and whether labels transfer to it is a
+question rather than a finding.</p>
 
 <p class="neighbours">
-  <strong>Nearby terms in the literature:</strong> prompt engineering, chain-of-thought prompting.
-  None of these is a synonym for Strong Prompt Structure; they name related work this
+  <strong>Nearby terms in the literature:</strong> worked example, cognitive load, schema acquisition.
+  None of these is a synonym for Subgoal Label; they name related work this
   paper did not measure against.
 </p>
 </div></section><section class="stripe"><div class="wrap">
@@ -123,16 +124,16 @@ the student rather than the machine.</p>
     <p class="def">A Spatial or Counting Miscount is a failure mode in which a chatbot counts placements that break the constraint, or counts the same one twice.</p>
   </li>
   <li>
+    <a class="t" href="/concepts/strong-prompt-structure/">Strong Prompt Structure</a>
+    <p class="def">Strong Prompt Structure is a four-part shape for a prompt: establish context, require justification at every step, build in self-questioning, and plan the correction.</p>
+  </li>
+  <li>
     <a class="t" href="/concepts/collaborative-prompting/">Collaborative Prompting</a>
     <p class="def">Collaborative Prompting is a six-step routine in which a student forbids the final answer, takes one step at a time, and checks each against cases computed by hand.</p>
   </li>
   <li>
     <a class="t" href="/concepts/genai-assisted-prototyping-procedure/">GenAI-Assisted Prototyping Procedure</a>
     <p class="def">The GenAI-Assisted Prototyping Procedure is a nine-stage pipeline, brief to handoff, in which a person reads the plan, plays the build, and deploys it.</p>
-  </li>
-  <li>
-    <a class="t" href="/concepts/subgoal-label/">Subgoal Label</a>
-    <p class="def">A Subgoal Label names the function a step serves in any problem of its type, so a learner can separate a solution&#39;s structure from one example&#39;s surface details.</p>
   </li>
   <li>
     <a class="t" href="/concepts/ai-literacy/">AI Literacy</a>
@@ -154,8 +155,8 @@ the student rather than the machine.</p>
 </div></section><section class="stripe"><div class="wrap">
 <h2>What people usually want to know</h2>
 <ul class="questions">
-  <li>What makes a prompt good for a mathematics problem?</li>
-  <li>How should a student write a prompt so they can catch a wrong answer?</li>
+  <li>What is a subgoal label and why does it help students learn a procedure?</li>
+  <li>How do you teach a procedure so students can reuse it on a new problem?</li>
 </ul>
 
 <p class="backlink"><a href="/concepts/">All concepts</a></p>

@@ -55,6 +55,10 @@ ORCID: https://orcid.org/0009-0002-2394-8649
   Also written: Procedure C, scaffolding strong prompts
 - [GenAI-Assisted Prototyping Procedure](https://sgilson7.github.io/concepts/genai-assisted-prototyping-procedure/): The GenAI-Assisted Prototyping Procedure is a nine-stage pipeline, brief to handoff, in which a person reads the plan, plays the build, and deploys it.
   Also written: GenAI-assisted prototyping, agentic prototyping procedure
+- [Subgoal Label](https://sgilson7.github.io/concepts/subgoal-label/): A Subgoal Label names the function a step serves in any problem of its type, so a learner can separate a solution's structure from one example's surface details.
+  Also written: subgoal labelling, subgoal-labeled instruction
+- [AI Literacy](https://sgilson7.github.io/concepts/ai-literacy/): AI Literacy is the set of competencies that let a person critically evaluate AI technologies, and communicate and collaborate effectively with AI.
+  Also written: artificial intelligence literacy
 
 ## Other pages
 
