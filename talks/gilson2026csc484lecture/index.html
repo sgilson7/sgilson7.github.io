@@ -1,0 +1,888 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Applications of AI Literacy to GenAI-Assisted Game Development — Sam Gilson</title>
+<meta name="description" content="Applications of AI Literacy to GenAI-Assisted Game Development — CSC 484/584 Game AI, North Carolina State University. All 55 slides and 37 described figures.">
+<link rel="canonical" href="https://sgilson7.github.io/talks/gilson2026csc484lecture/">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Sam Gilson">
+<meta property="og:title" content="Applications of AI Literacy to GenAI-Assisted Game Development">
+<meta property="og:description" content="Applications of AI Literacy to GenAI-Assisted Game Development — CSC 484/584 Game AI, North Carolina State University. All 55 slides and 37 described figures.">
+<meta property="og:url" content="https://sgilson7.github.io/talks/gilson2026csc484lecture/">
+<meta property="og:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta property="og:image:alt" content="Sam Gilson">
+<meta name="twitter:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Applications of AI Literacy to GenAI-Assisted Game Development">
+<meta name="twitter:description" content="Applications of AI Literacy to GenAI-Assisted Game Development — CSC 484/584 Game AI, North Carolina State University. All 55 slides and 37 described figures.">
+<meta name="author" content="Sam Gilson">
+
+<link rel="stylesheet" href="/styles.css?v=ef198161">
+<link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "Applications of AI Literacy to GenAI-Assisted Game Development",
+  "headline": "Applications of AI Literacy to GenAI-Assisted Game Development",
+  "url": "https://sgilson7.github.io/talks/gilson2026csc484lecture/",
+  "datePublished": "2026-09-17",
+  "inLanguage": "en",
+  "learningResourceType": "Lecture",
+  "author": {"@type": "Person", "name": "Sam Gilson", "@id": "https://orcid.org/0009-0002-2394-8649"},
+  "publisher": {"@type": "Organization", "name": "North Carolina State University"},
+  "associatedMedia": {"@type": "MediaObject", "encodingFormat": "application/pdf", "contentUrl": "https://sgilson7.github.io/talks/gilson2026csc484lecture.pdf"}
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="band">
+  <div class="wrap">
+    <p class="brand"><a href="/">Sam Gilson</a></p>
+    <nav aria-label="Sections">
+      <a href="/">Home</a>
+      <a href="/publications/">Publications</a>
+      <a href="/dissertation/">Dissertation</a>
+      <a href="/concepts/">Concepts</a>
+      <a href="/projects/">Tools</a>
+      <a href="/teaching/">Teaching</a>
+      <a href="/cv/">CV</a>
+      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google&nbsp;Scholar</a>
+    </nav>
+  </div>
+</header>
+
+
+<main id="main" class="">
+<section class="stripe"><div class="wrap">
+
+<p class="kicker">Talk</p>
+<h1>Applications of AI Literacy to GenAI-Assisted Game Development</h1>
+<p class="lede">CSC 484/584 Game AI, North Carolina State University. 17 September 2026.</p>
+
+<dl class="facts">
+  <dt>Slides</dt>
+  <dd><a href="/talks/gilson2026csc484lecture.pdf">Download as PDF</a> &middot; 55 slides</dd>
+  <dt>Figures</dt>
+  <dd>37, each described in full</dd>
+</dl>
+
+<p class="note">
+  Everything on the slides is below, in order. The PDF is printed from this
+  page, so the two say the same thing. The figure descriptions were written
+  for this page; the deck did not carry any.
+</p>
+
+
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-1" aria-labelledby="h-slide-1">
+  <p class="slideno"><a href="#slide-1">Slide 1</a></p>
+  <h2 id="h-slide-1" data-quotation="verbatim">Applications of AI Literacy to GenAI-Assisted Game Development</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">CSC 484/584 Game AI, guest lecture</li>
+    <li data-quotation="verbatim">Sam Gilson, PhD student in Dr. Barnes’ Game2Learn lab</li>
+    <li data-quotation="verbatim">September 2026</li>
+  </ul>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-2" aria-labelledby="h-slide-2">
+  <p class="slideno"><a href="#slide-2">Slide 2</a></p>
+  <h2 id="h-slide-2" data-quotation="verbatim">Four parts</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">Context, justification, and system architecture for easily deployable, browser based artifacts</li>
+    <li data-quotation="verbatim">AI Literacy: Catching hallucinations, prompt engineering, collaborative prompting</li>
+    <li data-quotation="verbatim">From design docs to a game prototype</li>
+    <li data-quotation="verbatim">Ideas / Examples for project; multiplayer with no server, Q-learning for enemies</li>
+  </ul>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-3" aria-labelledby="h-slide-3">
+  <p class="slideno"><a href="#slide-3">Slide 3</a></p>
+  <h2 id="h-slide-3" data-quotation="verbatim">1. Why am I here talking to you?</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">Motivations for Game Engine + AI Design</li>
+  </ul>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-4" aria-labelledby="h-slide-4">
+  <p class="slideno"><a href="#slide-4">Slide 4</a></p>
+  <h2 id="h-slide-4" data-quotation="verbatim">Exclaim Teacher Professional Development</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">Six weeks around one classroom chatbot called ClassChat</li>
+    <li data-quotation="verbatim">Developers spent two weeks learning it</li>
+    <li data-quotation="verbatim">Then four weeks building tools for teachers, with teachers</li>
+    <li data-quotation="verbatim">Five teams, five tools</li>
+  </ul>
+  <figure class="slidefig">
+    <img src="/img/talks/csc484/image2.png?v=ef198161" alt="A six-week timeline drawn as a row of blocks. Weeks 1 and 2 are shaded under the heading &#39;5 undergraduate developers learn ClassChat&#39;, covering codebase, GitHub and guided features. A break follows. Weeks 3 to 6 are shaded under &#39;9 K-12 teachers join: five teams, one developer and one or two teachers each&#39; -- week 3 takes a classroom concern to a scoped feature, weeks 4 and 5 are build with teacher and cross-team testing, and week 6 is revise, document, School AI Plan." loading="lazy">
+    <figcaption>A six-week timeline drawn as a row of blocks. Weeks 1 and 2 are shaded under the heading &#39;5 undergraduate developers learn ClassChat&#39;, covering codebase, GitHub and guided features. A break follows. Weeks 3 to 6 are shaded under &#39;9 K-12 teachers join: five teams, one developer and one or two teachers each&#39; -- week 3 takes a classroom concern to a scoped feature, weeks 4 and 5 are build with teacher and cross-team testing, and week 6 is revise, document, School AI Plan.</figcaption>
+  </figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-5" aria-labelledby="h-slide-5">
+  <p class="slideno"><a href="#slide-5">Slide 5</a></p>
+  <h2 id="h-slide-5" data-quotation="verbatim">What teachers asked for</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">Help when a student is stuck and won’t ask</li>
+    <li data-quotation="verbatim">Warm-ups and exit tickets from their own files</li>
+    <li data-quotation="verbatim">Feedback on individual submissions</li>
+    <li data-quotation="verbatim">Practice analytics and quizzes</li>
+    <li data-quotation="verbatim">All of it went into the chatbot</li>
+  </ul>
+  <figure class="slidefig">
+    <img src="/img/talks/csc484/image1.png?v=ef198161" alt="Five labelled boxes with arrows converging on one box. The five are help-seeking during independent work; warm-ups and exit tickets from course files; individual feedback on submissions; topic-level analytics and quizzes; and collaborative boards with a coach. They all point at a box reading &#39;ClassChat: Flask, SQL, a server, accounts and logs&#39;, annotated as the one setting the developer knew and the teacher had trained on. A note beside it reads: so everything went in, whether or not a shared chatbot was the right home for it." loading="lazy">
+    <figcaption>Five labelled boxes with arrows converging on one box. The five are help-seeking during independent work; warm-ups and exit tickets from course files; individual feedback on submissions; topic-level analytics and quizzes; and collaborative boards with a coach. They all point at a box reading &#39;ClassChat: Flask, SQL, a server, accounts and logs&#39;, annotated as the one setting the developer knew and the teacher had trained on. A note beside it reads: so everything went in, whether or not a shared chatbot was the right home for it.</figcaption>
+  </figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-6" aria-labelledby="h-slide-6">
+  <p class="slideno"><a href="#slide-6">Slide 6</a></p>
+  <h2 id="h-slide-6" data-quotation="verbatim">Findings relative to shared technical setting</h2>
+  <figure class="slidefig">
+    <img src="/img/talks/csc484/image3.png?v=ef198161" alt="Two columns of quoted concerns. Under &#39;developers said&#39;: always having to debug a lot after AI wrote the foundation; a change looked right and the app still failed, in database or runtime state; peers&#39; untested branches and long uploads timing out the server; permissions and security roles left unclear, so features were held back. Under &#39;teachers said&#39;: debugged and fully developed before it reaches a classroom; district approval required, with one district allowing a single student AI tool; privacy, meaning what persists, who sees it and what students consent to; a fallback if the platform is unavailable, and support after the summer." loading="lazy">
+    <figcaption>Two columns of quoted concerns. Under &#39;developers said&#39;: always having to debug a lot after AI wrote the foundation; a change looked right and the app still failed, in database or runtime state; peers&#39; untested branches and long uploads timing out the server; permissions and security roles left unclear, so features were held back. Under &#39;teachers said&#39;: debugged and fully developed before it reaches a classroom; district approval required, with one district allowing a single student AI tool; privacy, meaning what persists, who sees it and what students consent to; a fallback if the platform is unavailable, and support after the summer.</figcaption>
+  </figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-7" aria-labelledby="h-slide-7">
+  <p class="slideno"><a href="#slide-7">Slide 7</a></p>
+  <h2 id="h-slide-7" data-quotation="verbatim">Design Takeaways</h2>
+  <figure class="slidefig">
+    <img src="/img/talks/csc484/image17.png?v=ef198161" alt="Four rows, each turning a constraint on the left into a design property on the right. Debugging server and database state becomes &#39;testable in seconds&#39;: a Rust core with no graphics or DOM, the whole logic running under cargo test. Privacy, consent and what persists becomes &#39;collects nothing&#39;: no server, no account, no network request after load, checkable in DevTools. District approval of one tool becomes &#39;deploys anywhere&#39;: static files on GitHub Pages, opened on any school laptop. Support after the summer becomes &#39;one pattern to learn&#39;: core, shim and page, learned once and used for many artifacts, with the docs as the handoff." loading="lazy">
+    <figcaption>Four rows, each turning a constraint on the left into a design property on the right. Debugging server and database state becomes &#39;testable in seconds&#39;: a Rust core with no graphics or DOM, the whole logic running under cargo test. Privacy, consent and what persists becomes &#39;collects nothing&#39;: no server, no account, no network request after load, checkable in DevTools. District approval of one tool becomes &#39;deploys anywhere&#39;: static files on GitHub Pages, opened on any school laptop. Support after the summer becomes &#39;one pattern to learn&#39;: core, shim and page, learned once and used for many artifacts, with the docs as the handoff.</figcaption>
+  </figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-8" aria-labelledby="h-slide-8">
+  <p class="slideno"><a href="#slide-8">Slide 8</a></p>
+  <h2 id="h-slide-8" data-quotation="verbatim">Rust + WASM + JS Architecture for deployable artifacts</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">Rust core holds all the logic, no graphics</li>
+    <li data-quotation="verbatim">A wasm shim to mediate transfer from rust core to graphical engine</li>
+    <li data-quotation="verbatim">A plain JS page draws what core sends</li>
+    <li data-quotation="verbatim">Static files on GitHub Pages</li>
+    <li data-quotation="verbatim">Content is JSON; state is a save file</li>
+  </ul>
+  <figure class="slidefig">
+    <img src="/img/talks/csc484/image10.png?v=ef198161" alt="A left-to-right pipeline of four boxes. crates/core, Rust with no graphics, decides everything and its tests run in seconds. crates/wasm, a wasm-bindgen shim, decides nothing and moves strings across. web/app.js, canvas and vanilla JS, draws the numbers core sent and never recomputes one. GitHub Pages static files: no server, no account, no network after load. Two notes point in: data/*.json holds every string a player reads, and the save file is the database, downloaded and re-uploaded." loading="lazy">
+    <figcaption>A left-to-right pipeline of four boxes. crates/core, Rust with no graphics, decides everything and its tests run in seconds. crates/wasm, a wasm-bindgen shim, decides nothing and moves strings across. web/app.js, canvas and vanilla JS, draws the numbers core sent and never recomputes one. GitHub Pages static files: no server, no account, no network after load. Two notes point in: data/*.json holds every string a player reads, and the save file is the database, downloaded and re-uploaded.</figcaption>
+  </figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-9" aria-labelledby="h-slide-9">
+  <p class="slideno"><a href="#slide-9">Slide 9</a></p>
+  <h2 id="h-slide-9" data-quotation="verbatim">Proof of Concept 1</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">PDF redactor</li>
+  </ul>
+  <figure class="slidefig">
+    <img src="/img/talks/csc484/image4.png?v=ef198161" alt="Three document outlines in sequence. In the first, a name on the page is ringed in red: find the name and its variants. In the second that area is a solid black block: rasterise, and paint the box into the bitmap. In the third the solid block remains: write a new PDF from the bitmaps only." loading="lazy">
+    <figcaption>Three document outlines in sequence. In the first, a name on the page is ringed in red: find the name and its variants. In the second that area is a solid black block: rasterise, and paint the box into the bitmap. In the third the solid block remains: write a new PDF from the bitmaps only.</figcaption>
+  </figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-10" aria-labelledby="h-slide-10">
+  <p class="slideno"><a href="#slide-10">Slide 10</a></p>
+  <h2 id="h-slide-10" data-quotation="verbatim">Proof of Concept 2</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">Perturbation Workbench</li>
+    <li data-quotation="verbatim">Goes with our AIED 2026 paper</li>
+    <li data-quotation="verbatim">You paste the query into a fresh chatbot</li>
+    <li data-quotation="verbatim">Grade it against a rubric you fixed first</li>
+    <li data-quotation="verbatim">Too easy? Perturb it and try again</li>
+    <li data-quotation="verbatim">Three misses in a row, and it’s resistant</li>
+  </ul>
+  <figure class="slidefig">
+    <img src="/img/talks/csc484/image5.png?v=ef198161" alt="A flowchart. &#39;Question v1&#39; leads to a baseline step, pasting the exact query, then to a decision diamond asking whether it graded at or above 60 percent. The &#39;no, three times&#39; branch leads to a box marked resistant, three attempts below. The &#39;yes: not resistant&#39; branch leads to a perturb step offering spatial, axiomatic and contextual changes, which loops back to the question as a new version." loading="lazy">
+    <figcaption>A flowchart. &#39;Question v1&#39; leads to a baseline step, pasting the exact query, then to a decision diamond asking whether it graded at or above 60 percent. The &#39;no, three times&#39; branch leads to a box marked resistant, three attempts below. The &#39;yes: not resistant&#39; branch leads to a perturb step offering spatial, axiomatic and contextual changes, which loops back to the question as a new version.</figcaption>
+  </figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-11" aria-labelledby="h-slide-11">
+  <p class="slideno"><a href="#slide-11">Slide 11</a></p>
+  <h2 id="h-slide-11" data-quotation="verbatim">Proof of Concepts worked, so I made some games</h2>
+  <figure class="slidefig">
+    <img src="/img/talks/csc484/image28.png?v=ef198161" alt="Five repository boxes with arrows. pdf-redactor, FERPA redaction in the browser, and perturbation-workbench, the dissertation&#39;s protocol tool, both feed into gear-master, a gear auto-battler with Q-learning agents. gear-master in turn feeds gear-master-2d, an open-world RPG on the same engine, and floodline, a multiplayer city builder with no server." loading="lazy">
+    <figcaption>Five repository boxes with arrows. pdf-redactor, FERPA redaction in the browser, and perturbation-workbench, the dissertation&#39;s protocol tool, both feed into gear-master, a gear auto-battler with Q-learning agents. gear-master in turn feeds gear-master-2d, an open-world RPG on the same engine, and floodline, a multiplayer city builder with no server.</figcaption>
+  </figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-12" aria-labelledby="h-slide-12">
+  <p class="slideno"><a href="#slide-12">Slide 12</a></p>
+  <h2 id="h-slide-12" data-quotation="verbatim">2. AI Literacy</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">How a chatbot writes a proof</li>
+  </ul>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-13" aria-labelledby="h-slide-13">
+  <p class="slideno"><a href="#slide-13">Slide 13</a></p>
+  <h2 id="h-slide-13" data-quotation="verbatim">One token at a time</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">Each token is a draw from a distribution</li>
+    <li data-quotation="verbatim">Conditioned on the internet</li>
+    <li data-quotation="verbatim">Pick the likely one, append, repeat</li>
+    <li data-quotation="verbatim">Nothing in that loop checks first principles and logical validity</li>
+    <li data-quotation="verbatim">It sounds like a textbook because it read textbooks</li>
+  </ul>
+  <figure class="slidefig">
+    <img src="/img/talks/csc484/image11.png?v=ef198161" alt="Four sampling steps, labelled T0 to T3, building the sentence &#39;Prove that for all n at least 1, the integer n is&#39;. At each step the next word is drawn from a short list of candidates with probabilities: &#39;the&#39; at 0.42 against we 0.31, by 0.18 and sum 0.05; then &#39;integer&#39; at 0.95; then &#39;n&#39; at 0.71; then &#39;is&#39; at 0.46. A final row, Tn, reads: a finished proof, several hundred more draws, each conditioned on everything above it. Underneath, in red: no step in that loop checks whether any of it is valid." loading="lazy">
+    <figcaption>Four sampling steps, labelled T0 to T3, building the sentence &#39;Prove that for all n at least 1, the integer n is&#39;. At each step the next word is drawn from a short list of candidates with probabilities: &#39;the&#39; at 0.42 against we 0.31, by 0.18 and sum 0.05; then &#39;integer&#39; at 0.95; then &#39;n&#39; at 0.71; then &#39;is&#39; at 0.46. A final row, Tn, reads: a finished proof, several hundred more draws, each conditioned on everything above it. Underneath, in red: no step in that loop checks whether any of it is valid.</figcaption>
+  </figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-14" aria-labelledby="h-slide-14">
+  <p class="slideno"><a href="#slide-14">Slide 14</a></p>
+  <h2 id="h-slide-14" data-quotation="verbatim">Three stages of training</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">Pretraining: predict the next token</li>
+    <li data-quotation="verbatim">Post-training: tone and format</li>
+    <li data-quotation="verbatim">RL: reward for answers that can be checked</li>
+    <li data-quotation="verbatim">None of them stores a rule of inference</li>
+  </ul>
+  <figure class="slidefig">
+    <img src="/img/talks/csc484/image9.png?v=ef198161" alt="Three boxes in sequence. The first is labelled pretraining, &#34;predict the next token&#34;, from textbooks, forums and code, with a caption reading &#34;stores statistical regularities of the corpus&#34;. Post-training uses human feedback for tone and format, and shapes how it sounds rather than whether it is right. Reinforcement learning rewards answers that can be checked, and tunes toward chains that reach checkable answers. Underneath, in red: no stage stores rules of inference." loading="lazy">
+    <figcaption>Three boxes in sequence. The first is labelled pretraining, &#34;predict the next token&#34;, from textbooks, forums and code, with a caption reading &#34;stores statistical regularities of the corpus&#34;. Post-training uses human feedback for tone and format, and shapes how it sounds rather than whether it is right. Reinforcement learning rewards answers that can be checked, and tunes toward chains that reach checkable answers. Underneath, in red: no stage stores rules of inference.</figcaption>
+  </figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-15" aria-labelledby="h-slide-15">
+  <p class="slideno"><a href="#slide-15">Slide 15</a></p>
+  <h2 id="h-slide-15" data-quotation="verbatim">Unfamiliar questions more likely to hallucinate</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">Reliability tracks how common the problem is</li>
+    <li data-quotation="verbatim">1+2+…+n: thousands of times in the corpus</li>
+    <li data-quotation="verbatim">3+7+11+…: same structure, almost never</li>
+    <li data-quotation="verbatim">The rare one gets filled in from the common one</li>
+    <li data-quotation="verbatim">No harder for a person</li>
+  </ul>
+  <figure class="slidefig">
+    <img src="/img/talks/csc484/image30.png?v=ef198161" alt="A curve of frequency in the training corpus against problem formulations. A tall peak is labelled with the standard form, 1 + 2 + ... + n = n(n+1)/2. Far out along the flat tail sits a marked point labelled with the perturbed form, 3 + 7 + ... + (4n - 1) = n(2n + 1). A dashed arrow runs from the rare point back up toward the peak, labelled: rare form is completed by interpolation toward the nearest frequent pattern." loading="lazy">
+    <figcaption>A curve of frequency in the training corpus against problem formulations. A tall peak is labelled with the standard form, 1 + 2 + ... + n = n(n+1)/2. Far out along the flat tail sits a marked point labelled with the perturbed form, 3 + 7 + ... + (4n - 1) = n(2n + 1). A dashed arrow runs from the rare point back up toward the peak, labelled: rare form is completed by interpolation toward the nearest frequent pattern.</figcaption>
+  </figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-16" aria-labelledby="h-slide-16">
+  <p class="slideno"><a href="#slide-16">Slide 16</a></p>
+  <h2 id="h-slide-16" data-quotation="verbatim">Three ways chatbots mess up when solving proofs</h2>
+  <figure class="slidefig">
+    <img src="/img/talks/csc484/image6.png?v=ef198161" alt="Three cards, one per failure mode. Axiom reversion swaps in the textbook theorem the problem was perturbed from; its indicator is that the closed form matches the textbook rather than the problem. Invalid syntactic shortcut manipulates the form as if a rule applied, well-formed but false; its indicator is that the step fails when checked symbolically. Spatial or counting miscount counts placements that break the constraint, or double counts; its indicator is that the case breakdown does not sum to the total." loading="lazy">
+    <figcaption>Three cards, one per failure mode. Axiom reversion swaps in the textbook theorem the problem was perturbed from; its indicator is that the closed form matches the textbook rather than the problem. Invalid syntactic shortcut manipulates the form as if a rule applied, well-formed but false; its indicator is that the step fails when checked symbolically. Spatial or counting miscount counts placements that break the constraint, or double counts; its indicator is that the case breakdown does not sum to the total.</figcaption>
+  </figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-17" aria-labelledby="h-slide-17">
+  <p class="slideno"><a href="#slide-17">Slide 17</a></p>
+  <h2 id="h-slide-17" data-quotation="verbatim">Procedure A — The hallucination autopsy procedure</h2>
+  <table class="steps">
+    <caption data-quotation="verbatim">Procedure A — The hallucination autopsy procedure</caption>
+    <thead>
+      <tr><th scope="col">Label</th><th scope="col">What the step is for</th><th scope="col">What you do</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row" data-quotation="verbatim">A0</th>
+        <td data-quotation="verbatim">Calibrate your reliance</td>
+        <td data-quotation="verbatim">Before reading the response, note how much you expect to trust it for this problem type, and why. Revisit after A6.</td>
+      </tr>
+      <tr>
+        <th scope="row" data-quotation="verbatim">A1</th>
+        <td data-quotation="verbatim">Restate the claim as given</td>
+        <td data-quotation="verbatim">Write down exactly what is to be proven, including its right-hand side.</td>
+      </tr>
+      <tr>
+        <th scope="row" data-quotation="verbatim">A2</th>
+        <td data-quotation="verbatim">Extract the rule the chatbot actually used</td>
+        <td data-quotation="verbatim">Find the closed form it substituted during the inductive step.</td>
+      </tr>
+      <tr>
+        <th scope="row" data-quotation="verbatim">A3</th>
+        <td data-quotation="verbatim">Locate the first divergence</td>
+        <td data-quotation="verbatim">Mark the exact line where the stated hypothesis and the substituted rule part ways.</td>
+      </tr>
+      <tr>
+        <th scope="row" data-quotation="verbatim">A4</th>
+        <td data-quotation="verbatim">Test a small case</td>
+        <td data-quotation="verbatim">Evaluate both sides at a small n. If the numbers agree, verify one derivation step anyway.</td>
+      </tr>
+      <tr>
+        <th scope="row" data-quotation="verbatim">A5</th>
+        <td data-quotation="verbatim">Classify the failure mode</td>
+        <td data-quotation="verbatim">Axiom reversion, invalid syntactic shortcut, or spatial / counting miscount.</td>
+      </tr>
+      <tr>
+        <th scope="row" data-quotation="verbatim">A6</th>
+        <td data-quotation="verbatim">Explain why the failure was likely</td>
+        <td data-quotation="verbatim">Connect the error to how the model generates text.</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-18" aria-labelledby="h-slide-18">
+  <p class="slideno"><a href="#slide-18">Slide 18</a></p>
+  <h2 id="h-slide-18" data-quotation="verbatim">Catching a hallucination</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">A1  A2  A3  A4  A5  A6</li>
+    <li data-quotation="verbatim">Claim: 5+9+13+…+(4n+1) = n(2n+3)</li>
+    <li data-quotation="verbatim">The chatbot slipped in k(k+1)/2</li>
+    <li data-quotation="verbatim">The hypothesis says k(2k+3)</li>
+    <li data-quotation="verbatim">Try n=2: 14 on one side, 3 on the other</li>
+    <li data-quotation="verbatim">That’s the textbook coming back</li>
+  </ul>
+  <figure class="slidefig">
+    <img src="/img/talks/csc484/image7.png?v=ef198161" alt="A worked example annotated with the procedure&#39;s step labels. A1 gives the claim, 5 + 9 + 13 + ... + (4n + 1) = n(2n + 3). A boxed derivation substitutes k(k+1)/2, described in the chatbot&#39;s words as substituting the standard Gauss sum, with that substitution ringed in red. A2 names the rule actually used, k(k+1)/2. A3 marks the first divergence: the hypothesis says k(2k + 3). A4 tests n = 2, where the claim gives 5 + 9 = 14 and the chatbot&#39;s form gives 3, so they disagree and the proof is wrong; had they agreed, check one step anyway. A5 classifies it as axiom reversion. A6 explains it: the Gauss sum is everywhere in the corpus, so the model matched the visual pattern of the sum and kept the familiar closed form." loading="lazy">
+    <figcaption>A worked example annotated with the procedure&#39;s step labels. A1 gives the claim, 5 + 9 + 13 + ... + (4n + 1) = n(2n + 3). A boxed derivation substitutes k(k+1)/2, described in the chatbot&#39;s words as substituting the standard Gauss sum, with that substitution ringed in red. A2 names the rule actually used, k(k+1)/2. A3 marks the first divergence: the hypothesis says k(2k + 3). A4 tests n = 2, where the claim gives 5 + 9 = 14 and the chatbot&#39;s form gives 3, so they disagree and the proof is wrong; had they agreed, check one step anyway. A5 classifies it as axiom reversion. A6 explains it: the Gauss sum is everywhere in the corpus, so the model matched the visual pattern of the sum and kept the familiar closed form.</figcaption>
+  </figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-19" aria-labelledby="h-slide-19">
+  <p class="slideno"><a href="#slide-19">Slide 19</a></p>
+  <h2 id="h-slide-19" data-quotation="verbatim">Procedure B — Structure of a strong prompt</h2>
+  <table class="steps">
+    <caption data-quotation="verbatim">Procedure B — Structure of a strong prompt</caption>
+    <thead>
+      <tr><th scope="col">Label</th><th scope="col">What the step is for</th><th scope="col">What you do</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row" data-quotation="verbatim">B1</th>
+        <td data-quotation="verbatim">Establish context</td>
+        <td data-quotation="verbatim">Tell the chatbot which subject, question type, and goal.</td>
+      </tr>
+      <tr>
+        <th scope="row" data-quotation="verbatim">B2</th>
+        <td data-quotation="verbatim">Require step-by-step justification</td>
+        <td data-quotation="verbatim">Require each step to name the rule or prior line it uses.</td>
+      </tr>
+      <tr>
+        <th scope="row" data-quotation="verbatim">B3</th>
+        <td data-quotation="verbatim">Build in self-questioning</td>
+        <td data-quotation="verbatim">Before the chatbot finishes, have it list its assumptions and check them.</td>
+      </tr>
+      <tr>
+        <th scope="row" data-quotation="verbatim">B4</th>
+        <td data-quotation="verbatim">Plan the corrective dialogue</td>
+        <td data-quotation="verbatim">Know in advance what you will say if you spot an error.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="note" data-quotation="verbatim">Same label, same words, every time it appears: in this box, in a worked example, and in your own task.</p>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-20" aria-labelledby="h-slide-20">
+  <p class="slideno"><a href="#slide-20">Slide 20</a></p>
+  <h2 id="h-slide-20" data-quotation="verbatim">Fixing a weak prompt</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">B1  B2  B3  B4</li>
+    <li data-quotation="verbatim">Weak: “solve this: 1*2 + 2*3 + … = ?”</li>
+    <li data-quotation="verbatim">Say which course, which module, which claim</li>
+    <li data-quotation="verbatim">Ask for the rule at every step</li>
+    <li data-quotation="verbatim">Ask it to list and check its assumptions</li>
+    <li data-quotation="verbatim">Write the correction before you need it</li>
+  </ul>
+  <figure class="slidefig">
+    <img src="/img/talks/csc484/image8.png?v=ef198161" alt="Two prompts side by side. The weak one reads in full: solve this: 1*2 + 2*3 + ... + n(n+1) = ? The strong one is annotated with step labels. B1 establishes context: I&#39;m in CSC 226, the induction module, prove 1 times 2 + 2 times 3 + ... + n(n+1) = n(n+1)(n+2)/3 for n at least 1. B2: for each step, name the rule or the earlier line it uses. B3: before finishing, list three assumptions and check each against the statement. B4: if a step uses a different closed form than my hypothesis, I will quote the line and ask you to redo it." loading="lazy">
+    <figcaption>Two prompts side by side. The weak one reads in full: solve this: 1*2 + 2*3 + ... + n(n+1) = ? The strong one is annotated with step labels. B1 establishes context: I&#39;m in CSC 226, the induction module, prove 1 times 2 + 2 times 3 + ... + n(n+1) = n(n+1)(n+2)/3 for n at least 1. B2: for each step, name the rule or the earlier line it uses. B3: before finishing, list three assumptions and check each against the statement. B4: if a step uses a different closed form than my hypothesis, I will quote the line and ask you to redo it.</figcaption>
+  </figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-21" aria-labelledby="h-slide-21">
+  <p class="slideno"><a href="#slide-21">Slide 21</a></p>
+  <h2 id="h-slide-21" data-quotation="verbatim">Procedure C — Scaffolding strong prompts to provide critical feedback</h2>
+  <table class="steps">
+    <caption data-quotation="verbatim">Procedure C — Scaffolding strong prompts to provide critical feedback</caption>
+    <thead>
+      <tr><th scope="col">Label</th><th scope="col">What the step is for</th><th scope="col">What you do</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row" data-quotation="verbatim">C1</th>
+        <td data-quotation="verbatim">Frame the problem and set the rules</td>
+        <td data-quotation="verbatim">Give context, state the problem exactly, forbid the final answer.</td>
+      </tr>
+      <tr>
+        <th scope="row" data-quotation="verbatim">C2</th>
+        <td data-quotation="verbatim">Elicit one step with its rule named</td>
+        <td data-quotation="verbatim">Ask for the next step and the counting rule it uses.</td>
+      </tr>
+      <tr>
+        <th scope="row" data-quotation="verbatim">C3</th>
+        <td data-quotation="verbatim">Interrogate the claim</td>
+        <td data-quotation="verbatim">Request a justification or issue a correction; never accept a step silently.</td>
+      </tr>
+      <tr>
+        <th scope="row" data-quotation="verbatim">C4</th>
+        <td data-quotation="verbatim">Verify against hand-computed cases</td>
+        <td data-quotation="verbatim">Small cases computed by hand decide who is right.</td>
+      </tr>
+      <tr>
+        <th scope="row" data-quotation="verbatim">C5</th>
+        <td data-quotation="verbatim">Consolidate in your own words</td>
+        <td data-quotation="verbatim">The write-up is yours, not the chatbot’s.</td>
+      </tr>
+      <tr>
+        <th scope="row" data-quotation="verbatim">C6</th>
+        <td data-quotation="verbatim">Question the system</td>
+        <td data-quotation="verbatim">Ask who built it, on whose data, and why you trust its answer.</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-22" aria-labelledby="h-slide-22">
+  <p class="slideno"><a href="#slide-22">Slide 22</a></p>
+  <h2 id="h-slide-22" data-quotation="verbatim">If you could make a game right now, what would it be?</h2>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-23" aria-labelledby="h-slide-23">
+  <p class="slideno"><a href="#slide-23">Slide 23</a></p>
+  <h2 id="h-slide-23" data-quotation="verbatim">Do you think you could make a prototype of your game, and implement AI control of entities for the class project?</h2>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-24" aria-labelledby="h-slide-24">
+  <p class="slideno"><a href="#slide-24">Slide 24</a></p>
+  <h2 id="h-slide-24" data-quotation="verbatim">Would you incorporate generative AI into your game?</h2>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-25" aria-labelledby="h-slide-25">
+  <p class="slideno"><a href="#slide-25">Slide 25</a></p>
+  <h2 id="h-slide-25" data-quotation="verbatim">Would you incorporate generative AI into your game?</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">If you would, what would you use it for?</li>
+    <li data-quotation="verbatim">If you would not, explain why?</li>
+  </ul>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-26" aria-labelledby="h-slide-26">
+  <p class="slideno"><a href="#slide-26">Slide 26</a></p>
+  <h2 id="h-slide-26" data-quotation="verbatim">3. Generative AI for Game Prototyping</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">Using AI literacy to optimize agentic game engine development workflows</li>
+  </ul>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-27" aria-labelledby="h-slide-27">
+  <p class="slideno"><a href="#slide-27">Slide 27</a></p>
+  <h2 id="h-slide-27" data-quotation="verbatim">GenAI-Assisted Prototyping Procedure</h2>
+  <figure class="slidefig">
+    <img src="/img/talks/csc484/image15.png?v=ef198161" alt="A nine-stage vertical pipeline, each stage tagged with the procedure steps it serves. Brief, written by a person, tagged C1 and B1: what we are making, what done means, and what the agent may not decide on its own. Plan, B2: the agent fills the brief in, every decision and the reason for it, before any code. &#39;I read the plan&#39;, read by a person, C3: approve it or send it back, and a reference it cannot find is a question for me rather than a guess; a revise arrow loops back to plan. Recon, B2: measure against the running build, counts, brackets and prices, and say in the commit what you found. Build, B2: tests and content lints in the same change, and a number that disagrees with the plan must name which of the two is wrong. Notebook, B3: assumptions listed and checked while the work happens, as a divergence, a finding, or a decision handed back. &#39;I play it&#39;, played by a person, C4: a fortnight of real play against what the plan claimed, with everything wrong becoming a triage row, looping back to build. Deploy, C4: I push, and drive.py then walks every check against the live page in three engines. Handoff, C5: for whoever is next, the rules that are load-bearing and the mistakes that cost a day." loading="lazy">
+    <figcaption>A nine-stage vertical pipeline, each stage tagged with the procedure steps it serves. Brief, written by a person, tagged C1 and B1: what we are making, what done means, and what the agent may not decide on its own. Plan, B2: the agent fills the brief in, every decision and the reason for it, before any code. &#39;I read the plan&#39;, read by a person, C3: approve it or send it back, and a reference it cannot find is a question for me rather than a guess; a revise arrow loops back to plan. Recon, B2: measure against the running build, counts, brackets and prices, and say in the commit what you found. Build, B2: tests and content lints in the same change, and a number that disagrees with the plan must name which of the two is wrong. Notebook, B3: assumptions listed and checked while the work happens, as a divergence, a finding, or a decision handed back. &#39;I play it&#39;, played by a person, C4: a fortnight of real play against what the plan claimed, with everything wrong becoming a triage row, looping back to build. Deploy, C4: I push, and drive.py then walks every check against the live page in three engines. Handoff, C5: for whoever is next, the rules that are load-bearing and the mistakes that cost a day.</figcaption>
+  </figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-28" aria-labelledby="h-slide-28">
+  <p class="slideno"><a href="#slide-28">Slide 28</a></p>
+  <h2 id="h-slide-28" data-quotation="verbatim">Project Planning Artifacts</h2>
+  <figure class="slidefig">
+    <img src="/img/talks/csc484/image36.png?v=ef198161" alt="A table of planning documents, who writes each, and the procedure steps behind them. PLANNING-BRIEF.md, written by you: what are we making, and what does done mean; C1. CLAUDE.md, both: the load-bearing rules, and the mistakes that cost a day; C1 and A6. TONE.md, you: ten checkable rules for every string a player reads; B1. PLAN.md and PLAN-Mn.md, the agent: the decisions, with a paragraph of why for each; B2. PROMPT-Mn.md, you: reading order, your ask verbatim, recon first; B1 and B2. SECOND-ORDER-Mn.md, the agent: every assumption checked while the work is done; B3 and C3. PLAYTEST and TRIAGE, you: what a fortnight of play reported, sorted into rows; C4 and B4. HANDOFF.md, the agent: what the next reader needs before touching anything; C5." loading="lazy">
+    <figcaption>A table of planning documents, who writes each, and the procedure steps behind them. PLANNING-BRIEF.md, written by you: what are we making, and what does done mean; C1. CLAUDE.md, both: the load-bearing rules, and the mistakes that cost a day; C1 and A6. TONE.md, you: ten checkable rules for every string a player reads; B1. PLAN.md and PLAN-Mn.md, the agent: the decisions, with a paragraph of why for each; B2. PROMPT-Mn.md, you: reading order, your ask verbatim, recon first; B1 and B2. SECOND-ORDER-Mn.md, the agent: every assumption checked while the work is done; B3 and C3. PLAYTEST and TRIAGE, you: what a fortnight of play reported, sorted into rows; C4 and B4. HANDOFF.md, the agent: what the next reader needs before touching anything; C5.</figcaption>
+  </figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-29" aria-labelledby="h-slide-29">
+  <p class="slideno"><a href="#slide-29">Slide 29</a></p>
+  <h2 id="h-slide-29" data-quotation="verbatim">Unit and System Testing</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">Unit tests on the core, in seconds</li>
+    <li data-quotation="verbatim">Lints on the content, not just the code</li>
+    <li data-quotation="verbatim">Save round-trip on every commit</li>
+    <li data-quotation="verbatim">A browser gate, three engines</li>
+    <li data-quotation="verbatim">Then the same gate against the live page</li>
+  </ul>
+  <figure class="slidefig">
+    <img src="/img/talks/csc484/image13.png?v=ef198161" alt="Four stacked bars, one per layer of testing. Core unit tests, tagged A4: 1,037 tests in 90 binaries covering combat, saves, maps and economy, on every change, in seconds. Content lints, B3: every flag an event sets is read somewhere, and every refusal names its reason, on every change. Save round-trip, C1: a new field is a compile error until the save carries it, on every commit. Browser gate, C4: every check in three engines, then again on the live page, before and after deploy. Underneath: a check nobody has seen fail is not a check -- three shipped comparing zero with zero. Break a new one and watch it go red before you keep it." loading="lazy">
+    <figcaption>Four stacked bars, one per layer of testing. Core unit tests, tagged A4: 1,037 tests in 90 binaries covering combat, saves, maps and economy, on every change, in seconds. Content lints, B3: every flag an event sets is read somewhere, and every refusal names its reason, on every change. Save round-trip, C1: a new field is a compile error until the save carries it, on every commit. Browser gate, C4: every check in three engines, then again on the live page, before and after deploy. Underneath: a check nobody has seen fail is not a check -- three shipped comparing zero with zero. Break a new one and watch it go red before you keep it.</figcaption>
+  </figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-30" aria-labelledby="h-slide-30">
+  <p class="slideno"><a href="#slide-30">Slide 30</a></p>
+  <h2 id="h-slide-30" data-quotation="verbatim">Prototype 1: Gear Master</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">Inspired by backpack battles</li>
+    <li data-quotation="verbatim">Five slots, each one a grid</li>
+    <li data-quotation="verbatim">Drag parts in; touching parts become an item</li>
+    <li data-quotation="verbatim">Finished items fire on their own cooldowns</li>
+    <li data-quotation="verbatim">Press fight, then watch</li>
+  </ul>
+  <figure class="slidefig">
+    <img src="/img/talks/csc484/image12.png?v=ef198161" alt="A five-by-five grid holding pieces. A green outline rings a finished item made of a dark core square and a lighter square touching it; a red dashed square sits apart from them. Notes explain that a core plus touching pieces matching a recipe makes an item, with a gold outline meaning finished, while dashed means pieces placed without the recipe met, so they still add base stats and the bonuses wait. The grid is captioned &#39;the weapon slot (one of five)&#39;. A panel reads: BEGIN FIGHT -- each finished item fires on its own cooldown, your board above and the creature&#39;s below, and nobody presses anything until it ends." loading="lazy">
+    <figcaption>A five-by-five grid holding pieces. A green outline rings a finished item made of a dark core square and a lighter square touching it; a red dashed square sits apart from them. Notes explain that a core plus touching pieces matching a recipe makes an item, with a gold outline meaning finished, while dashed means pieces placed without the recipe met, so they still add base stats and the bonuses wait. The grid is captioned &#39;the weapon slot (one of five)&#39;. A panel reads: BEGIN FIGHT -- each finished item fires on its own cooldown, your board above and the creature&#39;s below, and nobody presses anything until it ends.</figcaption>
+  </figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-31" aria-labelledby="h-slide-31">
+  <p class="slideno"><a href="#slide-31">Slide 31</a></p>
+  <h2 id="h-slide-31" data-quotation="verbatim">Prototype 2: Gear Master 2D</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">Same core engine as Gear Master!</li>
+  </ul>
+  <figure class="slidefig">
+    <img src="/img/talks/csc484/image14.png?v=ef198161" alt="A tiled overworld map with a dark dot labelled &#39;you&#39; and a red dot labelled &#39;town&#39;, captioned: walk a tile a press, terrain sets the encounter rate. Beside it, five notes. Creatures are drawn by rating from the region&#39;s pool, and a fight is the board auto-battle. Levels and classes: a level adds a row to a slot grid, one skill point a level, a class at level 5. Towns and errands: shops sell components, errands are the quest log, 21 maps now. Dungeons have several floors, each a puzzle of stakes, levers or gates before the boss. The save file downloads any time, and loading restores everything including the RNG." loading="lazy">
+    <figcaption>A tiled overworld map with a dark dot labelled &#39;you&#39; and a red dot labelled &#39;town&#39;, captioned: walk a tile a press, terrain sets the encounter rate. Beside it, five notes. Creatures are drawn by rating from the region&#39;s pool, and a fight is the board auto-battle. Levels and classes: a level adds a row to a slot grid, one skill point a level, a class at level 5. Towns and errands: shops sell components, errands are the quest log, 21 maps now. Dungeons have several floors, each a puzzle of stakes, levers or gates before the boss. The save file downloads any time, and loading restores everything including the RNG.</figcaption>
+  </figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-32" aria-labelledby="h-slide-32">
+  <p class="slideno"><a href="#slide-32">Slide 32</a></p>
+  <h2 id="h-slide-32" data-quotation="verbatim">Design Insight 1No code until I’ve read the plan</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">C1  Frame the problem and set the rules</li>
+  </ul>
+  <figure class="slidefig">
+    <img src="/img/talks/csc484/image19.png?v=ef198161" alt="A flow from PLANNING-BRIEF.md, what and what done means, to PLAN.md, decisions plus rationale, written by the agent, then to a diamond where a human reads the plan. The approved branch leads to milestone 0; the other branch, &#39;not yet: revise&#39;, loops back to PLAN.md. Above it, tagged C1, the instruction quoted in full: Execute Part A to produce PLAN.md. Stop and show me PLAN.md before executing any milestone." loading="lazy">
+    <figcaption>A flow from PLANNING-BRIEF.md, what and what done means, to PLAN.md, decisions plus rationale, written by the agent, then to a diamond where a human reads the plan. The approved branch leads to milestone 0; the other branch, &#39;not yet: revise&#39;, loops back to PLAN.md. Above it, tagged C1, the instruction quoted in full: Execute Part A to produce PLAN.md. Stop and show me PLAN.md before executing any milestone.</figcaption>
+  </figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-33" aria-labelledby="h-slide-33">
+  <p class="slideno"><a href="#slide-33">Slide 33</a></p>
+  <h2 id="h-slide-33" data-quotation="verbatim">Design Insight 2</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">How to prompt an agentic chatbot with design docs</li>
+    <li data-quotation="verbatim">B1  Establish context</li>
+    <li data-quotation="verbatim">B2  Require step-by-step justification</li>
+  </ul>
+  <figure class="slidefig">
+    <img src="/img/talks/csc484/image33.png?v=ef198161" alt="Six rows pairing a part of the prompt with what it asked for. B1, reading order: read HANDOFF.md, then CLAUDE.md Rules, then these four sections, then PLAN-M16.md. B1, the ask verbatim: add a dungeon in the wextreen sands, with my current run&#39;s loadout as its gear slots. B2, recon before content: measure the boss by bracket against the save, never by adding to the last boss. B2, findings in the commit: put what the recon found in the commit message, and if a count disagrees, say which is wrong and why. B3, keep the notebook: write a row in SECOND-ORDER-Mn.md the moment you notice a second-order effect, not saved up for the end. C1, deploy points: after M16.3 and after M16.5, with a human deploying and then checking the live page." loading="lazy">
+    <figcaption>Six rows pairing a part of the prompt with what it asked for. B1, reading order: read HANDOFF.md, then CLAUDE.md Rules, then these four sections, then PLAN-M16.md. B1, the ask verbatim: add a dungeon in the wextreen sands, with my current run&#39;s loadout as its gear slots. B2, recon before content: measure the boss by bracket against the save, never by adding to the last boss. B2, findings in the commit: put what the recon found in the commit message, and if a count disagrees, say which is wrong and why. B3, keep the notebook: write a row in SECOND-ORDER-Mn.md the moment you notice a second-order effect, not saved up for the end. C1, deploy points: after M16.3 and after M16.5, with a human deploying and then checking the live page.</figcaption>
+  </figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-34" aria-labelledby="h-slide-34">
+  <p class="slideno"><a href="#slide-34">Slide 34</a></p>
+  <h2 id="h-slide-34" data-quotation="verbatim">Design Insight 3</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">Managing Second Order Effects</li>
+    <li data-quotation="verbatim">B3  Build in self-questioning</li>
+    <li data-quotation="verbatim">C3  Interrogate the claim</li>
+    <li data-quotation="verbatim">Second Order Effect notebook explicitly asked for in prompt</li>
+    <li data-quotation="verbatim">Written while the work is happening</li>
+    <li data-quotation="verbatim">One row per assumption</li>
+    <li data-quotation="verbatim">Divergence, finding, or worklist?</li>
+    <li data-quotation="verbatim">Worklist is brought to the human for guidance on; typically large reaching changes</li>
+    <li data-quotation="verbatim">Example: Seven rows in one block turned up real bugs</li>
+  </ul>
+  <figure class="slidefig">
+    <img src="/img/talks/csc484/image34.png?v=ef198161" alt="A table of notebook rows, each with a number, the row, its kind and its status. Row 4: the plan&#39;s curse-cap numbers do not reproduce, in either direction; a divergence; done. Row 9: solvable_blind is 36 and the plan asks for 9, pulls versus card reads; a divergence; done. Row 14: is rarity a creature&#39;s measure or a player&#39;s, three answers and all content; a worklist row; the human&#39;s. Row 17: a data/ change costs three minutes of relinking, measured rather than fixed; a worklist row; done. Row 25: enemies.json went lossy the moment a creature carried an ench; a finding; done." loading="lazy">
+    <figcaption>A table of notebook rows, each with a number, the row, its kind and its status. Row 4: the plan&#39;s curse-cap numbers do not reproduce, in either direction; a divergence; done. Row 9: solvable_blind is 36 and the plan asks for 9, pulls versus card reads; a divergence; done. Row 14: is rarity a creature&#39;s measure or a player&#39;s, three answers and all content; a worklist row; the human&#39;s. Row 17: a data/ change costs three minutes of relinking, measured rather than fixed; a worklist row; done. Row 25: enemies.json went lossy the moment a creature carried an ench; a finding; done.</figcaption>
+  </figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-35" aria-labelledby="h-slide-35">
+  <p class="slideno"><a href="#slide-35">Slide 35</a></p>
+  <h2 id="h-slide-35" data-quotation="verbatim">Bug caught by Second Order Notebook</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">A2  Extract the rule the chatbot actually used</li>
+    <li data-quotation="verbatim">A3  Locate the first divergence</li>
+    <li data-quotation="verbatim">A5  Classify the failure mode</li>
+    <li data-quotation="verbatim">A puzzle floor</li>
+    <li data-quotation="verbatim">nine stakes in three bands that must be pulled in order to open the door to the next floor</li>
+    <li data-quotation="verbatim">Divergence: The plan used 9 stakes; the test used all 36 stakes</li>
+    <li data-quotation="verbatim">Agent added the divergence to the second order notebook</li>
+    <li data-quotation="verbatim">Human Root Cause Analysis:</li>
+    <li data-quotation="verbatim">Test was written to try every possibility and assumed every possibility should pass</li>
+    <li data-quotation="verbatim">Reality: only 9 of them should pass</li>
+  </ul>
+  <figure class="slidefig">
+    <img src="/img/talks/csc484/image26.png?v=ef198161" alt="Three bands, each holding three dots, labelled band 0, band 1 and band 2, under the heading &#39;nine stakes, three gated bands, one right stake per band&#39;. Two panels contrast the numbers. 9 is the plan, counting pulls, one per stake. 36 is the test, counting card reads, where the adversary opens each band early and leaves two wrong neighbours live. Tags: A2, the rule used, count pulls; A3, the divergence, the unit changed mid-plan; A5, counting miscount; and a fix -- assert both numbers, each in its own unit, so the disagreement cannot come back unnoticed." loading="lazy">
+    <figcaption>Three bands, each holding three dots, labelled band 0, band 1 and band 2, under the heading &#39;nine stakes, three gated bands, one right stake per band&#39;. Two panels contrast the numbers. 9 is the plan, counting pulls, one per stake. 36 is the test, counting card reads, where the adversary opens each band early and leaves two wrong neighbours live. Tags: A2, the rule used, count pulls; A3, the divergence, the unit changed mid-plan; A5, counting miscount; and a fix -- assert both numbers, each in its own unit, so the disagreement cannot come back unnoticed.</figcaption>
+  </figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-36" aria-labelledby="h-slide-36">
+  <p class="slideno"><a href="#slide-36">Slide 36</a></p>
+  <h2 id="h-slide-36" data-quotation="verbatim">Design Insight 4</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">Avoid multiple sources of truth</li>
+    <li data-quotation="verbatim">C4  Verify against hand-computed cases</li>
+    <li data-quotation="verbatim">We’d been saying 1,137 tests</li>
+    <li data-quotation="verbatim">Three ways of parsing gave three numbers</li>
+    <li data-quotation="verbatim">cargo mixes its output streams</li>
+    <li data-quotation="verbatim">Actual source of truth: Check the binaries directly</li>
+    <li data-quotation="verbatim">1,037, on any machine</li>
+  </ul>
+  <figure class="slidefig">
+    <img src="/img/talks/csc484/image20.png?v=ef198161" alt="A dark terminal block showing cargo output running together on one stream, with fragments such as &#39;test result: ok. 28 passtest every_place_on_a_shot_map_is_reachable_by_shots ... ok&#39; and &#39;test resutest result: ok. 9 passed&#39;. The caption explains that cargo interleaves test binaries on one stream, so summing the fourth field gave 978, 1,025 and 1,053 from the same run, while 1,137 was quoted three times. An arrow points to packaging/count-tests.sh, which builds the binaries, finds them from --message-format=json, runs each with --list and counts lines: the same command gives the same number on any machine, 1,037 tests in 90 binaries." loading="lazy">
+    <figcaption>A dark terminal block showing cargo output running together on one stream, with fragments such as &#39;test result: ok. 28 passtest every_place_on_a_shot_map_is_reachable_by_shots ... ok&#39; and &#39;test resutest result: ok. 9 passed&#39;. The caption explains that cargo interleaves test binaries on one stream, so summing the fourth field gave 978, 1,025 and 1,053 from the same run, while 1,137 was quoted three times. An arrow points to packaging/count-tests.sh, which builds the binaries, finds them from --message-format=json, runs each with --list and counts lines: the same command gives the same number on any machine, 1,037 tests in 90 binaries.</figcaption>
+  </figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-37" aria-labelledby="h-slide-37">
+  <p class="slideno"><a href="#slide-37">Slide 37</a></p>
+  <h2 id="h-slide-37" data-quotation="verbatim">Design Insight 5</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">Who does what during prototyping</li>
+    <li data-quotation="verbatim">C1  Frame the problem and set the rules</li>
+    <li data-quotation="verbatim">C5  Consolidate in your own words</li>
+    <li data-quotation="verbatim">The agent plans, builds, tests, writes it up</li>
+    <li data-quotation="verbatim">I read, play, decide, deploy</li>
+    <li data-quotation="verbatim">It never pushes on its own</li>
+    <li data-quotation="verbatim">After a deploy, the testing gates walk the live page</li>
+    <li data-quotation="verbatim">Handoff docs are written around at ~700k tokens used in current context</li>
+    <li data-quotation="verbatim">Around there, model performance starts to degrade</li>
+    <li data-quotation="verbatim">Handoff doc is to inform context-cleared model how to pick up the work</li>
+  </ul>
+  <figure class="slidefig">
+    <img src="/img/talks/csc484/image18.png?v=ef198161" alt="Three boxes left to right. The agent plans, builds, tests and writes the notebook. The human reads the plan, plays, decides and deploys, and receives PLAN, HANDOFF and the rows marked &#39;the human&#39;s&#39;. A git push arrow leads to the live page on GitHub Pages, the only thing players see. A return arrow underneath reads: drive.py walks every check against the deployed page, three browsers. Tagged C1, the agent does not push on its own judgement, and C5, HANDOFF.md is written for the next reader in the human&#39;s terms." loading="lazy">
+    <figcaption>Three boxes left to right. The agent plans, builds, tests and writes the notebook. The human reads the plan, plays, decides and deploys, and receives PLAN, HANDOFF and the rows marked &#39;the human&#39;s&#39;. A git push arrow leads to the live page on GitHub Pages, the only thing players see. A return arrow underneath reads: drive.py walks every check against the deployed page, three browsers. Tagged C1, the agent does not push on its own judgement, and C5, HANDOFF.md is written for the next reader in the human&#39;s terms.</figcaption>
+  </figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-38" aria-labelledby="h-slide-38">
+  <p class="slideno"><a href="#slide-38">Slide 38</a></p>
+  <h2 id="h-slide-38" data-quotation="verbatim">What sorts of benefits and drawbacks do you think arise from Generative AI use for Game Prototyping?</h2>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-39" aria-labelledby="h-slide-39">
+  <p class="slideno"><a href="#slide-39">Slide 39</a></p>
+  <h2 id="h-slide-39" data-quotation="verbatim">4. Game AI</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">Concepts and stuff you can borrow for the project</li>
+  </ul>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-40" aria-labelledby="h-slide-40">
+  <p class="slideno"><a href="#slide-40">Slide 40</a></p>
+  <h2 id="h-slide-40" data-quotation="verbatim">Floodline</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">Multiplayer without a server</li>
+    <li data-quotation="verbatim">Up to six players share one map</li>
+    <li data-quotation="verbatim">The host’s browser is the hub</li>
+    <li data-quotation="verbatim">A public relay introduces peers, once</li>
+  </ul>
+  <figure class="slidefig">
+    <img src="/img/talks/csc484/image16.png?v=ef198161" alt="Five peer circles arranged around a central host browser, each joined only to the host, under the heading &#39;star: only commands travel, a few kB/s for six browsers&#39;. Notes explain that GitHub Pages serves the files and after that nothing runs anywhere, and that the one thing which can cost money is a TURN relay for the rare strict NAT, one edit and no rebuild. Two panels: introduction happens once through a public relay, Nostr by default, never touched again; or a pasted code of about 300 characters each way over any chat, with no third party at all." loading="lazy">
+    <figcaption>Five peer circles arranged around a central host browser, each joined only to the host, under the heading &#39;star: only commands travel, a few kB/s for six browsers&#39;. Notes explain that GitHub Pages serves the files and after that nothing runs anywhere, and that the one thing which can cost money is a TURN relay for the rare strict NAT, one edit and no rebuild. Two panels: introduction happens once through a public relay, Nostr by default, never touched again; or a pasted code of about 300 characters each way over any chat, with no third party at all.</figcaption>
+  </figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-41" aria-labelledby="h-slide-41">
+  <p class="slideno"><a href="#slide-41">Slide 41</a></p>
+  <h2 id="h-slide-41" data-quotation="verbatim">How two browsers find each other</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">Two browsers cannot dial each other by address, so before a direct link exists they have to exchange an SDP offer, an answer and a handful of ICE candidates through some third channel. That channel is the only part of this that anyone else operates, and the game stops using it the moment the link is up.</li>
+  </ul>
+  <figure class="slidefig">
+    <img src="/img/talks/csc484/image22.png?v=ef198161" alt="Host and joiner browsers each reach up to a public Nostr relay, labelled Trystero, vendored and pinned, through joinRoom of build hash and room, exchanging an SDP offer and answer and ICE candidates, a few kB, once. A heavy arrow runs directly between the two browsers, labelled &#39;direct WebRTC -- everything after this&#39;, with the note that the relay is never touched again and no game byte ever crosses it. A fallback panel: the host gathers ICE to completion with no trickle, strips the lines the far end can infer, deflates and base64-encodes to about 300 characters over any chat -- one round trip, no third party, the same two channels at the end." loading="lazy">
+    <figcaption>Host and joiner browsers each reach up to a public Nostr relay, labelled Trystero, vendored and pinned, through joinRoom of build hash and room, exchanging an SDP offer and answer and ICE candidates, a few kB, once. A heavy arrow runs directly between the two browsers, labelled &#39;direct WebRTC -- everything after this&#39;, with the note that the relay is never touched again and no game byte ever crosses it. A fallback panel: the host gathers ICE to completion with no trickle, strips the lines the far end can infer, deflates and base64-encodes to about 300 characters over any chat -- one round trip, no third party, the same two channels at the end.</figcaption>
+  </figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-42" aria-labelledby="h-slide-42">
+  <p class="slideno"><a href="#slide-42">Slide 42</a></p>
+  <h2 id="h-slide-42" data-quotation="verbatim">Trystero Room as a mesh network</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">Every peer in a Trystero room meets every other peer. The lockstep wants joiners talking only to the host.</li>
+  </ul>
+  <figure class="slidefig">
+    <img src="/img/talks/csc484/image21.png?v=ef198161" alt="Four joiner circles around a host. Dashed lines connect every peer to every other, labelled &#39;the mesh Trystero gives you&#39;; solid lines connect each joiner to the host alone, labelled &#39;the star the game wants&#39;. Beside it, the first byte on the reliable channel is 0x48 H from a host and 0x4A J from a joiner, sent the moment the channel opens: a host that reads J reports a peer, a joiner that reads H has found the host, and a joiner that reads J has met another joiner, so it closes its two channels and tells Rust nothing. A note adds that &#39;first peer is the host&#39; is a guess, because two joiners can meet before either meets the host, so one byte per connection buys an invariant instead. Channel 40 is ordered, for turns and bundles; channel 41 uses maxRetransmits 0, for cursors at 20 Hz and chat; the ids are 40 and 41 rather than 0 and 1 because Trystero&#39;s own in-band channel allocates from 0 upwards." loading="lazy">
+    <figcaption>Four joiner circles around a host. Dashed lines connect every peer to every other, labelled &#39;the mesh Trystero gives you&#39;; solid lines connect each joiner to the host alone, labelled &#39;the star the game wants&#39;. Beside it, the first byte on the reliable channel is 0x48 H from a host and 0x4A J from a joiner, sent the moment the channel opens: a host that reads J reports a peer, a joiner that reads H has found the host, and a joiner that reads J has met another joiner, so it closes its two channels and tells Rust nothing. A note adds that &#39;first peer is the host&#39; is a guess, because two joiners can meet before either meets the host, so one byte per connection buys an invariant instead. Channel 40 is ordered, for turns and bundles; channel 41 uses maxRetransmits 0, for cursors at 20 Hz and chat; the ids are 40 and 41 rather than 0 and 1 because Trystero&#39;s own in-band channel allocates from 0 upwards.</figcaption>
+  </figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-43" aria-labelledby="h-slide-43">
+  <p class="slideno"><a href="#slide-43">Slide 43</a></p>
+  <h2 id="h-slide-43" data-quotation="verbatim">One tick, end to end</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">Every peer sends the host one turn per tick and waits. The host collects a turn from each live player, bundles them, and sends the bundle back to everyone including itself. That bundle is the only thing any peer advances on.</li>
+  </ul>
+  <figure class="slidefig">
+    <img src="/img/talks/csc484/image23.png?v=ef198161" alt="A sequence diagram with joiner A, the host, and joiner B. Each joiner sends the host a Turn carrying player, tick T, commands, checked_tick and checksum. The host collects one turn per live player, then sends both peers a Bundle of tick T and the turns. Every peer, the host included, advances tick T only on that bundle. Notes: a command issued at tick T is scheduled for T + 3, which is 150 ms at twenty ticks a second, long enough for a round trip and short enough that a click still feels like it did something. Nobody simulates ahead and nobody rolls back; the host runs the same sim as everyone else, a relay with a clock rather than an authority, so a disagreement is reported rather than won." loading="lazy">
+    <figcaption>A sequence diagram with joiner A, the host, and joiner B. Each joiner sends the host a Turn carrying player, tick T, commands, checked_tick and checksum. The host collects one turn per live player, then sends both peers a Bundle of tick T and the turns. Every peer, the host included, advances tick T only on that bundle. Notes: a command issued at tick T is scheduled for T + 3, which is 150 ms at twenty ticks a second, long enough for a round trip and short enough that a click still feels like it did something. Nobody simulates ahead and nobody rolls back; the host runs the same sim as everyone else, a relay with a clock rather than an authority, so a disagreement is reported rather than won.</figcaption>
+  </figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-44" aria-labelledby="h-slide-44">
+  <p class="slideno"><a href="#slide-44">Slide 44</a></p>
+  <h2 id="h-slide-44" data-quotation="verbatim">The checksum is the whole world, cheaply</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">Every turn carries a 64-bit FNV-1a hash of the postcard encoding of the entire World. Hashing the encoding rather than a hand-written list of fields means a new field is covered the day it is added — and it is the same encoding a late joiner receives.</li>
+  </ul>
+  <figure class="slidefig">
+    <img src="/img/talks/csc484/image24.png?v=ef198161" alt="A chain of four boxes: World, then postcard::to_allocvec, then FNV-1a, then a u64 of 8 bytes. Notes: anything in the world is in the checksum by construction, with no list of fields to forget to update; it is the same encoding a late joiner receives, so if the checksums agree the snapshot will too; and it is tagged with checked_tick, because a turn for T is sent three ticks early and the sender cannot yet know T minus 1. On the right, per tick on the wire: a player id, that tick&#39;s commands, usually none, and eight bytes of checksum, then the host&#39;s bundle of the same. Never on the wire: world state, positions, paths -- flow fields are two vectors of sixteen thousand cells each, so Nav lives outside World, rebuilt identically on every peer, in nobody&#39;s snapshot and nobody&#39;s checksum. Once, on late join: a Welcome of seed, tick and snapshot, 50 to 150 kB of postcard at five hundred citizens." loading="lazy">
+    <figcaption>A chain of four boxes: World, then postcard::to_allocvec, then FNV-1a, then a u64 of 8 bytes. Notes: anything in the world is in the checksum by construction, with no list of fields to forget to update; it is the same encoding a late joiner receives, so if the checksums agree the snapshot will too; and it is tagged with checked_tick, because a turn for T is sent three ticks early and the sender cannot yet know T minus 1. On the right, per tick on the wire: a player id, that tick&#39;s commands, usually none, and eight bytes of checksum, then the host&#39;s bundle of the same. Never on the wire: world state, positions, paths -- flow fields are two vectors of sixteen thousand cells each, so Nav lives outside World, rebuilt identically on every peer, in nobody&#39;s snapshot and nobody&#39;s checksum. Once, on late join: a Welcome of seed, tick and snapshot, 50 to 150 kB of postcard at five hundred citizens.</figcaption>
+  </figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-45" aria-labelledby="h-slide-45">
+  <p class="slideno"><a href="#slide-45">Slide 45</a></p>
+  <h2 id="h-slide-45" data-quotation="verbatim">When someone lags, disagrees, or leaves</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">The pipeline means a peer’s reported tick is always behind the host’s: a round trip old, and three ticks besides. A steady gap is health. A growing one is a peer falling behind, and one that stops moving is a peer that has stopped.</li>
+  </ul>
+  <figure class="slidefig">
+    <img src="/img/talks/csc484/image25.png?v=ef198161" alt="On the left, a peer falling behind in three states. Healthy: peers at 74 and 71, the host&#39;s own tick beside everyone&#39;s last reported one, where a steady gap is the pipeline rather than a fault. At 5 seconds it shows as &#39;waiting on&#39;, the banner you actually see, because a backgrounded tab still sends turns at 1 Hz. At 30 seconds the host drops them and the game continues without that city. On the right, refused or stopped. Build mismatch: Hello carries the wasm&#39;s sha256, so a stale tab cannot even find the room, and is refused if it does. Desync: checksums for the same tick differ and the game stops with &#39;desync with Alice at tick T&#39;. The host leaves: over, for now, and because the sim is identical everywhere, migration is a reconnect rather than a state transfer. In red at the foot: known and unfixed -- a checksum rides on Turn, which goes only to the host, so only the host can notice a desync, and on one the joiner simply freezes without being told." loading="lazy">
+    <figcaption>On the left, a peer falling behind in three states. Healthy: peers at 74 and 71, the host&#39;s own tick beside everyone&#39;s last reported one, where a steady gap is the pipeline rather than a fault. At 5 seconds it shows as &#39;waiting on&#39;, the banner you actually see, because a backgrounded tab still sends turns at 1 Hz. At 30 seconds the host drops them and the game continues without that city. On the right, refused or stopped. Build mismatch: Hello carries the wasm&#39;s sha256, so a stale tab cannot even find the room, and is refused if it does. Desync: checksums for the same tick differ and the game stops with &#39;desync with Alice at tick T&#39;. The host leaves: over, for now, and because the sim is identical everywhere, migration is a reconnect rather than a state transfer. In red at the foot: known and unfixed -- a checksum rides on Turn, which goes only to the host, so only the host can notice a desync, and on one the joiner simply freezes without being told.</figcaption>
+  </figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-46" aria-labelledby="h-slide-46">
+  <p class="slideno"><a href="#slide-46">Slide 46</a></p>
+  <h2 id="h-slide-46" data-quotation="verbatim">Gear Master</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">Q-Learning over State Space</li>
+    <li data-quotation="verbatim">Fights are simulations, no RNG, 0.03 ms per fight</li>
+    <li data-quotation="verbatim">So you can evaluate millions of boards quickly</li>
+    <li data-quotation="verbatim">The real decisions are how to shop and pack gear effectively (quartermaster), and how to reach every event in the game (Pathfinder)</li>
+    <li data-quotation="verbatim">Two agents, and they don’t share verbs</li>
+  </ul>
+  <figure class="slidefig">
+    <img src="/img/talks/csc484/image27.png?v=ef198161" alt="A board of placed pieces feeds combat::simulate, no RNG at 0.03 ms, which produces a win or lose reward. A note in green reads: not an environment the agent is inside -- an exact objective, millions of evaluations. The board is captioned &#39;a board (five of these)&#39;. Two agents below. Quartermaster, a DQN, has the verbs Place, Rotate, Buy, Sell and Reroll, and scores board-and-move pairs. Pathfinder, Q-learning, has the verbs Fight, Walk, Town and Answer, where packing is one macro-action. Between them: disjoint verb sets, neither is offered the other&#39;s move." loading="lazy">
+    <figcaption>A board of placed pieces feeds combat::simulate, no RNG at 0.03 ms, which produces a win or lose reward. A note in green reads: not an environment the agent is inside -- an exact objective, millions of evaluations. The board is captioned &#39;a board (five of these)&#39;. Two agents below. Quartermaster, a DQN, has the verbs Place, Rotate, Buy, Sell and Reroll, and scores board-and-move pairs. Pathfinder, Q-learning, has the verbs Fight, Walk, Town and Answer, where packing is one macro-action. Between them: disjoint verb sets, neither is offered the other&#39;s move.</figcaption>
+  </figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-47" aria-labelledby="h-slide-47">
+  <p class="slideno"><a href="#slide-47">Slide 47</a></p>
+  <h2 id="h-slide-47" data-quotation="verbatim">Gear Master</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">How I started the Q-Learning work</li>
+    <li data-quotation="verbatim">B1  Establish context</li>
+    <li data-quotation="verbatim">B2  Require step-by-step justification</li>
+    <li data-quotation="verbatim">B3  Build in self-questioning</li>
+  </ul>
+  <figure class="slidefig">
+    <img src="/img/talks/csc484/image31.png?v=ef198161" alt="Three documents in sequence. The brief, mine: six facts about the engine, stated and marked &#39;correct me from the code&#39;; no Python; a search baseline must be beaten before any net. rl-research.md, the agent&#39;s: the crates burn, candle, tch-rs and rurel; prior art including Laterre 2018 ranked reward, a 2025 bin-packing review, Crescitelli 2023, sts-lightspeed and MTG draft ranking; dated, and marked unverified where it could not read a date. rl-agent-plan.md, the agent&#39;s: &#39;right on five and a half&#39;, the purse is an input to combat -- one correction the brief could not know. Tagged B1, context is the engine&#39;s own numbers cited by line; B2, every recommendation names the paper or the crate release behind it; B3, the brief&#39;s own claims were the assumptions to check." loading="lazy">
+    <figcaption>Three documents in sequence. The brief, mine: six facts about the engine, stated and marked &#39;correct me from the code&#39;; no Python; a search baseline must be beaten before any net. rl-research.md, the agent&#39;s: the crates burn, candle, tch-rs and rurel; prior art including Laterre 2018 ranked reward, a 2025 bin-packing review, Crescitelli 2023, sts-lightspeed and MTG draft ranking; dated, and marked unverified where it could not read a date. rl-agent-plan.md, the agent&#39;s: &#39;right on five and a half&#39;, the purse is an input to combat -- one correction the brief could not know. Tagged B1, context is the engine&#39;s own numbers cited by line; B2, every recommendation names the paper or the crate release behind it; B3, the brief&#39;s own claims were the assumptions to check.</figcaption>
+  </figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-48" aria-labelledby="h-slide-48">
+  <p class="slideno"><a href="#slide-48">Slide 48</a></p>
+  <h2 id="h-slide-48" data-quotation="verbatim">Gear Master</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">Q-Learning Implementation deviated from design docs</li>
+    <li data-quotation="verbatim">A2  Extract the rule the chatbot actually used</li>
+    <li data-quotation="verbatim">A3  Locate the first divergence</li>
+    <li data-quotation="verbatim">C4  Verify against hand-computed cases</li>
+  </ul>
+  <figure class="slidefig">
+    <img src="/img/talks/csc484/image29.png?v=ef198161" alt="A two-column comparison of the design doc against what got built. State: 11,040 floats, five grids times 96 cells times 23, against 30 floats for the whole board. Action: factored, piece then anchor plus rotation, against one shared 32-float move vector. Agents: two, with disjoint verb sets, against one encoder for both. Road verbs: Fight, Walk, Town and Answer, against all of them collapsing to 8. A boxed line at the foot: qmoves -- 1,341 road verbs offered, 1 distinct vector the net can see." loading="lazy">
+    <figcaption>A two-column comparison of the design doc against what got built. State: 11,040 floats, five grids times 96 cells times 23, against 30 floats for the whole board. Action: factored, piece then anchor plus rotation, against one shared 32-float move vector. Agents: two, with disjoint verb sets, against one encoder for both. Road verbs: Fight, Walk, Town and Answer, against all of them collapsing to 8. A boxed line at the foot: qmoves -- 1,341 road verbs offered, 1 distinct vector the net can see.</figcaption>
+  </figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-49" aria-labelledby="h-slide-49">
+  <p class="slideno"><a href="#slide-49">Slide 49</a></p>
+  <h2 id="h-slide-49" data-quotation="verbatim">Gear Master</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">Pathfinding agent as validity solver for quest chains</li>
+  </ul>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-50" aria-labelledby="h-slide-50">
+  <p class="slideno"><a href="#slide-50">Slide 50</a></p>
+  <h2 id="h-slide-50" data-quotation="verbatim">Gear Master</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">Packer agent as enemy gear author</li>
+  </ul>
+  <figure class="slidefig">
+    <img src="/img/talks/csc484/image35.png?v=ef198161" alt="A left-to-right flow. &#39;The situation you write&#39;: a rung to clear, say 50; a tray, a purse, a shop; the creature it must beat; speed against survival; thirteen floats and no theme names. That goes to the quartermaster, which packs a board, where one fight decides and a win is +1 plus margin. Then the board that won. Then a creature shipped wearing it -- the harvest path, not a hand-built board. A return arrow reads: want a harder creature? raise the rung and ask again. Underneath: borrowed boards, three of five outside the 0.300 band; dressed from trained play, 0.009." loading="lazy">
+    <figcaption>A left-to-right flow. &#39;The situation you write&#39;: a rung to clear, say 50; a tray, a purse, a shop; the creature it must beat; speed against survival; thirteen floats and no theme names. That goes to the quartermaster, which packs a board, where one fight decides and a win is +1 plus margin. Then the board that won. Then a creature shipped wearing it -- the harvest path, not a hand-built board. A return arrow reads: want a harder creature? raise the rung and ask again. Underneath: borrowed boards, three of five outside the 0.300 band; dressed from trained play, 0.009.</figcaption>
+  </figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-51" aria-labelledby="h-slide-51">
+  <p class="slideno"><a href="#slide-51">Slide 51</a></p>
+  <h2 id="h-slide-51" data-quotation="verbatim">Bug</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">Q-Learning overfitting</li>
+    <li data-quotation="verbatim">A0  Calibrate your reliance</li>
+    <li data-quotation="verbatim">A3  Locate the first divergence</li>
+    <li data-quotation="verbatim">The packing agent got to rung 11</li>
+    <li data-quotation="verbatim">Then slid back to rung 2 over 1,300 episodes</li>
+    <li data-quotation="verbatim">The shaping reward was too quiet to hear</li>
+    <li data-quotation="verbatim">And the saved nets were loading as None</li>
+  </ul>
+  <figure class="slidefig">
+    <img src="/img/talks/csc484/image32.png?v=ef198161" alt="A curve of rung reached against episodes. It climbs to a marked peak at rung 11, annotated &#39;exploration already at 0.07&#39;, then falls away steadily to a marked point at rung 2. The decline spans about 1,300 episodes and is labelled &#39;Q spread rising&#39;." loading="lazy">
+    <figcaption>A curve of rung reached against episodes. It climbs to a marked peak at rung 11, annotated &#39;exploration already at 0.07&#39;, then falls away steadily to a marked point at rung 2. The decline spans about 1,300 episodes and is labelled &#39;Q spread rising&#39;.</figcaption>
+  </figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-52" aria-labelledby="h-slide-52">
+  <p class="slideno"><a href="#slide-52">Slide 52</a></p>
+  <h2 id="h-slide-52" data-quotation="verbatim">Question the system</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">C6  Question the system</li>
+    <li data-quotation="verbatim">Who built it, and on whose work?</li>
+    <li data-quotation="verbatim">Whose math is it good at?</li>
+    <li data-quotation="verbatim">Did the confident tone mislead you?</li>
+    <li data-quotation="verbatim">What would you want to know before leaning on it?</li>
+  </ul>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-53" aria-labelledby="h-slide-53">
+  <p class="slideno"><a href="#slide-53">Slide 53</a></p>
+  <h2 id="h-slide-53" data-quotation="verbatim">GenAI-Assisted Prototyping Procedure</h2>
+  <figure class="slidefig">
+    <img src="/img/talks/csc484/image15.png?v=ef198161" alt="A nine-stage vertical pipeline, each stage tagged with the procedure steps it serves. Brief, written by a person, tagged C1 and B1: what we are making, what done means, and what the agent may not decide on its own. Plan, B2: the agent fills the brief in, every decision and the reason for it, before any code. &#39;I read the plan&#39;, read by a person, C3: approve it or send it back, and a reference it cannot find is a question for me rather than a guess; a revise arrow loops back to plan. Recon, B2: measure against the running build, counts, brackets and prices, and say in the commit what you found. Build, B2: tests and content lints in the same change, and a number that disagrees with the plan must name which of the two is wrong. Notebook, B3: assumptions listed and checked while the work happens, as a divergence, a finding, or a decision handed back. &#39;I play it&#39;, played by a person, C4: a fortnight of real play against what the plan claimed, with everything wrong becoming a triage row, looping back to build. Deploy, C4: I push, and drive.py then walks every check against the live page in three engines. Handoff, C5: for whoever is next, the rules that are load-bearing and the mistakes that cost a day." loading="lazy">
+    <figcaption>A nine-stage vertical pipeline, each stage tagged with the procedure steps it serves. Brief, written by a person, tagged C1 and B1: what we are making, what done means, and what the agent may not decide on its own. Plan, B2: the agent fills the brief in, every decision and the reason for it, before any code. &#39;I read the plan&#39;, read by a person, C3: approve it or send it back, and a reference it cannot find is a question for me rather than a guess; a revise arrow loops back to plan. Recon, B2: measure against the running build, counts, brackets and prices, and say in the commit what you found. Build, B2: tests and content lints in the same change, and a number that disagrees with the plan must name which of the two is wrong. Notebook, B3: assumptions listed and checked while the work happens, as a divergence, a finding, or a decision handed back. &#39;I play it&#39;, played by a person, C4: a fortnight of real play against what the plan claimed, with everything wrong becoming a triage row, looping back to build. Deploy, C4: I push, and drive.py then walks every check against the live page in three engines. Handoff, C5: for whoever is next, the rules that are load-bearing and the mistakes that cost a day.</figcaption>
+  </figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-54" aria-labelledby="h-slide-54">
+  <p class="slideno"><a href="#slide-54">Slide 54</a></p>
+  <h2 id="h-slide-54" data-quotation="verbatim">Resources</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">github.com/sgilson7/floodline</li>
+    <li data-quotation="verbatim">WebRTC lockstep, no server</li>
+    <li data-quotation="verbatim">github.com/sgilson7/gear-master</li>
+    <li data-quotation="verbatim">engine, agents, the RL write-ups</li>
+    <li data-quotation="verbatim">github.com/sgilson7/gear-master-2d</li>
+    <li data-quotation="verbatim">the full doc set, tests, gate</li>
+    <li data-quotation="verbatim">github.com/sgilson7/pdf-redactor</li>
+    <li data-quotation="verbatim">github.com/sgilson7/perturbation-workbench</li>
+  </ul>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-55" aria-labelledby="h-slide-55">
+  <p class="slideno"><a href="#slide-55">Slide 55</a></p>
+  <h2 id="h-slide-55" data-quotation="verbatim">Questions?</h2>
+  <ul class="slidelines">
+    <li data-quotation="verbatim">Sam Gilson</li>
+    <li data-quotation="verbatim">sagilson@ncsu.edu</li>
+  </ul>
+</section>
+
+</div></section><section class="stripe"><div class="wrap">
+<h2>Where this sits</h2>
+<p>
+  The three procedures on these slides have a page each, and they are in the
+  <a href="/concepts/">concept graph</a> with the terms from the papers they
+  came out of. <a href="/publications/">The publications</a> list this talk
+  with its date and course.
+</p>
+<p class="backlink"><a href="/publications/">All publications</a></p>
+
+</div></section>
+</main>
+
+<footer class="band">
+  <div class="wrap">
+    <p>
+      Sam Gilson (he/him) &middot; PhD student in computer science,
+      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>, North Carolina State University
+    </p>
+    <p class="ids">
+      <a href="https://orcid.org/0009-0002-2394-8649">ORCID 0009-0002-2394-8649</a> &middot;
+      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google Scholar</a> &middot;
+      <a href="https://github.com/sgilson7">GitHub</a>
+    </p>
+    <p class="meta">
+      Everything I've written here is CC&nbsp;BY&nbsp;4.0. The papers belong to
+      their publishers. This page loads from this site alone and keeps nothing
+      about your visit. Build <code>ef198161</code>.
+    </p>
+  </div>
+</footer>
+</body>
+</html>

@@ -17,7 +17,7 @@ ORCID: https://orcid.org/0009-0002-2394-8649
 
 ## Talks
 
-- Applications of AI Literacy to GenAI-Assisted Game Development — Guest lecture, CSC 484/584 Game AI, NC State University, 2026
+- [Applications of AI Literacy to GenAI-Assisted Game Development](https://sgilson7.github.io/talks/gilson2026csc484lecture/) — Guest lecture, CSC 484/584 Game AI, NC State University, 2026
 
 ## Concepts
 
@@ -41,6 +41,20 @@ ORCID: https://orcid.org/0009-0002-2394-8649
   Also written: OOD CS coursework, OODCS, on-demand computer science coursework
 - [DRIVE framework](https://sgilson7.github.io/concepts/drive-framework/): The DRIVE framework is a taxonomy for generative AI interactions that separates how a student steers an exchange from how they articulate what they know.
   Also written: Deep Reasoning in Virtual Education, DRIVE taxonomy
+- [Hallucination Autopsy Procedure](https://sgilson7.github.io/concepts/hallucination-autopsy-procedure/): The Hallucination Autopsy Procedure is a seven-step routine for finding where a chatbot's proof leaves the claim it was given, and naming why it left.
+  Also written: hallucination autopsy, Procedure A
+- [Axiom Reversion](https://sgilson7.github.io/concepts/axiom-reversion/): Axiom Reversion is a failure mode in which a chatbot swaps in the textbook theorem that the problem was perturbed away from.
+  Also written: axiom reversion failure
+- [Invalid Syntactic Shortcut](https://sgilson7.github.io/concepts/invalid-syntactic-shortcut/): An Invalid Syntactic Shortcut is a failure mode in which a chatbot manipulates a form as though a rule applied, producing a step that is well-formed and false.
+  Also written: syntactic shortcut
+- [Spatial or Counting Miscount](https://sgilson7.github.io/concepts/spatial-counting-miscount/): A Spatial or Counting Miscount is a failure mode in which a chatbot counts placements that break the constraint, or counts the same one twice.
+  Also written: counting miscount, spatial miscount
+- [Strong Prompt Structure](https://sgilson7.github.io/concepts/strong-prompt-structure/): Strong Prompt Structure is a four-part shape for a prompt: establish context, require justification at every step, build in self-questioning, and plan the correction.
+  Also written: Procedure B, structure of a strong prompt
+- [Collaborative Prompting](https://sgilson7.github.io/concepts/collaborative-prompting/): Collaborative Prompting is a six-step routine in which a student forbids the final answer, takes one step at a time, and checks each against cases computed by hand.
+  Also written: Procedure C, scaffolding strong prompts
+- [GenAI-Assisted Prototyping Procedure](https://sgilson7.github.io/concepts/genai-assisted-prototyping-procedure/): The GenAI-Assisted Prototyping Procedure is a nine-stage pipeline, brief to handoff, in which a person reads the plan, plays the build, and deploys it.
+  Also written: GenAI-assisted prototyping, agentic prototyping procedure
 
 ## Other pages
 
