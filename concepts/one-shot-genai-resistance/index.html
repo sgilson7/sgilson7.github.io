@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>One-Shot GenAI Resistance — Sam Gilson</title>
+<meta name="description" content="One-Shot GenAI Resistance is a property of an assignment question: a target chatbot scores below 60% on it across three separate attempts with the same prompt.">
+<link rel="canonical" href="https://sgilson7.github.io/concepts/one-shot-genai-resistance/">
+
+<link rel="stylesheet" href="/styles.css?v=d393061d">
+<link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "One-Shot GenAI Resistance",
+  "description": "One-Shot GenAI Resistance is a property of an assignment question: a target chatbot scores below 60% on it across three separate attempts with the same prompt.",
+  "url": "https://sgilson7.github.io/concepts/one-shot-genai-resistance/",
+  "alternateName": ["One-Shot Generative AI Resistance", "One-Shot GenAI-Resistant", "One-Shot GenAI Resistant", "AI-resistant assignment"],
+  "citation": {"@type": "ScholarlyArticle", "identifier": "https://doi.org/10.1007/978-3-032-29770-9_48"},
+  "inDefinedTermSet": {"@type": "DefinedTermSet", "name": "Sam Gilson concepts", "url": "https://sgilson7.github.io/concepts/"}
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="band">
+  <div class="wrap">
+    <p class="brand"><a href="/">Sam Gilson</a></p>
+    <nav aria-label="Sections">
+      <a href="/">Home</a>
+      <a href="/publications/">Publications</a>
+      <a href="/concepts/">Concepts</a>
+      <a href="/projects/">Tools</a>
+      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google&nbsp;Scholar</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+
+<article>
+<p class="kicker">Concept</p>
+<h1>One-Shot GenAI Resistance</h1>
+
+
+<p class="lede definition">One-Shot GenAI Resistance is a property of an assignment question: a target chatbot scores below 60% on it across three separate attempts with the same prompt.</p>
+<p class="alts">Also written: One-Shot Generative AI Resistance · One-Shot GenAI-Resistant · One-Shot GenAI Resistant · AI-resistant assignment</p>
+
+<dl class="facts">
+  <dt>Defined in</dt>
+  <dd>
+    <a href="/papers/gilson2026perturbation/">Adversarial Assignment Perturbation: Effects on Help-Seeking Behaviors in Student Generative AI Chatbot Use</a>, Section 2 and Table 1
+  </dd>
+  <dt>DOI</dt><dd><a href="https://doi.org/10.1007/978-3-032-29770-9_48">https://doi.org/10.1007/978-3-032-29770-9_48</a></dd>
+  <dt>Tool</dt><dd><a href="/projects/perturbation-workbench/">Perturbation Workbench</a></dd>
+</dl>
+
+<p>The threshold is 60%, and it was not chosen for neatness. The paper grounds it
+at the point where a student in the United States typically stops receiving
+course credit, so a question that holds a model below it is a question a
+student cannot outsource and still pass.</p>
+<p>Resistance is a property of a question against a <em>named model at a named time</em>,
+not a permanent quality. The AIED 2026 study tested against Google Gemini
+2.0-flash, the free tier available to students through the university during
+Summer 2025. A question resistant to that model may not be resistant to the
+next one, which is why the protocol records which model it was run against.</p>
+<p>One attempt is not enough to claim it. A model that fails once may pass on a
+re-roll, so the classification requires three failures of the exact same query
+against fresh instances.</p>
+
+<h2>Questions this page answers</h2>
+<ul class="questions">
+  <li>What is a one-shot GenAI-resistant assignment?</li>
+  <li>What score should a chatbot fall below before an assignment counts as AI-resistant?</li>
+  <li>How can I write a discrete mathematics assignment that a chatbot cannot solve in one prompt?</li>
+</ul>
+
+<p class="backlink"><a href="/concepts/">All concepts</a></p>
+</article>
+
+</main>
+
+<footer class="band">
+  <div class="wrap">
+    <p>
+      Sam Gilson (he/him) &middot; PhD student in computer science,
+      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>, North Carolina State University
+    </p>
+    <p class="ids">
+      <a href="https://orcid.org/0009-0002-2394-8649">ORCID 0009-0002-2394-8649</a> &middot;
+      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google Scholar</a> &middot;
+      <a href="https://github.com/sgilson7">GitHub</a>
+    </p>
+    <p class="meta">
+      Text on this site is CC&nbsp;BY&nbsp;4.0; papers keep their publishers' terms.
+      No analytics, no third-party requests, fonts vendored.
+      Build <code>d393061d</code>.
+    </p>
+  </div>
+</footer>
+</body>
+</html>

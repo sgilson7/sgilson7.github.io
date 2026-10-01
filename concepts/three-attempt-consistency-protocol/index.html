@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Three-Attempt Consistency Protocol — Sam Gilson</title>
+<meta name="description" content="The Three-Attempt Consistency Protocol re-prompts a model with the exact query two further times, and classifies a question resistant only if all three attempts fail.">
+<link rel="canonical" href="https://sgilson7.github.io/concepts/three-attempt-consistency-protocol/">
+
+<link rel="stylesheet" href="/styles.css?v=d393061d">
+<link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "Three-Attempt Consistency Protocol",
+  "description": "The Three-Attempt Consistency Protocol re-prompts a model with the exact query two further times, and classifies a question resistant only if all three attempts fail.",
+  "url": "https://sgilson7.github.io/concepts/three-attempt-consistency-protocol/",
+  "alternateName": ["three-attempt protocol", "result validity check"],
+  "citation": {"@type": "ScholarlyArticle", "identifier": "https://doi.org/10.1007/978-3-032-29770-9_48"},
+  "inDefinedTermSet": {"@type": "DefinedTermSet", "name": "Sam Gilson concepts", "url": "https://sgilson7.github.io/concepts/"}
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="band">
+  <div class="wrap">
+    <p class="brand"><a href="/">Sam Gilson</a></p>
+    <nav aria-label="Sections">
+      <a href="/">Home</a>
+      <a href="/publications/">Publications</a>
+      <a href="/concepts/">Concepts</a>
+      <a href="/projects/">Tools</a>
+      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google&nbsp;Scholar</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+
+<article>
+<p class="kicker">Concept</p>
+<h1>Three-Attempt Consistency Protocol</h1>
+
+
+<p class="lede definition">The Three-Attempt Consistency Protocol re-prompts a model with the exact query two further times, and classifies a question resistant only if all three attempts fail.</p>
+<p class="alts">Also written: three-attempt protocol · result validity check</p>
+
+<dl class="facts">
+  <dt>Defined in</dt>
+  <dd>
+    <a href="/papers/gilson2026perturbation/">Adversarial Assignment Perturbation: Effects on Help-Seeking Behaviors in Student Generative AI Chatbot Use</a>, Table 1, step 8
+  </dd>
+  <dt>DOI</dt><dd><a href="https://doi.org/10.1007/978-3-032-29770-9_48">https://doi.org/10.1007/978-3-032-29770-9_48</a></dd>
+  <dt>Tool</dt><dd><a href="/projects/perturbation-workbench/">Perturbation Workbench</a></dd>
+</dl>
+
+<p>The protocol exists to mitigate false negatives. A model that fails a question
+once may pass the same question on a different roll, and a single failure is
+not evidence that a question resists anything.</p>
+<p>So after the first failure the model is re-prompted with the exact query two
+more times. Only if it fails across all three trials is the prompt classified
+as GenAI resistant. A later attempt that passes is a false negative caught, and
+the record says so rather than quietly discarding it.</p>
+
+<h2>Questions this page answers</h2>
+<ul class="questions">
+  <li>How many times should I test an assignment against a chatbot before trusting the result?</li>
+  <li>How do I avoid a false negative when testing whether an assignment is AI-resistant?</li>
+</ul>
+
+<p class="backlink"><a href="/concepts/">All concepts</a></p>
+</article>
+
+</main>
+
+<footer class="band">
+  <div class="wrap">
+    <p>
+      Sam Gilson (he/him) &middot; PhD student in computer science,
+      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>, North Carolina State University
+    </p>
+    <p class="ids">
+      <a href="https://orcid.org/0009-0002-2394-8649">ORCID 0009-0002-2394-8649</a> &middot;
+      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google Scholar</a> &middot;
+      <a href="https://github.com/sgilson7">GitHub</a>
+    </p>
+    <p class="meta">
+      Text on this site is CC&nbsp;BY&nbsp;4.0; papers keep their publishers' terms.
+      No analytics, no third-party requests, fonts vendored.
+      Build <code>d393061d</code>.
+    </p>
+  </div>
+</footer>
+</body>
+</html>

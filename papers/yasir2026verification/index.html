@@ -7,7 +7,7 @@
 <meta name="description" content="When Verification Hurts: Asymmetric Effects of Multi-Agent Feedback in Logic Proof Tutoring — Tahreem Yasir, Sutapa Dey Tithi, Benyamin Tabarsi, Dmitri Droujkov, Sam Gilson, Yasitha Rajapaksha, Xiaoyi Tian, Arun Ramesh, DongKuan Xu and Tiffany Barnes. ">
 <link rel="canonical" href="https://sgilson7.github.io/papers/yasir2026verification/">
 
-<link rel="stylesheet" href="/styles.css?v=b4f7dfd3">
+<link rel="stylesheet" href="/styles.css?v=d393061d">
 <link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
 
   <meta name="citation_title" content="When Verification Hurts: Asymmetric Effects of Multi-Agent Feedback in Logic Proof Tutoring">
@@ -43,6 +43,8 @@
     <nav aria-label="Sections">
       <a href="/">Home</a>
       <a href="/publications/">Publications</a>
+      <a href="/concepts/">Concepts</a>
+      <a href="/projects/">Tools</a>
       <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google&nbsp;Scholar</a>
     </nav>
   </div>
@@ -65,6 +67,10 @@
   </dd>
   <dt>Preprint</dt><dd><a href="https://arxiv.org/abs/2603.27076">arXiv</a></dd>
 </dl>
+<h2>Abstract</h2>
+<div class="abstract" data-quotation="verbatim"><p>Large language models (LLMs) are increasingly used for automated tutoring, but their reliability in structured symbolic domains remains unclear. We study step-level feedback for propositional logic proofs, which require precise symbolic reasoning aligned with a learner’s current proof state. We introduce a knowledge-graph-grounded benchmark of 516 unique proof states with step-level annotations and difficulty metrics. Unlike prior tutoring evaluations that rely on model self-assessment or binary correctness, our framework enables fine-grained analysis of feedback quality against verified solution paths. We evaluate three role-specialized pipelines with varying solution access: Tutor (partial solution access), Teacher (full derivation access), and Judge (verification of Tutor feedback). Our results reveal a striking asymmetry: verification improves outcomes when upstream feedback is error-prone (&lt;70% accuracy), but degrades performance by 4-6 percentage points through over-specification when feedback is already reliable (&gt;85%). Critically, we identify a shared complexity ceiling; no model or pipeline reliably succeeds on proof states exceeding complexity 4-5. These findings challenge the assumption that adding verifiers or richer context universally improves tutoring, motivating adaptive, difficulty-aware architectures that route problems by estimated complexity and upstream reliability.</p>
+</div>
+<p class="provenance">Reconstructed from the OpenAlex record&#39;s inverted index for the arXiv DOI.</p>
 <p class="note">
   No full text here yet. Which version may be posted depends on the licence
   signed for this paper, and that has not been recorded — so the build
@@ -99,7 +105,7 @@
     <p class="meta">
       Text on this site is CC&nbsp;BY&nbsp;4.0; papers keep their publishers' terms.
       No analytics, no third-party requests, fonts vendored.
-      Build <code>b4f7dfd3</code>.
+      Build <code>d393061d</code>.
     </p>
   </div>
 </footer>

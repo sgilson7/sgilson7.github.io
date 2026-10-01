@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>iterative perturbation process — Sam Gilson</title>
+<meta name="description" content="The iterative perturbation process is an eight-step, instructor-led loop that rewrites an assignment question until a target chatbot fails it three times running.">
+<link rel="canonical" href="https://sgilson7.github.io/concepts/iterative-perturbation-process/">
+
+<link rel="stylesheet" href="/styles.css?v=d393061d">
+<link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "iterative perturbation process",
+  "description": "The iterative perturbation process is an eight-step, instructor-led loop that rewrites an assignment question until a target chatbot fails it three times running.",
+  "url": "https://sgilson7.github.io/concepts/iterative-perturbation-process/",
+  "alternateName": ["Adversarial Iterative Perturbation", "Adversarial Assignment Perturbation", "iterative perturbation method"],
+  "citation": {"@type": "ScholarlyArticle", "identifier": "https://doi.org/10.1007/978-3-032-29770-9_48"},
+  "inDefinedTermSet": {"@type": "DefinedTermSet", "name": "Sam Gilson concepts", "url": "https://sgilson7.github.io/concepts/"}
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="band">
+  <div class="wrap">
+    <p class="brand"><a href="/">Sam Gilson</a></p>
+    <nav aria-label="Sections">
+      <a href="/">Home</a>
+      <a href="/publications/">Publications</a>
+      <a href="/concepts/">Concepts</a>
+      <a href="/projects/">Tools</a>
+      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google&nbsp;Scholar</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+
+<article>
+<p class="kicker">Concept</p>
+<h1>iterative perturbation process</h1>
+
+
+<p class="lede definition">The iterative perturbation process is an eight-step, instructor-led loop that rewrites an assignment question until a target chatbot fails it three times running.</p>
+<p class="alts">Also written: Adversarial Iterative Perturbation · Adversarial Assignment Perturbation · iterative perturbation method</p>
+
+<dl class="facts">
+  <dt>Defined in</dt>
+  <dd>
+    <a href="/papers/gilson2026perturbation/">Adversarial Assignment Perturbation: Effects on Help-Seeking Behaviors in Student Generative AI Chatbot Use</a>, Table 1
+  </dd>
+  <dt>DOI</dt><dd><a href="https://doi.org/10.1007/978-3-032-29770-9_48">https://doi.org/10.1007/978-3-032-29770-9_48</a></dd>
+  <dt>Tool</dt><dd><a href="/projects/perturbation-workbench/">Perturbation Workbench</a></dd>
+</dl>
+
+<p>The eight steps run in a loop: write a rubric for the unperturbed question,
+pick the model that matches what students can actually reach, test the original,
+grade it, and if it scores at or above 60%, apply one of the three
+perturbation strategies and try again against a <em>fresh</em> instance so nothing
+carries over from the last exchange. Each pass also updates the rubric, so the
+hallucinations the model produced become things the grading scheme explicitly
+penalises.</p>
+<p>The process is instructor-led rather than automated. The paper is direct about
+why: choosing which perturbation to apply relies on domain expertise to
+identify and target a specific failure point, and that judgement is the part a
+script cannot supply.</p>
+<p>A version that has been perturbed keeps the attempts recorded against its
+earlier form. Those attempts are evidence about <em>those</em> bytes, and they stay
+attached to them.</p>
+
+<h2>Questions this page answers</h2>
+<ul class="questions">
+  <li>How do I make an existing assignment resistant to ChatGPT?</li>
+  <li>Is there a protocol for testing whether an assignment resists a chatbot?</li>
+  <li>What is adversarial assignment perturbation?</li>
+</ul>
+
+<p class="backlink"><a href="/concepts/">All concepts</a></p>
+</article>
+
+</main>
+
+<footer class="band">
+  <div class="wrap">
+    <p>
+      Sam Gilson (he/him) &middot; PhD student in computer science,
+      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>, North Carolina State University
+    </p>
+    <p class="ids">
+      <a href="https://orcid.org/0009-0002-2394-8649">ORCID 0009-0002-2394-8649</a> &middot;
+      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google Scholar</a> &middot;
+      <a href="https://github.com/sgilson7">GitHub</a>
+    </p>
+    <p class="meta">
+      Text on this site is CC&nbsp;BY&nbsp;4.0; papers keep their publishers' terms.
+      No analytics, no third-party requests, fonts vendored.
+      Build <code>d393061d</code>.
+    </p>
+  </div>
+</footer>
+</body>
+</html>

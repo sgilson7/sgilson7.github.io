@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Perturbation Workbench — Sam Gilson</title>
+<meta name="description" content="Run the AIED 2026 iterative perturbation protocol in the browser. Nothing is uploaded.">
+<link rel="canonical" href="https://sgilson7.github.io/projects/perturbation-workbench/">
+
+<link rel="stylesheet" href="/styles.css?v=d393061d">
+<link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Perturbation Workbench",
+  "description": "Run the AIED 2026 iterative perturbation protocol in the browser. Nothing is uploaded.",
+  "url": "https://sgilson7.github.io/projects/perturbation-workbench/",
+  "codeRepository": "https://github.com/sgilson7/perturbation-workbench",
+  "programmingLanguage": "Rust",
+  "author": {"@type": "Person", "name": "Sam Gilson", "identifier": "https://orcid.org/0009-0002-2394-8649"},
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Any (runs in a web browser)",
+  "installUrl": "https://sgilson7.github.io/perturbation-workbench/"
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="band">
+  <div class="wrap">
+    <p class="brand"><a href="/">Sam Gilson</a></p>
+    <nav aria-label="Sections">
+      <a href="/">Home</a>
+      <a href="/publications/">Publications</a>
+      <a href="/concepts/">Concepts</a>
+      <a href="/projects/">Tools</a>
+      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google&nbsp;Scholar</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+
+<article>
+<p class="kicker">Research tool</p>
+<h1>Perturbation Workbench</h1>
+<p class="lede">Run the AIED 2026 iterative perturbation protocol in the browser. Nothing is uploaded.</p>
+
+<dl class="facts">
+  <dt>Written in</dt><dd>Rust</dd>
+  <dt>Run it</dt><dd><a href="https://sgilson7.github.io/perturbation-workbench/">https://sgilson7.github.io/perturbation-workbench/</a></dd>
+  <dt>Source</dt><dd><a href="https://github.com/sgilson7/perturbation-workbench">https://github.com/sgilson7/perturbation-workbench</a></dd>
+  <dt>Implements</dt><dd><a href="/papers/gilson2026perturbation/">Adversarial Assignment Perturbation: Effects on Help-Seeking Behaviors in Student Generative AI Chatbot Use</a></dd>
+</dl>
+
+<p>The Workbench runs the paper’s Table 1 protocol and produces two artefacts a
+collaborator at another institution can check: the assignment, and a run
+manifest that is a proof of execution.</p>
+<p>It calls no model. The tool has no API key and no code that could use one — you
+are the transport between the workbench and the chatbot. It gives you the exact
+query, you paste it into a fresh instance, you paste the response back, and you
+grade it against your rubric. What the tool guarantees is that the protocol was
+followed: the same bytes were prompted three times, the rubric was fixed before
+grading, and nothing was stamped resistant that did not earn it.</p>
+<p>The manifest is deliberately not the assignment. It carries counts, ordinals,
+settings, hashes and timestamps, and there is no field through which question
+text could arrive — a record that leaked the questions it certifies would
+destroy the thing it was made to protect.</p>
+
+<h2>How to cite it</h2>
+<p>Cite the paper this implements. If the tool itself needs citing in a
+methods section, name it and link this page alongside.</p>
+<pre class="bibtex"><code>@inproceedings{gilson2026perturbation,
+  title = {{Adversarial Assignment Perturbation: Effects on Help-Seeking Behaviors in Student Generative AI Chatbot Use}},
+  author = {Sam Gilson and Benyamin Tabarsi and Tiffany Barnes},
+  booktitle = {Artificial Intelligence in Education (AIED 2026), LNAI 16585},
+  pages = {440--449},
+  year = {2026},
+  doi = {10.1007/978-3-032-29770-9_48}
+}</code></pre>
+<h2>Questions this page answers</h2>
+<ul class="questions">
+  <li>Is there a tool for testing whether an assignment resists ChatGPT or Gemini?</li>
+  <li>How do I produce evidence that an assignment was tested against a chatbot?</li>
+</ul>
+
+<p class="backlink"><a href="/projects/">All tools and games</a></p>
+</article>
+
+</main>
+
+<footer class="band">
+  <div class="wrap">
+    <p>
+      Sam Gilson (he/him) &middot; PhD student in computer science,
+      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>, North Carolina State University
+    </p>
+    <p class="ids">
+      <a href="https://orcid.org/0009-0002-2394-8649">ORCID 0009-0002-2394-8649</a> &middot;
+      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google Scholar</a> &middot;
+      <a href="https://github.com/sgilson7">GitHub</a>
+    </p>
+    <p class="meta">
+      Text on this site is CC&nbsp;BY&nbsp;4.0; papers keep their publishers' terms.
+      No analytics, no third-party requests, fonts vendored.
+      Build <code>d393061d</code>.
+    </p>
+  </div>
+</footer>
+</body>
+</html>

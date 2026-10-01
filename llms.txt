@@ -15,3 +15,34 @@ ORCID: https://orcid.org/0009-0002-2394-8649
 - [Designing AI-Resistant Assignments via Iterative Perturbation to Promote Interactive Learning](https://sgilson7.github.io/papers/gilson2026designing/) — Proceedings of the 57th ACM Technical Symposium on Computer Science Education V.2 (SIGCSE TS 2026), 2026 doi:10.1145/3770761.3777058
 - [When Verification Hurts: Asymmetric Effects of Multi-Agent Feedback in Logic Proof Tutoring](https://sgilson7.github.io/papers/yasir2026verification/), 2026
 - [How Do Undergraduates Interested in Computer Science Use Online, On-Demand CS Coursework?](https://sgilson7.github.io/papers/gilson2025oodcs/) — Proceedings of the Twelfth ACM Conference on Learning @ Scale (L@S '25), 2025 doi:10.1145/3698205.3733938
+
+## Concepts
+
+- [One-Shot GenAI Resistance](https://sgilson7.github.io/concepts/one-shot-genai-resistance/): One-Shot GenAI Resistance is a property of an assignment question: a target chatbot scores below 60% on it across three separate attempts with the same prompt.
+  Also written: One-Shot Generative AI Resistance, One-Shot GenAI-Resistant, One-Shot GenAI Resistant, AI-resistant assignment
+- [iterative perturbation process](https://sgilson7.github.io/concepts/iterative-perturbation-process/): The iterative perturbation process is an eight-step, instructor-led loop that rewrites an assignment question until a target chatbot fails it three times running.
+  Also written: Adversarial Iterative Perturbation, Adversarial Assignment Perturbation, iterative perturbation method
+- [Spatial Injection](https://sgilson7.github.io/concepts/spatial-injection/): Spatial Injection is a perturbation strategy that adds reasoning requiring visual or geometric interpretation to a question, so a model must track layout as well as arithmetic.
+  Also written: spatial constraint
+- [Axiomatic Replacement](https://sgilson7.github.io/concepts/axiomatic-replacement/): Axiomatic Replacement is a perturbation strategy that alters a question's fundamental logical premises or axioms to prevent a model retrieving a memorised proof.
+  Also written: axiom replacement
+- [Contextual Embedding](https://sgilson7.github.io/concepts/contextual-embedding/): Contextual Embedding is a perturbation strategy that places a question inside unfamiliar, class-specific context which the grading rubric then requires the answer to use.
+  Also written: contextual embedding strategy
+- [Three-Attempt Consistency Protocol](https://sgilson7.github.io/concepts/three-attempt-consistency-protocol/): The Three-Attempt Consistency Protocol re-prompts a model with the exact query two further times, and classifies a question resistant only if all three attempts fail.
+  Also written: three-attempt protocol, result validity check
+- [Cognitive Scaffolding](https://sgilson7.github.io/concepts/cognitive-scaffolding/): Cognitive Scaffolding is an engagement pattern in which a student recognises that a chatbot has hallucinated and supplies context to steer it toward a correct answer.
+  Also written: cognitive scaffolding strategy, collaborative repair
+- [GenAI dependence](https://sgilson7.github.io/concepts/genai-dependence/): GenAI dependence is an engagement pattern in which a student accepts a chatbot's hallucinated answer without critically evaluating it.
+  Also written: Dependency, Dependence, cognitive outsourcing
+- [online, on-demand CS coursework](https://sgilson7.github.io/concepts/online-on-demand-cs-coursework/): Online, on-demand CS coursework is computing coursework a student takes outside a degree programme, on their own schedule, to supplement that programme.
+  Also written: OOD CS coursework, OODCS, on-demand computer science coursework
+- [DRIVE framework](https://sgilson7.github.io/concepts/drive-framework/): The DRIVE framework is a taxonomy for generative AI interactions that separates how a student steers an exchange from how they articulate what they know.
+  Also written: Deep Reasoning in Virtual Education, DRIVE taxonomy
+
+## Tools and games
+
+- [Perturbation Workbench](https://sgilson7.github.io/projects/perturbation-workbench/): Run the AIED 2026 iterative perturbation protocol in the browser. Nothing is uploaded. (Research tool)
+- [PDF Redactor](https://sgilson7.github.io/projects/pdf-redactor/): Redact student names and strip all metadata from PDFs, entirely in your browser. Nothing is uploaded. (Research tool)
+- [Gear Master](https://sgilson7.github.io/projects/gear-master/): Build gear out of parts, then watch your character auto-battle. Rust + macroquad. (Game)
+- [Gear Master 2D](https://sgilson7.github.io/projects/gear-master-2d/): A 2D tile-based open-world RPG on the gear-assembly auto-battler from gear-master. (Game)
+- [Floodline](https://sgilson7.github.io/projects/floodline/): Multiplayer medieval city builder in the browser. Deterministic lockstep over WebRTC; every age ends in a flood. (Game)

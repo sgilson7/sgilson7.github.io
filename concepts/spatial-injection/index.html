@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spatial Injection — Sam Gilson</title>
+<meta name="description" content="Spatial Injection is a perturbation strategy that adds reasoning requiring visual or geometric interpretation to a question, so a model must track layout as well as arithmetic.">
+<link rel="canonical" href="https://sgilson7.github.io/concepts/spatial-injection/">
+
+<link rel="stylesheet" href="/styles.css?v=d393061d">
+<link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "Spatial Injection",
+  "description": "Spatial Injection is a perturbation strategy that adds reasoning requiring visual or geometric interpretation to a question, so a model must track layout as well as arithmetic.",
+  "url": "https://sgilson7.github.io/concepts/spatial-injection/",
+  "alternateName": ["spatial constraint"],
+  "citation": {"@type": "ScholarlyArticle", "identifier": "https://doi.org/10.1007/978-3-032-29770-9_48"},
+  "inDefinedTermSet": {"@type": "DefinedTermSet", "name": "Sam Gilson concepts", "url": "https://sgilson7.github.io/concepts/"}
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="band">
+  <div class="wrap">
+    <p class="brand"><a href="/">Sam Gilson</a></p>
+    <nav aria-label="Sections">
+      <a href="/">Home</a>
+      <a href="/publications/">Publications</a>
+      <a href="/concepts/">Concepts</a>
+      <a href="/projects/">Tools</a>
+      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google&nbsp;Scholar</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+
+<article>
+<p class="kicker">Concept</p>
+<h1>Spatial Injection</h1>
+
+
+<p class="lede definition">Spatial Injection is a perturbation strategy that adds reasoning requiring visual or geometric interpretation to a question, so a model must track layout as well as arithmetic.</p>
+<p class="alts">Also written: spatial constraint</p>
+
+<dl class="facts">
+  <dt>Defined in</dt>
+  <dd>
+    <a href="/papers/gilson2026perturbation/">Adversarial Assignment Perturbation: Effects on Help-Seeking Behaviors in Student Generative AI Chatbot Use</a>, Table 1, step 5, and Q1
+  </dd>
+  <dt>DOI</dt><dd><a href="https://doi.org/10.1007/978-3-032-29770-9_48">https://doi.org/10.1007/978-3-032-29770-9_48</a></dd>
+  <dt>Tool</dt><dd><a href="/projects/perturbation-workbench/">Perturbation Workbench</a></dd>
+</dl>
+
+<p>The worked example in the paper is a counting question. It began as a rote
+permutation task — assigning items to slots — and gained a spatial constraint
+that mapped the items onto a visual grid, a salad bar at a restaurant.</p>
+<p>What broke the model was not the grid alone but the interaction between
+constraints. Across multiple attempts the model failed to account for the
+interplay between “warm” items and “cold” slots, hallucinating formulas such as
+7^6 in place of P(7, 6), and failing to satisfy the constraints simultaneously.</p>
+
+<h2>Questions this page answers</h2>
+<ul class="questions">
+  <li>Which changes to a combinatorics question make a language model hallucinate?</li>
+  <li>Do spatial constraints make a counting problem harder for a chatbot?</li>
+</ul>
+
+<p class="backlink"><a href="/concepts/">All concepts</a></p>
+</article>
+
+</main>
+
+<footer class="band">
+  <div class="wrap">
+    <p>
+      Sam Gilson (he/him) &middot; PhD student in computer science,
+      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>, North Carolina State University
+    </p>
+    <p class="ids">
+      <a href="https://orcid.org/0009-0002-2394-8649">ORCID 0009-0002-2394-8649</a> &middot;
+      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google Scholar</a> &middot;
+      <a href="https://github.com/sgilson7">GitHub</a>
+    </p>
+    <p class="meta">
+      Text on this site is CC&nbsp;BY&nbsp;4.0; papers keep their publishers' terms.
+      No analytics, no third-party requests, fonts vendored.
+      Build <code>d393061d</code>.
+    </p>
+  </div>
+</footer>
+</body>
+</html>
