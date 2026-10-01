@@ -1,0 +1,222 @@
+/* The look follows the 17 September lecture deck: dark slate bands, white
+   pages, a serif for headings, a humanist sans for text, a mono for ids.
+   The deck's own faces cannot be redistributed, so these are the open
+   stand-ins confirmed in M0 recon (decision 32, PLAN.md D11). */
+
+/* TeX Gyre Schola stands in for Century Schoolbook. GUST Font License. */
+@font-face {
+  font-family: "Schola";
+  src: url("/fonts/tex-gyre-schola/texgyreschola-regular.otf") format("opentype");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Schola";
+  src: url("/fonts/tex-gyre-schola/texgyreschola-bold.otf") format("opentype");
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Schola";
+  src: url("/fonts/tex-gyre-schola/texgyreschola-italic.otf") format("opentype");
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+/* Carlito stands in for Calibri. SIL OFL 1.1, Reserved Font Name "Carlito". */
+@font-face {
+  font-family: "Carlito";
+  src: url("/fonts/carlito/Carlito-Regular.ttf") format("truetype");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Carlito";
+  src: url("/fonts/carlito/Carlito-Bold.ttf") format("truetype");
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Carlito";
+  src: url("/fonts/carlito/Carlito-Italic.ttf") format("truetype");
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+/* Courier Prime stands in for Courier New. SIL OFL 1.1. */
+@font-face {
+  font-family: "Courier Prime";
+  src: url("/fonts/courier-prime/CourierPrime-Regular.ttf") format("truetype");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+
+:root {
+  --ink: #1B2430;
+  --grey: #6B7680;
+  --rule: #C9CFD3;
+  --panel: #E6EAEC;
+  --green: #2A6B4A;
+  --red: #8B2E2E;
+  --blue: #2F4BA0;
+  --page: #FFFFFF;
+  --serif: "Schola", Georgia, "Times New Roman", serif;
+  --sans: "Carlito", "Segoe UI", Helvetica, Arial, sans-serif;
+  --mono: "Courier Prime", "SF Mono", Menlo, Consolas, monospace;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font: 400 17px/1.6 var(--sans);
+}
+
+.wrap {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* --- the bands ------------------------------------------------------- */
+
+.band {
+  background: var(--ink);
+  color: var(--page);
+}
+.band a { color: var(--page); }
+header.band { padding: 1rem 0; }
+header.band .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.brand {
+  margin: 0;
+  font: 700 1.15rem/1.2 var(--serif);
+  letter-spacing: 0.01em;
+}
+.brand a { text-decoration: none; }
+header.band nav { display: flex; flex-wrap: wrap; gap: 1rem; font-size: 0.95rem; }
+
+footer.band {
+  margin-top: 4rem;
+  padding: 2rem 0 2.5rem;
+  font-size: 0.9rem;
+}
+footer.band p { margin: 0 0 0.5rem; }
+footer.band .meta { color: var(--rule); margin-top: 1rem; }
+footer.band code { font-family: var(--mono); color: var(--page); }
+
+/* --- type ------------------------------------------------------------ */
+
+main { padding-top: 2.5rem; }
+
+h1 {
+  font: 700 2.1rem/1.15 var(--serif);
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.01em;
+}
+h2 {
+  font: 700 1.3rem/1.25 var(--serif);
+  margin: 2.5rem 0 0.75rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--rule);
+}
+p { margin: 0 0 1rem; }
+
+.lede { font-size: 1.12rem; color: var(--ink); }
+.kicker {
+  font: 400 0.8rem/1 var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--grey);
+  margin: 0 0 0.6rem;
+}
+
+a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { color: var(--ink); }
+
+.skip {
+  position: absolute; left: -9999px;
+  background: var(--page); color: var(--ink); padding: 0.5rem 1rem;
+}
+.skip:focus { left: 0.5rem; top: 0.5rem; z-index: 10; }
+
+/* --- publication lists ----------------------------------------------- */
+
+ul.pubs, ol.pubs { padding-left: 0; list-style: none; margin: 0; }
+ol.numbered { counter-reset: pub; }
+.pubs li {
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.pubs li:last-child { border-bottom: 0; }
+.pubs .t {
+  display: block;
+  font: 700 1.03rem/1.35 var(--serif);
+  color: var(--ink);
+  text-decoration: none;
+}
+a.t { color: var(--blue); text-decoration: underline; }
+a.t:hover { color: var(--ink); }
+.pubs .by, .pubs .vn {
+  display: block;
+  font-size: 0.93rem;
+  color: var(--grey);
+}
+.pubs .by { margin-top: 0.2rem; }
+.pubs .tags {
+  display: flex; flex-wrap: wrap; gap: 0.5rem 0.9rem;
+  margin-top: 0.4rem; font-size: 0.85rem;
+}
+.chip {
+  background: var(--panel);
+  color: var(--ink);
+  padding: 0.08rem 0.45rem;
+  border-radius: 2px;
+  font: 400 0.78rem/1.5 var(--mono);
+}
+
+/* --- paper page ------------------------------------------------------ */
+
+article .by { font-size: 1.02rem; margin-bottom: 0.2rem; }
+article .vn { color: var(--grey); margin-bottom: 1.5rem; }
+
+dl.facts {
+  display: grid;
+  grid-template-columns: 8.5rem 1fr;
+  gap: 0.4rem 1rem;
+  margin: 0 0 1.5rem;
+  padding: 1rem 1.1rem;
+  background: var(--panel);
+  font-size: 0.95rem;
+}
+dl.facts dt { font-weight: 700; color: var(--grey); }
+dl.facts dd { margin: 0; }
+
+.note {
+  border-left: 3px solid var(--red);
+  padding: 0.6rem 0 0.6rem 0.9rem;
+  color: var(--ink);
+  font-size: 0.95rem;
+  background: #fbf7f7;
+}
+
+pre.bibtex {
+  background: var(--ink);
+  color: var(--page);
+  padding: 1rem 1.1rem;
+  overflow-x: auto;
+  font: 400 0.84rem/1.55 var(--mono);
+  border-radius: 2px;
+}
+pre.bibtex code { font: inherit; }
+
+ul.errata, ul.ids { padding-left: 1.1rem; }
+ul.ids li { margin-bottom: 0.3rem; }
+footer .ids a { color: var(--page); }
+
+@media (max-width: 30rem) {
+  body { font-size: 16px; }
+  h1 { font-size: 1.7rem; }
+  dl.facts { grid-template-columns: 1fr; gap: 0.1rem; }
+  dl.facts dd { margin-bottom: 0.6rem; }
+}

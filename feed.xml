@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Sam Gilson</title>
+  <link href="https://sgilson7.github.io/feed.xml"/>
+  <id>https://sgilson7.github.io</id>
+  <updated>1970-01-01T00:00:00Z</updated>
+  <generator version="b490c554">site-cli</generator>
+  <entry>
+    <title>How Do Undergraduates Interested in Computer Science Use Online, On-Demand CS Coursework?</title>
+    <link href="https://sgilson7.github.io/papers/gilson2025oodcs/"/>
+    <id>https://sgilson7.github.io/papers/gilson2025oodcs/</id>
+    <updated>2025-07-01T00:00:00Z</updated>
+    <summary>Sam Gilson, Tiffany Barnes, Mahzabin Tamanna and Saminur Islam — Proceedings of the Twelfth ACM Conference on Learning @ Scale (L@S '25)</summary>
+  </entry>
+  <entry>
+    <title>Adversarial Assignment Perturbation: Effects on Help-Seeking Behaviors in Student Generative AI Chatbot Use</title>
+    <link href="https://sgilson7.github.io/papers/gilson2026perturbation/"/>
+    <id>https://sgilson7.github.io/papers/gilson2026perturbation/</id>
+    <updated>2026-06-27T00:00:00Z</updated>
+    <summary>Sam Gilson, Benyamin Tabarsi and Tiffany Barnes — Artificial Intelligence in Education (AIED 2026), LNAI 16585</summary>
+  </entry>
+  <entry>
+    <title>Designing AI-Resistant Assignments via Iterative Perturbation to Promote Interactive Learning</title>
+    <link href="https://sgilson7.github.io/papers/gilson2026designing/"/>
+    <id>https://sgilson7.github.io/papers/gilson2026designing/</id>
+    <updated>2026-02-01T00:00:00Z</updated>
+    <summary>Sam Gilson — Proceedings of the 57th ACM Technical Symposium on Computer Science Education V.2 (SIGCSE TS 2026)</summary>
+  </entry>
+  <entry>
+    <title>LLMs' reshaping of people, processes, products, and society in software development: a qualitative exploration with early adopters</title>
+    <link href="https://sgilson7.github.io/papers/tabarsi2026reshaping/"/>
+    <id>https://sgilson7.github.io/papers/tabarsi2026reshaping/</id>
+    <updated>2027-01-01T00:00:00Z</updated>
+    <summary>Benyamin Tabarsi, Heidi Reichert, Sam Gilson, Ally Limke, Sandeep Kuttal and Tiffany Barnes — Empirical Software Engineering</summary>
+  </entry>
+  <entry>
+    <title>Confirming Correct, Missing the Rest: LLM Tutoring Agents Struggle Where Feedback Matters Most</title>
+    <link href="https://sgilson7.github.io/papers/yasir2026confirming/"/>
+    <id>https://sgilson7.github.io/papers/yasir2026confirming/</id>
+    <updated>2026-01-01T00:00:00Z</updated>
+    <summary>Tahreem Yasir, Wenbo Li, Sam Gilson, Sutapa Dey Tithi, Xiaoyi Tian and Tiffany Barnes — BEA 2026</summary>
+  </entry>
+  <entry>
+    <title>When Verification Hurts: Asymmetric Effects of Multi-Agent Feedback in Logic Proof Tutoring</title>
+    <link href="https://sgilson7.github.io/papers/yasir2026verification/"/>
+    <id>https://sgilson7.github.io/papers/yasir2026verification/</id>
+    <updated>2026-03-28T00:00:00Z</updated>
+    <summary>Tahreem Yasir, Sutapa Dey Tithi, Benyamin Tabarsi, Dmitri Droujkov, Sam Gilson, Yasitha Rajapaksha, Xiaoyi Tian, Arun Ramesh, DongKuan Xu and Tiffany Barnes — </summary>
+  </entry>
+</feed>
