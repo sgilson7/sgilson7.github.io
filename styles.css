@@ -351,6 +351,10 @@ img.portrait {
 svg.kcgraph { display: block; height: auto; }
 
 .kc-node { fill: #f7f7f7; stroke: var(--rule); stroke-width: 1; }
+/* A strategy is something you do rather than something you know. The caption
+   says so in words; this is the second cue, and it is a different shape of
+   information from the arrow colours. */
+.kc-node.kc-strategy { fill: #e8f5e9; stroke: #9ccc9f; }
 a:hover .kc-node { fill: var(--panel); stroke: var(--ink); }
 a:focus-visible .kc-node { stroke: var(--blue); stroke-width: 2; }
 .kc-ntext {
@@ -358,11 +362,33 @@ a:focus-visible .kc-node { stroke: var(--blue); stroke-width: 2; }
   fill: var(--ink);
   text-anchor: middle;
 }
-.kc-edge path { stroke: var(--grey); stroke-width: 1.6; }
+.kc-edge { opacity: 0.85; }
+/* The two or three words drawn beside a line. The box is opaque so the label
+   stays readable where it crosses another curve. */
+.kc-elabel { fill: #ffffff; stroke: var(--rule); stroke-width: 0.75; }
+.kc-etext { font: 400 10.5px/1.2 var(--mono); }
+a:hover .kc-elabel { fill: var(--panel); }
+/* A label that could not sit beside its own curve gets a thread back to it,
+   and a dot on the curve it names. Three labels in one band can read the same
+   word, and the dot is what says which line each belongs to. It is a shape,
+   not a colour, so it survives greyscale and forced colours. */
+.kc-leader { stroke-width: 1.1; stroke-dasharray: 2 2; opacity: 0.95; }
+.kc-anchor { stroke: #fff; stroke-width: 0.8; }
+/* The legend's colour swatches. The kind is also a column in the table, so the
+   swatch is a convenience and never the only way to read the picture. */
+.key { white-space: nowrap; padding-left: 1.1rem; position: relative; }
+.key::before {
+  content: "";
+  position: absolute; left: 0; top: 0.45em;
+  width: 0.85rem; height: 2px; background: var(--c);
+}
 @media (forced-colors: active) {
-  .kc-edge path { stroke: CanvasText; }
   .kc-node { fill: Canvas; stroke: CanvasText; }
+  .kc-node.kc-strategy { fill: Canvas; stroke: CanvasText; stroke-dasharray: 4 2; }
   .kc-ntext { fill: CanvasText; }
+  .kc-elabel { fill: Canvas; stroke: CanvasText; }
+  .kc-leader { stroke: CanvasText !important; opacity: 1; }
+  .kc-anchor { fill: CanvasText !important; stroke: Canvas !important; }
 }
 @media (max-width: 40rem) {
   .kcscroll { margin: 0 -1.25rem; padding: 0 1.25rem 0.5rem; }
