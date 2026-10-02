@@ -4,39 +4,39 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PDF Redactor — Sam Gilson</title>
-<meta name="description" content="Redact student names and strip all metadata from PDFs, entirely in your browser. Nothing is uploaded.">
+<meta name="description" content="Find identifiers, review redaction boxes, and export a rebuilt PDF in your browser.">
 <link rel="canonical" href="https://sgilson7.github.io/projects/pdf-redactor/">
 
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Sam Gilson">
 <meta property="og:title" content="PDF Redactor">
-<meta property="og:description" content="Redact student names and strip all metadata from PDFs, entirely in your browser. Nothing is uploaded.">
+<meta property="og:description" content="Find identifiers, review redaction boxes, and export a rebuilt PDF in your browser.">
 <meta property="og:url" content="https://sgilson7.github.io/projects/pdf-redactor/">
 <meta property="og:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
 <meta property="og:image:alt" content="Sam Gilson">
 <meta name="twitter:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PDF Redactor">
-<meta name="twitter:description" content="Redact student names and strip all metadata from PDFs, entirely in your browser. Nothing is uploaded.">
+<meta name="twitter:description" content="Find identifiers, review redaction boxes, and export a rebuilt PDF in your browser.">
 <meta name="author" content="Sam Gilson">
 
-<link rel="stylesheet" href="/styles.css?v=59e89986">
+<link rel="stylesheet" href="/styles.css?v=7e486897">
 <link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
+  "@type": "WebPage",
   "name": "PDF Redactor",
-  "description": "Redact student names and strip all metadata from PDFs, entirely in your browser. Nothing is uploaded.",
+  "description": "Find identifiers, review redaction boxes, and export a rebuilt PDF in your browser.",
   "url": "https://sgilson7.github.io/projects/pdf-redactor/",
-  "codeRepository": "https://github.com/sgilson7/pdf-redactor",
-  "programmingLanguage": "Rust",
-  "author": {"@type": "Person", "name": "Sam Gilson", "identifier": "https://orcid.org/0009-0002-2394-8649"},
-  "applicationCategory": "EducationalApplication",
-  "operatingSystem": "Any (runs in a web browser)",
-  "installUrl": "https://sgilson7.github.io/pdf-redactor/"
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "PDF Redactor",
+    "description": "Find identifiers, review redaction boxes, and export a rebuilt PDF in your browser.",
+    "url": "https://sgilson7.github.io/pdf-redactor/",
+    "sameAs": "https://github.com/sgilson7/pdf-redactor"
+  }
 }
 </script>
 </head>
@@ -46,74 +46,47 @@
   <div class="wrap">
     <p class="brand"><a href="/">Sam Gilson</a></p>
     <nav aria-label="Sections">
-      <a href="/">Home</a>
-      <a href="/publications/">Publications</a>
+      <a href="/publications/">Research</a>
       <a href="/dissertation/">Dissertation</a>
       <a href="/concepts/">Concepts</a>
-      <a href="/projects/">Tools</a>
       <a href="/teaching/">Teaching</a>
-      <a href="/materials/">Materials</a>
+      <a href="/materials/">Course materials</a>
+      <a href="/projects/">Tools and games</a>
       <a href="/cv/">CV</a>
-      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google&nbsp;Scholar</a>
     </nav>
   </div>
 </header>
 
 
-<main id="main" class="">
+<main id="main">
 <section class="stripe"><div class="wrap">
-
-<p class="kicker">Research tool</p>
 <h1>PDF Redactor</h1>
-<p class="lede">Redact student names and strip all metadata from PDFs, entirely in your browser. Nothing is uploaded.</p>
-
-<dl class="facts">
-  <dt>Written in</dt><dd>Rust</dd>
-  <dt>Run it</dt><dd><a href="https://sgilson7.github.io/pdf-redactor/">https://sgilson7.github.io/pdf-redactor/</a></dd>
-  <dt>Source</dt><dd><a href="https://github.com/sgilson7/pdf-redactor">https://github.com/sgilson7/pdf-redactor</a></dd>
-</dl>
-
-<p>Studying student work comes with an obligation: the corpus has to be
-de-identified before anyone else sees it, and you have to be able to show,
-months later, that it was.</p>
-<p>It rebuilds the PDF from scratch. Redaction boxes are painted into the page
-bitmap before it is encoded, so the covered pixels are gone from the output —
-there is no black rectangle to peel off and no earlier revision left in the
-file. Metadata goes the same way: the output contains only what the writer
-chose to emit.</p>
-<p>The text layer survives. The original text is re-attached as invisible text
-after every span touching a redaction box has been dropped, so a redacted
-corpus is still searchable. Content streams are left uncompressed so you can
-check the tool’s work yourself.</p>
+<p>Research tool</p>
+<p>I built PDF Redactor while preparing student work for research. It helps find names and other identifiers, lets you review the proposed boxes, and supports drawing additional redactions by hand.</p>
+<p>The document is processed in your browser. The tool rebuilds the output PDF from rendered pages and, if you choose a searchable export, adds a text layer that excludes spans intersecting redaction boxes.</p>
+<p>Finding text is only part of the review. An identifier may appear in an image, a handwritten note, or an unexpected form. OCR can help with image text, but it can also miss or misread it. Inspect each page and the exported PDF before sharing.</p>
+<p>The export report shows the tool’s checks for retained terms and document structure. A passed check covers those tests; it does not establish that every identifying detail has been removed. Export records are stored locally in the browser and can be downloaded or cleared.</p>
 
 </div></section><section class="stripe"><div class="wrap">
-<h2>What people usually want to know</h2>
-<ul class="questions">
-  <li>How do I de-identify student PDFs for a study without uploading them anywhere?</li>
-  <li>How do I strip metadata from a PDF before sharing it with a collaborator?</li>
-</ul>
-
-<p class="backlink"><a href="/projects/">All tools and games</a></p>
+<h2>Using the tool</h2>
+<p>Open a PDF, enter the name and additional identifiers, and select <strong>Find identifiers</strong>. Review the matches and add any missing boxes. Choose whether the output should be searchable, export it, and inspect the result.</p>
+<p><a href="/pdf-redactor/">Open the project</a> · <a href="https://github.com/sgilson7/pdf-redactor">Source code</a></p>
+<p><a href="/projects/">All tools and games</a></p>
 
 </div></section>
 </main>
 
 <footer class="band">
   <div class="wrap">
-    <p>
-      Sam Gilson (he/him) &middot; PhD student in computer science,
-      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>, North Carolina State University
-    </p>
     <p class="ids">
+      <a href="mailto:sagilson@ncsu.edu">Email Sam Gilson</a> &middot;
       <a href="https://orcid.org/0009-0002-2394-8649">ORCID 0009-0002-2394-8649</a> &middot;
       <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google Scholar</a> &middot;
-      <a href="https://github.com/sgilson7">GitHub</a>
+      <a href="https://github.com/sgilson7">GitHub</a> &middot;
+      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>
     </p>
-    <p class="meta">
-      Everything I've written here is CC&nbsp;BY&nbsp;4.0. The papers belong to
-      their publishers. This page loads from this site alone and keeps nothing
-      about your visit. Build <code>59e89986</code>.
-    </p>
+    <p class="licence">Original website text by Sam Gilson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Papers, teaching materials, software, and quoted material retain their own notices.</p>
+    <p class="meta">Build <code>7e486897</code></p>
   </div>
 </footer>
 </body>

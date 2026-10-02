@@ -3,36 +3,40 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GenAI-Assisted Prototyping Procedure — Sam Gilson</title>
-<meta name="description" content="The GenAI-Assisted Prototyping Procedure is a nine-stage pipeline, brief to handoff, in which a person reads the plan, plays the build, and deploys it.">
+<title>GenAI-assisted prototyping procedure — Sam Gilson</title>
+<meta name="description" content="The GenAI-assisted prototyping procedure is a development workflow that combines a coding agent’s output with human review, testing, play, and handoff.">
 <link rel="canonical" href="https://sgilson7.github.io/concepts/genai-assisted-prototyping-procedure/">
 
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Sam Gilson">
-<meta property="og:title" content="GenAI-Assisted Prototyping Procedure">
-<meta property="og:description" content="The GenAI-Assisted Prototyping Procedure is a nine-stage pipeline, brief to handoff, in which a person reads the plan, plays the build, and deploys it.">
+<meta property="og:title" content="GenAI-assisted prototyping procedure">
+<meta property="og:description" content="The GenAI-assisted prototyping procedure is a development workflow that combines a coding agent’s output with human review, testing, play, and handoff.">
 <meta property="og:url" content="https://sgilson7.github.io/concepts/genai-assisted-prototyping-procedure/">
 <meta property="og:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
 <meta property="og:image:alt" content="Sam Gilson">
 <meta name="twitter:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="GenAI-Assisted Prototyping Procedure">
-<meta name="twitter:description" content="The GenAI-Assisted Prototyping Procedure is a nine-stage pipeline, brief to handoff, in which a person reads the plan, plays the build, and deploys it.">
+<meta name="twitter:title" content="GenAI-assisted prototyping procedure">
+<meta name="twitter:description" content="The GenAI-assisted prototyping procedure is a development workflow that combines a coding agent’s output with human review, testing, play, and handoff.">
 <meta name="author" content="Sam Gilson">
 
-<link rel="stylesheet" href="/styles.css?v=59e89986">
+<link rel="stylesheet" href="/styles.css?v=7e486897">
 <link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "GenAI-Assisted Prototyping Procedure",
-  "description": "The GenAI-Assisted Prototyping Procedure is a nine-stage pipeline, brief to handoff, in which a person reads the plan, plays the build, and deploys it.",
+  "@type": "WebPage",
+  "name": "GenAI-assisted prototyping procedure",
+  "description": "The GenAI-assisted prototyping procedure is a development workflow that combines a coding agent’s output with human review, testing, play, and handoff.",
   "url": "https://sgilson7.github.io/concepts/genai-assisted-prototyping-procedure/",
-  "alternateName": ["GenAI-assisted prototyping", "agentic prototyping procedure"],
-  "inDefinedTermSet": {"@type": "DefinedTermSet", "name": "Sam Gilson concepts", "url": "https://sgilson7.github.io/concepts/"}
+  "about": {
+    "@type": "DefinedTerm",
+    "name": "GenAI-assisted prototyping procedure",
+    "description": "The GenAI-assisted prototyping procedure is a development workflow that combines a coding agent’s output with human review, testing, play, and handoff.",
+    "url": "https://sgilson7.github.io/concepts/genai-assisted-prototyping-procedure/"
+  },
+  "citation": ["https://sgilson7.github.io/talks/gilson2026csc484lecture/"]
 }
 </script>
 </head>
@@ -42,107 +46,65 @@
   <div class="wrap">
     <p class="brand"><a href="/">Sam Gilson</a></p>
     <nav aria-label="Sections">
-      <a href="/">Home</a>
-      <a href="/publications/">Publications</a>
+      <a href="/publications/">Research</a>
       <a href="/dissertation/">Dissertation</a>
       <a href="/concepts/">Concepts</a>
-      <a href="/projects/">Tools</a>
       <a href="/teaching/">Teaching</a>
-      <a href="/materials/">Materials</a>
+      <a href="/materials/">Course materials</a>
+      <a href="/projects/">Tools and games</a>
       <a href="/cv/">CV</a>
-      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google&nbsp;Scholar</a>
     </nav>
   </div>
 </header>
 
 
-<main id="main" class="">
+<main id="main">
 <section class="stripe"><div class="wrap">
+<h1>GenAI-assisted prototyping procedure</h1>
 
-<p class="kicker">Concept</p>
-<h1>GenAI-Assisted Prototyping Procedure</h1>
-
-
-<p class="lede definition">The GenAI-Assisted Prototyping Procedure is a nine-stage pipeline, brief to handoff, in which a person reads the plan, plays the build, and deploys it.</p>
-
-<p class="scope">A working practice from one guest lecture, drawn from building five browser artefacts. Every stage names the prompt or autopsy step it is carrying out.</p>
-<p class="alts">Also written: GenAI-assisted prototyping · agentic prototyping procedure</p>
-
-
-<dl class="sources">
-  <dt>Introduced in</dt>
-  <dd><a href="/talks/gilson2026csc484lecture/">Sam Gilson. Applications of AI Literacy to GenAI-Assisted Game Development. Guest lecture, CSC 484/584 Game AI, NC State University.</a>
-  </dd>
-</dl>
-
-<dl class="facts">
-  <dt>Described in</dt>
-  <dd>Gilson, 2026 &middot; 
-    <a href="/talks/gilson2026csc484lecture/">Applications of AI Literacy to GenAI-Assisted Game Development</a>, Slides 27 and 53
-  </dd>
-</dl>
-
-<p>Five browser artefacts came out of this, so the shape is a worked practice
-rather than a proposal.</p>
-<p>A person writes the brief: what is being made, what done means, and what the
-agent may not decide alone. The agent turns that into a plan with a reason
-attached to every decision, and writes no code until a person has read it. Then
-it measures against the running build instead of against its own memory, and
-says in the commit what it found. Tests and content lints land with the change
-they cover.</p>
-<p>While the work happens the agent keeps a notebook, one row per assumption, each
-marked as a divergence, a finding, or something handed back for a person to
-decide. Then a person plays the thing for a fortnight, and everything wrong
-becomes a row. A person deploys, and the browser gate walks the live page.
-Last comes a handoff written for whoever picks it up, listing the rules that
-are load-bearing and the mistakes that cost a day.</p>
-<p>The agent never pushes. That is the line the whole arrangement rests on.</p>
-
-<p class="neighbours">
-  <strong>Nearby terms in the literature:</strong> human-in-the-loop development, pair programming, agentic workflows.
-  None of these is a synonym for GenAI-Assisted Prototyping Procedure; they name related work this
-  paper did not measure against.
-</p>
 </div></section><section class="stripe"><div class="wrap">
-<h2>Where this comes from</h2>
-<p>
-  Sam Gilson. &ldquo;Applications of AI Literacy to GenAI-Assisted Game Development&rdquo;.
-  Guest lecture, CSC 484/584 Game AI, NC State University, 2026.
-</p>
-<pre class="bibtex"><code>@misc{gilson2026csc484lecture,
-  title = {{Applications of AI Literacy to GenAI-Assisted Game Development}},
-  author = {Sam Gilson},
-  howpublished = {Guest lecture, CSC 484/584 Game AI, NC State University},
-  year = {2026}
-}</code></pre>
+<h2>Definition</h2>
+<p>The GenAI-assisted prototyping procedure is a development workflow that combines a coding agent’s output with human review, testing, play, and handoff.</p>
 </div></section><section class="stripe"><div class="wrap">
-<h2>What people usually want to know</h2>
-<ul class="questions">
-  <li>How do you build software with an AI agent without losing control of it?</li>
-  <li>What does a human actually do when a coding agent writes the code?</li>
-</ul>
-
-<p class="backlink"><a href="/concepts/">All concepts</a></p>
+<h2>Explanation</h2>
+<p>I developed this workflow while building browser tools and games. The agent can propose a plan and produce code; I still need to decide what we are building and check whether the result does what the plan says.</p>
+<table><thead><tr><th scope="col">Stage</th><th scope="col">Work to do</th></tr></thead><tbody>
+<tr><td>Brief</td><td>Write the goal, constraints, and what completion means.</td></tr>
+<tr><td>Plan</td><td>Ask the agent to propose decisions and give reasons for them.</td></tr>
+<tr><td>Review</td><td>Read the plan, resolve assumptions, and approve or revise it.</td></tr>
+<tr><td>Reconnaissance</td><td>Check the running project and source before changing them.</td></tr>
+<tr><td>Build</td><td>Implement the change with the checks needed for its behavior.</td></tr>
+<tr><td>Notebook</td><td>Record assumptions, unexpected effects, findings, and decisions that need a person.</td></tr>
+<tr><td>Playtest</td><td>Use the build and compare its behavior with the plan.</td></tr>
+<tr><td>Deploy</td><td>Publish the reviewed build and check the live version.</td></tr>
+<tr><td>Handoff</td><td>Record the decisions and unresolved issues the next contributor needs.</td></tr>
+</tbody></table>
+<p>The notebook is useful because an assumption can be wrong even when the build succeeds. Recording what we expected, what happened, and what changed gives the next contributor a clearer starting point.</p>
+</div></section><section class="stripe"><div class="wrap">
+<h2>Scope and evidence</h2>
+<p>This is a reported development practice from the lecture. The projects demonstrate its use, but they do not establish a comparative productivity benefit or a general learning effect.</p>
+</div></section><section class="stripe"><div class="wrap">
+<h2>Sources</h2>
+<p><a href="/talks/gilson2026csc484lecture/">Gilson (2026). Applications of AI Literacy to GenAI-Assisted Game Development. Guest lecture, CSC 484/584 Game AI, 17 September 2026.</a></p>
+</div></section><section class="stripe"><div class="wrap">
+<h2>Related concepts</h2>
+<p><a href="/concepts/strong-prompt-structure/">Strong prompt structure</a> · <a href="/concepts/collaborative-prompting/">Collaborative prompting</a> · <a href="/concepts/hallucination-autopsy-procedure/">Hallucination autopsy procedure</a></p>
+<p><a href="/concepts/">All concepts</a></p>
 
 </div></section>
 </main>
 
 <footer class="band">
   <div class="wrap">
-    <p>
-      Sam Gilson (he/him) &middot; PhD student in computer science,
-      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>, North Carolina State University
-    </p>
     <p class="ids">
+      <a href="mailto:sagilson@ncsu.edu">Email Sam Gilson</a> &middot;
       <a href="https://orcid.org/0009-0002-2394-8649">ORCID 0009-0002-2394-8649</a> &middot;
       <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google Scholar</a> &middot;
-      <a href="https://github.com/sgilson7">GitHub</a>
+      <a href="https://github.com/sgilson7">GitHub</a> &middot;
+      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>
     </p>
-    <p class="meta">
-      Everything I've written here is CC&nbsp;BY&nbsp;4.0. The papers belong to
-      their publishers. This page loads from this site alone and keeps nothing
-      about your visit. Build <code>59e89986</code>.
-    </p>
+    <p class="licence">Original website text by Sam Gilson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Papers, teaching materials, software, and quoted material retain their own notices.</p>
+    <p class="meta">Build <code>7e486897</code></p>
   </div>
 </footer>
 </body>

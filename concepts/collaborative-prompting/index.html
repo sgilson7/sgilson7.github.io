@@ -3,36 +3,40 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Collaborative Prompting — Sam Gilson</title>
-<meta name="description" content="Collaborative Prompting is a six-step routine in which a student forbids the final answer, takes one step at a time, and checks each against cases computed by hand.">
+<title>Collaborative prompting — Sam Gilson</title>
+<meta name="description" content="Collaborative prompting is a teaching routine for working through a problem with a chatbot while keeping responsibility for checking and explaining the reasoning.">
 <link rel="canonical" href="https://sgilson7.github.io/concepts/collaborative-prompting/">
 
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Sam Gilson">
-<meta property="og:title" content="Collaborative Prompting">
-<meta property="og:description" content="Collaborative Prompting is a six-step routine in which a student forbids the final answer, takes one step at a time, and checks each against cases computed by hand.">
+<meta property="og:title" content="Collaborative prompting">
+<meta property="og:description" content="Collaborative prompting is a teaching routine for working through a problem with a chatbot while keeping responsibility for checking and explaining the reasoning.">
 <meta property="og:url" content="https://sgilson7.github.io/concepts/collaborative-prompting/">
 <meta property="og:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
 <meta property="og:image:alt" content="Sam Gilson">
 <meta name="twitter:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Collaborative Prompting">
-<meta name="twitter:description" content="Collaborative Prompting is a six-step routine in which a student forbids the final answer, takes one step at a time, and checks each against cases computed by hand.">
+<meta name="twitter:title" content="Collaborative prompting">
+<meta name="twitter:description" content="Collaborative prompting is a teaching routine for working through a problem with a chatbot while keeping responsibility for checking and explaining the reasoning.">
 <meta name="author" content="Sam Gilson">
 
-<link rel="stylesheet" href="/styles.css?v=59e89986">
+<link rel="stylesheet" href="/styles.css?v=7e486897">
 <link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "Collaborative Prompting",
-  "description": "Collaborative Prompting is a six-step routine in which a student forbids the final answer, takes one step at a time, and checks each against cases computed by hand.",
+  "@type": "WebPage",
+  "name": "Collaborative prompting",
+  "description": "Collaborative prompting is a teaching routine for working through a problem with a chatbot while keeping responsibility for checking and explaining the reasoning.",
   "url": "https://sgilson7.github.io/concepts/collaborative-prompting/",
-  "alternateName": ["Procedure C", "scaffolding strong prompts"],
-  "inDefinedTermSet": {"@type": "DefinedTermSet", "name": "Sam Gilson concepts", "url": "https://sgilson7.github.io/concepts/"}
+  "about": {
+    "@type": "DefinedTerm",
+    "name": "Collaborative prompting",
+    "description": "Collaborative prompting is a teaching routine for working through a problem with a chatbot while keeping responsibility for checking and explaining the reasoning.",
+    "url": "https://sgilson7.github.io/concepts/collaborative-prompting/"
+  },
+  "citation": ["https://sgilson7.github.io/papers/gilson-summer2026/", "https://sgilson7.github.io/talks/gilson2026csc484lecture/", "https://doi.org/10.1145/3313831.3376727"]
 }
 </script>
 </head>
@@ -42,141 +46,64 @@
   <div class="wrap">
     <p class="brand"><a href="/">Sam Gilson</a></p>
     <nav aria-label="Sections">
-      <a href="/">Home</a>
-      <a href="/publications/">Publications</a>
+      <a href="/publications/">Research</a>
       <a href="/dissertation/">Dissertation</a>
       <a href="/concepts/">Concepts</a>
-      <a href="/projects/">Tools</a>
       <a href="/teaching/">Teaching</a>
-      <a href="/materials/">Materials</a>
+      <a href="/materials/">Course materials</a>
+      <a href="/projects/">Tools and games</a>
       <a href="/cv/">CV</a>
-      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google&nbsp;Scholar</a>
     </nav>
   </div>
 </header>
 
 
-<main id="main" class="">
+<main id="main">
 <section class="stripe"><div class="wrap">
+<h1>Collaborative prompting</h1>
 
-<p class="kicker">Concept</p>
-<h1>Collaborative Prompting</h1>
-
-
-<p class="lede definition">Collaborative Prompting is a six-step routine in which a student forbids the final answer, takes one step at a time, and checks each against cases computed by hand.</p>
-
-<p class="scope">A teaching routine from one guest lecture. Its last step asks who built the system and on whose work, which is a question about the tool rather than the problem.</p>
-<p class="alts">Also written: Procedure C · scaffolding strong prompts</p>
-
-
-<dl class="sources">
-  <dt>Introduced in</dt>
-  <dd><a href="/papers/gilson-summer2026/">Sam Gilson. Perturbed Assignments and Subgoal-Labeled AI Literacy Instruction in Undergraduate Discrete Mathematics. SIGCSE TS 2027 Student Research Competition.</a>
-  </dd>
-  <dt>Builds on</dt>
-  <dd><a href="https://doi.org/10.1145/2787622.2787733">Briana B. Morrison, Lauren E. Margulieux, Mark Guzdial. 2015. Subgoals, Context, and Worked Examples in Learning Computing Problem Solving. Proceedings of ICER &#39;15, 21-29.</a><span class="why">C1-C6 are subgoal labels.</span>
-  </dd>
-  <dt>Builds on</dt>
-  <dd><a href="https://doi.org/10.1145/3313831.3376727">Duri Long, Brian Magerko. 2020. What is AI Literacy? Competencies and Design Considerations. Proceedings of CHI &#39;20, 1-16.</a><span class="why">Step C6, questioning the system, is the critical-evaluation competency.</span>
-  </dd>
-  <dt>Used in</dt>
-  <dd><a href="/talks/gilson2026csc484lecture/">Sam Gilson. Applications of AI Literacy to GenAI-Assisted Game Development. Guest lecture, CSC 484/584 Game AI, NC State University.</a><span class="why">Presented again in the CSC 484/584 guest lecture.</span>
-  </dd>
-</dl>
-
-<dl class="facts">
-  <dt>Described in</dt>
-  <dd>Gilson, 2026 &middot; 
-    <a href="/papers/gilson-summer2026/">Perturbed Assignments and Subgoal-Labeled AI Literacy Instruction in Undergraduate Discrete Mathematics</a>, The AI literacy session; Procedure C, labels C1-C6
-  </dd>
-</dl>
-
-<p>The move that makes this work is refusing to be given the answer. You tell the
-chatbot the problem, state the rules, and forbid it from finishing. After that
-you are asking for one step at a time, and each step has to arrive with the
-rule it used attached.</p>
-<p>Then you argue. A step you do not believe gets a correction or a request for
-justification, and nothing is accepted silently. When the two of you disagree,
-small cases you worked out by hand decide it, not whichever of you sounds more
-certain. The write-up at the end is yours, in your words.</p>
-<p>The sixth step is about the system rather than the problem: who built this, on
-whose work, and why would you trust it here. A student who can answer that is
-in a different relationship with the tool than one who cannot.</p>
-
-<p class="neighbours">
-  <strong>Nearby terms in the literature:</strong> productive failure, dialogic teaching, appropriate reliance.
-  None of these is a synonym for Collaborative Prompting; they name related work this
-  paper did not measure against.
-</p>
 </div></section><section class="stripe"><div class="wrap">
-<h2>Related terms</h2>
-
-<ul class="concepts">
-  <li>
-    <a class="t" href="/concepts/hallucination-autopsy-procedure/">Hallucination Autopsy Procedure</a>
-    <p class="def">The Hallucination Autopsy Procedure is a seven-step routine for finding where a chatbot&#39;s proof leaves the claim it was given, and naming why it left.</p>
-  </li>
-  <li>
-    <a class="t" href="/concepts/axiom-reversion/">Axiom Reversion</a>
-    <p class="def">Axiom Reversion is a failure mode in which a chatbot swaps in the textbook theorem that the problem was perturbed away from.</p>
-  </li>
-  <li>
-    <a class="t" href="/concepts/invalid-syntactic-shortcut/">Invalid Syntactic Shortcut</a>
-    <p class="def">An Invalid Syntactic Shortcut is a failure mode in which a chatbot manipulates a form as though a rule applied, producing a step that is well-formed and false.</p>
-  </li>
-  <li>
-    <a class="t" href="/concepts/spatial-counting-miscount/">Spatial or Counting Miscount</a>
-    <p class="def">A Spatial or Counting Miscount is a failure mode in which a chatbot counts placements that break the constraint, or counts the same one twice.</p>
-  </li>
-  <li>
-    <a class="t" href="/concepts/strong-prompt-structure/">Strong Prompt Structure</a>
-    <p class="def">Strong Prompt Structure is a four-part shape for a prompt: establish context, require justification at every step, build in self-questioning, and plan the correction.</p>
-  </li>
-  <li>
-    <a class="t" href="/concepts/subgoal-label/">Subgoal Label</a>
-    <p class="def">A Subgoal Label names the function a step serves in any problem of its type, so a learner can separate a solution&#39;s structure from one example&#39;s surface details.</p>
-  </li>
-</ul>
+<h2>Definition</h2>
+<p>Collaborative prompting is a teaching routine for working through a problem with a chatbot while keeping responsibility for checking and explaining the reasoning.</p>
 </div></section><section class="stripe"><div class="wrap">
-<h2>Where this comes from</h2>
-<p>
-  Sam Gilson. &ldquo;Perturbed Assignments and Subgoal-Labeled AI Literacy Instruction in Undergraduate Discrete Mathematics&rdquo;.
-  SIGCSE TS 2027 Student Research Competition, 2026.
-</p>
-<pre class="bibtex"><code>@misc{gilson-summer2026,
-  title = {{Perturbed Assignments and Subgoal-Labeled AI Literacy Instruction in Undergraduate Discrete Mathematics}},
-  author = {Sam Gilson},
-  howpublished = {SIGCSE TS 2027 Student Research Competition},
-  year = {2026}
-}</code></pre>
+<h2>Explanation</h2>
+<p>The student states the task, asks for one step at a time, and examines the justification before moving on. Asking the chatbot to withhold the final answer can make room for that work, but the learning still depends on what the student does with the exchange.</p>
+<table><thead><tr><th scope="col">Label</th><th scope="col">Purpose</th><th scope="col">Action</th></tr></thead><tbody>
+<tr><td>C1</td><td>Frame the problem and set the rules</td><td>State the problem and the kind of help you want. Ask the chatbot to withhold the final answer while you work through the reasoning.</td></tr>
+<tr><td>C2</td><td>Elicit one step with its rule named</td><td>Ask for one next step and the rule that supports it.</td></tr>
+<tr><td>C3</td><td>Interrogate the claim</td><td>Check the step. Ask for a justification or explain a correction when it does not follow.</td></tr>
+<tr><td>C4</td><td>Verify against hand-computed cases</td><td>Compare with cases you computed yourself. Use counterexamples to reject claims and check the general argument before accepting it.</td></tr>
+<tr><td>C5</td><td>Consolidate in your own words</td><td>Write your own explanation of the solution and check that you can justify its steps.</td></tr>
+<tr><td>C6</td><td>Question the system</td><td>Consider who built the system, what is known about its data and limitations, and what evidence supports relying on it for this task.</td></tr>
+</tbody></table>
+<p>The final step widens the question from “is this answer right?” to “what do I know about this system, and why am I relying on it here?”</p>
 </div></section><section class="stripe"><div class="wrap">
-<h2>What people usually want to know</h2>
-<ul class="questions">
-  <li>How do I use a chatbot without it just giving me the answer?</li>
-  <li>How can students work with AI on a proof and still learn something?</li>
-</ul>
-
-<p class="backlink"><a href="/concepts/">All concepts</a></p>
+<h2>Scope and evidence</h2>
+<p>Procedure C is described in the classroom-study materials and guest lecture. The ongoing study does not yet establish that the routine improves learning or reduces GenAI dependence.</p>
+</div></section><section class="stripe"><div class="wrap">
+<h2>Sources</h2>
+<p><a href="/papers/gilson-summer2026/">Gilson (2026). Perturbed Assignments and Subgoal-Labeled AI Literacy Instruction in Undergraduate Discrete Mathematics. Preprint; submitted to the SIGCSE TS 2027 Student Research Competition.</a></p>
+<p><a href="/talks/gilson2026csc484lecture/">Gilson (2026). Applications of AI Literacy to GenAI-Assisted Game Development. Guest lecture, CSC 484/584 Game AI, 17 September 2026.</a></p>
+<p><a href="https://doi.org/10.1145/3313831.3376727">Long and Magerko (2020). What is AI Literacy? Competencies and Design Considerations. CHI 2020.</a></p>
+</div></section><section class="stripe"><div class="wrap">
+<h2>Related concepts</h2>
+<p><a href="/concepts/strong-prompt-structure/">Strong prompt structure</a> · <a href="/concepts/calibrated-trust/">Calibrated trust</a> · <a href="/concepts/genai-dependence/">GenAI dependence</a></p>
+<p><a href="/concepts/">All concepts</a></p>
 
 </div></section>
 </main>
 
 <footer class="band">
   <div class="wrap">
-    <p>
-      Sam Gilson (he/him) &middot; PhD student in computer science,
-      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>, North Carolina State University
-    </p>
     <p class="ids">
+      <a href="mailto:sagilson@ncsu.edu">Email Sam Gilson</a> &middot;
       <a href="https://orcid.org/0009-0002-2394-8649">ORCID 0009-0002-2394-8649</a> &middot;
       <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google Scholar</a> &middot;
-      <a href="https://github.com/sgilson7">GitHub</a>
+      <a href="https://github.com/sgilson7">GitHub</a> &middot;
+      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>
     </p>
-    <p class="meta">
-      Everything I've written here is CC&nbsp;BY&nbsp;4.0. The papers belong to
-      their publishers. This page loads from this site alone and keeps nothing
-      about your visit. Build <code>59e89986</code>.
-    </p>
+    <p class="licence">Original website text by Sam Gilson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Papers, teaching materials, software, and quoted material retain their own notices.</p>
+    <p class="meta">Build <code>7e486897</code></p>
   </div>
 </footer>
 </body>

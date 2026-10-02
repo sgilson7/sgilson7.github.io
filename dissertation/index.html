@@ -3,27 +3,35 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dissertation — Sam Gilson</title>
-<meta name="description" content="How the published work fits together, and what is still in progress.">
+<title>Dissertation research — Sam Gilson</title>
+<meta name="description" content="Sam Gilson’s dissertation research connects generative AI help-seeking, assignment perturbation, and AI literacy instruction.">
 <link rel="canonical" href="https://sgilson7.github.io/dissertation/">
 
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Sam Gilson">
-<meta property="og:title" content="Dissertation — Sam Gilson">
-<meta property="og:description" content="How the published work fits together, and what is still in progress.">
+<meta property="og:title" content="Dissertation research">
+<meta property="og:description" content="Sam Gilson’s dissertation research connects generative AI help-seeking, assignment perturbation, and AI literacy instruction.">
 <meta property="og:url" content="https://sgilson7.github.io/dissertation/">
 <meta property="og:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
 <meta property="og:image:alt" content="Sam Gilson">
 <meta name="twitter:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Dissertation — Sam Gilson">
-<meta name="twitter:description" content="How the published work fits together, and what is still in progress.">
+<meta name="twitter:title" content="Dissertation research">
+<meta name="twitter:description" content="Sam Gilson’s dissertation research connects generative AI help-seeking, assignment perturbation, and AI literacy instruction.">
 <meta name="author" content="Sam Gilson">
 
-<link rel="stylesheet" href="/styles.css?v=59e89986">
+<link rel="stylesheet" href="/styles.css?v=7e486897">
 <link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Dissertation research",
+  "description": "Sam Gilson’s dissertation research connects generative AI help-seeking, assignment perturbation, and AI literacy instruction.",
+  "url": "https://sgilson7.github.io/dissertation/"
+}
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -31,84 +39,51 @@
   <div class="wrap">
     <p class="brand"><a href="/">Sam Gilson</a></p>
     <nav aria-label="Sections">
-      <a href="/">Home</a>
-      <a href="/publications/">Publications</a>
+      <a href="/publications/">Research</a>
       <a href="/dissertation/">Dissertation</a>
       <a href="/concepts/">Concepts</a>
-      <a href="/projects/">Tools</a>
       <a href="/teaching/">Teaching</a>
-      <a href="/materials/">Materials</a>
+      <a href="/materials/">Course materials</a>
+      <a href="/projects/">Tools and games</a>
       <a href="/cv/">CV</a>
-      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google&nbsp;Scholar</a>
     </nav>
   </div>
 </header>
 
 
-<main id="main" class="">
+<main id="main">
 <section class="stripe"><div class="wrap">
+<h1>Dissertation research</h1>
+<p>My dissertation research asks how we can understand and support students’ learning when they use generative AI for help. I’m especially interested in the reasoning that happens between receiving an answer and deciding whether to use it.</p>
+<p>This matters for assignment design. A student can submit a plausible solution without showing how they evaluated the chatbot’s contribution. I use perturbed discrete mathematics questions to make some of those decisions observable, then examine the conversations students have around them.</p>
 
-<h1>Dissertation</h1>
-<p>Students can hand almost any homework question to a chatbot now and get back
-something that looks like an answer. That leaves an instructor with a problem
-they cannot see. A submitted assignment looks the same whether a student
-reasoned their way to it or copied it down.</p>
-<p>The fix has to happen in the assignment. Change the question until the
-chatbot’s answer is wrong in a way a student can detect, hand it to the class,
-and record what they do with the wrong answer.</p>
-<p>Some students catch it and some do not. Checking an AI’s reasoning is a skill
-like any other in the course, which means it can be taught directly instead of
-being assumed.</p>
-<p>So the work runs in that order: make the behaviour visible, then teach it.</p>
-<h2>Where it started</h2>
-<p>Before any of this I wanted to know why students were studying outside their
-degree programmes at all, and why they stopped. That survey of 51 undergraduates,
-four of whom I interviewed, found that a common reason for giving up on online,
-on-demand coursework was that a large language model had replaced it. That is the behaviour the rest of the work goes
-looking for, in a setting where the transcript is available to read.</p>
-<h2>What is published</h2>
-<p><strong>Making reliance observable.</strong> The first study built a method for rewriting a
-discrete mathematics question until a chatbot fails it, then ran the resulting
-questions as a two-week lab in a Summer 2025 discrete mathematics course of 18
-students, 8 of whom used the chatbot they were offered. Two engagement patterns
-separated out of those 8 transcripts. It is published at AIED 2026, and the
-terms it introduced each have <a href="/concepts/">a page here</a>.</p>
-<h2>What is in progress</h2>
-<p>Three further phases are under way. Two are with reviewers or in analysis and
-one is a design, so there is nothing to show yet and no findings to report.
-What I can say about their shape:</p>
-<ul>
-<li>A survey of what the free chatbots students actually reach can and cannot do
-on school and early university mathematics.</li>
-<li>A classroom study of teaching students to check generative AI output on
-unfamiliar problems.</li>
-<li>A comparison design testing whether the instruction transfers.</li>
-</ul>
-<p>Each will get a page here when it is accepted, and not before.</p>
+</div></section><section class="stripe"><div class="wrap">
+<h2>How the work connects</h2>
+<p>The <a href="/papers/gilson2025oodcs/">online, on-demand coursework study</a> examined why undergraduates seek computing instruction outside their degree programs and why they stop. Some participants reported turning to LLMs. That raised a further question for me: what kinds of help do students seek from these systems, and what do they do with it?</p>
+<p>The <a href="/papers/gilson2026perturbation/">AIED case study</a> examined eight students’ chatbot conversations during a perturbed discrete mathematics assignment. It identified patterns of cognitive scaffolding and GenAI dependence associated with assignment grades in that sample. Those observations motivate instruction in checking a chatbot’s reasoning; they do not by themselves show that the instruction will improve learning.</p>
+</div></section><section class="stripe"><div class="wrap">
+<h2>Current work</h2>
+<p>An <a href="/papers/gilson-summer2026/">ongoing classroom study</a> places instruction between two perturbed assignments. Its preprint describes three procedures for checking a proof, strengthening a prompt, and working through a problem with a chatbot. Analysis was still in progress when the preprint was written.</p>
+<p>A <a href="/papers/gilson-math-benchmark/">manuscript under review</a> examines mathematical performance on models available through free access tiers. This work considers the capability evidence students might use when deciding how much to rely on a tool.</p>
+<p>I’m also developing a comparison study to examine whether the instruction transfers to other problems. That is a study design, rather than a reported result.</p>
+</div></section><section class="stripe"><div class="wrap">
 <h2>Status</h2>
-<p>The committee has not yet approved a title or an abstract, so neither appears
-on this page. Nothing above describes a result from unpublished work.</p>
-
+<p>This page describes the research direction. A committee-approved dissertation title and abstract are not posted here. The linked records distinguish published work from preprints and work under review.</p>
 
 </div></section>
 </main>
 
 <footer class="band">
   <div class="wrap">
-    <p>
-      Sam Gilson (he/him) &middot; PhD student in computer science,
-      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>, North Carolina State University
-    </p>
     <p class="ids">
+      <a href="mailto:sagilson@ncsu.edu">Email Sam Gilson</a> &middot;
       <a href="https://orcid.org/0009-0002-2394-8649">ORCID 0009-0002-2394-8649</a> &middot;
       <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google Scholar</a> &middot;
-      <a href="https://github.com/sgilson7">GitHub</a>
+      <a href="https://github.com/sgilson7">GitHub</a> &middot;
+      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>
     </p>
-    <p class="meta">
-      Everything I've written here is CC&nbsp;BY&nbsp;4.0. The papers belong to
-      their publishers. This page loads from this site alone and keeps nothing
-      about your visit. Build <code>59e89986</code>.
-    </p>
+    <p class="licence">Original website text by Sam Gilson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Papers, teaching materials, software, and quoted material retain their own notices.</p>
+    <p class="meta">Build <code>7e486897</code></p>
   </div>
 </footer>
 </body>

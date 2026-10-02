@@ -3,37 +3,40 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Spatial Injection — Sam Gilson</title>
-<meta name="description" content="Spatial Injection is a perturbation strategy that adds reasoning requiring visual or geometric interpretation to a question, so a model must track layout as well as arithmetic.">
+<title>Spatial injection — Sam Gilson</title>
+<meta name="description" content="Spatial injection adds a visual or geometric constraint to a question as part of assignment perturbation.">
 <link rel="canonical" href="https://sgilson7.github.io/concepts/spatial-injection/">
 
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Sam Gilson">
-<meta property="og:title" content="Spatial Injection">
-<meta property="og:description" content="Spatial Injection is a perturbation strategy that adds reasoning requiring visual or geometric interpretation to a question, so a model must track layout as well as arithmetic.">
+<meta property="og:title" content="Spatial injection">
+<meta property="og:description" content="Spatial injection adds a visual or geometric constraint to a question as part of assignment perturbation.">
 <meta property="og:url" content="https://sgilson7.github.io/concepts/spatial-injection/">
 <meta property="og:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
 <meta property="og:image:alt" content="Sam Gilson">
 <meta name="twitter:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Spatial Injection">
-<meta name="twitter:description" content="Spatial Injection is a perturbation strategy that adds reasoning requiring visual or geometric interpretation to a question, so a model must track layout as well as arithmetic.">
+<meta name="twitter:title" content="Spatial injection">
+<meta name="twitter:description" content="Spatial injection adds a visual or geometric constraint to a question as part of assignment perturbation.">
 <meta name="author" content="Sam Gilson">
 
-<link rel="stylesheet" href="/styles.css?v=59e89986">
+<link rel="stylesheet" href="/styles.css?v=7e486897">
 <link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "Spatial Injection",
-  "description": "Spatial Injection is a perturbation strategy that adds reasoning requiring visual or geometric interpretation to a question, so a model must track layout as well as arithmetic.",
+  "@type": "WebPage",
+  "name": "Spatial injection",
+  "description": "Spatial injection adds a visual or geometric constraint to a question as part of assignment perturbation.",
   "url": "https://sgilson7.github.io/concepts/spatial-injection/",
-  "alternateName": ["spatial constraint"],
-  "citation": {"@type": "ScholarlyArticle", "identifier": "https://doi.org/10.1007/978-3-032-29770-9_48"},
-  "inDefinedTermSet": {"@type": "DefinedTermSet", "name": "Sam Gilson concepts", "url": "https://sgilson7.github.io/concepts/"}
+  "about": {
+    "@type": "DefinedTerm",
+    "name": "Spatial injection",
+    "description": "Spatial injection adds a visual or geometric constraint to a question as part of assignment perturbation.",
+    "url": "https://sgilson7.github.io/concepts/spatial-injection/"
+  },
+  "citation": ["https://doi.org/10.1007/978-3-032-29770-9_48"]
 }
 </script>
 </head>
@@ -43,140 +46,55 @@
   <div class="wrap">
     <p class="brand"><a href="/">Sam Gilson</a></p>
     <nav aria-label="Sections">
-      <a href="/">Home</a>
-      <a href="/publications/">Publications</a>
+      <a href="/publications/">Research</a>
       <a href="/dissertation/">Dissertation</a>
       <a href="/concepts/">Concepts</a>
-      <a href="/projects/">Tools</a>
       <a href="/teaching/">Teaching</a>
-      <a href="/materials/">Materials</a>
+      <a href="/materials/">Course materials</a>
+      <a href="/projects/">Tools and games</a>
       <a href="/cv/">CV</a>
-      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google&nbsp;Scholar</a>
     </nav>
   </div>
 </header>
 
 
-<main id="main" class="">
+<main id="main">
 <section class="stripe"><div class="wrap">
-
-<p class="kicker">Concept</p>
-<h1>Spatial Injection</h1>
-
-
-<p class="lede definition">Spatial Injection is a perturbation strategy that adds reasoning requiring visual or geometric interpretation to a question, so a model must track layout as well as arithmetic.</p>
-
-<p class="scope">One of three perturbation strategies in that paper, demonstrated on a single combinatorics question.</p>
-<p class="alts">Also written: spatial constraint</p>
-
-
-<dl class="sources">
-  <dt>Introduced in</dt>
-  <dd><a href="https://doi.org/10.1007/978-3-032-29770-9_48">Sam Gilson, Benyamin Tabarsi, Tiffany Barnes. Adversarial Assignment Perturbation: Effects on Help-Seeking Behaviors in Student Generative AI Chatbot Use. Artificial Intelligence in Education (AIED 2026), LNAI 16585.</a>
-  </dd>
-</dl>
-
-<dl class="facts">
-  <dt>Described in</dt>
-  <dd>Gilson et al., 2026 &middot; 
-    <a href="/papers/gilson2026perturbation/">Adversarial Assignment Perturbation: Effects on Help-Seeking Behaviors in Student Generative AI Chatbot Use</a>, Table 1, step 5, and Q1
-  </dd>
-  <dt>Publisher</dt><dd>Springer Nature Switzerland</dd>
-  <dt>DOI</dt><dd><a href="https://doi.org/10.1007/978-3-032-29770-9_48">https://doi.org/10.1007/978-3-032-29770-9_48</a></dd>
-  <dt>Tool</dt><dd><a href="/projects/perturbation-workbench/">Perturbation Workbench</a></dd>
-</dl>
-
-<p>The worked example in the paper is a counting question. It began as a rote
-permutation task — assigning items to slots — and gained a spatial constraint
-that mapped the items onto a visual grid, a salad bar at a restaurant.</p>
-<p>What broke the model was the interaction between the constraints. Across
-multiple attempts the model failed to account for the
-interplay between “warm” items and “cold” slots, hallucinating formulas such as
-7^6 in place of P(7, 6), and failing to satisfy the constraints simultaneously.</p>
+<h1>Spatial injection</h1>
 
 </div></section><section class="stripe"><div class="wrap">
-<h2>Related terms</h2>
-
-<ul class="concepts">
-  <li>
-    <a class="t" href="/concepts/one-shot-genai-resistance/">One-Shot GenAI Resistance</a>
-    <p class="def">One-Shot GenAI Resistance is a property of an assignment question: a target chatbot scores below 60% on it across three separate attempts with the same prompt.</p>
-  </li>
-  <li>
-    <a class="t" href="/concepts/iterative-perturbation-process/">iterative perturbation process</a>
-    <p class="def">The iterative perturbation process is an eight-step, instructor-led loop that rewrites an assignment question until a target chatbot fails it three times running.</p>
-  </li>
-  <li>
-    <a class="t" href="/concepts/axiomatic-replacement/">Axiomatic Replacement</a>
-    <p class="def">Axiomatic Replacement is a perturbation strategy that alters a question&#39;s fundamental logical premises or axioms to prevent a model retrieving a memorised proof.</p>
-  </li>
-  <li>
-    <a class="t" href="/concepts/contextual-embedding/">Contextual Embedding</a>
-    <p class="def">Contextual Embedding is a perturbation strategy that places a question inside unfamiliar, class-specific context which the grading rubric then requires the answer to use.</p>
-  </li>
-  <li>
-    <a class="t" href="/concepts/three-attempt-consistency-protocol/">Three-Attempt Consistency Protocol</a>
-    <p class="def">The Three-Attempt Consistency Protocol re-prompts a model with the exact query two further times, and classifies a question resistant only if all three attempts fail.</p>
-  </li>
-  <li>
-    <a class="t" href="/concepts/cognitive-scaffolding/">Cognitive Scaffolding</a>
-    <p class="def">Cognitive Scaffolding is an engagement pattern in which a student recognises that a chatbot has hallucinated and supplies context to steer it toward a correct answer.</p>
-  </li>
-  <li>
-    <a class="t" href="/concepts/genai-dependence/">GenAI dependence</a>
-    <p class="def">GenAI dependence is an engagement pattern in which a student accepts a chatbot&#39;s hallucinated answer without critically evaluating it.</p>
-  </li>
-  <li>
-    <a class="t" href="/concepts/drive-framework/">DRIVE framework</a>
-    <p class="def">The DRIVE framework is a taxonomy for generative AI interactions that separates how a student steers an exchange from how they articulate what they know.</p>
-  </li>
-  <li>
-    <a class="t" href="/concepts/ai-literacy/">AI Literacy</a>
-    <p class="def">AI Literacy is the set of competencies that let a person critically evaluate AI technologies, and communicate and collaborate effectively with AI.</p>
-  </li>
-</ul>
+<h2>Definition</h2>
+<p>Spatial injection adds a visual or geometric constraint to a question as part of assignment perturbation.</p>
 </div></section><section class="stripe"><div class="wrap">
-<h2>Where this comes from</h2>
-<p>
-  Sam Gilson, Benyamin Tabarsi and Tiffany Barnes. &ldquo;Adversarial Assignment Perturbation: Effects on Help-Seeking Behaviors in Student Generative AI Chatbot Use&rdquo;.
-  Artificial Intelligence in Education (AIED 2026), LNAI 16585, 2026.
-</p>
-<pre class="bibtex"><code>@inproceedings{gilson2026perturbation,
-  title = {{Adversarial Assignment Perturbation: Effects on Help-Seeking Behaviors in Student Generative AI Chatbot Use}},
-  author = {Sam Gilson and Benyamin Tabarsi and Tiffany Barnes},
-  booktitle = {Artificial Intelligence in Education (AIED 2026), LNAI 16585},
-  pages = {440--449},
-  year = {2026},
-  doi = {10.1007/978-3-032-29770-9_48}
-}</code></pre>
+<h2>Explanation</h2>
+<p>A counting question can require students to track where objects may be placed, rather than count combinations without reference to their arrangement. The added constraint changes what a valid solution must account for.</p>
+<p>The important check is whether the new question still assesses the intended mathematics. The rubric should make the constraint explicit, and the instructor should verify that a correct solution exists before using the question.</p>
+<p>A chatbot may overlook a placement restriction or count a configuration twice. Those are errors to look for, rather than outcomes the strategy guarantees.</p>
 </div></section><section class="stripe"><div class="wrap">
-<h2>What people usually want to know</h2>
-<ul class="questions">
-  <li>Which changes to a combinatorics question make a language model hallucinate?</li>
-  <li>Do spatial constraints make a counting problem harder for a chatbot?</li>
-</ul>
-
-<p class="backlink"><a href="/concepts/">All concepts</a></p>
+<h2>Scope and evidence</h2>
+<p>This is one of three strategies described in the AIED assignment-design procedure. Evidence from that use does not establish a general failure mechanism across models.</p>
+</div></section><section class="stripe"><div class="wrap">
+<h2>Sources</h2>
+<p><a href="https://doi.org/10.1007/978-3-032-29770-9_48">Gilson, Tabarsi, and Barnes (2027; first online 2026). Adversarial Assignment Perturbation: Effects on Help-Seeking Behaviors in Student Generative AI Chatbot Use.</a></p>
+</div></section><section class="stripe"><div class="wrap">
+<h2>Related concepts</h2>
+<p><a href="/concepts/spatial-counting-miscount/">Spatial or counting miscount</a> · <a href="/concepts/iterative-perturbation-process/">Iterative perturbation process</a> · <a href="/concepts/contextual-embedding/">Contextual embedding</a></p>
+<p><a href="/concepts/">All concepts</a></p>
 
 </div></section>
 </main>
 
 <footer class="band">
   <div class="wrap">
-    <p>
-      Sam Gilson (he/him) &middot; PhD student in computer science,
-      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>, North Carolina State University
-    </p>
     <p class="ids">
+      <a href="mailto:sagilson@ncsu.edu">Email Sam Gilson</a> &middot;
       <a href="https://orcid.org/0009-0002-2394-8649">ORCID 0009-0002-2394-8649</a> &middot;
       <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google Scholar</a> &middot;
-      <a href="https://github.com/sgilson7">GitHub</a>
+      <a href="https://github.com/sgilson7">GitHub</a> &middot;
+      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>
     </p>
-    <p class="meta">
-      Everything I've written here is CC&nbsp;BY&nbsp;4.0. The papers belong to
-      their publishers. This page loads from this site alone and keeps nothing
-      about your visit. Build <code>59e89986</code>.
-    </p>
+    <p class="licence">Original website text by Sam Gilson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Papers, teaching materials, software, and quoted material retain their own notices.</p>
+    <p class="meta">Build <code>7e486897</code></p>
   </div>
 </footer>
 </body>

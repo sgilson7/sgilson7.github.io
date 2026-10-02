@@ -1,7 +1,11 @@
 /* The look follows the 17 September lecture deck: dark slate bands, white
    pages, a serif for headings, a humanist sans for text, a mono for ids.
    The deck's own faces cannot be redistributed, so these are the open
-   stand-ins confirmed in M0 recon (decision 32, PLAN.md D11). */
+   stand-ins confirmed in M0 recon (decision 32, PLAN.md D11).
+
+   Every page is now one Markdown body rendered into alternating bands, so the
+   rules below are nearly all element rules: a heading, a paragraph, a list, a
+   table, a figure. There are no per-page component classes left to drift. */
 
 /* TeX Gyre Schola stands in for Century Schoolbook. GUST Font License. */
 @font-face {
@@ -84,7 +88,7 @@ body {
   padding: 0 1.25rem;
 }
 
-/* --- the bands ------------------------------------------------------- */
+/* --- the header and the footer ---------------------------------------- */
 
 .band {
   background: var(--ink);
@@ -105,19 +109,27 @@ header.band .wrap {
   letter-spacing: 0.01em;
 }
 .brand a { text-decoration: none; }
-header.band nav { display: flex; flex-wrap: wrap; gap: 1rem; font-size: 0.95rem; }
+/* Seven items, and a long label wraps rather than being clipped. */
+header.band nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; font-size: 0.95rem; }
 
 footer.band {
-  /* The bands now provide the vertical rhythm; a margin here read as a stray
+  /* The bands provide the vertical rhythm; a margin here read as a stray
      empty band between the last section and the footer. */
   padding: 2rem 0 2.5rem;
   font-size: 0.9rem;
 }
 footer.band p { margin: 0 0 0.5rem; }
-footer.band .meta { color: var(--rule); margin-top: 1rem; }
+footer.band .ids { display: flex; flex-wrap: wrap; gap: 0.3rem 0.5rem; }
+footer.band .licence { color: var(--rule); max-width: 60ch; }
+footer.band .licence a { color: var(--page); }
+footer.band .meta { color: var(--rule); margin-top: 0.75rem; }
 footer.band code { font-family: var(--mono); color: var(--page); }
 
-/* --- type ------------------------------------------------------------ */
+.skip {
+  position: absolute; left: -9999px;
+  background: var(--page); color: var(--ink); padding: 0.5rem 1rem;
+}
+.skip:focus { left: 0.5rem; top: 0.5rem; z-index: 10; }
 
 /* --- alternating bands ------------------------------------------------
    Sections alternate white and a pale red so a reader can tell where one part
@@ -126,7 +138,6 @@ footer.band code { font-family: var(--mono); color: var(--page); }
    in lightness rather than only in hue. */
 
 main { padding-top: 0; }
-main.wide .wrap { max-width: 60rem; }
 
 .stripe { padding: 2.1rem 0; }
 .stripe:nth-of-type(even) { background: var(--tint); }
@@ -148,10 +159,14 @@ main.wide .wrap { max-width: 60rem; }
   .stripe + .stripe { border-top: 1px solid CanvasText; }
 }
 
+/* --- type ------------------------------------------------------------- */
+
 h1 {
   font: 700 2.1rem/1.15 var(--serif);
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.9rem;
   letter-spacing: -0.01em;
+  /* A paper title is long and has to wrap, never be clipped or shortened. */
+  overflow-wrap: break-word;
 }
 h2 {
   font: 700 1.3rem/1.25 var(--serif);
@@ -159,164 +174,81 @@ h2 {
   padding-bottom: 0.3rem;
   border-bottom: 1px solid var(--rule);
 }
-p { margin: 0 0 1rem; }
-
-.lede { font-size: 1.12rem; color: var(--ink); }
-.kicker {
-  font: 400 0.8rem/1 var(--mono);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--grey);
-  margin: 0 0 0.6rem;
+/* An h3 is a record in a list: a paper, a concept, a course, a file. It carries
+   the link, so it is set at reading size rather than as another heading step. */
+h3 {
+  font: 700 1.06rem/1.35 var(--serif);
+  margin: 1.9rem 0 0.4rem;
+  overflow-wrap: break-word;
 }
+h3 + p { margin-top: 0; }
+p { margin: 0 0 1rem; max-width: 68ch; }
+
+/* The first paragraph of a page carries it, and on a paper page the first three
+   are the record: what the work is, who wrote it, and where it appeared. */
+.stripe:first-of-type > .wrap > p:first-of-type { font-size: 1.1rem; }
 
 a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 2px; }
 a:hover { color: var(--ink); }
-
-.skip {
-  position: absolute; left: -9999px;
-  background: var(--page); color: var(--ink); padding: 0.5rem 1rem;
-}
-.skip:focus { left: 0.5rem; top: 0.5rem; z-index: 10; }
-
-/* --- publication lists ----------------------------------------------- */
-
-ul.pubs, ol.pubs { padding-left: 0; list-style: none; margin: 0; }
-ol.numbered { counter-reset: pub; }
-.pubs li {
-  padding: 0.9rem 0;
-  border-bottom: 1px solid var(--rule);
-}
-.pubs li:last-child { border-bottom: 0; }
-.pubs .t {
-  display: block;
-  font: 700 1.03rem/1.35 var(--serif);
-  color: var(--ink);
-  text-decoration: none;
-}
-a.t { color: var(--blue); text-decoration: underline; }
-a.t:hover { color: var(--ink); }
-.pubs .by, .pubs .vn {
-  display: block;
-  font-size: 0.93rem;
-  color: var(--grey);
-}
-.pubs .by { margin-top: 0.2rem; }
-/* The studies list on the home page. Same bones as .pubs, with room for the
-   summary paragraph: the summary is the thing a reader came for, so it gets
-   body-text size rather than the metadata grey. */
-ul.studies { padding-left: 0; list-style: none; margin: 0; }
-.studies li {
-  padding: 1.15rem 0;
-  border-bottom: 1px solid var(--rule);
-}
-.studies li:last-child { border-bottom: 0; }
-.studies .t {
-  display: block;
-  font: 700 1.08rem/1.35 var(--serif);
-  color: var(--ink);
-  text-decoration: none;
-}
-.studies .vn {
-  display: block;
-  font-size: 0.93rem;
-  color: var(--grey);
-}
-.studies .summary {
-  margin: 0.55rem 0 0.5rem;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: var(--ink);
-  max-width: 62ch;
+a:focus-visible, button:focus-visible, summary:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
 }
 
-.pubs .tags {
-  display: flex; flex-wrap: wrap; gap: 0.5rem 0.9rem;
-  margin-top: 0.4rem; font-size: 0.85rem;
+ul, ol { margin: 0 0 1rem; padding-left: 1.2rem; }
+li { margin-bottom: 0.3rem; max-width: 66ch; }
+
+strong { font-weight: 700; }
+em { font-style: italic; }
+
+code {
+  font: 400 0.9em/1.5 var(--mono);
 }
-.chip {
-  background: var(--panel);
-  color: var(--ink);
-  padding: 0.08rem 0.45rem;
-  border-radius: 2px;
-  font: 400 0.78rem/1.5 var(--mono);
-}
-
-/* --- paper page ------------------------------------------------------ */
-
-article .by { font-size: 1.02rem; margin-bottom: 0.2rem; }
-article .vn { color: var(--grey); margin-bottom: 1.5rem; }
-
-dl.facts {
-  display: grid;
-  grid-template-columns: 8.5rem 1fr;
-  gap: 0.4rem 1rem;
-  margin: 0 0 1.5rem;
-  padding: 1rem 1.1rem;
-  background: var(--panel);
-  font-size: 0.95rem;
-}
-dl.facts dt { font-weight: 700; color: var(--grey); }
-dl.facts dd { margin: 0; }
-
-.note {
-  border-left: 3px solid var(--red);
-  padding: 0.6rem 0 0.6rem 0.9rem;
-  color: var(--ink);
-  font-size: 0.95rem;
-  background: #fbf7f7;
-}
-
-pre.bibtex {
+pre {
   background: var(--ink);
   color: var(--page);
   padding: 1rem 1.1rem;
   overflow-x: auto;
-  font: 400 0.84rem/1.55 var(--mono);
   border-radius: 2px;
+  margin: 0 0 1.2rem;
 }
-pre.bibtex code { font: inherit; }
+pre code { font: 400 0.84rem/1.55 var(--mono); color: inherit; }
 
-ul.errata, ul.ids { padding-left: 1.1rem; }
-ul.ids li { margin-bottom: 0.3rem; }
-footer .ids a { color: var(--page); }
+/* --- tables ----------------------------------------------------------
+   The procedures and the map's relationship table. A table has to stay
+   readable on a narrow screen, so it scrolls sideways inside its own box
+   rather than being shrunk or clipped. */
 
-@media (max-width: 30rem) {
-  body { font-size: 16px; }
-  h1 { font-size: 1.7rem; }
-  dl.facts { grid-template-columns: 1fr; gap: 0.1rem; }
-  dl.facts dd { margin-bottom: 0.6rem; }
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0 0 1.3rem;
+  font-size: 0.95rem;
+  display: block;
+  overflow-x: auto;
 }
-
-/* --- awards ----------------------------------------------------------- */
-
-ul.awards { padding-left: 0; list-style: none; margin: 0; }
-ul.awards li {
-  padding: 0.9rem 0;
+thead th {
+  text-align: left;
+  font: 700 0.85rem/1.4 var(--sans);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--grey);
+  border-bottom: 1px solid var(--edge);
+  padding: 0.4rem 0.7rem 0.4rem 0;
+}
+tbody td {
+  vertical-align: top;
+  padding: 0.55rem 0.7rem 0.55rem 0;
   border-bottom: 1px solid var(--rule);
 }
-ul.awards li:last-child { border-bottom: 0; }
-ul.awards .t {
-  display: block;
-  font: 700 1.03rem/1.35 var(--serif);
-  color: var(--ink);
-}
-ul.awards .vn {
-  display: block;
-  font-size: 0.93rem;
-  color: var(--grey);
-  margin-top: 0.2rem;
-}
-ul.awards .basis {
-  margin: 0.5rem 0 0;
-  padding-left: 0.9rem;
-  border-left: 3px solid var(--green);
-  font-size: 0.93rem;
-  color: var(--ink);
-}
+tbody tr:last-child td { border-bottom: 0; }
+/* The first column is a label: A0, B1, Brief. Keep it from wrapping mid-word. */
+tbody td:first-child { white-space: nowrap; font-weight: 700; }
+
+/* --- quotations and source records ----------------------------------- */
 
 blockquote.student {
-  margin: 0.7rem 0 0;
+  margin: 0.7rem 0 1.2rem;
   padding: 0.75rem 1rem;
   background: var(--panel);
   border-left: 3px solid var(--green);
@@ -333,198 +265,56 @@ blockquote.student cite {
   font-style: normal;
   color: var(--grey);
 }
+blockquote {
+  margin: 0 0 1.2rem;
+  padding-left: 0.9rem;
+  border-left: 3px solid var(--rule);
+  color: var(--ink);
+}
+
+/* An abstract is a source record, not site prose: it is set in the serif and
+   marked as a verbatim quotation in the markup. */
+.abstract {
+  border-left: 3px solid var(--edge);
+  padding-left: 0.9rem;
+  margin: 0 0 0.6rem;
+}
+.abstract p { margin-bottom: 0.8rem; font-family: var(--serif); }
 p.provenance {
-  margin: 0.5rem 0 1.5rem;
+  margin: 0 0 0.6rem;
   font-size: 0.85rem;
   color: var(--grey);
 }
-.abstract p { margin-bottom: 0.8rem; }
-
-/* --- concepts and projects -------------------------------------------- */
-
-ul.concepts, ul.projects { padding-left: 0; list-style: none; margin: 0; }
-ul.concepts li, ul.projects li {
-  padding: 1rem 0;
-  border-bottom: 1px solid var(--rule);
-}
-ul.concepts li:last-child, ul.projects li:last-child { border-bottom: 0; }
-ul.concepts .t, ul.projects .t {
-  display: block;
-  font: 700 1.05rem/1.35 var(--serif);
-}
-ul.concepts .def, ul.projects .def {
-  margin: 0.3rem 0 0;
-  font-size: 0.95rem;
-}
-.alts {
-  display: block;
-  margin-top: 0.35rem;
-  font: 400 0.84rem/1.5 var(--mono);
+ul.errata {
+  margin: 0 0 1.4rem;
+  padding-left: 1.1rem;
+  font-size: 0.88rem;
   color: var(--grey);
 }
-p.alts { margin-bottom: 1.2rem; }
-.lede.definition {
-  font-size: 1.14rem;
-  border-left: 3px solid var(--blue);
-  padding-left: 0.9rem;
-  margin-bottom: 1rem;
-}
-.note.credit { border-left-color: var(--blue); background: #f6f8fc; }
-ul.questions { padding-left: 1.1rem; }
-ul.questions li { margin-bottom: 0.4rem; }
-p.backlink { margin-top: 2.5rem; font-size: 0.9rem; }
-.defined-here { margin-top: 0.4rem; }
 
-/* The opening paragraph carries the page, so it gets the lede's weight. */
-.lede-body > p:first-child {
-  font-size: 1.14rem;
-  color: var(--ink);
-}
+/* --- figures ---------------------------------------------------------- */
 
-/* --- the knowledge-component graph ------------------------------------ */
-
-.viewtoggle {
-  display: flex;
-  align-items: baseline;
-  gap: 0.5rem;
-  margin: 1.5rem 0 1rem;
-  padding: 0.6rem 0.8rem;
-  background: var(--panel);
-  border-radius: 3px;
-  font-size: 0.92rem;
-}
-.viewtoggle input { margin: 0; }
-.viewtoggle label { cursor: pointer; }
-
-/* No JavaScript: the checkbox drives which section shows. Both are in the
-   HTML either way, so a crawler reads the text whichever is visible. */
-.viewtoggle:has(#asgraph:not(:checked)) ~ .graphview { display: none; }
-.viewtoggle:has(#asgraph:checked) ~ .listview { display: none; }
-
-.kcfig { margin: 0 0 2rem; }
-.kcscroll { overflow-x: auto; padding-bottom: 0.5rem; }
-svg.kcgraph { display: block; max-width: 100%; height: auto; }
-
-.kc-node { fill: #f7f7f7; stroke: var(--rule); stroke-width: 1; }
-.kc-node.kc-strategy { fill: #e8f5e9; stroke: #9ccc9f; }
-a:hover .kc-node { fill: var(--panel); stroke: var(--ink); }
-.kc-ntext {
-  font: 700 12px/1.25 var(--sans);
-  fill: var(--ink);
-  text-anchor: middle;
-}
-.kc-edge { opacity: 0.85; }
-.kc-elabel { fill: #ffffff; stroke: var(--rule); stroke-width: 0.75; }
-.kc-etext { font: 400 10.5px/1.2 var(--mono); }
-a:hover .kc-elabel { fill: var(--panel); }
-
-.kcfig figcaption {
-  margin-top: 0.75rem;
+figure { margin: 0 0 1.6rem; }
+img { max-width: 100%; height: auto; }
+figcaption {
+  margin-top: 0.6rem;
   font-size: 0.88rem;
   color: var(--grey);
   line-height: 1.6;
+  max-width: 68ch;
 }
-.key {
-  white-space: nowrap;
-  padding-left: 1.1rem;
-  position: relative;
-}
-.key::before {
-  content: "";
-  position: absolute; left: 0; top: 0.45em;
-  width: 0.85rem; height: 2px; background: var(--c);
+.slidefig img {
+  display: block;
+  border: 1px solid var(--rule);
+  background: var(--page);
 }
 
-ol.relations { padding-left: 0; list-style: none; margin: 0; counter-reset: rel; }
-ol.relations li {
-  padding: 0.85rem 0;
-  border-bottom: 1px solid var(--rule);
-  scroll-margin-top: 1rem;
-}
-ol.relations li:target { background: #fffbe6; }
-ol.relations li:last-child { border-bottom: 0; }
-.relations .pair { margin: 0 0 0.3rem; font-size: 0.97rem; }
-.relations .arrow { color: var(--c); font-weight: 700; padding: 0 0.15rem; }
-.relations .chip {
-  background: transparent;
-  border: 1px solid var(--c);
-  color: var(--c);
-  margin-left: 0.35rem;
-}
-.relations .sentence { margin: 0 0 0.25rem; }
-.relations .src { margin: 0; font-size: 0.85rem; color: var(--grey); }
+/* --- the lecture ------------------------------------------------------ */
 
-p.kc {
-  margin: 0.35rem 0 0;
-  font-size: 0.92rem;
-  color: var(--ink);
-  border-left: 2px solid var(--rule);
-  padding-left: 0.7rem;
-}
-p.kc span { color: var(--grey); font-variant: small-caps; letter-spacing: 0.03em; }
+section.slide { scroll-margin-top: 1rem; }
+section.slide > h2 { margin-top: 0; }
 
-@media (max-width: 40rem) {
-  .kcscroll { margin: 0 -1.25rem; padding: 0 1.25rem 0.5rem; }
-}
-
-/* --- teaching and CV --------------------------------------------------- */
-
-ul.courses, ul.plain { padding-left: 0; list-style: none; margin: 0; }
-ul.courses li {
-  padding: 1rem 0;
-  border-bottom: 1px solid var(--rule);
-}
-ul.courses li:last-child { border-bottom: 0; }
-ul.courses .t { margin: 0; font: 700 1.03rem/1.35 var(--serif); }
-ul.courses .vn { margin: 0.2rem 0 0; font-size: 0.93rem; color: var(--grey); }
-.note-plain { margin: 0.5rem 0 0; font-size: 0.95rem; }
-.awarded {
-  margin: 0.5rem 0 0;
-  padding-left: 0.8rem;
-  border-left: 3px solid var(--green);
-  font-size: 0.93rem;
-  color: var(--green);
-  font-weight: 700;
-}
-ul.plain li { padding: 0.25rem 0; }
-
-.cvactions {
-  display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.75rem 1rem;
-  margin: 1.5rem 0 2rem;
-}
-.btn {
-  display: inline-block;
-  background: var(--ink);
-  color: var(--page);
-  padding: 0.5rem 1rem;
-  border-radius: 3px;
-  text-decoration: none;
-  font-size: 0.95rem;
-}
-.btn:hover { background: var(--blue); color: var(--page); }
-.cvactions .hint { font-size: 0.88rem; color: var(--grey); }
-.cvlist li { padding: 0.6rem 0; }
-
-/* --- print: the CV page is meant to come out as a PDF ------------------ */
-
-@media print {
-  header.band, footer.band, .cvactions, .viewtoggle, .skip, .backlink { display: none !important; }
-  /* Tinted bands waste ink and print grey. The rules keep the structure. */
-  .stripe { background: #fff !important; padding: 0.4rem 0; }
-  .stripe + .stripe { border-top: 1px solid #999; }
-  body { font-size: 11pt; color: #000; }
-  .wrap { max-width: none; padding: 0; }
-  main { padding-top: 0; }
-  a { color: #000; text-decoration: none; }
-  /* A printed page cannot be clicked, so a link has to carry its target. */
-  .cvlist a[href^="/"]::after { content: ""; }
-  h1 { font-size: 20pt; }
-  h2 { font-size: 13pt; margin-top: 1.2rem; page-break-after: avoid; }
-  li, .pubs li, ul.courses li { page-break-inside: avoid; }
-  pre.bibtex { display: none; }
-}
-
-/* --- the portrait ------------------------------------------------------ */
+/* --- the portrait ----------------------------------------------------- */
 
 .intro {
   display: flex;
@@ -541,77 +331,58 @@ img.portrait {
   flex: none;
 }
 @media (max-width: 30rem) {
+  body { font-size: 16px; }
+  h1 { font-size: 1.7rem; }
   .intro { gap: 0.8rem; }
   img.portrait { width: 72px; }
 }
-@media print { img.portrait { display: none; } }
 
-/* A label that could not sit beside its own curve gets a thread back to it. */
-.kc-leader { stroke-width: 1.1; stroke-dasharray: 2 2; opacity: 0.95; }
-/* The dot sits on the curve the label names. Three labels in one band can read
-   the same word -- "classifies" appears three times -- and the dot is what
-   says which line each belongs to. It is a shape, not a colour, so it works
-   in monochrome and under forced-colors. */
-.kc-anchor { stroke: #fff; stroke-width: 0.8; }
+/* --- the concept map --------------------------------------------------
+   The picture is the optional half: every relationship it draws is also a row
+   in the table directly below it. It scrolls sideways on a narrow screen
+   rather than being scaled until the labels stop being readable. */
+
+.kcfig { margin: 0 0 1.6rem; }
+/* The picture keeps its own size and scrolls inside this box. Shrinking it to
+   the reading column instead is what made 22 boxes illegible: the labels are
+   the content, and a label too small to read is not a smaller picture, it is a
+   missing one. The table below says the same thing in text either way. */
+.kcscroll { overflow-x: auto; padding-bottom: 0.5rem; }
+svg.kcgraph { display: block; height: auto; }
+
+.kc-node { fill: #f7f7f7; stroke: var(--rule); stroke-width: 1; }
+a:hover .kc-node { fill: var(--panel); stroke: var(--ink); }
+a:focus-visible .kc-node { stroke: var(--blue); stroke-width: 2; }
+.kc-ntext {
+  font: 700 12px/1.25 var(--sans);
+  fill: var(--ink);
+  text-anchor: middle;
+}
+.kc-edge path { stroke: var(--grey); stroke-width: 1.6; }
 @media (forced-colors: active) {
-  .kc-leader { stroke: CanvasText !important; opacity: 1; }
-  .kc-anchor { fill: CanvasText !important; stroke: Canvas !important; }
+  .kc-edge path { stroke: CanvasText; }
+  .kc-node { fill: Canvas; stroke: CanvasText; }
+  .kc-ntext { fill: CanvasText; }
+}
+@media (max-width: 40rem) {
+  .kcscroll { margin: 0 -1.25rem; padding: 0 1.25rem 0.5rem; }
 }
 
-/* Provenance, directly under the definition, because that is the region a
-   snippet generator takes. */
-p.scope {
-  margin: -0.4rem 0 1rem;
-  padding-left: 0.9rem;
-  border-left: 3px solid var(--rule);
-  font-size: 0.93rem;
-  color: var(--grey);
-}
-p.neighbours {
-  margin: 1.5rem 0 0;
-  padding: 0.75rem 0.9rem;
-  background: var(--panel);
-  border-radius: 3px;
-  font-size: 0.93rem;
-}
+/* --- print: the CV page is meant to come out as a PDF ------------------ */
 
-/* Attribution on a concept page. The origin row is the one a reader should
-   cite, so it is not styled as metadata. */
-dl.sources { margin: 1.1rem 0; }
-dl.sources dt {
-  font: 700 0.8rem/1.4 var(--sans);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--grey);
-  margin-top: 0.7rem;
+@media print {
+  header.band, footer.band, .skip { display: none !important; }
+  /* Tinted bands waste ink and print grey. The rules keep the structure. */
+  .stripe { background: #fff !important; padding: 0.4rem 0; }
+  .stripe + .stripe { border-top: 1px solid #999; }
+  body { font-size: 11pt; color: #000; }
+  .wrap { max-width: none; padding: 0; }
+  main { padding-top: 0; }
+  a { color: #000; text-decoration: none; }
+  h1 { font-size: 20pt; }
+  h2 { font-size: 13pt; margin-top: 1.2rem; page-break-after: avoid; }
+  h3 { page-break-after: avoid; }
+  li, p { page-break-inside: avoid; }
+  pre { display: none; }
+  img.portrait { display: none; }
 }
-dl.sources dd { margin: 0.15rem 0 0; font-size: 0.95rem; line-height: 1.5; }
-dl.sources dd .why {
-  display: block;
-  color: var(--grey);
-  font-size: 0.9rem;
-  margin-top: 0.15rem;
-}
-
-/* The materials directory. Each row is a file somebody is about to download,
-   so the title is the link and the format and length sit beside it. */
-ul.materials { padding-left: 0; list-style: none; margin: 0; }
-.materials li { padding: 1.1rem 0; border-bottom: 1px solid var(--rule); }
-.materials li:last-child { border-bottom: 0; }
-.materials .mhead { margin: 0; }
-.materials .t { display: block; font: 700 1.05rem/1.35 var(--serif); }
-.materials .vn { display: block; font-size: 0.92rem; color: var(--grey); }
-.materials .summary { margin: 0.5rem 0 0.45rem; max-width: 62ch; line-height: 1.6; }
-.materials details { margin: 0.3rem 0 0.5rem; }
-.materials details summary { font-size: 0.92rem; color: var(--grey); cursor: pointer; }
-ul.objectives { margin: 0.4rem 0 0 1.1rem; font-size: 0.95rem; line-height: 1.55; }
-
-/* A submission says so before anything else on the page. Not a warning colour:
-   it is a statement of where the work is, not a problem. */
-.submitted {
-  border-left: 3px solid var(--edge);
-  padding: 0.1rem 0 0.1rem 0.9rem;
-  margin: 0 0 1.2rem;
-}
-.submitted p { margin: 0.5rem 0; color: var(--grey); font-size: 0.95rem; }
-.submitted strong { color: var(--ink); }

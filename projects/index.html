@@ -4,26 +4,34 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tools and games — Sam Gilson</title>
-<meta name="description" content="Tools and games Sam Gilson has built and released.">
+<meta name="description" content="Browser research tools and games by Sam Gilson, including Perturbation Workbench, PDF Redactor, Gear Master, and Floodline.">
 <link rel="canonical" href="https://sgilson7.github.io/projects/">
 
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Sam Gilson">
-<meta property="og:title" content="Tools and games — Sam Gilson">
-<meta property="og:description" content="Tools and games Sam Gilson has built and released.">
+<meta property="og:title" content="Tools and games">
+<meta property="og:description" content="Browser research tools and games by Sam Gilson, including Perturbation Workbench, PDF Redactor, Gear Master, and Floodline.">
 <meta property="og:url" content="https://sgilson7.github.io/projects/">
 <meta property="og:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
 <meta property="og:image:alt" content="Sam Gilson">
 <meta name="twitter:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tools and games — Sam Gilson">
-<meta name="twitter:description" content="Tools and games Sam Gilson has built and released.">
+<meta name="twitter:title" content="Tools and games">
+<meta name="twitter:description" content="Browser research tools and games by Sam Gilson, including Perturbation Workbench, PDF Redactor, Gear Master, and Floodline.">
 <meta name="author" content="Sam Gilson">
 
-<link rel="stylesheet" href="/styles.css?v=59e89986">
+<link rel="stylesheet" href="/styles.css?v=7e486897">
 <link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Tools and games",
+  "description": "Browser research tools and games by Sam Gilson, including Perturbation Workbench, PDF Redactor, Gear Master, and Floodline.",
+  "url": "https://sgilson7.github.io/projects/"
+}
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -31,90 +39,52 @@
   <div class="wrap">
     <p class="brand"><a href="/">Sam Gilson</a></p>
     <nav aria-label="Sections">
-      <a href="/">Home</a>
-      <a href="/publications/">Publications</a>
+      <a href="/publications/">Research</a>
       <a href="/dissertation/">Dissertation</a>
       <a href="/concepts/">Concepts</a>
-      <a href="/projects/">Tools</a>
       <a href="/teaching/">Teaching</a>
-      <a href="/materials/">Materials</a>
+      <a href="/materials/">Course materials</a>
+      <a href="/projects/">Tools and games</a>
       <a href="/cv/">CV</a>
-      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google&nbsp;Scholar</a>
     </nav>
   </div>
 </header>
 
 
-<main id="main" class="">
+<main id="main">
 <section class="stripe"><div class="wrap">
-
 <h1>Tools and games</h1>
+<p>These projects grew out of research tasks and game development. The research tools help with assignment testing and PDF review; the games explore browser-based simulation and equipment-building systems.</p>
 
 </div></section><section class="stripe"><div class="wrap">
 <h2>Research tools</h2>
-<p>The Perturbation Workbench runs the protocol from the AIED 2026 paper; PDF
-Redactor de-identifies the student work a study collects. Both run inside your
-browser tab. You don't sign in, nothing is uploaded, and once the page has
-loaded it stops talking to the internet — open the Network tab and watch.</p>
-<ul class="projects">
-  <li>
-    <a class="t" href="/projects/perturbation-workbench/">Perturbation Workbench</a>
-    <p class="def">Run the AIED 2026 iterative perturbation protocol in the browser. Nothing is uploaded.</p>
-    <span class="tags"><span class="chip">Rust</span><a href="https://sgilson7.github.io/perturbation-workbench/">Open the tool</a>
-      <a href="https://github.com/sgilson7/perturbation-workbench">Source</a></span>
-  </li>
-  <li>
-    <a class="t" href="/projects/pdf-redactor/">PDF Redactor</a>
-    <p class="def">Redact student names and strip all metadata from PDFs, entirely in your browser. Nothing is uploaded.</p>
-    <span class="tags"><span class="chip">Rust</span><a href="https://sgilson7.github.io/pdf-redactor/">Open the tool</a>
-      <a href="https://github.com/sgilson7/pdf-redactor">Source</a></span>
-  </li>
-</ul>
-
+<h3><a href="/projects/perturbation-workbench/">Perturbation Workbench</a></h3>
+<p>Record questions, rubrics, and chatbot attempts during iterative assignment perturbation.</p>
+<h3><a href="/projects/pdf-redactor/">PDF Redactor</a></h3>
+<p>Find identifiers, review redaction boxes, and export a rebuilt PDF in your browser.</p>
 </div></section><section class="stripe"><div class="wrap">
 <h2>Games</h2>
-<p>These are games. They are also where I work out engine ideas that turn up
-later in the research tools. All three run in a browser.</p>
-<ul class="projects">
-  <li>
-    <a class="t" href="/projects/gear-master/">Gear Master</a>
-    <p class="def">Build gear out of parts, then watch your character auto-battle. Rust + macroquad.</p>
-    <span class="tags"><span class="chip">Rust</span><a href="https://sgilson7.github.io/gear-master/">Play</a>
-      <a href="https://github.com/sgilson7/gear-master">Source</a></span>
-  </li>
-  <li>
-    <a class="t" href="/projects/gear-master-2d/">Gear Master 2D</a>
-    <p class="def">A 2D tile-based open-world RPG on the gear-assembly auto-battler from gear-master.</p>
-    <span class="tags"><span class="chip">Rust</span><a href="https://sgilson7.github.io/gear-master-2d/">Play</a>
-      <a href="https://github.com/sgilson7/gear-master-2d">Source</a></span>
-  </li>
-  <li>
-    <a class="t" href="/projects/floodline/">Floodline</a>
-    <p class="def">Multiplayer medieval city builder in the browser. Deterministic lockstep over WebRTC; every age ends in a flood.</p>
-    <span class="tags"><span class="chip">Rust</span><a href="https://sgilson7.github.io/floodline/">Play</a>
-      <a href="https://github.com/sgilson7/floodline">Source</a></span>
-  </li>
-</ul>
+<h3><a href="/projects/gear-master/">Gear Master</a></h3>
+<p>Arrange components into gear, then watch the build take part in an automatic battle.</p>
+<h3><a href="/projects/gear-master-2d/">Gear Master 2D</a></h3>
+<p>Explore a tile-based world and assemble equipment for automatic battles.</p>
+<h3><a href="/projects/floodline/">Floodline</a></h3>
+<p>A multiplayer medieval city builder in which each age ends in a flood.</p>
 
 </div></section>
 </main>
 
 <footer class="band">
   <div class="wrap">
-    <p>
-      Sam Gilson (he/him) &middot; PhD student in computer science,
-      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>, North Carolina State University
-    </p>
     <p class="ids">
+      <a href="mailto:sagilson@ncsu.edu">Email Sam Gilson</a> &middot;
       <a href="https://orcid.org/0009-0002-2394-8649">ORCID 0009-0002-2394-8649</a> &middot;
       <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google Scholar</a> &middot;
-      <a href="https://github.com/sgilson7">GitHub</a>
+      <a href="https://github.com/sgilson7">GitHub</a> &middot;
+      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>
     </p>
-    <p class="meta">
-      Everything I've written here is CC&nbsp;BY&nbsp;4.0. The papers belong to
-      their publishers. This page loads from this site alone and keeps nothing
-      about your visit. Build <code>59e89986</code>.
-    </p>
+    <p class="licence">Original website text by Sam Gilson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Papers, teaching materials, software, and quoted material retain their own notices.</p>
+    <p class="meta">Build <code>7e486897</code></p>
   </div>
 </footer>
 </body>

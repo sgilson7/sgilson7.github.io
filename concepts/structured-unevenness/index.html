@@ -3,36 +3,39 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Structured Unevenness — Sam Gilson</title>
-<meta name="description" content="Structured Unevenness is the pattern where a model&#39;s accuracy varies by topic in the same way across vendors, rather than varying at random.">
+<title>Structured unevenness — Sam Gilson</title>
+<meta name="description" content="Structured unevenness is the descriptive label used here for a pattern of model performance that varies systematically across subject areas.">
 <link rel="canonical" href="https://sgilson7.github.io/concepts/structured-unevenness/">
 
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Sam Gilson">
-<meta property="og:title" content="Structured Unevenness">
-<meta property="og:description" content="Structured Unevenness is the pattern where a model&#39;s accuracy varies by topic in the same way across vendors, rather than varying at random.">
+<meta property="og:title" content="Structured unevenness">
+<meta property="og:description" content="Structured unevenness is the descriptive label used here for a pattern of model performance that varies systematically across subject areas.">
 <meta property="og:url" content="https://sgilson7.github.io/concepts/structured-unevenness/">
 <meta property="og:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
 <meta property="og:image:alt" content="Sam Gilson">
 <meta name="twitter:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Structured Unevenness">
-<meta name="twitter:description" content="Structured Unevenness is the pattern where a model&#39;s accuracy varies by topic in the same way across vendors, rather than varying at random.">
+<meta name="twitter:title" content="Structured unevenness">
+<meta name="twitter:description" content="Structured unevenness is the descriptive label used here for a pattern of model performance that varies systematically across subject areas.">
 <meta name="author" content="Sam Gilson">
 
-<link rel="stylesheet" href="/styles.css?v=59e89986">
+<link rel="stylesheet" href="/styles.css?v=7e486897">
 <link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "DefinedTerm",
-  "name": "Structured Unevenness",
-  "description": "Structured Unevenness is the pattern where a model's accuracy varies by topic in the same way across vendors, rather than varying at random.",
+  "@type": "WebPage",
+  "name": "Structured unevenness",
+  "description": "Structured unevenness is the descriptive label used here for a pattern of model performance that varies systematically across subject areas.",
   "url": "https://sgilson7.github.io/concepts/structured-unevenness/",
-  "alternateName": ["subject-level variance", "cross-vendor weakness profile"],
-  "inDefinedTermSet": {"@type": "DefinedTermSet", "name": "Sam Gilson concepts", "url": "https://sgilson7.github.io/concepts/"}
+  "about": {
+    "@type": "DefinedTerm",
+    "name": "Structured unevenness",
+    "description": "Structured unevenness is the descriptive label used here for a pattern of model performance that varies systematically across subject areas.",
+    "url": "https://sgilson7.github.io/concepts/structured-unevenness/"
+  }
 }
 </script>
 </head>
@@ -42,121 +45,53 @@
   <div class="wrap">
     <p class="brand"><a href="/">Sam Gilson</a></p>
     <nav aria-label="Sections">
-      <a href="/">Home</a>
-      <a href="/publications/">Publications</a>
+      <a href="/publications/">Research</a>
       <a href="/dissertation/">Dissertation</a>
       <a href="/concepts/">Concepts</a>
-      <a href="/projects/">Tools</a>
       <a href="/teaching/">Teaching</a>
-      <a href="/materials/">Materials</a>
+      <a href="/materials/">Course materials</a>
+      <a href="/projects/">Tools and games</a>
       <a href="/cv/">CV</a>
-      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google&nbsp;Scholar</a>
     </nav>
   </div>
 </header>
 
 
-<main id="main" class="">
+<main id="main">
 <section class="stripe"><div class="wrap">
+<h1>Structured unevenness</h1>
 
-<p class="kicker">Concept</p>
-<h1>Structured Unevenness</h1>
-
-
-<p class="lede definition">Structured Unevenness is the pattern where a model&#39;s accuracy varies by topic in the same way across vendors, rather than varying at random.</p>
-
-<p class="scope">Measured on five models over all 12,500 MATH benchmark problems. MATH has been public since 2021, so the accuracies are read as upper bounds rather than as underlying ability.</p>
-<p class="alts">Also written: subject-level variance · cross-vendor weakness profile</p>
-
-
-<dl class="sources">
-  <dt>Introduced in</dt>
-  <dd><a href="/papers/gilson-math-benchmark/">Sam Gilson. Free-tier Large Language Models on the MATH Benchmark: Implications for AI Literacy Instruction. AERA 2027 annual meeting.</a>
-  </dd>
-  <dt>Measured with</dt>
-  <dd>Dan Hendrycks, Collin Burns, Saurav Kadavath. 2021. Measuring Mathematical Problem Solving with the MATH Dataset. Proceedings of the NeurIPS Datasets and Benchmarks Track.<span class="why">The 12,500-problem MATH dataset, seven subjects by five difficulty levels.</span>
-  </dd>
-</dl>
-
-<dl class="facts">
-  <dt>Described in</dt>
-  <dd>Gilson, 2026 &middot; 
-    <a href="/papers/gilson-math-benchmark/">Free-tier Large Language Models on the MATH Benchmark: Implications for AI Literacy Instruction</a>, Results and Substantiated Conclusions
-  </dd>
-</dl>
-
-<p>Five models, three companies, 12,500 problems each. The thing worth reporting is
-not that they get most of it right, though they do. It is that they get the same
-things wrong.</p>
-<p>Within each model, accuracy moved by 9.3 to 14.0 percentage points across
-subjects. Intermediate algebra, precalculus and geometry occupied the bottom
-three positions for every one of the five, which is not what you would expect
-from three vendors training separately. The spread does not follow price or
-overall accuracy either: the widest-spread model was the second most accurate,
-not the cheapest.</p>
-<p>Read as error rates it is sharper. Each model’s error rate on its weakest
-subject is at least double its rate on its strongest.</p>
-<p>MATH has been public since 2021, so every model has likely seen it. These
-numbers are an upper bound on performance against genuinely new problems.</p>
-
-<p class="neighbours">
-  <strong>Nearby terms in the literature:</strong> benchmark contamination, capability profile.
-  None of these is a synonym for Structured Unevenness; they name related work this
-  paper did not measure against.
-</p>
 </div></section><section class="stripe"><div class="wrap">
-<h2>Related terms</h2>
-
-<ul class="concepts">
-  <li>
-    <a class="t" href="/concepts/free-tier-accessible-model/">Free-Tier Accessible Model</a>
-    <p class="def">A Free-Tier Accessible Model is one a student can reach through a consumer chatbot interface without a paid subscription.</p>
-  </li>
-  <li>
-    <a class="t" href="/concepts/calibrated-trust/">Calibrated Trust</a>
-    <p class="def">Calibrated Trust is trust in a tool that matches the tool&#39;s actual reliability, rather than being uniform across everything the tool does.</p>
-  </li>
-</ul>
+<h2>Definition</h2>
+<p>Structured unevenness is the descriptive label used here for a pattern of model performance that varies systematically across subject areas.</p>
 </div></section><section class="stripe"><div class="wrap">
-<h2>Where this comes from</h2>
-<p>
-  Sam Gilson. &ldquo;Free-tier Large Language Models on the MATH Benchmark: Implications for AI Literacy Instruction&rdquo;.
-  AERA 2027 annual meeting, 2026.
-</p>
-<pre class="bibtex"><code>@inproceedings{gilson-math-benchmark,
-  title = {{Free-tier Large Language Models on the MATH Benchmark: Implications for AI Literacy Instruction}},
-  author = {Sam Gilson},
-  booktitle = {AERA 2027 annual meeting},
-  year = {2026}
-}</code></pre>
+<h2>Explanation</h2>
+<p>An overall accuracy score can hide differences among kinds of problems. To examine those differences, compare performance by subject and look at how the pattern changes across the evaluated models.</p>
+<p>The interpretation depends on the dataset, subject categories, scoring method, access route, and date. Similar rankings across models would be a result about that evaluation; they would not by themselves establish a weakness shared by every model or access tier.</p>
+<p>The manuscript under review considers this kind of analysis in relation to AI literacy. Detailed numerical results are omitted until a public manuscript or publication can support them.</p>
 </div></section><section class="stripe"><div class="wrap">
-<h2>What people usually want to know</h2>
-<ul class="questions">
-  <li>Are chatbots equally good at every area of mathematics?</li>
-  <li>Which maths topics are AI chatbots worst at?</li>
-</ul>
-
-<p class="backlink"><a href="/concepts/">All concepts</a></p>
+<h2>Scope and evidence</h2>
+<p>This page explains a descriptive idea associated with work under review. It makes no confirmed claim about a cross-vendor ranking, score gap, or instructional effect.</p>
+<p><a href="/papers/gilson-math-benchmark/">Related manuscript under review</a></p>
+</div></section><section class="stripe"><div class="wrap">
+<h2>Related concepts</h2>
+<p><a href="/concepts/free-tier-accessible-model/">Free-tier accessible model</a> · <a href="/concepts/calibrated-trust/">Calibrated trust</a> · <a href="/concepts/ai-literacy/">AI literacy</a></p>
+<p><a href="/concepts/">All concepts</a></p>
 
 </div></section>
 </main>
 
 <footer class="band">
   <div class="wrap">
-    <p>
-      Sam Gilson (he/him) &middot; PhD student in computer science,
-      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>, North Carolina State University
-    </p>
     <p class="ids">
+      <a href="mailto:sagilson@ncsu.edu">Email Sam Gilson</a> &middot;
       <a href="https://orcid.org/0009-0002-2394-8649">ORCID 0009-0002-2394-8649</a> &middot;
       <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google Scholar</a> &middot;
-      <a href="https://github.com/sgilson7">GitHub</a>
+      <a href="https://github.com/sgilson7">GitHub</a> &middot;
+      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>
     </p>
-    <p class="meta">
-      Everything I've written here is CC&nbsp;BY&nbsp;4.0. The papers belong to
-      their publishers. This page loads from this site alone and keeps nothing
-      about your visit. Build <code>59e89986</code>.
-    </p>
+    <p class="licence">Original website text by Sam Gilson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Papers, teaching materials, software, and quoted material retain their own notices.</p>
+    <p class="meta">Build <code>7e486897</code></p>
   </div>
 </footer>
 </body>

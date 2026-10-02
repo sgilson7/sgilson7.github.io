@@ -1,84 +1,24 @@
 # Sam Gilson
 
-> Sam Gilson is a computer science education researcher interested in how undergraduates use generative AI to learn: in writing proofs, in discrete mathematics, and in game AI.
+Sam Gilson is a PhD student in computer science at North Carolina State University. His work examines generative AI help-seeking, AI literacy, and undergraduate discrete mathematics.
 
-Sam Gilson, PhD student in computer science in the Game2Learn lab at North Carolina State University, advised by Dr. Tiffany Barnes.
+## Research
+- [Research and publications](https://sgilson7.github.io/publications/): Published papers and posters, preprints, work under review, and talks are labeled separately.
+- [Dissertation research](https://sgilson7.github.io/dissertation/): Research direction and current work.
+- [AIED case study](https://sgilson7.github.io/papers/gilson2026perturbation/): Eight students’ chatbot interactions; online release in 2026, publisher citation year 2027.
+- [Classroom-study preprint](https://sgilson7.github.io/papers/gilson-summer2026/): Ongoing analysis; submitted to the SIGCSE TS 2027 Student Research Competition.
+- [MATH manuscript](https://sgilson7.github.io/papers/gilson-math-benchmark/): Under review; no public manuscript or formal publication record on this site.
+- [Citations](https://sgilson7.github.io/publications.bib): BibTeX for public research records and the lecture.
 
-ORCID: https://orcid.org/0009-0002-2394-8649
+## Concepts and teaching
+- [Concepts](https://sgilson7.github.io/concepts/): Definitions distinguish established constructs from local study and teaching labels.
+- [Teaching](https://sgilson7.github.io/teaching/): Courses and teaching approach.
+- [Course materials](https://sgilson7.github.io/materials/): Historical PDFs and slides with contextual notes.
+- [Game AI lecture](https://sgilson7.github.io/talks/gilson2026csc484lecture/): Revised web reading edition; the original slide deck is preserved.
 
-## Publications
+## Software and profile
+- [Tools and games](https://sgilson7.github.io/projects/): Research software and browser games.
+- [CV](https://sgilson7.github.io/cv/): Education, appointments, teaching, and research records.
+- [ORCID](https://orcid.org/0009-0002-2394-8649): Author identity.
 
-- [LLMs' reshaping of people, processes, products, and society in software development: a qualitative exploration with early adopters](https://sgilson7.github.io/papers/tabarsi2026reshaping/) — Empirical Software Engineering, 2027 doi:10.1007/s10664-026-10917-0
-- [Adversarial Assignment Perturbation: Effects on Help-Seeking Behaviors in Student Generative AI Chatbot Use](https://sgilson7.github.io/papers/gilson2026perturbation/) — Artificial Intelligence in Education (AIED 2026), LNAI 16585, 2026 doi:10.1007/978-3-032-29770-9_48
-- [Confirming Correct, Missing the Rest: LLM Tutoring Agents Struggle Where Feedback Matters Most](https://sgilson7.github.io/papers/yasir2026confirming/) — BEA 2026, 2026 doi:10.18653/v1/2026.bea-1.56
-- [Designing AI-Resistant Assignments via Iterative Perturbation to Promote Interactive Learning](https://sgilson7.github.io/papers/gilson2026designing/) — Proceedings of the 57th ACM Technical Symposium on Computer Science Education V.2 (SIGCSE TS 2026), 2026 doi:10.1145/3770761.3777058
-- [Free-tier Large Language Models on the MATH Benchmark: Implications for AI Literacy Instruction](https://sgilson7.github.io/papers/gilson-math-benchmark/) — AERA 2027 annual meeting, 2026
-- [Perturbed Assignments and Subgoal-Labeled AI Literacy Instruction in Undergraduate Discrete Mathematics](https://sgilson7.github.io/papers/gilson-summer2026/) — SIGCSE TS 2027 Student Research Competition, 2026
-- [When Verification Hurts: Asymmetric Effects of Multi-Agent Feedback in Logic Proof Tutoring](https://sgilson7.github.io/papers/yasir2026verification/), 2026 doi:10.48550/arXiv.2603.27076
-- [How Do Undergraduates Interested in Computer Science Use Online, On-Demand CS Coursework?](https://sgilson7.github.io/papers/gilson2025oodcs/) — Proceedings of the Twelfth ACM Conference on Learning @ Scale (L@S '25), 2025 doi:10.1145/3698205.3733938
-
-## Talks
-
-- [Applications of AI Literacy to GenAI-Assisted Game Development](https://sgilson7.github.io/talks/gilson2026csc484lecture/) — Guest lecture, CSC 484/584 Game AI, NC State University, 2026
-
-## Concepts
-
-- [One-Shot GenAI Resistance](https://sgilson7.github.io/concepts/one-shot-genai-resistance/): One-Shot GenAI Resistance is a property of an assignment question: a target chatbot scores below 60% on it across three separate attempts with the same prompt.
-  Also written: One-Shot Generative AI Resistance, One-Shot GenAI-Resistant, One-Shot GenAI Resistant, AI-resistant assignment
-- [iterative perturbation process](https://sgilson7.github.io/concepts/iterative-perturbation-process/): The iterative perturbation process is an eight-step, instructor-led loop that rewrites an assignment question until a target chatbot fails it three times running.
-  Also written: Adversarial Iterative Perturbation, Adversarial Assignment Perturbation, iterative perturbation method
-- [Spatial Injection](https://sgilson7.github.io/concepts/spatial-injection/): Spatial Injection is a perturbation strategy that adds reasoning requiring visual or geometric interpretation to a question, so a model must track layout as well as arithmetic.
-  Also written: spatial constraint
-- [Axiomatic Replacement](https://sgilson7.github.io/concepts/axiomatic-replacement/): Axiomatic Replacement is a perturbation strategy that alters a question's fundamental logical premises or axioms to prevent a model retrieving a memorised proof.
-  Also written: axiom replacement
-- [Contextual Embedding](https://sgilson7.github.io/concepts/contextual-embedding/): Contextual Embedding is a perturbation strategy that places a question inside unfamiliar, class-specific context which the grading rubric then requires the answer to use.
-  Also written: contextual embedding strategy
-- [Three-Attempt Consistency Protocol](https://sgilson7.github.io/concepts/three-attempt-consistency-protocol/): The Three-Attempt Consistency Protocol re-prompts a model with the exact query two further times, and classifies a question resistant only if all three attempts fail.
-  Also written: three-attempt protocol, result validity check
-- [Cognitive Scaffolding](https://sgilson7.github.io/concepts/cognitive-scaffolding/): Cognitive Scaffolding is an engagement pattern in which a student recognises that a chatbot has hallucinated and supplies context to steer it toward a correct answer.
-  Also written: cognitive scaffolding strategy, collaborative repair
-- [GenAI dependence](https://sgilson7.github.io/concepts/genai-dependence/): GenAI dependence is an engagement pattern in which a student accepts a chatbot's hallucinated answer without critically evaluating it.
-  Also written: Dependency, Dependence, cognitive outsourcing
-- [online, on-demand CS coursework](https://sgilson7.github.io/concepts/online-on-demand-cs-coursework/): Online, on-demand CS coursework is computing coursework a student takes outside a degree programme, on their own schedule, to supplement that programme.
-  Also written: OOD CS coursework, OODCS, on-demand computer science coursework
-- [DRIVE framework](https://sgilson7.github.io/concepts/drive-framework/): The DRIVE framework is a taxonomy for generative AI interactions that separates how a student steers an exchange from how they articulate what they know.
-  Also written: Deep Reasoning in Virtual Education, DRIVE taxonomy
-- [Hallucination Autopsy Procedure](https://sgilson7.github.io/concepts/hallucination-autopsy-procedure/): The Hallucination Autopsy Procedure is a seven-step routine for finding where a chatbot's proof leaves the claim it was given, and naming why it left.
-  Also written: hallucination autopsy, Procedure A
-- [Axiom Reversion](https://sgilson7.github.io/concepts/axiom-reversion/): Axiom Reversion is a failure mode in which a chatbot swaps in the textbook theorem that the problem was perturbed away from.
-  Also written: axiom reversion failure
-- [Invalid Syntactic Shortcut](https://sgilson7.github.io/concepts/invalid-syntactic-shortcut/): An Invalid Syntactic Shortcut is a failure mode in which a chatbot manipulates a form as though a rule applied, producing a step that is well-formed and false.
-  Also written: syntactic shortcut
-- [Spatial or Counting Miscount](https://sgilson7.github.io/concepts/spatial-counting-miscount/): A Spatial or Counting Miscount is a failure mode in which a chatbot counts placements that break the constraint, or counts the same one twice.
-  Also written: counting miscount, spatial miscount
-- [Strong Prompt Structure](https://sgilson7.github.io/concepts/strong-prompt-structure/): Strong Prompt Structure is a four-part shape for a prompt: establish context, require justification at every step, build in self-questioning, and plan the correction.
-  Also written: Procedure B, structure of a strong prompt
-- [Collaborative Prompting](https://sgilson7.github.io/concepts/collaborative-prompting/): Collaborative Prompting is a six-step routine in which a student forbids the final answer, takes one step at a time, and checks each against cases computed by hand.
-  Also written: Procedure C, scaffolding strong prompts
-- [GenAI-Assisted Prototyping Procedure](https://sgilson7.github.io/concepts/genai-assisted-prototyping-procedure/): The GenAI-Assisted Prototyping Procedure is a nine-stage pipeline, brief to handoff, in which a person reads the plan, plays the build, and deploys it.
-  Also written: GenAI-assisted prototyping, agentic prototyping procedure
-- [Subgoal Label](https://sgilson7.github.io/concepts/subgoal-label/): A Subgoal Label names the function a step serves in any problem of its type, so a learner can separate a solution's structure from one example's surface details.
-  Also written: subgoal labelling, subgoal-labeled instruction
-- [AI Literacy](https://sgilson7.github.io/concepts/ai-literacy/): AI Literacy is the set of competencies that let a person critically evaluate AI technologies, and communicate and collaborate effectively with AI.
-  Also written: artificial intelligence literacy
-- [Free-Tier Accessible Model](https://sgilson7.github.io/concepts/free-tier-accessible-model/): A Free-Tier Accessible Model is one a student can reach through a consumer chatbot interface without a paid subscription.
-  Also written: free-tier model, free-tier chatbot
-- [Calibrated Trust](https://sgilson7.github.io/concepts/calibrated-trust/): Calibrated Trust is trust in a tool that matches the tool's actual reliability, rather than being uniform across everything the tool does.
-  Also written: appropriate trust, calibrated reliance
-- [Structured Unevenness](https://sgilson7.github.io/concepts/structured-unevenness/): Structured Unevenness is the pattern where a model's accuracy varies by topic in the same way across vendors, rather than varying at random.
-  Also written: subject-level variance, cross-vendor weakness profile
-
-## Other pages
-
-- [Dissertation](https://sgilson7.github.io/dissertation/) — how the published work fits together
-- [Concepts](https://sgilson7.github.io/concepts/) — a knowledge-component graph of the terms, with the relations written out
-- [Teaching](https://sgilson7.github.io/teaching/) — courses taught, and a teaching award
-- [CV](https://sgilson7.github.io/cv/) — also at https://sgilson7.github.io/cv.txt as plain text
-
-## Tools and games
-
-- [Perturbation Workbench](https://sgilson7.github.io/projects/perturbation-workbench/): Run the AIED 2026 iterative perturbation protocol in the browser. Nothing is uploaded. (Research tool)
-- [PDF Redactor](https://sgilson7.github.io/projects/pdf-redactor/): Redact student names and strip all metadata from PDFs, entirely in your browser. Nothing is uploaded. (Research tool)
-- [Gear Master](https://sgilson7.github.io/projects/gear-master/): Build gear out of parts, then watch your character auto-battle. Rust + macroquad. (Game)
-- [Gear Master 2D](https://sgilson7.github.io/projects/gear-master-2d/): A 2D tile-based open-world RPG on the gear-assembly auto-battler from gear-master. (Game)
-- [Floodline](https://sgilson7.github.io/projects/floodline/): Multiplayer medieval city builder in the browser. Deterministic lockstep over WebRTC; every age ends in a flood. (Game)
+Summaries are author-written explanations. Published abstracts remain source records. Review status, sample size, access conditions, and study limitations should remain attached to research claims.
