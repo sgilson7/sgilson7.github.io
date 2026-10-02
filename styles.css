@@ -309,6 +309,31 @@ figcaption {
   background: var(--page);
 }
 
+/* --- a blog post's figures -------------------------------------------- */
+/* Compiled from TikZ, so they are line art rather than photographs: no border
+   and no background, because a rule around a drawing that already has its own
+   boxes reads as a second frame. They scale to the column and never exceed
+   their natural size, since an upscaled vector of 9pt labels is not more
+   readable, only larger. */
+.postfig {
+  margin: 1.6rem 0;
+}
+.postfig img {
+  display: block;
+  /* Natural size, capped at the column. These are line drawings whose labels
+     are set at one point size, so upscaling a narrow figure to fill the column
+     would make its text larger than the next figure's for no reason. A figure
+     is as wide as it was drawn to be. */
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+.postfig figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--grey);
+}
+
 /* --- the lecture ------------------------------------------------------ */
 
 section.slide { scroll-margin-top: 1rem; }
