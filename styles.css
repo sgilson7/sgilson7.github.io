@@ -339,16 +339,66 @@ img.portrait {
 
 /* --- the concept map --------------------------------------------------
    The picture is the optional half: every relationship it draws is also a row
-   in the table directly below it. It scrolls sideways on a narrow screen
-   rather than being scaled until the labels stop being readable. */
+   in the table directly below it. The reader chooses the size, because there
+   is no one right one: scaled to the window, or drawn at the size it was laid
+   out and scrolled. The table says the same thing either way. */
 
-.kcfig { margin: 0 0 1.6rem; }
-/* The picture keeps its own size and scrolls inside this box. Shrinking it to
-   the reading column instead is what made 22 boxes illegible: the labels are
-   the content, and a label too small to read is not a smaller picture, it is a
-   missing one. The table below says the same thing in text either way. */
-.kcscroll { overflow-x: auto; padding-bottom: 0.5rem; }
+/* The map gets a wider window than the reading column, because the column is
+   sized for prose and this is a picture with 22 labelled boxes in it. It breaks
+   out of the column to the width of the viewport, bounded so that it can never
+   be the thing that makes the page scroll sideways: at 400px it is 375px wide,
+   inside the body's own padding. */
+.kcfig {
+  margin: 0 0 1.6rem;
+  width: min(calc(100vw - 2.5rem), 1600px);
+  margin-left: calc((100% - min(100vw - 2.5rem, 1600px)) / 2);
+}
+
+/* Zoom, in three steps, with no JavaScript (D3). The radios are the state and
+   CSS reads them. Fit scales the whole map into the window, Full size draws it
+   at the size it was laid out, Larger draws it half again — and in both of
+   those the window scrolls rather than the labels shrinking. */
+.kczoom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0 0 0.6rem;
+  font-size: 0.85rem;
+}
+.kczoom input { position: absolute; opacity: 0; pointer-events: none; }
+.kczoom label {
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 0.2rem 0.6rem;
+  cursor: pointer;
+  color: var(--grey);
+  background: var(--page);
+}
+.kczoom label:hover { color: var(--ink); border-color: var(--edge); }
+.kczoom input:checked + label {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--page);
+}
+/* The control is operated by keyboard: the focus ring has to be on the label,
+   because the input itself is not where the eye is. */
+.kczoom input:focus-visible + label { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+.kcscroll { overflow-x: auto; overflow-y: hidden; padding-bottom: 0.5rem; }
 svg.kcgraph { display: block; height: auto; }
+/* The radios live inside the control, so the picture is not their sibling and
+   `:has()` on the figure is what reaches it. A browser without `:has()` applies
+   none of the three and draws the map at the size it was laid out, inside a
+   window that scrolls — which is where this page was before the control
+   existed. Fit never upscales past that size, or the lines go soft. */
+.kcfig:has(#kc-fit:checked) svg.kcgraph { width: 100%; max-width: var(--kcw); }
+.kcfig:has(#kc-full:checked) svg.kcgraph { width: var(--kcw); max-width: none; }
+.kcfig:has(#kc-large:checked) svg.kcgraph { width: calc(var(--kcw) * 1.5); max-width: none; }
+@media (forced-colors: active) {
+  .kczoom label { border-color: CanvasText; }
+  .kczoom input:checked + label { background: Highlight; color: HighlightText; }
+}
 
 .kc-node { fill: #f7f7f7; stroke: var(--rule); stroke-width: 1; }
 /* A strategy is something you do rather than something you know. The caption
@@ -389,9 +439,6 @@ a:hover .kc-elabel { fill: var(--panel); }
   .kc-elabel { fill: Canvas; stroke: CanvasText; }
   .kc-leader { stroke: CanvasText !important; opacity: 1; }
   .kc-anchor { fill: CanvasText !important; stroke: Canvas !important; }
-}
-@media (max-width: 40rem) {
-  .kcscroll { margin: 0 -1.25rem; padding: 0 1.25rem 0.5rem; }
 }
 
 /* --- print: the CV page is meant to come out as a PDF ------------------ */
