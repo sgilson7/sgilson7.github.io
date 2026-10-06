@@ -484,3 +484,21 @@ a:hover .kc-elabel { fill: var(--panel); }
   pre { display: none; }
   img.portrait { display: none; }
 }
+
+/* Sam's pick on the project index. --red measures 8.3:1 on white and 7.0:1 on
+   the tint, so it clears AA in both bands; the gate checks that per band. The
+   star is decorative and aria-hidden, so the word carries the meaning on its
+   own, and in forced-colors the border is what survives the dropped colour. */
+.featured {
+  margin: 0.2rem 0 0;
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+.featured span { font-size: 1rem; }
+@media (forced-colors: active) {
+  .featured { border: 1px solid; display: inline-block; padding: 0 0.35rem; }
+}

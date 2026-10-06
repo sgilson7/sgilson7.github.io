@@ -3,22 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PDF Redactor — Sam Gilson</title>
-<meta name="description" content="Find identifiers, review redaction boxes, and export a rebuilt PDF in your browser.">
-<link rel="canonical" href="https://sgilson7.github.io/projects/pdf-redactor/">
+<title>Warm-ups and Exit Tickets — Sam Gilson</title>
+<meta name="description" content="Build a warm-up or an exit ticket from a question bank, chosen by source document and Depth of Knowledge level.">
+<link rel="canonical" href="https://sgilson7.github.io/projects/warmups-exit-tickets/">
 
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Sam Gilson">
-<meta property="og:title" content="PDF Redactor">
-<meta property="og:description" content="Find identifiers, review redaction boxes, and export a rebuilt PDF in your browser.">
-<meta property="og:url" content="https://sgilson7.github.io/projects/pdf-redactor/">
+<meta property="og:title" content="Warm-ups and Exit Tickets">
+<meta property="og:description" content="Build a warm-up or an exit ticket from a question bank, chosen by source document and Depth of Knowledge level.">
+<meta property="og:url" content="https://sgilson7.github.io/projects/warmups-exit-tickets/">
 <meta property="og:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
 <meta property="og:image:alt" content="Sam Gilson">
 <meta name="twitter:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PDF Redactor">
-<meta name="twitter:description" content="Find identifiers, review redaction boxes, and export a rebuilt PDF in your browser.">
+<meta name="twitter:title" content="Warm-ups and Exit Tickets">
+<meta name="twitter:description" content="Build a warm-up or an exit ticket from a question bank, chosen by source document and Depth of Knowledge level.">
 <meta name="author" content="Sam Gilson">
 <meta name="google-site-verification" content="MSQ0LGD6_zGzbznBsabmPTIkp9ASxM_U04OJdrtKgis">
 
@@ -28,15 +28,15 @@
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "PDF Redactor",
-  "description": "Find identifiers, review redaction boxes, and export a rebuilt PDF in your browser.",
-  "url": "https://sgilson7.github.io/projects/pdf-redactor/",
+  "name": "Warm-ups and Exit Tickets",
+  "description": "Build a warm-up or an exit ticket from a question bank, chosen by source document and Depth of Knowledge level.",
+  "url": "https://sgilson7.github.io/projects/warmups-exit-tickets/",
   "about": {
     "@type": "SoftwareApplication",
-    "name": "PDF Redactor",
-    "description": "Find identifiers, review redaction boxes, and export a rebuilt PDF in your browser.",
-    "url": "https://sgilson7.github.io/pdf-redactor/",
-    "sameAs": "https://github.com/sgilson7/pdf-redactor"
+    "name": "Warm-ups and Exit Tickets",
+    "description": "Build a warm-up or an exit ticket from a question bank, chosen by source document and Depth of Knowledge level.",
+    "url": "https://sgilson7.github.io/warmups-exit-tickets/",
+    "sameAs": "https://github.com/sgilson7/warmups-exit-tickets"
   }
 }
 </script>
@@ -63,17 +63,16 @@
 
 <main id="main">
 <section class="stripe"><div class="wrap">
-<h1>PDF Redactor</h1>
-<p>Research tool</p>
-<p>I built PDF Redactor while preparing student work for research. It helps find names and other identifiers, lets you review the proposed boxes, and supports drawing additional redactions by hand.</p>
-<p>The document is processed in your browser. The tool rebuilds the output PDF from rendered pages and, if you choose a searchable export, adds a text layer that excludes spans intersecting redaction boxes.</p>
-<p>Finding text is only part of the review. An identifier may appear in an image, a handwritten note, or an unexpected form. OCR can help with image text, but it can also miss or misread it. Inspect each page and the exported PDF before sharing.</p>
-<p>The export report shows the tool’s checks for retained terms and document structure. A passed check covers those tests; it does not establish that every identifying detail has been removed. Export records are stored locally in the browser and can be downloaded or cleared.</p>
+<h1>Warm-ups and Exit Tickets</h1>
+<p>Classroom tool</p>
+<p>The teacher chooses one or more source documents and a Depth of Knowledge level from 1 to 4, and the tool builds a warm-up of three questions or an exit ticket of two from a question bank written in advance. Any question can be swapped for another drawn from the same sources at the same level. The set can be printed or saved as a text file. A student opens the same page on their own device, types the set code or opens the saved file, answers, and sees which answers match the key.</p>
+<p>Everything is computed in the browser on the device that opens the page. The page sets a Content-Security-Policy whose <code>connect-src</code> is <code>'self'</code> and whose <code>form-action</code> is <code>'none'</code>, so the page has no route to another origin.</p>
+<p>The question bank the tool ships with is sample content: three sources across four Depth of Knowledge levels, two questions each, on fractions. It is there to show how the tool works. Write or load a bank of your own before using it with a class.</p>
 
 </div></section><section class="stripe"><div class="wrap">
 <h2>Using the tool</h2>
-<p>Open a PDF, enter the name and additional identifiers, and select <strong>Find identifiers</strong>. Review the matches and add any missing boxes. Choose whether the output should be searchable, export it, and inspect the result.</p>
-<p><a href="/pdf-redactor/">Open the project</a> · <a href="https://github.com/sgilson7/pdf-redactor">Source code</a></p>
+<p>Pick the sources and the level, choose a warm-up or an exit ticket, swap any question you would rather not use, and print or save the set.</p>
+<p><a href="/warmups-exit-tickets/">Open the project</a> · <a href="https://github.com/sgilson7/warmups-exit-tickets">Source code</a></p>
 <p><a href="/projects/">All tools and games</a></p>
 
 </div></section>

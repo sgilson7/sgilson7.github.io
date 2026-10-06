@@ -3,22 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PDF Redactor — Sam Gilson</title>
-<meta name="description" content="Find identifiers, review redaction boxes, and export a rebuilt PDF in your browser.">
-<link rel="canonical" href="https://sgilson7.github.io/projects/pdf-redactor/">
+<title>Practice Results — Sam Gilson</title>
+<meta name="description" content="Students practise a question set and save a result file; the teacher opens the files together to see which topics to reteach.">
+<link rel="canonical" href="https://sgilson7.github.io/projects/practice-results/">
 
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Sam Gilson">
-<meta property="og:title" content="PDF Redactor">
-<meta property="og:description" content="Find identifiers, review redaction boxes, and export a rebuilt PDF in your browser.">
-<meta property="og:url" content="https://sgilson7.github.io/projects/pdf-redactor/">
+<meta property="og:title" content="Practice Results">
+<meta property="og:description" content="Students practise a question set and save a result file; the teacher opens the files together to see which topics to reteach.">
+<meta property="og:url" content="https://sgilson7.github.io/projects/practice-results/">
 <meta property="og:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
 <meta property="og:image:alt" content="Sam Gilson">
 <meta name="twitter:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PDF Redactor">
-<meta name="twitter:description" content="Find identifiers, review redaction boxes, and export a rebuilt PDF in your browser.">
+<meta name="twitter:title" content="Practice Results">
+<meta name="twitter:description" content="Students practise a question set and save a result file; the teacher opens the files together to see which topics to reteach.">
 <meta name="author" content="Sam Gilson">
 <meta name="google-site-verification" content="MSQ0LGD6_zGzbznBsabmPTIkp9ASxM_U04OJdrtKgis">
 
@@ -28,15 +28,15 @@
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "PDF Redactor",
-  "description": "Find identifiers, review redaction boxes, and export a rebuilt PDF in your browser.",
-  "url": "https://sgilson7.github.io/projects/pdf-redactor/",
+  "name": "Practice Results",
+  "description": "Students practise a question set and save a result file; the teacher opens the files together to see which topics to reteach.",
+  "url": "https://sgilson7.github.io/projects/practice-results/",
   "about": {
     "@type": "SoftwareApplication",
-    "name": "PDF Redactor",
-    "description": "Find identifiers, review redaction boxes, and export a rebuilt PDF in your browser.",
-    "url": "https://sgilson7.github.io/pdf-redactor/",
-    "sameAs": "https://github.com/sgilson7/pdf-redactor"
+    "name": "Practice Results",
+    "description": "Students practise a question set and save a result file; the teacher opens the files together to see which topics to reteach.",
+    "url": "https://sgilson7.github.io/practice-results/",
+    "sameAs": "https://github.com/sgilson7/practice-results"
   }
 }
 </script>
@@ -63,17 +63,16 @@
 
 <main id="main">
 <section class="stripe"><div class="wrap">
-<h1>PDF Redactor</h1>
-<p>Research tool</p>
-<p>I built PDF Redactor while preparing student work for research. It helps find names and other identifiers, lets you review the proposed boxes, and supports drawing additional redactions by hand.</p>
-<p>The document is processed in your browser. The tool rebuilds the output PDF from rendered pages and, if you choose a searchable export, adds a text layer that excludes spans intersecting redaction boxes.</p>
-<p>Finding text is only part of the review. An identifier may appear in an image, a handwritten note, or an unexpected form. OCR can help with image text, but it can also miss or misread it. Inspect each page and the exported PDF before sharing.</p>
-<p>The export report shows the tool’s checks for retained terms and document structure. A passed check covers those tests; it does not establish that every identifying detail has been removed. Export records are stored locally in the browser and can be downloaded or cleared.</p>
+<h1>Practice Results</h1>
+<p>Classroom tool</p>
+<p>Practice Results has two views. A student practises a set of multiple-choice questions on their own device, checks their answers to see a score for each topic, and saves a result file under a nickname they choose; there is no name and no account. A teacher opens all the result files at once and sees, for each topic, the share of correct answers, the questions missed most often, and a suggestion to reteach any topic that falls below a threshold the teacher sets, which starts at 70%.</p>
+<p>Everything is computed in the browser on the device that opens the page. The page sets a Content-Security-Policy whose <code>connect-src</code> is <code>'self'</code> and whose <code>form-action</code> is <code>'none'</code>, so the page has no route to another origin.</p>
+<p>The practice set the tool ships with is sample content: twelve ratio questions across four topics, written to exercise the tool rather than to be taught. Check it or replace it before using it with a class.</p>
 
 </div></section><section class="stripe"><div class="wrap">
 <h2>Using the tool</h2>
-<p>Open a PDF, enter the name and additional identifiers, and select <strong>Find identifiers</strong>. Review the matches and add any missing boxes. Choose whether the output should be searchable, export it, and inspect the result.</p>
-<p><a href="/pdf-redactor/">Open the project</a> · <a href="https://github.com/sgilson7/pdf-redactor">Source code</a></p>
+<p>Open the student view, work through the questions, and save the result file. In the teacher view, open the files the students handed in and set the threshold below which a topic is flagged for reteaching.</p>
+<p><a href="/practice-results/">Open the project</a> · <a href="https://github.com/sgilson7/practice-results">Source code</a></p>
 <p><a href="/projects/">All tools and games</a></p>
 
 </div></section>
