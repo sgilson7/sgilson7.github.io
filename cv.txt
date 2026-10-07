@@ -94,6 +94,10 @@ Talks
 
 Applications of AI Literacy to GenAI-Assisted Game Development (/talks/gilson2026csc484lecture/) — Guest lecture, CSC 484/584 Game AI, North Carolina State University, 17 September 2026.
 
+Perturbed Assignments and Subgoal-Labeled AI Literacy Instruction in Undergraduate Discrete Mathematics — SPLICE LLM Working Group. Scheduled, 9 October 2026.
+
+Making research easier to find — Game2Learn lab, North Carolina State University. Scheduled, October 2026.
+
 Teaching
 
 CSC 151, Java Programming — Instructor of record, Central Carolina Community College, Spring and Fall 2026.
