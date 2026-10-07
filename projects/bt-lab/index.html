@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BT Lab — Sam Gilson</title>
+<meta name="description" content="A classroom demo of how a behavior tree becomes key presses, one tick at a time, using the opponents from Vagrancy.">
+<link rel="canonical" href="https://sgilson7.github.io/projects/bt-lab/">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sam Gilson">
+<meta property="og:title" content="BT Lab">
+<meta property="og:description" content="A classroom demo of how a behavior tree becomes key presses, one tick at a time, using the opponents from Vagrancy.">
+<meta property="og:url" content="https://sgilson7.github.io/projects/bt-lab/">
+<meta property="og:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta property="og:image:alt" content="Sam Gilson">
+<meta name="twitter:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="BT Lab">
+<meta name="twitter:description" content="A classroom demo of how a behavior tree becomes key presses, one tick at a time, using the opponents from Vagrancy.">
+<meta name="author" content="Sam Gilson">
+<meta name="google-site-verification" content="MSQ0LGD6_zGzbznBsabmPTIkp9ASxM_U04OJdrtKgis">
+
+<link rel="stylesheet" href="/styles.css?v=7a6afd68">
+<link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "BT Lab",
+  "description": "A classroom demo of how a behavior tree becomes key presses, one tick at a time, using the opponents from Vagrancy.",
+  "url": "https://sgilson7.github.io/projects/bt-lab/",
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "BT Lab",
+    "description": "A classroom demo of how a behavior tree becomes key presses, one tick at a time, using the opponents from Vagrancy.",
+    "url": "https://sgilson7.github.io/vagrancy/bt-lab.html",
+    "sameAs": "https://github.com/sgilson7/vagrancy"
+  }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="band">
+  <div class="wrap">
+    <p class="brand"><a href="/">Sam Gilson</a></p>
+    <nav aria-label="Sections">
+      <a href="/publications/">Research</a>
+      <a href="/dissertation/">Dissertation</a>
+      <a href="/concepts/">Concepts</a>
+      <a href="/teaching/">Teaching</a>
+      <a href="/materials/">Course materials</a>
+      <a href="/projects/">Tools and games</a>
+      <a href="/cv/">CV</a>
+      <a href="/positions/">Seeking work</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+  </div>
+</header>
+
+
+<main id="main">
+<section class="stripe"><div class="wrap">
+<h1>BT Lab</h1>
+<p>Classroom tool</p>
+<p>The lab runs the opponents from Vagrancy, a physics sword-fighting game, and shows what each one's behavior tree did on each tick. Choose two opponents and watch them fight, or fight one yourself with the keys. The opponent's tree is drawn in full, with the selectors and sequences that ran this tick lit, the conditions that held or failed marked, and the move still running from an earlier tick shown as running.</p>
+<p>A panel follows the running action down to the keys it pressed. A scripted move shows the line of its script that is playing. A pose, such as high guard, shows its controller: for the shoulder and for the elbow, how far the joint is from the pose, the turn it aims for, the turn it has, and the key that follows. A search shows each key combination it tried and its score, and the throw shows its steps. A timeline records the last three seconds of keys, marked where the running move changed. The match can be paused, stepped one tick at a time, or slowed to an eighth of its speed.</p>
+
+</div></section><section class="stripe"><div class="wrap">
+<h2>Using it in class</h2>
+<p>The class tour has a step for each idea: a tree made of tasks, the selector as a fallback list, the sequence as a plan, actions that keep running over many ticks, a script, a pose controller, a search, the throw as a plan inside one action, parallel trees, a repeating decorator, and a fight of your own. Each step loads two opponents that show the idea, runs the match until the move it is about starts, and ends with a question for discussion.</p>
+<p>The lab runs in the browser as a page of the game's own site, and it does not write a save file: a match played in it is not recorded.</p>
+<p><a href="/vagrancy/bt-lab.html">Open the project</a> · <a href="https://github.com/sgilson7/vagrancy">Source code</a></p>
+<p><a href="/projects/">All tools and games</a></p>
+
+</div></section>
+</main>
+
+<footer class="band">
+  <div class="wrap">
+    <p class="ids">
+      <a href="mailto:sagilson@ncsu.edu">Email Sam Gilson</a> &middot;
+      <a href="https://orcid.org/0009-0002-2394-8649">ORCID 0009-0002-2394-8649</a> &middot;
+      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google Scholar</a> &middot;
+      <a href="https://www.semanticscholar.org/author/2387936753">Semantic Scholar</a> &middot;
+      <a href="https://openalex.org/A5125954125">OpenAlex</a> &middot;
+      <a href="https://github.com/sgilson7">GitHub</a> &middot;
+      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>
+    </p>
+    <p class="licence">Original website text by Sam Gilson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Papers, teaching materials, software, and quoted material retain their own notices.</p>
+    <p class="meta">Build <code>7a6afd68</code></p>
+  </div>
+</footer>
+</body>
+</html>
