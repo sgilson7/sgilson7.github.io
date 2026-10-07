@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Builder — Sam Gilson</title>
+<meta name="description" content="A template, agent instructions and one check command for building small browser tools with a coding agent, with every rule in a tested Rust core.">
+<link rel="canonical" href="https://sgilson7.github.io/projects/builder-setting/">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sam Gilson">
+<meta property="og:title" content="Builder">
+<meta property="og:description" content="A template, agent instructions and one check command for building small browser tools with a coding agent, with every rule in a tested Rust core.">
+<meta property="og:url" content="https://sgilson7.github.io/projects/builder-setting/">
+<meta property="og:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta property="og:image:alt" content="Sam Gilson">
+<meta name="twitter:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Builder">
+<meta name="twitter:description" content="A template, agent instructions and one check command for building small browser tools with a coding agent, with every rule in a tested Rust core.">
+<meta name="author" content="Sam Gilson">
+<meta name="google-site-verification" content="MSQ0LGD6_zGzbznBsabmPTIkp9ASxM_U04OJdrtKgis">
+
+<link rel="stylesheet" href="/styles.css?v=4585fbe1">
+<link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Builder",
+  "description": "A template, agent instructions and one check command for building small browser tools with a coding agent, with every rule in a tested Rust core.",
+  "url": "https://sgilson7.github.io/projects/builder-setting/",
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "Builder",
+    "description": "A template, agent instructions and one check command for building small browser tools with a coding agent, with every rule in a tested Rust core.",
+    "url": "https://sgilson7.github.io/builder-setting/",
+    "sameAs": "https://github.com/sgilson7/builder-setting"
+  }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="band">
+  <div class="wrap">
+    <p class="brand"><a href="/">Sam Gilson</a></p>
+    <nav aria-label="Sections">
+      <a href="/publications/">Research</a>
+      <a href="/dissertation/">Dissertation</a>
+      <a href="/concepts/">Concepts</a>
+      <a href="/teaching/">Teaching</a>
+      <a href="/materials/">Course materials</a>
+      <a href="/projects/">Tools and games</a>
+      <a href="/cv/">CV</a>
+      <a href="/positions/">Seeking work</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+  </div>
+</header>
+
+
+<main id="main">
+<section class="stripe"><div class="wrap">
+<h1>Builder</h1>
+<p>Research tool</p>
+<p>Builder is the setting I use to build browser tools with a coding agent. A tool's rules live in a Rust core that performs no input or output, so its tests run in seconds without a browser. A thin WebAssembly shim moves values between that core and the page and decides nothing, and a static page draws what the core returns.</p>
+<p>The repository holds a template to copy when starting a tool, the instructions a coding agent reads at the start of each session, the nine stages of the build procedure as files in every project, and one command that runs the whole check. The check covers formatting and lint, the core's tests, boundary tests that fail when the core does input or output or the shim makes a decision, the release WebAssembly build, an audit that follows each of the module's imports into its JavaScript glue, and a browser check in Chromium, Firefox and WebKit that fails on a console error or a request to another origin. A pass describes what happened on the path the check drove. It does not show that a feature the check never started cannot reach the network, and a script in the repository plants defects to show that each check fails when it should.</p>
+<p>The link below opens the repository's minimal example, a counter that exercises every part. Feedback Drafts was built from the template by a fresh agent session given one prompt set, and the repository includes that prompt set.</p>
+
+</div></section><section class="stripe"><div class="wrap">
+<h2>Using the setting</h2>
+<p>Clone the repository, copy <code>template/</code> to a new directory, write <code>BRIEF.md</code>, and point a coding agent at the directory. <code>./scripts/check.sh</code> runs the full check before a deploy.</p>
+<p><a href="/builder-setting/">Open the project</a> · <a href="https://github.com/sgilson7/builder-setting">Source code</a></p>
+<p><a href="/projects/">All tools and games</a></p>
+
+</div></section>
+</main>
+
+<footer class="band">
+  <div class="wrap">
+    <p class="ids">
+      <a href="mailto:sagilson@ncsu.edu">Email Sam Gilson</a> &middot;
+      <a href="https://orcid.org/0009-0002-2394-8649">ORCID 0009-0002-2394-8649</a> &middot;
+      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google Scholar</a> &middot;
+      <a href="https://www.semanticscholar.org/author/2387936753">Semantic Scholar</a> &middot;
+      <a href="https://openalex.org/A5125954125">OpenAlex</a> &middot;
+      <a href="https://github.com/sgilson7">GitHub</a> &middot;
+      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>
+    </p>
+    <p class="licence">Original website text by Sam Gilson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Papers, teaching materials, software, and quoted material retain their own notices.</p>
+    <p class="meta">Build <code>4585fbe1</code></p>
+  </div>
+</footer>
+</body>
+</html>
