@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research Discovery Lab — Sam Gilson</title>
+<meta name="description" content="A follow-along lab for setting up research profiles, author records, crawling checks, and discovery tests.">
+<link rel="canonical" href="https://sgilson7.github.io/projects/research-discovery-lab/">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sam Gilson">
+<meta property="og:title" content="Research Discovery Lab">
+<meta property="og:description" content="A follow-along lab for setting up research profiles, author records, crawling checks, and discovery tests.">
+<meta property="og:url" content="https://sgilson7.github.io/projects/research-discovery-lab/">
+<meta property="og:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta property="og:image:alt" content="Sam Gilson">
+<meta name="twitter:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Research Discovery Lab">
+<meta name="twitter:description" content="A follow-along lab for setting up research profiles, author records, crawling checks, and discovery tests.">
+<meta name="author" content="Sam Gilson">
+<meta name="google-site-verification" content="MSQ0LGD6_zGzbznBsabmPTIkp9ASxM_U04OJdrtKgis">
+
+<link rel="stylesheet" href="/styles.css?v=1730fda1">
+<link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Research Discovery Lab",
+  "description": "A follow-along lab for setting up research profiles, author records, crawling checks, and discovery tests.",
+  "url": "https://sgilson7.github.io/projects/research-discovery-lab/",
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "Research Discovery Lab",
+    "description": "A follow-along lab for setting up research profiles, author records, crawling checks, and discovery tests.",
+    "url": "https://sgilson7.github.io/research-discovery-lab/",
+    "sameAs": "https://github.com/sgilson7/research-discovery-lab"
+  }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="band">
+  <div class="wrap">
+    <p class="brand"><a href="/">Sam Gilson</a></p>
+    <nav aria-label="Sections">
+      <a href="/publications/">Research</a>
+      <a href="/dissertation/">Dissertation</a>
+      <a href="/concepts/">Concepts</a>
+      <a href="/teaching/">Teaching</a>
+      <a href="/materials/">Course materials</a>
+      <a href="/projects/">Tools and games</a>
+      <a href="/cv/">CV</a>
+      <a href="/positions/">Seeking work</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+  </div>
+</header>
+
+
+<main id="main">
+<section class="stripe"><div class="wrap">
+<h1>Research Discovery Lab</h1>
+<p>Classroom tool</p>
+<p>The Research Discovery Lab is a follow-along exercise for a talk on making research easier to find. Its stations match the talk's sections: the author records that identify you, closing the loop between a profile and a website, the crawling and indexing checks, AI crawler access as a decision taken separately from search visibility, explaining the ideas behind the papers, testing the route with an assistant, and keeping the record coherent afterwards.</p>
+<p>Nothing in it is required. Every task can be skipped, a whole station can be skipped in one click, and no field has to be filled in. What someone types — an ORCID iD, a Google Scholar id, their site — is used to build direct links into their own records, including the OpenAlex lookup that goes through the ORCID rather than the name, which is the one that finds an author entity holding somebody else's work. A link whose field is still empty is shown dashed and names the field it needs.</p>
+<p>Everything is computed in the browser on the device that opens the page, and what is typed is kept in that browser. The page sets a Content-Security-Policy whose <code>connect-src</code> is <code>'self'</code> and whose <code>form-action</code> is <code>'none'</code>, so the page has no route to another origin.</p>
+
+</div></section><section class="stripe"><div class="wrap">
+<h2>Using the lab</h2>
+<p>Fill in as much of the details panel as you have, work down the stations alongside the talk, and skip whatever does not apply. The summary button copies a short plain-text record of what you did and what you left.</p>
+<p><a href="/research-discovery-lab/">Open the project</a> · <a href="https://github.com/sgilson7/research-discovery-lab">Source code</a></p>
+<p><a href="/projects/">All tools and games</a></p>
+
+</div></section>
+</main>
+
+<footer class="band">
+  <div class="wrap">
+    <p class="ids">
+      <a href="mailto:sagilson@ncsu.edu">Email Sam Gilson</a> &middot;
+      <a href="https://orcid.org/0009-0002-2394-8649">ORCID 0009-0002-2394-8649</a> &middot;
+      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google Scholar</a> &middot;
+      <a href="https://www.semanticscholar.org/author/2387936753">Semantic Scholar</a> &middot;
+      <a href="https://openalex.org/A5125954125">OpenAlex</a> &middot;
+      <a href="https://github.com/sgilson7">GitHub</a> &middot;
+      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>
+    </p>
+    <p class="licence">Original website text by Sam Gilson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Papers, teaching materials, software, and quoted material retain their own notices.</p>
+    <p class="meta">Build <code>1730fda1</code></p>
+  </div>
+</footer>
+</body>
+</html>
