@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Iron Vector — Sam Gilson</title>
+<meta name="description" content="A single-player 3D mech game: build a frame from parts in the garage, then fly it across a city.">
+<link rel="canonical" href="https://sgilson7.github.io/projects/iron-vector/">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sam Gilson">
+<meta property="og:title" content="Iron Vector">
+<meta property="og:description" content="A single-player 3D mech game: build a frame from parts in the garage, then fly it across a city.">
+<meta property="og:url" content="https://sgilson7.github.io/projects/iron-vector/">
+<meta property="og:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta property="og:image:alt" content="Sam Gilson">
+<meta name="twitter:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Iron Vector">
+<meta name="twitter:description" content="A single-player 3D mech game: build a frame from parts in the garage, then fly it across a city.">
+<meta name="author" content="Sam Gilson">
+<meta name="google-site-verification" content="MSQ0LGD6_zGzbznBsabmPTIkp9ASxM_U04OJdrtKgis">
+
+<link rel="stylesheet" href="/styles.css?v=2289da78">
+<link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Iron Vector",
+  "description": "A single-player 3D mech game: build a frame from parts in the garage, then fly it across a city.",
+  "url": "https://sgilson7.github.io/projects/iron-vector/",
+  "about": {
+    "@type": "VideoGame",
+    "name": "Iron Vector",
+    "description": "A single-player 3D mech game: build a frame from parts in the garage, then fly it across a city.",
+    "url": "https://sgilson7.github.io/iron-vector/",
+    "sameAs": "https://github.com/sgilson7/iron-vector"
+  }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="band">
+  <div class="wrap">
+    <p class="brand"><a href="/">Sam Gilson</a></p>
+    <nav aria-label="Sections">
+      <a href="/publications/">Research</a>
+      <a href="/dissertation/">Dissertation</a>
+      <a href="/concepts/">Concepts</a>
+      <a href="/teaching/">Teaching</a>
+      <a href="/materials/">Course materials</a>
+      <a href="/projects/">Tools and games</a>
+      <a href="/cv/">CV</a>
+      <a href="/positions/">Seeking work</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+  </div>
+</header>
+
+
+<main id="main">
+<section class="stripe"><div class="wrap">
+<h1>Iron Vector</h1>
+<p>Game</p>
+<p>Iron Vector is a single-player mech game that runs in a browser. You assemble a frame in the garage from twenty-six parts across nine slots — head, core, arms, legs, booster, generator, two arm weapons and a shoulder weapon — and every stat can be compared before a part is fitted. The trade-offs are the design: a frame over its weight limit moves slower, and drawing more energy than the generator puts out slows how quickly that energy comes back.</p>
+<p>There are two places to take a frame. The test field is a seeded city with practice drones, for trying a build out. Operation Saltline is the mission: cross the city to the relay plaza, destroy four gunships, and then fight an enemy frame. That frame's pilot is a behaviour tree, and the heads-up display shows which part of it is running. Heavy hits build impact, and a frame that takes more than its stability staggers and takes extra damage until it recovers. The debrief ranks the run on armour kept and time taken.</p>
+<p>Everything that decides anything is in a Rust core that performs no input or output and uses no floating-point arithmetic: the movement, the energy, the collisions, the weapons, the lock-on, the camera and the matrices the page draws with are all fixed-point integer maths. A WebAssembly shim converts those integers to the floats WebGL wants and decides nothing itself, and the page uploads what the core returns and draws it. The simulation runs at a fixed sixty ticks a second and is drawn at whatever rate the display runs, interpolated between ticks, with mouse look applied every frame before any tick.</p>
+<p>The enemy pilot returns only the controls a player could press, and its frame moves under the same rules as yours.</p>
+
+</div></section><section class="stripe"><div class="wrap">
+<h2>Playing it</h2>
+<p>W, A, S and D move and the mouse aims. Holding space jumps and then ascends, shift is a quick boost, and C toggles a glide boost; all three draw on the same energy the weapons use. The mouse buttons fire the arm weapons and E or F fires the shoulder weapon. Escape pauses and releases the mouse. Your build is kept in the browser you played in.</p>
+<p><a href="/iron-vector/">Open the project</a> · <a href="https://github.com/sgilson7/iron-vector">Source code</a></p>
+<p><a href="/projects/">All tools and games</a></p>
+
+</div></section>
+</main>
+
+<footer class="band">
+  <div class="wrap">
+    <p class="ids">
+      <a href="mailto:sagilson@ncsu.edu">Email Sam Gilson</a> &middot;
+      <a href="https://orcid.org/0009-0002-2394-8649">ORCID 0009-0002-2394-8649</a> &middot;
+      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google Scholar</a> &middot;
+      <a href="https://www.semanticscholar.org/author/2387936753">Semantic Scholar</a> &middot;
+      <a href="https://openalex.org/A5125954125">OpenAlex</a> &middot;
+      <a href="https://github.com/sgilson7">GitHub</a> &middot;
+      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>
+    </p>
+    <p class="licence">Original website text by Sam Gilson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Papers, teaching materials, software, and quoted material retain their own notices.</p>
+    <p class="meta">Build <code>2289da78</code></p>
+  </div>
+</footer>
+</body>
+</html>
