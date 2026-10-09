@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Food Truck Circus — Sam Gilson</title>
+<meta name="description" content="A 3D trampoline game on a food truck, played across the real venues of a touring circus.">
+<link rel="canonical" href="https://sgilson7.github.io/projects/food-truck-circus/">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sam Gilson">
+<meta property="og:title" content="Food Truck Circus">
+<meta property="og:description" content="A 3D trampoline game on a food truck, played across the real venues of a touring circus.">
+<meta property="og:url" content="https://sgilson7.github.io/projects/food-truck-circus/">
+<meta property="og:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta property="og:image:alt" content="Sam Gilson">
+<meta name="twitter:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Food Truck Circus">
+<meta name="twitter:description" content="A 3D trampoline game on a food truck, played across the real venues of a touring circus.">
+<meta name="author" content="Sam Gilson">
+<meta name="google-site-verification" content="MSQ0LGD6_zGzbznBsabmPTIkp9ASxM_U04OJdrtKgis">
+
+<link rel="stylesheet" href="/styles.css?v=ccc9f3e5">
+<link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Food Truck Circus",
+  "description": "A 3D trampoline game on a food truck, played across the real venues of a touring circus.",
+  "url": "https://sgilson7.github.io/projects/food-truck-circus/",
+  "about": {
+    "@type": "VideoGame",
+    "name": "Food Truck Circus",
+    "description": "A 3D trampoline game on a food truck, played across the real venues of a touring circus.",
+    "url": "https://sgilson7.github.io/food-truck-circus/",
+    "sameAs": "https://github.com/sgilson7/food-truck-circus"
+  }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="band">
+  <div class="wrap">
+    <p class="brand"><a href="/">Sam Gilson</a></p>
+    <nav aria-label="Sections">
+      <a href="/publications/">Research</a>
+      <a href="/dissertation/">Dissertation</a>
+      <a href="/concepts/">Concepts</a>
+      <a href="/teaching/">Teaching</a>
+      <a href="/materials/">Course materials</a>
+      <a href="/projects/">Tools and games</a>
+      <a href="/cv/">CV</a>
+      <a href="/positions/">Seeking work</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+  </div>
+</header>
+
+
+<main id="main">
+<section class="stripe"><div class="wrap">
+<h1>Food Truck Circus</h1>
+<p>Game</p>
+<p>Food Truck Circus is a third-person 3D game that runs in a browser. You are a performer in a circus played on and around a food truck, and each show is a trick or a run of tricks. It is a fan game after Cirque Kikasse's <em>SANTÉ!</em>, made in a day for the show's Durham run in October 2026, and it uses nothing of theirs but the idea.</p>
+<p>The tour has twenty-six shows at twenty-one real venues from the company's 2025–26 schedule, starting at the RTP 800 Building in Durham and ending in Port Angeles, Washington. The map lays the shows out by what each needs first. Most are on the trampoline beside the truck: pushing the bed to go higher, seat drops and back drops, then back tucks, baranis, full twists and double backs, named in trampoline terms and graded on the landing. The others stack chairs into a tower on the truck's roof, juggle, catch popcorn from an overflowing machine, and swing on a trapeze, which is the game's own addition. The crowd shouts the grade, and twelve costumes are earned along the way.</p>
+<p>The performer's body is particles joined by sticks. While you are in control, a flight model places them: a centre of mass, a flip and a twist, and the angular momentum behind each, with the inertia read off the body's shape, so pulling into a tuck spins you faster without any other rule saying so. A bad landing hands the same particles to the physics solver and the performer tumbles. Every rule runs in integer fixed-point maths in a Rust core compiled to WebAssembly, and the page only draws what the core returns.</p>
+
+</div></section><section class="stripe"><div class="wrap">
+<h2>Playing it</h2>
+<p>Hold Space to push the bed as it throws you up. Hold S or W during the push for a back or front flip, A or D to twist, J to tuck and K to pike. The arrow keys travel toward the truck and turn, dragging the mouse looks around, R starts a show again and Esc pauses. Your tour is kept in the browser you played in.</p>
+<p><a href="/food-truck-circus/">Open the project</a> · <a href="https://github.com/sgilson7/food-truck-circus">Source code</a></p>
+<p><a href="/projects/">All tools and games</a></p>
+
+</div></section>
+</main>
+
+<footer class="band">
+  <div class="wrap">
+    <p class="ids">
+      <a href="mailto:sagilson@ncsu.edu">Email Sam Gilson</a> &middot;
+      <a href="https://orcid.org/0009-0002-2394-8649">ORCID 0009-0002-2394-8649</a> &middot;
+      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google Scholar</a> &middot;
+      <a href="https://www.semanticscholar.org/author/2387936753">Semantic Scholar</a> &middot;
+      <a href="https://openalex.org/A5125954125">OpenAlex</a> &middot;
+      <a href="https://github.com/sgilson7">GitHub</a> &middot;
+      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>
+    </p>
+    <p class="licence">Original website text by Sam Gilson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Papers, teaching materials, software, and quoted material retain their own notices.</p>
+    <p class="meta">Build <code>ccc9f3e5</code></p>
+  </div>
+</footer>
+</body>
+</html>
