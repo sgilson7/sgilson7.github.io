@@ -22,7 +22,7 @@
 <meta name="author" content="Sam Gilson">
 <meta name="google-site-verification" content="MSQ0LGD6_zGzbznBsabmPTIkp9ASxM_U04OJdrtKgis">
 
-<link rel="stylesheet" href="/styles.css?v=5f37daac">
+<link rel="stylesheet" href="/styles.css?v=55d5a4dc">
 <link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
 <script type="application/ld+json">
 {
@@ -66,12 +66,12 @@
 <h1>Pursuer</h1>
 <p>Game</p>
 <p>Pursuer is a first-person survival driving game that runs in a browser. You start in a house in the middle of a city, where six things can be picked up: a teddy bear, an electric guitar, a trophy, a toaster, a microphone and a crown. Hold one for five seconds and the house folds flat like a paper diorama, and a 60-metre cardboard cut-out of a character that thing belongs to stands up and walks at you, straight through every building in the way. You run to the car in the garage and drive. The score is how long you last.</p>
-<p>The city is a kilometre square on a Manhattan grid, with downtown towers north of the house, suburbs on hills to the south and west, and one elevated road. It is built from about 20,000 breakable pieces. What the pursuer walks through is thrown forward piece by piece; a building that loses enough of its ground floor comes down whole, and a span of the overpass falls when one of its pillars goes. The pursuer always faces you, turns slowly and gains speed as the chase goes on, until it is faster than the car; now and then it vanishes and stands up again in the road ahead of you. The car has a rear-view mirror and two door mirrors, each showing it behind you, and it earns abilities as you survive: eight seconds on stilts that step over fallen buildings, three seconds of hover, turbo, and five seconds of flight. Turn too hard at speed and it rolls; a held key rolls it back onto its wheels. A record player in the house picks the chase music, its song's name floating over it.</p>
+<p>The city is a kilometre square on a Manhattan grid, with downtown towers north of the house, suburbs on hills to the south and west, and one elevated road. It is built from about 20,000 breakable pieces. What the pursuer walks through is thrown forward piece by piece; a building that loses enough of its ground floor comes down whole, and a span of the overpass falls when one of its pillars goes. The pursuer always faces you, turns slowly and gains speed as the chase goes on, until it is faster than the car; now and then it vanishes and stands up again in the road ahead of you. The car has a rear-view mirror and two door mirrors, each showing it behind you, and every so often it earns an ability drawn at random, so no two chases are kitted out alike: eight seconds on stilts that step over fallen buildings, five seconds of flight, a dash in any direction, an instant turn, a leap, turbo, and nitrous that sends it faster than it can be steered. Turn too hard at speed and it rolls; a held key rolls it back onto its wheels. A record player in the house picks the chase music, its song's name floating over it.</p>
 <p>Every rule runs in a Rust core in fixed-point integer maths, compiled to WebAssembly, and the page draws what the core returns. The pieces that fall are simulated in full only near the player, up to a fixed number, and the rest fall straight to the ground, which keeps the cost bounded with the whole city knocked loose. The pursuers and the menu art are drawn in TikZ.</p>
 
 </div></section><section class="stripe"><div class="wrap">
 <h2>Playing it</h2>
-<p>W, A, S and D walk or drive, and the mouse looks. Hold E or the left button to pick something up, and press E by the car to get in. Shift runs or pulls the handbrake. Hold R to roll the car over. Space hovers and F flies once the car can. Escape pauses. Your best time is kept in the browser you played in.</p>
+<p>W, A, S and D walk or drive, and the mouse looks. Hold E or the left button to pick something up, and press E by the car to get in. Shift runs or pulls the handbrake. Hold R to roll the car over. Each ability's key shows beside it once the car has it. Escape pauses. Your best time is kept in the browser you played in.</p>
 <p><a href="/pursuer/">Open the project</a> · <a href="https://github.com/sgilson7/pursuer">Source code</a></p>
 <p><a href="/projects/">All tools and games</a></p>
 
@@ -90,7 +90,7 @@
       <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>
     </p>
     <p class="licence">Original website text by Sam Gilson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Papers, teaching materials, software, and quoted material retain their own notices.</p>
-    <p class="meta">Build <code>5f37daac</code></p>
+    <p class="meta">Build <code>55d5a4dc</code></p>
   </div>
 </footer>
 </body>
