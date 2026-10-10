@@ -4,37 +4,37 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Long Time Comin&#39; — Sam Gilson</title>
-<meta name="description" content="A third-person bullet-hell roguelike: sent back in time to stop yourself, fifty years too early.">
+<meta name="description" content="A third-person bullet-hell roguelike: sent back in time to stop yourself, fifty years too early, across a city and then the ice.">
 <link rel="canonical" href="https://sgilson7.github.io/projects/long-time-comin/">
 
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Sam Gilson">
 <meta property="og:title" content="Long Time Comin&#39;">
-<meta property="og:description" content="A third-person bullet-hell roguelike: sent back in time to stop yourself, fifty years too early.">
+<meta property="og:description" content="A third-person bullet-hell roguelike: sent back in time to stop yourself, fifty years too early, across a city and then the ice.">
 <meta property="og:url" content="https://sgilson7.github.io/projects/long-time-comin/">
 <meta property="og:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
 <meta property="og:image:alt" content="Sam Gilson">
 <meta name="twitter:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Long Time Comin&#39;">
-<meta name="twitter:description" content="A third-person bullet-hell roguelike: sent back in time to stop yourself, fifty years too early.">
+<meta name="twitter:description" content="A third-person bullet-hell roguelike: sent back in time to stop yourself, fifty years too early, across a city and then the ice.">
 <meta name="author" content="Sam Gilson">
 <meta name="google-site-verification" content="MSQ0LGD6_zGzbznBsabmPTIkp9ASxM_U04OJdrtKgis">
 
-<link rel="stylesheet" href="/styles.css?v=6cec3a4a">
+<link rel="stylesheet" href="/styles.css?v=5f37daac">
 <link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "Long Time Comin'",
-  "description": "A third-person bullet-hell roguelike: sent back in time to stop yourself, fifty years too early.",
+  "description": "A third-person bullet-hell roguelike: sent back in time to stop yourself, fifty years too early, across a city and then the ice.",
   "url": "https://sgilson7.github.io/projects/long-time-comin/",
   "about": {
     "@type": "VideoGame",
     "name": "Long Time Comin'",
-    "description": "A third-person bullet-hell roguelike: sent back in time to stop yourself, fifty years too early.",
+    "description": "A third-person bullet-hell roguelike: sent back in time to stop yourself, fifty years too early, across a city and then the ice.",
     "url": "https://sgilson7.github.io/long-time-comin/",
     "sameAs": "https://github.com/sgilson7/long-time-comin"
   }
@@ -66,13 +66,15 @@
 <h1>Long Time Comin&#39;</h1>
 <p>Game</p>
 <p>Long Time Comin' is a third-person shooter that runs in a browser, in the bullet-hell style of Returnal and Saros: enemies fire large orbs in rings, spirals and flowers, and you dodge through them while shooting back. In the story you committed a crime in 2081 that the court calls the Stilling, and were sentenced to go back and stop yourself. The court's Bailiff sent you fifty years too early, so you land in 2031 and have to cross the half century on foot.</p>
-<p>Each run crosses the first zone, the Waiting City, as a graph of arenas. One main path runs from the crater where you land to the Court of Hours and its boss, the Bailiff of Hours. Side paths of one or two harder fights leave the main path and rejoin it, and each ends in a reward shown on the map before you choose: a higher level of one of the three guns, more health, more speed, another jump (up to four), or one of three that last the run: shots that pierce, a dash that clears the orbs round you, or a parry that heals. Before the boss, the Antechamber offers half your health back or one more reward, and you take one. Every run rolls its own graph. When you die, the court reads the next of the ten counts of your indictment and adds years to your sentence, and you return to the Holding, where the Clemency the run earned buys upgrades. Two of them add mechanics: a grappling hook that hauls you to what it hits and keeps your speed when you let go, and a parry that turns gold orbs back at whoever fired them. The route has three bosses and a final one; zones two to four are sealed in this version.</p>
-<p>The arenas have height: bridges and walkways to climb or run under, towers, and broken walls to hide behind, and in the boss's court, stands that its ground waves cannot reach. An in-game Codex lists every control, every level of every gun, every enemy and the orbs each attack fires, every upgrade and the rules, all written by the core from the numbers the game runs on.</p>
-<p>Every rule runs in a Rust core in fixed-point integer maths, compiled to WebAssembly, and the page draws what the core returns. Each enemy pattern is data: how many orbs a volley holds, how far each repeat turns, and how fast each orb curls or changes speed. The arenas are built from a seed, with lit windows, rooftop clutter and a clock tower stopped at 21:14,, and every shape is outlined in one plum ink to match the menu art, which is drawn in TikZ.</p>
+<p>Each run starts in the first zone, the Waiting City, a graph of arenas. One main path runs from the crater where you land to the Court of Hours and its boss, the Bailiff of Hours. Side paths of one or two harder fights leave the main path and rejoin it, and each ends in a reward shown on the map before you choose: a higher level of one of the three guns, more health, more speed, another jump (up to four), or one of three that last the run: shots that pierce, a dash that clears the orbs round you, or a parry that heals. Before the boss, the Antechamber offers half your health back or one more reward, and you take one. Every run rolls its own graph.</p>
+<p>Beating the Bailiff does not end the run. In an interlude the years pass: you use what you know of the coming decades to build a company, and in 2046 you pay for an expedition north to fetch the Observatory's key from the ice before your older self can. The second zone, the White Waste, is built the same way, with its own seven enemies and its own boss, the Witness. Once you have beaten the Bailiff, a run can also start on the ice. Zones three and four are sealed in this version.</p>
+<p>When you die, the court reads the next of the ten counts of your indictment and adds years to your sentence, and you return to the Holding, where the Clemency the run earned buys upgrades. Three of them add mechanics: a grappling hook that hauls you to what it hits and keeps your speed when you let go, a parry that turns gold orbs back at whoever fired them, and the Injunction, a wall in front of you for half a second that breaks blue orbs.</p>
+<p>The arenas have height. In the city there are bridges and walkways to climb or run under, towers, broken walls to hide behind, and in the boss's court, stands that its ground waves cannot reach. On the ice there are updraft vents that throw you up, a crevasse you can fall into, an icebreaker frozen in the ice to run through and climb, a catwalk round a field of radio masts, and an ice cave with a roof. The enemies on the ice place their orbs in shapes and hold them before they fly: a ring hangs in the air, then its outer ring flies and its inner ring follows at twice the speed; a cage forms round you and closes; a grid of orbs waits and then flies at where you are heading. When the camera ends up behind a wall or inside something, the shader cuts away the scenery in front of you so it never hides you. An in-game Codex lists every control, every level of every gun, every enemy and the orbs each attack fires, every upgrade and the rules, all written by the core from the numbers the game runs on.</p>
+<p>Every rule runs in a Rust core in fixed-point integer maths, compiled to WebAssembly, and the page draws what the core returns. Each enemy pattern is data: how many orbs a volley holds, the shape they are placed in, how long each is held, how far each repeat turns, and how fast each orb curls or changes speed. The arenas are built from a seed, and every shape is outlined in ink to match the menu art, which is drawn in TikZ.</p>
 
 </div></section><section class="stripe"><div class="wrap">
 <h2>Playing it</h2>
-<p>W, A, S and D move and the mouse aims. Hold the left button to fire. Space jumps, and again in the air if you have the jumps; Shift dashes, and orbs pass through you while you dash. E takes a gun from the floor, Tab opens the map and Escape pauses. Your record is kept in the browser you played in.</p>
+<p>W, A, S and D move and the mouse aims. Hold the left button to fire. Space jumps, and again in the air if you have the jumps; Shift dashes, and orbs pass through you while you dash. E takes a gun from the floor, F fires the hook, right mouse or Q parries and R raises the Injunction, once bought. Tab opens the map and Escape pauses. Your record is kept in the browser you played in.</p>
 <p><a href="/long-time-comin/">Open the project</a> · <a href="https://github.com/sgilson7/long-time-comin">Source code</a></p>
 <p><a href="/projects/">All tools and games</a></p>
 
@@ -91,7 +93,7 @@
       <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>
     </p>
     <p class="licence">Original website text by Sam Gilson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Papers, teaching materials, software, and quoted material retain their own notices.</p>
-    <p class="meta">Build <code>6cec3a4a</code></p>
+    <p class="meta">Build <code>5f37daac</code></p>
   </div>
 </footer>
 </body>
