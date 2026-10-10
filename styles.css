@@ -515,3 +515,66 @@ a:hover .kc-elabel { fill: var(--panel); }
   color: var(--grey);
 }
 .seeking a { color: var(--red); font-weight: 600; }
+
+/* ------------------------------------------------- the tools and games grid
+   A tile is a still from the running application, its name and its one
+   sentence. Where an application moves on its own, resting a pointer on the
+   tile swaps the still for a short loop -- done by changing a background
+   image, because the site ships no script (D3) and an animated image needs
+   none. The still is what loads, so a reader who never hovers sees a picture
+   rather than a blank.
+
+   Motion is opt-out twice over: prefers-reduced-motion keeps the still, and a
+   tile without a loop never changes. The name and the sentence carry the tile
+   on their own, so a picture that fails to load costs nothing. */
+.tiles {
+  list-style: none;
+  margin: 1.2rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  gap: 1.4rem 1.2rem;
+}
+.tile { display: flex; flex-direction: column; }
+.tile > a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+}
+.tile > a:hover, .tile > a:focus-visible { border-color: var(--red); }
+.tile > a:focus-visible { outline: 3px solid var(--red); outline-offset: 2px; }
+.tile .shot {
+  display: block;
+  aspect-ratio: 8 / 5;
+  background-image: var(--poster);
+  background-size: cover;
+  background-position: center;
+  background-color: var(--panel);
+  border-bottom: 1px solid var(--rule);
+}
+.tile h3 {
+  margin: 0;
+  padding: .55rem .7rem;
+  font-size: 1rem;
+  text-decoration: underline;
+  text-decoration-color: var(--rule);
+}
+.tile > a:hover h3 { text-decoration-color: var(--red); }
+.tile > p { margin: .45rem .1rem 0; font-size: .92rem; color: var(--grey); }
+.tile .featured { margin: .4rem .1rem 0; }
+@media (hover: hover) {
+  .tile > a:hover .shot.moves,
+  .tile > a:focus-visible .shot.moves { background-image: var(--clip); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tile > a:hover .shot.moves,
+  .tile > a:focus-visible .shot.moves { background-image: var(--poster); }
+}
+@media (forced-colors: active) {
+  .tile > a { border: 1px solid; }
+  .tile .shot { border-bottom: 1px solid; }
+}
