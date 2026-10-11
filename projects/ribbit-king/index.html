@@ -22,7 +22,7 @@
 <meta name="author" content="Sam Gilson">
 <meta name="google-site-verification" content="MSQ0LGD6_zGzbznBsabmPTIkp9ASxM_U04OJdrtKgis">
 
-<link rel="stylesheet" href="/styles.css?v=6c8db3d0">
+<link rel="stylesheet" href="/styles.css?v=9ebae369">
 <link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
 <script type="application/ld+json">
 {
@@ -67,7 +67,8 @@
 <p>Game</p>
 <p>Ribbit King is a 3D game of frolf, golf played with frogs, that runs in a browser. It is a fan game after Bandai's Ribbit King for the GameCube (2003), built from a design a friend wrote, and it uses none of Bandai's material. Each frog sits on a catapult like a carnival strength tester. You whack it with a mallet, then fly the frog through the air, and the fewest strokes into the lotus flower at the end of the hole wins.</p>
 <p>The swing is a timing meter. A needle runs round a circle with a red power bar on it, and the gold notch in the middle of the bar is a perfect shot: full power, dead straight and a little extra. Elsewhere on the bar the shot is weaker, and an early hit hooks left while a late one slices right. Off the bar is a whiff. Before the swing you aim, set the mallet's power and pick a loft, and a dotted arc shows where a perfect hit would first land.</p>
-<p>In the air you steer the frog. Power-ups give an extra jump, wings that glide like Mario 64's wing cap, and explosive mushrooms that blast the frog away. Lily pads and spider webs throw it back up. Lines of flies, after the flies in The Binding of Isaac, hang over each hole like Sonic's rings. Catch ten and your tongue can knock another frog flying. Water, lava and out of bounds each cost a stroke. The four holes are a swamp, a desert oasis, a city street with traffic, and a lava flow under a volcano. Up to four frogs, people or computer players, take turns from the same tee, and the leader wears a crown.</p>
+<p>In the air you steer the frog. Power-ups give an extra jump, or wings that glide like Mario 64's wing cap. Small red mushrooms explode and blast the frog away, and giant blue ones bounce it off like pinball bumpers. Lily pads throw it back up, and spider webs strung across pits in the ground stretch down under it and fling it back up. Lines of flies, after the flies in The Binding of Isaac, hang over each hole like Sonic's rings. Each fly adds a small hop when the frog lands, and ten let your tongue knock another frog flying. Floating bubbles score points, kept apart from the strokes. Frogs swim, so water costs nothing: a lily pad comes up under the frog for its next shot. Lava and out of bounds cost a stroke.</p>
+<p>There are five holes, each at least a par 5: a swamp, a desert oasis, a fungus forest, a city street with traffic, and a lava flow under a volcano. Each has three routes to the lotus. Two cross each other on a high terrace in the middle, and the third goes under that terrace through a tunnel. Around them are cliffs, rivers and waterfalls. Snails crawl across the swamp and block bounces, and its whirlpools spin a frog and throw it somewhere new. Antlions in the desert's sandy pits grab a frog and end its turn. Up to four frogs, people or computer players, take turns from the same tee, and the frog in first place wears a small crown.</p>
 <p>Up to four people can also play online, each in their own browser. One hosts and gets a room code, the others type it in, and each picks their own frog. You swing on your own turn and watch everyone else's live, and if someone leaves, the computer takes their frog. The browsers connect to each other directly, with nothing of the game's running on a server. They meet the way they do in Floodline and Vagrancy: through public relays by room code, or by pasting an invitation code when a room code will not connect.</p>
 <p>Every rule runs in a Rust core in fixed-point integer maths, compiled to WebAssembly, and the page draws what the core returns. The flight the player steers, the aiming arc and the computer players' imagined shots all run on the same physics step. The menu art and the frog portraits are drawn in TikZ.</p>
 <p>Online, the host's copy of the round runs on its own clock and sends every other browser the input for each tick: the keys of whoever's turn it is. Each browser runs the same round from the same steps, and they compare checksums to show that their copies agree. A swing is judged by where the needle stood on the swinging player's own screen, so the delay to the host does not change it.</p>
@@ -93,7 +94,7 @@
       <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>
     </p>
     <p class="licence">Original website text by Sam Gilson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Papers, teaching materials, software, and quoted material retain their own notices.</p>
-    <p class="meta">Build <code>6c8db3d0</code></p>
+    <p class="meta">Build <code>9ebae369</code></p>
   </div>
 </footer>
 </body>
