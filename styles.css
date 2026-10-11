@@ -64,6 +64,10 @@
   --panel: #E6EAEC;
   --green: #2A6B4A;
   --red: #8B2E2E;
+  /* The same red with the lightness taken down, for a filled button's
+     hover. White on it is 11.11:1 against the base red's 8.31:1, so the
+     hover is never the weaker contrast — measured, not chosen by eye. */
+  --red-dark: #6B2323;
   --blue: #2F4BA0;
   --page: #FFFFFF;
   --serif: "Schola", Georgia, "Times New Roman", serif;
@@ -130,6 +134,18 @@ footer.band code { font-family: var(--mono); color: var(--page); }
   background: var(--page); color: var(--ink); padding: 0.5rem 1rem;
 }
 .skip:focus { left: 0.5rem; top: 0.5rem; z-index: 10; }
+
+/* Text for a reader that is not looking at the page. Not `display: none`,
+   which takes it out of the accessibility tree as well, and not a negative
+   text-indent, which a right-to-left reading would send the other way. */
+.vh {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0; border: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
 
 /* --- alternating bands ------------------------------------------------
    Sections alternate white and a pale red so a reader can tell where one part
@@ -535,18 +551,14 @@ a:hover .kc-elabel { fill: var(--panel); }
   grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
   gap: 1.4rem 1.2rem;
 }
-.tile { display: flex; flex-direction: column; }
-.tile > a {
-  text-decoration: none;
-  color: inherit;
-  display: block;
+.tile {
+  display: flex;
+  flex-direction: column;
   border: 1px solid var(--rule);
   border-radius: 6px;
   overflow: hidden;
   background: #fff;
 }
-.tile > a:hover, .tile > a:focus-visible { border-color: var(--red); }
-.tile > a:focus-visible { outline: 3px solid var(--red); outline-offset: 2px; }
 .tile .shot {
   display: block;
   aspect-ratio: 8 / 5;
@@ -556,25 +568,60 @@ a:hover .kc-elabel { fill: var(--panel); }
   background-color: var(--panel);
   border-bottom: 1px solid var(--rule);
 }
-.tile h3 {
-  margin: 0;
-  padding: .55rem .7rem;
-  font-size: 1rem;
+.tile h3 { margin: 0; padding: .6rem .7rem .1rem; font-size: 1rem; }
+.tile h3 a {
+  color: inherit;
   text-decoration: underline;
   text-decoration-color: var(--rule);
 }
-.tile > a:hover h3 { text-decoration-color: var(--red); }
-.tile > p { margin: .45rem .1rem 0; font-size: .92rem; color: var(--grey); }
-.tile .featured { margin: .4rem .1rem 0; }
+.tile h3 a:hover, .tile h3 a:focus-visible { text-decoration-color: var(--red); }
+.tile h3 a:focus-visible { outline: 3px solid var(--red); outline-offset: 2px; }
+.tile .featured { margin: .1rem .7rem 0; }
+.tile > p { margin: .35rem .7rem 0; font-size: .92rem; color: var(--grey); }
+/* The buttons sit on the floor of the card however long the sentence above
+   them runs, so a row of tiles has one line of buttons rather than a ragged
+   one. */
+.tile .go-row {
+  margin: auto .7rem .7rem;
+  padding-top: .7rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+}
+.tile .go {
+  flex: 1 1 auto;
+  text-align: center;
+  padding: .4rem .7rem;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  font-size: .92rem;
+  text-decoration: none;
+  color: inherit;
+  background: var(--panel);
+}
+.tile .go.play {
+  background: var(--red);
+  border-color: var(--red);
+  color: #fff;
+  font-weight: 600;
+}
+.tile .go:hover, .tile .go:focus-visible { border-color: var(--red); }
+.tile .go.play:hover, .tile .go.play:focus-visible { background: var(--red-dark); }
+.tile .go:focus-visible { outline: 3px solid var(--red); outline-offset: 2px; }
+/* The still becomes the clip when a pointer is over the card, and when the
+   keyboard reaches either button — `:focus-within`, because the card stopped
+   being a link and the buttons are what a keyboard lands on now. */
 @media (hover: hover) {
-  .tile > a:hover .shot.moves,
-  .tile > a:focus-visible .shot.moves { background-image: var(--clip); }
+  .tiles .tile:hover .shot.moves,
+  .tiles .tile:focus-within .shot.moves { background-image: var(--clip); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .tile > a:hover .shot.moves,
-  .tile > a:focus-visible .shot.moves { background-image: var(--poster); }
+  .tiles .tile:hover .shot.moves,
+  .tiles .tile:focus-within .shot.moves { background-image: var(--poster); }
 }
 @media (forced-colors: active) {
-  .tile > a { border: 1px solid; }
+  .tile { border: 1px solid; }
   .tile .shot { border-bottom: 1px solid; }
+  .tile .go { border: 1px solid; }
+}
 }

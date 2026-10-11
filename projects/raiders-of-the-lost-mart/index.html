@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Raiders of the Lost Mart — Sam Gilson</title>
+<meta name="description" content="A four-player co-op extraction shooter in 3D: raid an abandoned Southpoint mall full of drones, carry out what you find, and build your guns from it.">
+<link rel="canonical" href="https://sgilson7.github.io/projects/raiders-of-the-lost-mart/">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sam Gilson">
+<meta property="og:title" content="Raiders of the Lost Mart">
+<meta property="og:description" content="A four-player co-op extraction shooter in 3D: raid an abandoned Southpoint mall full of drones, carry out what you find, and build your guns from it.">
+<meta property="og:url" content="https://sgilson7.github.io/projects/raiders-of-the-lost-mart/">
+<meta property="og:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta property="og:image:alt" content="Sam Gilson">
+<meta name="twitter:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Raiders of the Lost Mart">
+<meta name="twitter:description" content="A four-player co-op extraction shooter in 3D: raid an abandoned Southpoint mall full of drones, carry out what you find, and build your guns from it.">
+<meta name="author" content="Sam Gilson">
+<meta name="google-site-verification" content="MSQ0LGD6_zGzbznBsabmPTIkp9ASxM_U04OJdrtKgis">
+
+<link rel="stylesheet" href="/styles.css?v=d1e468dc">
+<link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Raiders of the Lost Mart",
+  "description": "A four-player co-op extraction shooter in 3D: raid an abandoned Southpoint mall full of drones, carry out what you find, and build your guns from it.",
+  "url": "https://sgilson7.github.io/projects/raiders-of-the-lost-mart/",
+  "about": {
+    "@type": "VideoGame",
+    "name": "Raiders of the Lost Mart",
+    "description": "A four-player co-op extraction shooter in 3D: raid an abandoned Southpoint mall full of drones, carry out what you find, and build your guns from it.",
+    "url": "https://sgilson7.github.io/raiders-of-the-lost-mart/",
+    "sameAs": "https://github.com/sgilson7/raiders-of-the-lost-mart"
+  }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="band">
+  <div class="wrap">
+    <p class="brand"><a href="/">Sam Gilson</a></p>
+    <nav aria-label="Sections">
+      <a href="/publications/">Research</a>
+      <a href="/dissertation/">Dissertation</a>
+      <a href="/concepts/">Concepts</a>
+      <a href="/teaching/">Teaching</a>
+      <a href="/materials/">Course materials</a>
+      <a href="/projects/">Tools and games</a>
+      <a href="/cv/">CV</a>
+      <a href="/positions/">Seeking work</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+  </div>
+</header>
+
+
+<main id="main">
+<section class="stripe"><div class="wrap">
+<h1>Raiders of the Lost Mart</h1>
+<p>Game</p>
+<p>Raiders of the Lost Mart is a four-player co-op extraction shooter that runs in a browser, in 3D, built from a friend's design. You and up to three others are hired raiders. Each run starts in the back of a van parked far out in the lot of an abandoned Southpoint mall in Durham, now full of drones. A client's order sends you in: fetch a vintage Kid Cudi tee from the Hot Topic, clear a nest out of the food court, pull the mall's camera drives, break a hive in a department store, or get the lights on. Whatever you carry back to the van is yours, and you build your guns from it.</p>
+<p>A gun has six slots with five parts each: a frame, a barrel, a mount that sets out how many barrels and where, a payload every shot carries, a sight and a grip. Shots leave from the end of each barrel on the model, so a pistol frame with a square mount of double barrels fires eight loads of buckshot from eight muzzles, and an AK frame with a rocket tube full of goo fires rockets that slow drones and eat their armour without hurting them. A part on your gun comes off your shelf. Come back in the van and you keep it and everything in your pack; get left behind and it is gone. Fill the order and the client pays in rare parts.</p>
+<p>There are six drones. Wasps circle and strafe. Moths spot you, call the others, and fly out where you can see them to draw you out of cover toward waiting wasps. Hornets hide, peek out somewhere new and charge a laser. Wardens keep their armour toward you. Tick spiders run at you and blow up, and striders keep their distance and stomp. Each has armour, a glowing weak spot and, if it flies, rotors you can shoot off, and hits shove and spin them like real drones. Each order parks the van in front of a different entrance to one map: the concourse with its balconies and bridges, the centre court, the food court, three department stores, Main Street and its cinema, and the lots all round.</p>
+<p>Up to four people can play online, each in their own browser, meeting by room code or by pasted invitation as in Ribbit King. Every browser runs the whole run and rolls back when another raider's input arrives late, so nobody waits on the host. Every rule runs in a Rust core in fixed-point integer maths, compiled to WebAssembly, and the page draws what the core returns. The menu art, the drone portraits and the part icons are drawn in TikZ.</p>
+
+</div></section><section class="stripe"><div class="wrap">
+<h2>Playing it</h2>
+<p>W, A, S and D move, the mouse looks (click the view to capture it), the left button fires and the right button aims. R reloads, and holding E opens the van doors, searches, picks up, revives a teammate and drives the van off. Shift sprints and Space jumps; Escape pauses. The arrow keys turn without a mouse. Your stash and your gun are kept in the browser you played in.</p>
+<p><a href="/raiders-of-the-lost-mart/">Open the project</a> · <a href="https://github.com/sgilson7/raiders-of-the-lost-mart">Source code</a></p>
+<p><a href="/projects/">All tools and games</a></p>
+
+</div></section>
+</main>
+
+<footer class="band">
+  <div class="wrap">
+    <p class="ids">
+      <a href="mailto:sagilson@ncsu.edu">Email Sam Gilson</a> &middot;
+      <a href="https://orcid.org/0009-0002-2394-8649">ORCID 0009-0002-2394-8649</a> &middot;
+      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google Scholar</a> &middot;
+      <a href="https://www.semanticscholar.org/author/2387936753">Semantic Scholar</a> &middot;
+      <a href="https://openalex.org/A5125954125">OpenAlex</a> &middot;
+      <a href="https://github.com/sgilson7">GitHub</a> &middot;
+      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>
+    </p>
+    <p class="licence">Original website text by Sam Gilson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Papers, teaching materials, software, and quoted material retain their own notices.</p>
+    <p class="meta">Build <code>d1e468dc</code></p>
+  </div>
+</footer>
+</body>
+</html>
