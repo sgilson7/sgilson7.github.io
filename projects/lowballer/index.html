@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lowballer — Sam Gilson</title>
+<meta name="description" content="A 2D game about lowballing sellers on a neighbourhood marketplace: read the listing, check the seller, and offer as little as they&#39;ll take.">
+<link rel="canonical" href="https://sgilson7.github.io/projects/lowballer/">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sam Gilson">
+<meta property="og:title" content="Lowballer">
+<meta property="og:description" content="A 2D game about lowballing sellers on a neighbourhood marketplace: read the listing, check the seller, and offer as little as they&#39;ll take.">
+<meta property="og:url" content="https://sgilson7.github.io/projects/lowballer/">
+<meta property="og:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta property="og:image:alt" content="Sam Gilson">
+<meta name="twitter:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Lowballer">
+<meta name="twitter:description" content="A 2D game about lowballing sellers on a neighbourhood marketplace: read the listing, check the seller, and offer as little as they&#39;ll take.">
+<meta name="author" content="Sam Gilson">
+<meta name="google-site-verification" content="MSQ0LGD6_zGzbznBsabmPTIkp9ASxM_U04OJdrtKgis">
+
+<link rel="stylesheet" href="/styles.css?v=f7ac80d1">
+<link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Lowballer",
+  "description": "A 2D game about lowballing sellers on a neighbourhood marketplace: read the listing, check the seller, and offer as little as they'll take.",
+  "url": "https://sgilson7.github.io/projects/lowballer/",
+  "about": {
+    "@type": "VideoGame",
+    "name": "Lowballer",
+    "description": "A 2D game about lowballing sellers on a neighbourhood marketplace: read the listing, check the seller, and offer as little as they'll take.",
+    "url": "https://sgilson7.github.io/lowballer/",
+    "sameAs": "https://github.com/sgilson7/lowballer"
+  }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="band">
+  <div class="wrap">
+    <p class="brand"><a href="/">Sam Gilson</a></p>
+    <nav aria-label="Sections">
+      <a href="/publications/">Research</a>
+      <a href="/dissertation/">Dissertation</a>
+      <a href="/concepts/">Concepts</a>
+      <a href="/teaching/">Teaching</a>
+      <a href="/materials/">Course materials</a>
+      <a href="/projects/">Tools and games</a>
+      <a href="/cv/">CV</a>
+      <a href="/positions/">Seeking work</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+  </div>
+</header>
+
+
+<main id="main">
+<section class="stripe"><div class="wrap">
+<h1>Lowballer</h1>
+<p>Game</p>
+<p>Lowballer is a 2D game that runs in a browser, set on a made-up neighbourhood marketplace called Curbside. Each of three screens shows six listings: a toaster, a signed jersey, a 2011 Civic, a monstera, a kayak. You make an offer on five and skip one. Every seller has a lowest price they will take, which you never see. Offer at or above it and you keep the difference between asking and your offer; offer below it and you get nothing, but the offer still counts as one of the five. At the end the game adds up what you saved as a share of the asking prices of everything you bid on.</p>
+<p>Each seller has one hidden temperament, and everything they write follows from it. A stubborn seller writes "Price is firm" and "No lowballers", a flexible one "Make an offer!" and "Moving soon, need this gone!". On each screen you can inspect two seller profiles and message two sellers, but not both on the same listing. A profile shows the seller's bio, reviews from past buyers, how fast they reply, and what their recent sales went for. A message gets a reply in the seller's own voice, sometimes with a price they would take. How long the item has been listed matters too: a month-old listing gives more than one posted an hour ago. The tone of the listing is a strong clue but not a guarantee.</p>
+<p>Every rule runs in a Rust core in integer maths, compiled to WebAssembly, and the page draws what the core returns. Each game is dealt from a seed: the seller's temperament sets the tone of the listing, the profile, the reply and, with the listing's age and some noise, the hidden minimum. The item pictures and the menu art are drawn in TikZ.</p>
+
+</div></section><section class="stripe"><div class="wrap">
+<h2>Playing it</h2>
+<p>Click a listing to open it. Inspect Profile and Message Seller each work twice per screen. Type an offer or drag the slider, then send it. After your fifth offer the screen ends and shows which offers were accepted and what the skipped seller would have taken.</p>
+<p><a href="/lowballer/">Open the project</a> · <a href="https://github.com/sgilson7/lowballer">Source code</a></p>
+<p><a href="/projects/">All tools and games</a></p>
+
+</div></section>
+</main>
+
+<footer class="band">
+  <div class="wrap">
+    <p class="ids">
+      <a href="mailto:sagilson@ncsu.edu">Email Sam Gilson</a> &middot;
+      <a href="https://orcid.org/0009-0002-2394-8649">ORCID 0009-0002-2394-8649</a> &middot;
+      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google Scholar</a> &middot;
+      <a href="https://www.semanticscholar.org/author/2387936753">Semantic Scholar</a> &middot;
+      <a href="https://openalex.org/A5125954125">OpenAlex</a> &middot;
+      <a href="https://github.com/sgilson7">GitHub</a> &middot;
+      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>
+    </p>
+    <p class="licence">Original website text by Sam Gilson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Papers, teaching materials, software, and quoted material retain their own notices.</p>
+    <p class="meta">Build <code>f7ac80d1</code></p>
+  </div>
+</footer>
+</body>
+</html>
