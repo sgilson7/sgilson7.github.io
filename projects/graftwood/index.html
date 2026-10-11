@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Graftwood — Sam Gilson</title>
+<meta name="description" content="A 3D auto-battling roguelike: walk a branching path through the woods and graft the body parts of what you beat onto your own creature.">
+<link rel="canonical" href="https://sgilson7.github.io/projects/graftwood/">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sam Gilson">
+<meta property="og:title" content="Graftwood">
+<meta property="og:description" content="A 3D auto-battling roguelike: walk a branching path through the woods and graft the body parts of what you beat onto your own creature.">
+<meta property="og:url" content="https://sgilson7.github.io/projects/graftwood/">
+<meta property="og:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta property="og:image:alt" content="Sam Gilson">
+<meta name="twitter:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Graftwood">
+<meta name="twitter:description" content="A 3D auto-battling roguelike: walk a branching path through the woods and graft the body parts of what you beat onto your own creature.">
+<meta name="author" content="Sam Gilson">
+<meta name="google-site-verification" content="MSQ0LGD6_zGzbznBsabmPTIkp9ASxM_U04OJdrtKgis">
+
+<link rel="stylesheet" href="/styles.css?v=20f6efe0">
+<link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Graftwood",
+  "description": "A 3D auto-battling roguelike: walk a branching path through the woods and graft the body parts of what you beat onto your own creature.",
+  "url": "https://sgilson7.github.io/projects/graftwood/",
+  "about": {
+    "@type": "VideoGame",
+    "name": "Graftwood",
+    "description": "A 3D auto-battling roguelike: walk a branching path through the woods and graft the body parts of what you beat onto your own creature.",
+    "url": "https://sgilson7.github.io/graftwood/",
+    "sameAs": "https://github.com/sgilson7/graftwood"
+  }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="band">
+  <div class="wrap">
+    <p class="brand"><a href="/">Sam Gilson</a></p>
+    <nav aria-label="Sections">
+      <a href="/publications/">Research</a>
+      <a href="/dissertation/">Dissertation</a>
+      <a href="/concepts/">Concepts</a>
+      <a href="/teaching/">Teaching</a>
+      <a href="/materials/">Course materials</a>
+      <a href="/projects/">Tools and games</a>
+      <a href="/cv/">CV</a>
+      <a href="/positions/">Seeking work</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+  </div>
+</header>
+
+
+<main id="main">
+<section class="stripe"><div class="wrap">
+<h1>Graftwood</h1>
+<p>Game</p>
+<p>Graftwood is a 3D auto-battling roguelike that runs in a browser, built from a friend's design. Your creature walks a branching path through the woods, fights bugs, crustaceans and woodland creatures, and grafts their body parts onto its own body. The fights play themselves: every part counts down and acts when it reaches zero, so the build you have grown decides who wins.</p>
+<p>A creature has mass, and one body part fits on each unit of it. You start with three mass and two parts, choosing between a toothy, furry Burrowling, a Flitterling with a stinger and wings, and a Sprigling that fights from behind a coat of slime. Some parts act on a timer: teeth bite every two seconds, a stinger adds poison that stacks, lucky feet make a creature harder to hit the longer a fight lasts, a slime coat soaks up damage. Others change the creature for good: bunny ears take a point off every ranged hit, and wings make a light body harder to hit for each empty slot it carries. Past five, each extra unit of mass and each extra part slows every part a little, so a big creature is a slow one. Each part is drawn on the 3D body where it was grafted.</p>
+<p>Winning a fight pays acorns and offers more maximum health or one of the loser's parts; with no slot free, the new part replaces one of yours. Encounters on the path are half good and half bad: one might add mass or a part, another takes mass away, and with it the part that no longer fits. A trader sells parts, mass and healing for acorns, and rests heal or let you grow. Twelve floors of battles, elites, encounters, the trader and rests are rolled for each run, and the last is the Old Stag, carrying more parts than it should and slowed by every one.</p>
+<p>Every rule runs in a Rust core in fixed-point integer maths, compiled to WebAssembly, and the page draws what the core returns. A fight replays exactly from its seed, and a probe in the repository plays hundreds of whole runs to show what a change to the numbers does. The menu art is drawn in TikZ.</p>
+
+</div></section><section class="stripe"><div class="wrap">
+<h2>Playing it</h2>
+<p>Click to choose a creature, a place on the path, a reward or a part to graft. Fights run on their own at one, two or four times speed, or skip to the end. N turns the sound on or off. Your record of runs, wins and the deepest floor reached is kept in the browser you played in.</p>
+<p><a href="/graftwood/">Open the project</a> · <a href="https://github.com/sgilson7/graftwood">Source code</a></p>
+<p><a href="/projects/">All tools and games</a></p>
+
+</div></section>
+</main>
+
+<footer class="band">
+  <div class="wrap">
+    <p class="ids">
+      <a href="mailto:sagilson@ncsu.edu">Email Sam Gilson</a> &middot;
+      <a href="https://orcid.org/0009-0002-2394-8649">ORCID 0009-0002-2394-8649</a> &middot;
+      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google Scholar</a> &middot;
+      <a href="https://www.semanticscholar.org/author/2387936753">Semantic Scholar</a> &middot;
+      <a href="https://openalex.org/A5125954125">OpenAlex</a> &middot;
+      <a href="https://github.com/sgilson7">GitHub</a> &middot;
+      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>
+    </p>
+    <p class="licence">Original website text by Sam Gilson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Papers, teaching materials, software, and quoted material retain their own notices.</p>
+    <p class="meta">Build <code>20f6efe0</code></p>
+  </div>
+</footer>
+</body>
+</html>
