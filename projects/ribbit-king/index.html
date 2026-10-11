@@ -4,37 +4,37 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ribbit King — Sam Gilson</title>
-<meta name="description" content="Frolf, golf played with frogs: whack your frog off a catapult, fly it through flies, lily pads and webs, and land it in the lotus.">
+<meta name="description" content="Frolf, golf played with frogs, for up to four players in one browser or online: whack your frog off a catapult, fly it through flies, lily pads and webs, and land it in the lotus.">
 <link rel="canonical" href="https://sgilson7.github.io/projects/ribbit-king/">
 
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Sam Gilson">
 <meta property="og:title" content="Ribbit King">
-<meta property="og:description" content="Frolf, golf played with frogs: whack your frog off a catapult, fly it through flies, lily pads and webs, and land it in the lotus.">
+<meta property="og:description" content="Frolf, golf played with frogs, for up to four players in one browser or online: whack your frog off a catapult, fly it through flies, lily pads and webs, and land it in the lotus.">
 <meta property="og:url" content="https://sgilson7.github.io/projects/ribbit-king/">
 <meta property="og:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
 <meta property="og:image:alt" content="Sam Gilson">
 <meta name="twitter:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ribbit King">
-<meta name="twitter:description" content="Frolf, golf played with frogs: whack your frog off a catapult, fly it through flies, lily pads and webs, and land it in the lotus.">
+<meta name="twitter:description" content="Frolf, golf played with frogs, for up to four players in one browser or online: whack your frog off a catapult, fly it through flies, lily pads and webs, and land it in the lotus.">
 <meta name="author" content="Sam Gilson">
 <meta name="google-site-verification" content="MSQ0LGD6_zGzbznBsabmPTIkp9ASxM_U04OJdrtKgis">
 
-<link rel="stylesheet" href="/styles.css?v=39bddafb">
+<link rel="stylesheet" href="/styles.css?v=9c23bb03">
 <link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "Ribbit King",
-  "description": "Frolf, golf played with frogs: whack your frog off a catapult, fly it through flies, lily pads and webs, and land it in the lotus.",
+  "description": "Frolf, golf played with frogs, for up to four players in one browser or online: whack your frog off a catapult, fly it through flies, lily pads and webs, and land it in the lotus.",
   "url": "https://sgilson7.github.io/projects/ribbit-king/",
   "about": {
     "@type": "VideoGame",
     "name": "Ribbit King",
-    "description": "Frolf, golf played with frogs: whack your frog off a catapult, fly it through flies, lily pads and webs, and land it in the lotus.",
+    "description": "Frolf, golf played with frogs, for up to four players in one browser or online: whack your frog off a catapult, fly it through flies, lily pads and webs, and land it in the lotus.",
     "url": "https://sgilson7.github.io/ribbit-king/",
     "sameAs": "https://github.com/sgilson7/ribbit-king"
   }
@@ -68,11 +68,13 @@
 <p>Ribbit King is a 3D game of frolf, golf played with frogs, that runs in a browser. It is a fan game after Bandai's Ribbit King for the GameCube (2003), built from a design a friend wrote, and it uses none of Bandai's material. Each frog sits on a catapult like a carnival strength tester. You whack it with a mallet, then fly the frog through the air, and the fewest strokes into the lotus flower at the end of the hole wins.</p>
 <p>The swing is a timing meter. A needle runs round a circle with a red power bar on it, and the gold notch in the middle of the bar is a perfect shot: full power, dead straight and a little extra. Elsewhere on the bar the shot is weaker, and an early hit hooks left while a late one slices right. Off the bar is a whiff. Before the swing you aim, set the mallet's power and pick a loft, and a dotted arc shows where a perfect hit would first land.</p>
 <p>In the air you steer the frog. Power-ups give an extra jump, wings that glide like Mario 64's wing cap, and explosive mushrooms that blast the frog away. Lily pads and spider webs throw it back up. Lines of flies, after the flies in The Binding of Isaac, hang over each hole like Sonic's rings. Catch ten and your tongue can knock another frog flying. Water, lava and out of bounds each cost a stroke. The four holes are a swamp, a desert oasis, a city street with traffic, and a lava flow under a volcano. Up to four frogs, people or computer players, take turns from the same tee, and the leader wears a crown.</p>
+<p>Up to four people can also play online, each in their own browser. One hosts and gets a room code, the others type it in, and each picks their own frog. You swing on your own turn and watch everyone else's live, and if someone leaves, the computer takes their frog. The browsers connect to each other directly, with nothing of the game's running on a server. They meet the way they do in Floodline and Vagrancy: through public relays by room code, or by pasting an invitation code when a room code will not connect.</p>
 <p>Every rule runs in a Rust core in fixed-point integer maths, compiled to WebAssembly, and the page draws what the core returns. The flight the player steers, the aiming arc and the computer players' imagined shots all run on the same physics step. The menu art and the frog portraits are drawn in TikZ.</p>
+<p>Online, the host's copy of the round runs on its own clock and sends every other browser the input for each tick: the keys of whoever's turn it is. Each browser runs the same round from the same steps, and they compare checksums to show that their copies agree. A swing is judged by where the needle stood on the swinging player's own screen, so the delay to the host does not change it.</p>
 
 </div></section><section class="stripe"><div class="wrap">
 <h2>Playing it</h2>
-<p>A and D aim, W and S set the power, and Q changes the loft. Space starts the meter, and Space again whacks. In the air, W, A, S and D steer and Space jumps. E uses the tongue once you have ten flies. Drag with the mouse to look around. Escape pauses. Your best scores are kept in the browser you played in.</p>
+<p>A and D aim, W and S set the power, and Q changes the loft. Space starts the meter, and Space again whacks. In the air, W, A, S and D steer and Space jumps. E uses the tongue once you have ten flies. Drag with the mouse to look around. Escape pauses (online, it shows the menu while the round goes on). Choose Play, then Host online, to play with others over the internet. Your best scores are kept in the browser you played in.</p>
 <p><a href="/ribbit-king/">Open the project</a> · <a href="https://github.com/sgilson7/ribbit-king">Source code</a></p>
 <p><a href="/projects/">All tools and games</a></p>
 
@@ -91,7 +93,7 @@
       <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>
     </p>
     <p class="licence">Original website text by Sam Gilson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Papers, teaching materials, software, and quoted material retain their own notices.</p>
-    <p class="meta">Build <code>39bddafb</code></p>
+    <p class="meta">Build <code>9c23bb03</code></p>
   </div>
 </footer>
 </body>
