@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Status Trends — Sam Gilson</title>
+<meta name="description" content="Open a tracker or gradebook export and see items per year, quarter or month by status, the change between periods, and the risks, all inside the browser tab.">
+<link rel="canonical" href="https://sgilson7.github.io/projects/status-trends/">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sam Gilson">
+<meta property="og:title" content="Status Trends">
+<meta property="og:description" content="Open a tracker or gradebook export and see items per year, quarter or month by status, the change between periods, and the risks, all inside the browser tab.">
+<meta property="og:url" content="https://sgilson7.github.io/projects/status-trends/">
+<meta property="og:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta property="og:image:alt" content="Sam Gilson">
+<meta name="twitter:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Status Trends">
+<meta name="twitter:description" content="Open a tracker or gradebook export and see items per year, quarter or month by status, the change between periods, and the risks, all inside the browser tab.">
+<meta name="author" content="Sam Gilson">
+<meta name="google-site-verification" content="MSQ0LGD6_zGzbznBsabmPTIkp9ASxM_U04OJdrtKgis">
+
+<link rel="stylesheet" href="/styles.css?v=9720bb2f">
+<link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Status Trends",
+  "description": "Open a tracker or gradebook export and see items per year, quarter or month by status, the change between periods, and the risks, all inside the browser tab.",
+  "url": "https://sgilson7.github.io/projects/status-trends/",
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "Status Trends",
+    "description": "Open a tracker or gradebook export and see items per year, quarter or month by status, the change between periods, and the risks, all inside the browser tab.",
+    "url": "https://sgilson7.github.io/status-trends/",
+    "sameAs": "https://github.com/sgilson7/status-trends"
+  }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="band">
+  <div class="wrap">
+    <p class="brand"><a href="/">Sam Gilson</a></p>
+    <nav aria-label="Sections">
+      <a href="/publications/">Research</a>
+      <a href="/dissertation/">Dissertation</a>
+      <a href="/concepts/">Concepts</a>
+      <a href="/teaching/">Teaching</a>
+      <a href="/materials/">Course materials</a>
+      <a href="/projects/">Tools and games</a>
+      <a href="/cv/">CV</a>
+      <a href="/positions/">Seeking work</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+  </div>
+</header>
+
+
+<main id="main">
+<section class="stripe"><div class="wrap">
+<h1>Status Trends</h1>
+<p>Classroom tool</p>
+<p>Status Trends turns a CSV export into a dashboard. A project manager opens an export from Jira or another tracker; a teacher opens one row per student per assignment from a gradebook. The page counts the items received each year, quarter or month, split by where they stand today (still requested, pending or completed), and shows the percentage change on the period before and on the same period a year before, on the charts and in the table. It also shows completion against a target, the open backlog at the end of each period, and the median days to complete.</p>
+<p>A list of insights and risks applies rules to the same numbers: completion below the target, completion falling three periods running, more items received than completed three periods running, items open too long, items past due, jumps in volume, slower completion, and teams or students below the target over the last year. The thresholds can be changed in the page, and so can every guess about which column holds which date and which status counts as done. The year can start in any month.</p>
+<p>The file is read with the browser's own file reader and analysed in the tab by a WebAssembly module. The page fetches every file it needs before it reports ready, and a browser check in Chromium, Firefox and WebKit fails on any request after that point, to this site or any other, and on anything left in cookies or browser storage, while a file is opened and the dashboard is used. A second script plants five kinds of leak in a copy of the tool and requires the checks to catch each one. The page sets a Content-Security-Policy whose <code>connect-src</code> is <code>'self'</code> and whose <code>form-action</code> is <code>'none'</code>. Opening the page, turning off Wi-Fi and then opening a file is a test anyone can run.</p>
+<p>Two samples show the tool: a set of invented team requests over four years, and an invented class over one school year. The tool was built from the Builder template, and the repository holds its brief, plan, notebook and checks.</p>
+
+</div></section><section class="stripe"><div class="wrap">
+<h2>Using the tool</h2>
+<p>In Jira, search for the issues you report on and choose Export, then Export CSV. Open the file in the page, or drop it on the page. Check the guesses under "Columns, statuses and thresholds", choose year, quarter or month, and save the table as CSV or print the page as a PDF for a report.</p>
+<p><a href="/status-trends/">Open the project</a> · <a href="https://github.com/sgilson7/status-trends">Source code</a></p>
+<p><a href="/projects/">All tools and games</a></p>
+
+</div></section>
+</main>
+
+<footer class="band">
+  <div class="wrap">
+    <p class="ids">
+      <a href="mailto:sagilson@ncsu.edu">Email Sam Gilson</a> &middot;
+      <a href="https://orcid.org/0009-0002-2394-8649">ORCID 0009-0002-2394-8649</a> &middot;
+      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google Scholar</a> &middot;
+      <a href="https://www.semanticscholar.org/author/2387936753">Semantic Scholar</a> &middot;
+      <a href="https://openalex.org/A5125954125">OpenAlex</a> &middot;
+      <a href="https://github.com/sgilson7">GitHub</a> &middot;
+      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>
+    </p>
+    <p class="licence">Original website text by Sam Gilson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Papers, teaching materials, software, and quoted material retain their own notices.</p>
+    <p class="meta">Build <code>9720bb2f</code></p>
+  </div>
+</footer>
+</body>
+</html>
