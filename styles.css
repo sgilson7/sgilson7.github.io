@@ -578,6 +578,16 @@ a:hover .kc-elabel { fill: var(--panel); }
 .tile h3 a:focus-visible { outline: 3px solid var(--red); outline-offset: 2px; }
 .tile .featured { margin: .1rem .7rem 0; }
 .tile > p { margin: .35rem .7rem 0; font-size: .92rem; color: var(--grey); }
+/* Where it plays, and what it is played with. Two lines rather than one
+   sentence: a reader scanning a column of tiles reads the platform names and
+   nothing else, and the input only matters once one of them is theirs. */
+.tile .plays { margin: .5rem .7rem 0; font-size: .82rem; }
+.tile .plays .where {
+  display: block;
+  color: var(--ink);
+  letter-spacing: .01em;
+}
+.tile .plays .how { display: block; color: var(--grey); font-size: .78rem; }
 /* The buttons sit on the floor of the card however long the sentence above
    them runs, so a row of tiles has one line of buttons rather than a ragged
    one. */
