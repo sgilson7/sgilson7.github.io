@@ -4,37 +4,37 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Surfs Up! — Sam Gilson</title>
-<meta name="description" content="Counter-Strike surfing in 3D on surf_utopia, rebuilt from the original map as a school gym, with Source movement, ghosts and rooms for eight.">
+<meta name="description" content="Counter-Strike surfing in 3D on surf_utopia and surf_kitsune, rebuilt from the original maps as a school gym, with Source movement, ghosts and rooms for eight.">
 <link rel="canonical" href="https://sgilson7.github.io/projects/surfs-up/">
 
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Sam Gilson">
 <meta property="og:title" content="Surfs Up!">
-<meta property="og:description" content="Counter-Strike surfing in 3D on surf_utopia, rebuilt from the original map as a school gym, with Source movement, ghosts and rooms for eight.">
+<meta property="og:description" content="Counter-Strike surfing in 3D on surf_utopia and surf_kitsune, rebuilt from the original maps as a school gym, with Source movement, ghosts and rooms for eight.">
 <meta property="og:url" content="https://sgilson7.github.io/projects/surfs-up/">
 <meta property="og:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
 <meta property="og:image:alt" content="Sam Gilson">
 <meta name="twitter:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Surfs Up!">
-<meta name="twitter:description" content="Counter-Strike surfing in 3D on surf_utopia, rebuilt from the original map as a school gym, with Source movement, ghosts and rooms for eight.">
+<meta name="twitter:description" content="Counter-Strike surfing in 3D on surf_utopia and surf_kitsune, rebuilt from the original maps as a school gym, with Source movement, ghosts and rooms for eight.">
 <meta name="author" content="Sam Gilson">
 <meta name="google-site-verification" content="MSQ0LGD6_zGzbznBsabmPTIkp9ASxM_U04OJdrtKgis">
 
-<link rel="stylesheet" href="/styles.css?v=1c9bad20">
+<link rel="stylesheet" href="/styles.css?v=7c221b42">
 <link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "Surfs Up!",
-  "description": "Counter-Strike surfing in 3D on surf_utopia, rebuilt from the original map as a school gym, with Source movement, ghosts and rooms for eight.",
+  "description": "Counter-Strike surfing in 3D on surf_utopia and surf_kitsune, rebuilt from the original maps as a school gym, with Source movement, ghosts and rooms for eight.",
   "url": "https://sgilson7.github.io/projects/surfs-up/",
   "about": {
     "@type": "VideoGame",
     "name": "Surfs Up!",
-    "description": "Counter-Strike surfing in 3D on surf_utopia, rebuilt from the original map as a school gym, with Source movement, ghosts and rooms for eight.",
+    "description": "Counter-Strike surfing in 3D on surf_utopia and surf_kitsune, rebuilt from the original maps as a school gym, with Source movement, ghosts and rooms for eight.",
     "url": "https://sgilson7.github.io/surfs-up/",
     "sameAs": "https://github.com/sgilson7/surfs-up"
   }
@@ -65,14 +65,14 @@
 <section class="stripe"><div class="wrap">
 <h1>Surfs Up!</h1>
 <p>Game</p>
-<p>Surfs Up! is Counter-Strike surfing in a browser, on surf_utopia. The course is Panzerhandschuh's surf_utopia_v3, read brush by brush from the original map file, so every ramp, seam and gap is where it was. Only the look has changed: a school gym on a Saturday, where the ramps are gym mats, the pits are full of foam cubes, and surfing is just something kids do.</p>
-<p>The movement is ported from the Source engine's. Air acceleration is capped at 30 units a second in the wish direction but not in the rate, ramps are too steep to stand on (the 0.7 rule), velocity is clipped along a ramp, and gravity is applied in half-ticks at 64 ticks a second, with CS:GO surf-server settings. Rampbugs are fixed the way surf servers fix them. The clock starts when you drop off the start ledge and stops at the doors on the final wall, and it counts sync, strafes and gain as the CS surf timers do.</p>
+<p>Surfs Up! is Counter-Strike surfing in a browser, on two courses: Panzerhandschuh's surf_utopia_v3 and Arblarg's nine-stage surf_kitsune. Each is read brush by brush from the original map file, so every ramp, seam and gap is where it was. On kitsune a fall sends you back to the start of your stage with the clock still running, and its secret shortcuts still remember who found them. Only the look has changed: a school gym on a Saturday, where the ramps are gym mats, the pits are full of foam cubes, and surfing is just something kids do.</p>
+<p>The movement is ported from the Source engine's. Air acceleration is capped at 30 units a second in the wish direction but not in the rate, ramps are too steep to stand on (the 0.7 rule), velocity is clipped along a ramp, and gravity is applied in half-ticks at 64 ticks a second, with CS:GO surf-server settings. Rampbugs are fixed the way surf servers fix them. The clock starts when you leave the start and stops at the course's finish, and it counts sync, strafes and gain as the CS surf timers do.</p>
 <p>You start with your palms pressed together. A finish earns a pool noodle; bronze, silver and gold times earn a kickball, a squeaky duck and a foam finger; and the best time in the gym earns the rubber chicken. Click to squeeze what you hold.</p>
 <p>Up to eight people can surf together, meeting by room code or by pasted invitation over ptonkle's Ape Race mesh. Each browser re-runs everyone from their inputs and rolls back when inputs arrive late, and each finished run is sent once, whole, and races beside you as a ghost next time. Every rule runs in a Rust core compiled to WebAssembly, and the page draws what the core returns. The art is drawn in TikZ.</p>
 
 </div></section><section class="stripe"><div class="wrap">
 <h2>Playing it</h2>
-<p>Click Surf, then click the view to capture the mouse. Do not hold W on a ramp: hold A when the ramp rises to your left and D when it rises to your right, and turn the mouse the same way. Space or the scroll wheel jumps, Shift or C ducks, R goes back to the start, Q swaps what you hold, Tab shows the scoreboard, and Escape pauses. Your best run and what you have earned are kept in the browser you played in.</p>
+<p>Pick a course on the title, click Surf, then click the view to capture the mouse. Do not hold W on a ramp: hold A when the ramp rises to your left and D when it rises to your right, and turn the mouse the same way. Space or the scroll wheel jumps, Shift or C ducks, R goes back to the start, Q swaps what you hold, Tab shows the scoreboard, and Escape pauses. Your best run and what you have earned are kept in the browser you played in.</p>
 <p class="engines">Checked in Chromium, Firefox and WebKit.</p>
 <p><a href="/surfs-up/">Open the project</a> · <a href="https://github.com/sgilson7/surfs-up">Source code</a></p>
 <p><a href="/projects/">All tools and games</a></p>
@@ -92,7 +92,7 @@
       <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>
     </p>
     <p class="licence">Original website text by Sam Gilson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Papers, teaching materials, software, and quoted material retain their own notices.</p>
-    <p class="meta">Build <code>1c9bad20</code></p>
+    <p class="meta">Build <code>7c221b42</code></p>
   </div>
 </footer>
 </body>
