@@ -588,6 +588,19 @@ a:hover .kc-elabel { fill: var(--panel); }
   letter-spacing: .01em;
 }
 .tile .plays .how { display: block; color: var(--grey); font-size: .78rem; }
+/* The handheld callout. A pill rather than a colour, so it still reads as set
+   apart with no colour perception at all, and in forced colours it keeps its
+   border (the block at the end of this file). */
+.tile .plays .mobile {
+  display: inline-block;
+  margin-top: .35rem;
+  padding: .12rem .5rem;
+  border: 1px solid var(--red);
+  border-radius: 999px;
+  color: var(--red);
+  font-size: .76rem;
+  font-weight: 600;
+}
 /* The buttons sit on the floor of the card however long the sentence above
    them runs, so a row of tiles has one line of buttons rather than a ragged
    one. */
@@ -633,5 +646,6 @@ a:hover .kc-elabel { fill: var(--panel); }
   .tile { border: 1px solid; }
   .tile .shot { border-bottom: 1px solid; }
   .tile .go { border: 1px solid; }
+  .tile .plays .mobile { border: 1px solid; }
 }
 }
