@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Packet Alley — Sam Gilson</title>
+<meta name="description" content="Watch packets move on a network and solve TCP/IP challenges: address a packet, swap a hub for a switch, fix a route, open a connection.">
+<link rel="canonical" href="https://sgilson7.github.io/projects/packet-alley/">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sam Gilson">
+<meta property="og:title" content="Packet Alley">
+<meta property="og:description" content="Watch packets move on a network and solve TCP/IP challenges: address a packet, swap a hub for a switch, fix a route, open a connection.">
+<meta property="og:url" content="https://sgilson7.github.io/projects/packet-alley/">
+<meta property="og:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta property="og:image:alt" content="Sam Gilson">
+<meta name="twitter:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Packet Alley">
+<meta name="twitter:description" content="Watch packets move on a network and solve TCP/IP challenges: address a packet, swap a hub for a switch, fix a route, open a connection.">
+<meta name="author" content="Sam Gilson">
+<meta name="google-site-verification" content="MSQ0LGD6_zGzbznBsabmPTIkp9ASxM_U04OJdrtKgis">
+
+<link rel="stylesheet" href="/styles.css?v=d4cc162b">
+<link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Packet Alley",
+  "description": "Watch packets move on a network and solve TCP/IP challenges: address a packet, swap a hub for a switch, fix a route, open a connection.",
+  "url": "https://sgilson7.github.io/projects/packet-alley/",
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "Packet Alley",
+    "description": "Watch packets move on a network and solve TCP/IP challenges: address a packet, swap a hub for a switch, fix a route, open a connection.",
+    "url": "https://sgilson7.github.io/packet-alley/",
+    "sameAs": "https://github.com/sgilson7/packet-alley"
+  }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="band">
+  <div class="wrap">
+    <p class="brand"><a href="/">Sam Gilson</a></p>
+    <nav aria-label="Sections">
+      <a href="/publications/">Research</a>
+      <a href="/dissertation/">Dissertation</a>
+      <a href="/concepts/">Concepts</a>
+      <a href="/teaching/">Teaching</a>
+      <a href="/materials/">Course materials</a>
+      <a href="/projects/">Tools and games</a>
+      <a href="/cv/">CV</a>
+      <a href="/positions/">Seeking work</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+  </div>
+</header>
+
+
+<main id="main">
+<section class="stripe"><div class="wrap">
+<h1>Packet Alley</h1>
+<p>Classroom tool</p>
+<p>Packet Alley is a browser game that teaches TCP/IP by letting you watch packets move. You are handed a small network in a cartoon city — computers, printers, a noodle shop's server, hubs, switches and routers — and a job: address a packet so it arrives, swap a hub for a switch to stop collisions, break a switching loop, give a host its gateway, fix a routing table, point a packet away from a loop before its hops run out, find a neighbour's hardware address, open a connection the TCP way, and finish a transfer over a line that drops frames. You make one change, press Run, and the run plays out on the map: every frame rides its cable at a speed you set, and a log in words says what each device did and why anything was lost.</p>
+<p>It was built for an instructor teaching TCP/IP who asked, on the lab Slack, for a game with networking challenges that visualises packets moving on a network. Like the BT Lab, it is meant to be both a teaching tool and a game: each of the nine levels pairs a challenge with the one idea it teaches, a question for a third star, and a device inspector that shows what a switch or router actually knows at that moment. The levels come in three chapters, one layer of the stack at a time — Frames on the Block (link layer: addressing, hub versus switch, a switching loop), Routes Across Town (network layer: gateways, the routing table, the hop count that stops a routing loop), and Handshakes (transport layer: ARP, the three-way handshake, and go-back-N over a lossy link).</p>
+<p>Every packet carries a letter and is named in a list beside the map, and every map mark is a symbol, so nothing is told apart by colour alone; the status colours are the Okabe–Ito set, which stay distinct for colour-blind readers.</p>
+<p>Every rule runs in a Rust core in integer maths — the address arithmetic, the whole network simulation, the scoring — compiled to WebAssembly, and the page draws what the core returns. The simulated network is values in the core, which performs no input or output, so it cannot reach a real network. Every picture is drawn in TikZ, after the city in Sam_Comm_final.png.</p>
+
+</div></section><section class="stripe"><div class="wrap">
+<h2>Playing it</h2>
+<p>Pick a level, make the one change it offers — an address, a device, a gateway, a route — and press Run. The buttons under the map set the speed, pause, skip to the end or replay; click a moving packet to open it header by header, or a device to see its table. Pass a level to unlock the next and answer one question for a third star. Your stars are kept in the browser you played in.</p>
+<p><a href="/packet-alley/">Open the project</a> · <a href="https://github.com/sgilson7/packet-alley">Source code</a></p>
+<p><a href="/projects/">All tools and games</a></p>
+
+</div></section>
+</main>
+
+<footer class="band">
+  <div class="wrap">
+    <p class="ids">
+      <a href="mailto:sagilson@ncsu.edu">Email Sam Gilson</a> &middot;
+      <a href="https://orcid.org/0009-0002-2394-8649">ORCID 0009-0002-2394-8649</a> &middot;
+      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google Scholar</a> &middot;
+      <a href="https://www.semanticscholar.org/author/2387936753">Semantic Scholar</a> &middot;
+      <a href="https://openalex.org/A5125954125">OpenAlex</a> &middot;
+      <a href="https://github.com/sgilson7">GitHub</a> &middot;
+      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>
+    </p>
+    <p class="licence">Original website text by Sam Gilson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Papers, teaching materials, software, and quoted material retain their own notices.</p>
+    <p class="meta">Build <code>d4cc162b</code></p>
+  </div>
+</footer>
+</body>
+</html>
