@@ -94,9 +94,9 @@ Manuscript under review; submitted to the AERA 2027 annual meeting · Manuscript
 
 Talks
 
-Making research easier to find (/talks/gilson-g2l2026/) — Game2Learn lab, North Carolina State University, October 2026.
-
 Perturbed Assignments and Subgoal-Labeled AI Literacy Instruction in Undergraduate Discrete Mathematics (/talks/gilson-splice2026/) — SPLICE LLM Working Group, 9 October 2026.
+
+Making research easier to find (/talks/gilson-g2l2026/) — Game2Learn lab, North Carolina State University, 7 October 2026.
 
 Applications of AI Literacy to GenAI-Assisted Game Development (/talks/gilson2026csc484lecture/) — Guest lecture, CSC 484/584 Game AI, North Carolina State University, 17 September 2026.
 
