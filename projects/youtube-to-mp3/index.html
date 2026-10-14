@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YouTube to MP3 — Sam Gilson</title>
+<meta name="description" content="Record the sound of a YouTube video in your browser and save it as an MP3, for pulling audio clips into presentations and other research materials.">
+<link rel="canonical" href="https://sgilson7.github.io/projects/youtube-to-mp3/">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sam Gilson">
+<meta property="og:title" content="YouTube to MP3">
+<meta property="og:description" content="Record the sound of a YouTube video in your browser and save it as an MP3, for pulling audio clips into presentations and other research materials.">
+<meta property="og:url" content="https://sgilson7.github.io/projects/youtube-to-mp3/">
+<meta property="og:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta property="og:image:alt" content="Sam Gilson">
+<meta name="twitter:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="YouTube to MP3">
+<meta name="twitter:description" content="Record the sound of a YouTube video in your browser and save it as an MP3, for pulling audio clips into presentations and other research materials.">
+<meta name="author" content="Sam Gilson">
+<meta name="google-site-verification" content="MSQ0LGD6_zGzbznBsabmPTIkp9ASxM_U04OJdrtKgis">
+
+<link rel="stylesheet" href="/styles.css?v=7b33304e">
+<link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "YouTube to MP3",
+  "description": "Record the sound of a YouTube video in your browser and save it as an MP3, for pulling audio clips into presentations and other research materials.",
+  "url": "https://sgilson7.github.io/projects/youtube-to-mp3/",
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "YouTube to MP3",
+    "description": "Record the sound of a YouTube video in your browser and save it as an MP3, for pulling audio clips into presentations and other research materials.",
+    "url": "https://sgilson7.github.io/youtube-to-mp3/",
+    "sameAs": "https://github.com/sgilson7/youtube-to-mp3"
+  }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="band">
+  <div class="wrap">
+    <p class="brand"><a href="/">Sam Gilson</a></p>
+    <nav aria-label="Sections">
+      <a href="/publications/">Research</a>
+      <a href="/dissertation/">Dissertation</a>
+      <a href="/concepts/">Concepts</a>
+      <a href="/teaching/">Teaching</a>
+      <a href="/materials/">Course materials</a>
+      <a href="/projects/">Tools and games</a>
+      <a href="/cv/">CV</a>
+      <a href="/positions/">Seeking work</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+  </div>
+</header>
+
+
+<main id="main">
+<section class="stripe"><div class="wrap">
+<h1>YouTube to MP3</h1>
+<p>Research tool</p>
+<p>I use YouTube to MP3 to pull audio clips for presentations and other research materials. It records the sound of a YouTube video playing in another tab and saves it as an MP3, with no adverts and no server.</p>
+<p>A web page cannot download a YouTube video: the browser lets a page read another site's response only when that site allows it, and YouTube does not. Converter sites get around this with a server that downloads the video for you, and many of them carry advertising. This tool has no server. You choose the video's tab, the browser shares that tab's sound with the page, and the page encodes it as an MP3 in WebAssembly. The page makes no request to any other address while it records.</p>
+<p>Because it records what the tab plays, a recording takes as long as the clip. Silence before the first sound and after the last is left out, and recording can stop by itself after a few seconds of silence. An advert that plays in the tab is recorded too.</p>
+<p>Sharing a tab's sound needs a Chromium-based browser on a computer, such as Chrome, Edge or Opera. Safari and Firefox share no tab sound, and the page says so. Record only what you have the right to keep.</p>
+
+</div></section><section class="stripe"><div class="wrap">
+<h2>Using the tool</h2>
+<p>Open the video in a tab, or paste its link into the page and open it from there. Select <strong>Choose the tab</strong>, pick the video's tab from the browser's list, turn on the switch to share its audio, and play the video. Select <strong>Stop and make the MP3</strong> when the clip ends, add a title and artist if you want them in the file's tags, and save.</p>
+<p><a href="/youtube-to-mp3/">Open the project</a> · <a href="https://github.com/sgilson7/youtube-to-mp3">Source code</a></p>
+<p><a href="/projects/">All tools and games</a></p>
+
+</div></section>
+</main>
+
+<footer class="band">
+  <div class="wrap">
+    <p class="ids">
+      <a href="mailto:sagilson@ncsu.edu">Email Sam Gilson</a> &middot;
+      <a href="https://orcid.org/0009-0002-2394-8649">ORCID 0009-0002-2394-8649</a> &middot;
+      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google Scholar</a> &middot;
+      <a href="https://www.semanticscholar.org/author/2387936753">Semantic Scholar</a> &middot;
+      <a href="https://openalex.org/A5125954125">OpenAlex</a> &middot;
+      <a href="https://github.com/sgilson7">GitHub</a> &middot;
+      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>
+    </p>
+    <p class="licence">Original website text by Sam Gilson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Papers, teaching materials, software, and quoted material retain their own notices.</p>
+    <p class="meta">Build <code>7b33304e</code></p>
+  </div>
+</footer>
+</body>
+</html>
