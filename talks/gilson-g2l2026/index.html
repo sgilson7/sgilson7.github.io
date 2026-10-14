@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Making research easier to find — Sam Gilson</title>
+<meta name="description" content="A reading edition of Sam Gilson’s Game2Learn lab talk on making research easier to find: public author records, crawling and bot access, concept pages, and testing the discovery route with generative AI.">
+<link rel="canonical" href="https://sgilson7.github.io/talks/gilson-g2l2026/">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Sam Gilson">
+<meta property="og:title" content="Making research easier to find">
+<meta property="og:description" content="A reading edition of Sam Gilson’s Game2Learn lab talk on making research easier to find: public author records, crawling and bot access, concept pages, and testing the discovery route with generative AI.">
+<meta property="og:url" content="https://sgilson7.github.io/talks/gilson-g2l2026/">
+<meta property="og:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta property="og:image:alt" content="Sam Gilson">
+<meta name="twitter:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Making research easier to find">
+<meta name="twitter:description" content="A reading edition of Sam Gilson’s Game2Learn lab talk on making research easier to find: public author records, crawling and bot access, concept pages, and testing the discovery route with generative AI.">
+<meta name="author" content="Sam Gilson">
+<meta name="google-site-verification" content="MSQ0LGD6_zGzbznBsabmPTIkp9ASxM_U04OJdrtKgis">
+
+<link rel="stylesheet" href="/styles.css?v=70c0ba4d">
+<link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Making research easier to find",
+  "description": "A reading edition of Sam Gilson’s Game2Learn lab talk on making research easier to find: public author records, crawling and bot access, concept pages, and testing the discovery route with generative AI.",
+  "url": "https://sgilson7.github.io/talks/gilson-g2l2026/",
+  "about": {
+    "@type": "CreativeWork",
+    "name": "Making research easier to find",
+    "author": {"@type": "Person", "name": "Sam Gilson", "@id": "https://orcid.org/0009-0002-2394-8649", "sameAs": "https://orcid.org/0009-0002-2394-8649"},
+    "description": "A reading edition of Sam Gilson’s Game2Learn lab talk on making research easier to find: public author records, crawling and bot access, concept pages, and testing the discovery route with generative AI.",
+    "dateCreated": "2026-10"
+  }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="band">
+  <div class="wrap">
+    <p class="brand"><a href="/">Sam Gilson</a></p>
+    <nav aria-label="Sections">
+      <a href="/publications/">Research</a>
+      <a href="/dissertation/">Dissertation</a>
+      <a href="/concepts/">Concepts</a>
+      <a href="/teaching/">Teaching</a>
+      <a href="/materials/">Course materials</a>
+      <a href="/projects/">Tools and games</a>
+      <a href="/cv/">CV</a>
+      <a href="/positions/">Seeking work</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+  </div>
+</header>
+
+
+<main id="main">
+<section class="stripe"><div class="wrap">
+<h1>Making research easier to find</h1>
+<p>Game2Learn lab, NC State. Presented in October 2026.</p>
+<p>This is a reading edition of the talk. It follows the slide order and gives each slide's point in prose. The talk alternated with a hands-on exercise, the <a href="https://sgilson7.github.io/research-discovery-lab/">Research Discovery Lab</a>, and six of the slides are switches into it. It uses my own public profiles and this website as examples. Its goal is accurate discovery and attribution; it reports no measured change in search rankings or AI citations.</p>
+
+</div></section><section class="stripe"><div class="wrap">
+<h2>Contents</h2>
+<p><a href="#slide-3">The discovery problem</a> · <a href="#slide-5">Author records</a> · <a href="#slide-11">Crawling and bot access</a> · <a href="#slide-17">Concept pages and writing</a> · <a href="#slide-23">Testing the route</a> · <a href="#slide-26">Measuring and maintaining</a> · <a href="#slide-30">Sources</a></p>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-1" aria-labelledby="h-slide-1">
+<h2 id="h-slide-1">Slide 1: Making research easier to find</h2>
+<p>The talk is about SEO and generative engine optimization for researchers: research profiles, concept pages, webmaster checks, and writing that helps the right reader reach the right source. The practical goal is accurate discovery and attribution. I am not reporting a measured increase in rankings or AI citations.</p>
+<figure class="slidefig">
+<img src="/img/talks/g2l/summary.png?v=70c0ba4d" alt="A summary of the talk. Top, the discovery route: a reader's question leads to the author records, then to the website's explanations, then to the paper. Bottom, the profile loop: claim, correct, link, check, and back to claim." loading="lazy">
+<figcaption>A summary of the talk. Top, the discovery route: a reader's question leads to the author records, then to the website's explanations, then to the paper. Bottom, the profile loop: claim, correct, link, check, and back to claim.</figcaption>
+</figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-2" aria-labelledby="h-slide-2">
+<h2 id="h-slide-2">Slide 2: The talk and the lab run together</h2>
+<p>Each section of the talk ends with a short switch into the lab, which has seven stations: identify the researcher, connect the profiles and the website, check that pages can be reached, choose robots rules, build routes to the ideas, test the route with generative AI, and keep the record coherent.</p>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-3" aria-labelledby="h-slide-3">
+<h2 id="h-slide-3">Slide 3: The discovery problem</h2>
+<p>A reader can know the topic before they know the paper title. Someone may remember a problem, a method or a concept and never the formal title. The route runs from the reader's question to an author record, to an explanation on the website, and then to the paper. The working rule for the talk: build the route to your subject matter expertise, then check whether anyone can use it.</p>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-4" aria-labelledby="h-slide-4">
+<h2 id="h-slide-4">Slide 4: SEO and GEO are two parts of the same route</h2>
+<p>SEO, search engine optimization, is about search systems discovering and understanding a page. GEO is used here for AI search systems finding the material and using it in a generated answer. For research, the useful outcome is that a reader reaches the right paper or explanation, and that the generated answer represents the source accurately. Google's guidance on <a href="https://developers.google.com/search/docs/appearance/ai-features">AI features in Search</a> says the same SEO foundations apply to them, so I do not treat GEO as a special guarantee of being selected.</p>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-5" aria-labelledby="h-slide-5">
+<h2 id="h-slide-5">Slide 5: Start with the records that identify you</h2>
+<p>The website should reinforce the public author record, not replace it. Mine are an <a href="https://orcid.org/0009-0002-2394-8649">ORCID iD</a>, a <a href="https://www.semanticscholar.org/author/2387936753">Semantic Scholar author page</a>, an <a href="https://openalex.org/A5125954125">OpenAlex author record</a> and a <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&amp;hl=en">Google Scholar profile</a>, with this website for the explanations. Check the actual profile, not just the name. Two researchers can share a name, and the publications, affiliations and links are what let a reader confirm that a profile belongs to the right person.</p>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-6" aria-labelledby="h-slide-6">
+<h2 id="h-slide-6">Slide 6: The profile loop</h2>
+<p>Claim the profile where the service supports it. Correct missing work, namesakes and stale affiliations. Link the profile and the website in both directions. Then view the public version while signed out. Make the author record easy to verify before trying to optimize anything else; this loop is about accurate attribution, and it makes no ranking claim.</p>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-7" aria-labelledby="h-slide-7">
+<h2 id="h-slide-7">Slide 7: ORCID connects identity, works and the website</h2>
+<p>A persistent iD helps the same researcher stay findable across institutions and services. Add the name you publish under, your current affiliation, your website and your works, then inspect the signed-out public record. ORCID can <a href="https://support.orcid.org/hc/en-us/articles/360006973133-Add-works-to-your-ORCID-record">import works</a> through connected services, identifiers, BibTeX or manual entry, and each item has its own visibility setting. Do not create a second iD if a record already exists. My public ORCID record links to this website, and the website's footer links back to it.</p>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-8" aria-labelledby="h-slide-8">
+<h2 id="h-slide-8">Slide 8: Semantic Scholar and OpenAlex as open research databases</h2>
+<p>Both help readers and indexing systems connect a work to the right author. Semantic Scholar creates <a href="https://webflow.semanticscholar.org/author">author pages</a> automatically: find a paper you wrote, follow your name, claim the author page, and review its paper list. OpenAlex supports claiming and <a href="https://help.openalex.org/how-to/fixing-authors/">self-service corrections</a>: open the author record, compare the works, and correct missing or misassigned records. Some metadata still has to be corrected upstream, at the source OpenAlex reads.</p>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-9" aria-labelledby="h-slide-9">
+<h2 id="h-slide-9">Slide 9: Other records still matter</h2>
+<p>Treat these as maintenance points, not promises of a ranking lift. For <a href="https://scholar.google.com/intl/en/scholar/citations.html">Google Scholar</a>, make the profile public and verify an institutional email so the profile can appear in search; a public profile is a separate matter from whether an article is indexed. Keep a stable institution or lab page that points to the current website and publication list. Deposit permitted versions, data or software in a repository where the field expects it; what can be deposited depends on the publishing agreement. The rule is plain: keep the same version story across the paper page, the author profiles, the repository and the CV.</p>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-10" aria-labelledby="h-slide-10">
+<h2 id="h-slide-10">Slide 10: Lab checkpoint: profiles and the profile loop</h2>
+<p>Ten minutes in the lab. Enter only the identifiers you want to use. At station 1, check one author profile from a signed-out public view. At station 2, check that your website and your profile records point to each other. Skip anything you do not have yet: the lab should produce next steps, not homework guilt.</p>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-11" aria-labelledby="h-slide-11">
+<h2 id="h-slide-11">Slide 11: The website is the place readers land</h2>
+<p>A public profile gets someone to the site, and the site explains what they found. On this website, the <a href="/">home page</a> gives the research area, the <a href="/publications/">publication pages</a> identify the evidence, and the <a href="/concepts/">concept pages</a> explain the ideas behind the papers. The footer links back to the public author records. The home page also carries a canonical URL, Open Graph metadata and JSON-LD. Those make the page easier to read and check; they do not show by themselves that it is indexed or visible to AI search.</p>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-12" aria-labelledby="h-slide-12">
+<h2 id="h-slide-12">Slide 12: Crawling, indexing and use are separate checks</h2>
+<p>Can the page be reached, can it be indexed, can it be understood, and can I verify it? Check for stable URLs, <a href="https://developers.google.com/search/docs/crawling-indexing/links-crawlable">crawlable links</a>, robots rules, accidental noindex directives and the sitemap. Google's documentation separates crawling from indexing, and a <a href="https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview">sitemap</a> helps discovery without guaranteeing either. Search Console turns this into maintenance: <a href="https://support.google.com/webmasters/answer/9012289">inspect</a> representative URLs, submit the sitemap and read the indexing reports.</p>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-13" aria-labelledby="h-slide-13">
+<h2 id="h-slide-13">Slide 13: robots.txt belongs with the bot-access decision</h2>
+<p><a href="https://developers.google.com/search/docs/crawling-indexing/robots/intro">robots.txt</a> tells crawlers which URLs they may fetch, and it is mainly for managing crawler traffic and pointing to sitemaps. It does not make a public page private. To keep a page out of search results, use noindex; to keep it from readers, use access control.</p>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-14" aria-labelledby="h-slide-14">
+<h2 id="h-slide-14">Slide 14: AI bots are separate access choices</h2>
+<p>Search visibility, model training and visits a user asks for are different decisions. OpenAI <a href="https://developers.openai.com/api/docs/bots">documents three crawlers</a> separately: OAI-SearchBot discovers pages for ChatGPT search, GPTBot gathers material that may be used in model training, and ChatGPT-User is a visit a user initiated. A site owner who wants search visibility can allow the first and decide about training on its own terms. This site's <a href="/robots.txt">robots.txt</a> allows both search and training crawlers.</p>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-15" aria-labelledby="h-slide-15">
+<h2 id="h-slide-15">Slide 15: Webmaster tools turn discovery into a checkable workflow</h2>
+<p>Verify the site, submit the sitemap, inspect the URLs that matter, and read the reports. Google Search Console is the current name for Google Webmaster Tools. For a URL-prefix property, <a href="https://support.google.com/webmasters/answer/9008080">HTML-file verification</a> means publishing the supplied file unchanged at the required address and keeping it deployed.</p>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-16" aria-labelledby="h-slide-16">
+<h2 id="h-slide-16">Slide 16: Lab checkpoint: reachability and bot access</h2>
+<p>Ten minutes in the lab. At station 3, check robots.txt, the sitemap, noindex directives and one important URL. At station 4, separate search discovery, model training and user-requested visits, and record one bot-access decision you would make for your site. robots.txt records crawler access; it does not make public material private.</p>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-17" aria-labelledby="h-slide-17">
+<h2 id="h-slide-17">Slide 17: Concept pages and public writing</h2>
+<p>The second half of the talk moves from author records to public writing: concept pages, blog posts and internal links. A reader may know the problem before they know the title of my paper, and the website can make the route from topic to concept to paper visible.</p>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-18" aria-labelledby="h-slide-18">
+<h2 id="h-slide-18">Slide 18: The concepts page gives the site an idea layer</h2>
+<p>Each <a href="/concepts/">concept page</a> explains one idea and points to the work that uses it, with enough text to be useful on its own. The concept map shows the relationships, and text links give readers and crawlers a direct path. A graphic can orient the reader, but it should not be the only route to a page: the text still has to carry the discovery work.</p>
+<figure class="slidefig">
+<img src="/img/talks/g2l/slide18.png?v=70c0ba4d" alt="The concept map from this site's concepts page, as shown on the slide. Concepts such as the iterative perturbation process, axiomatic replacement and the hallucination autopsy procedure are joined by labelled arrows naming each relationship, such as &quot;selects&quot;, &quot;classifies&quot; and &quot;carried into&quot;." loading="lazy">
+<figcaption>The concept map from this site's concepts page, as shown on the slide. Concepts such as the iterative perturbation process, axiomatic replacement and the hallucination autopsy procedure are joined by labelled arrows naming each relationship, such as &quot;selects&quot;, &quot;classifies&quot; and &quot;carried into&quot;.</figcaption>
+</figure>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-19" aria-labelledby="h-slide-19">
+<h2 id="h-slide-19">Slide 19: A useful concept page makes the evidence path visible</h2>
+<p>Define the idea, explain how it works in the research, state the scope of what the evidence supports, name the paper or protocol to check, and point to related ideas. The <a href="/concepts/iterative-perturbation-process/">iterative perturbation process</a> page is the example. It describes testing responses against a rubric, revising questions, keeping each version and preserving the question's instructional purpose. It limits its claims about resistance across models and model updates, and it points to the <a href="/papers/gilson2026perturbation/">AIED paper</a> where the formal protocol appears.</p>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-20" aria-labelledby="h-slide-20">
+<h2 id="h-slide-20">Slide 20: Internal links should explain a relationship</h2>
+<p>Link where the destination helps the reader understand the current page. From iterative perturbation, the <a href="/concepts/three-attempt-consistency-protocol/">three-attempt consistency protocol</a> is how the question was tested, and the AIED paper is where the formal procedure appears. From <a href="/concepts/axiomatic-replacement/">axiomatic replacement</a>, <a href="/concepts/axiom-reversion/">axiom reversion</a> is an error to examine after the premises change, and iterative perturbation is the broader procedure that uses the strategy. The relationships are scoped: a perturbation strategy does not guarantee a particular model error. Link to relevant work; do not make every concept point to every paper.</p>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-21" aria-labelledby="h-slide-21">
+<h2 id="h-slide-21">Slide 21: A research blog can hold the reasoning around the paper</h2>
+<p>A blog can hold explanations that are useful but too informal or exploratory for the publication record: what confused me, why this example, what to check next, and the route to the evidence. A post can use the language an instructor or researcher actually uses when asking about a problem. When an interpretation is still a proposal, keep that status visible next to the claim and link the research that supports it. This is an editorial recommendation and a hypothesis about useful entry points for readers. Publishing more posts is not itself evidence of better SEO or GEO. The example was my post <a href="/blog/thinking-about-curriculum-as-a-knowledge-graph/">Thinking about curriculum as a knowledge graph</a>.</p>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-22" aria-labelledby="h-slide-22">
+<h2 id="h-slide-22">Slide 22: Lab checkpoint: build the idea route</h2>
+<p>Eight minutes in the lab. At station 5, choose one concept a reader doing a literature review might search for, draft the page's shape (definition, explanation, scope, source), and add one internal link because it explains a real relationship. Concept pages work when the explanation helps the reader, not when links are added for their number.</p>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-23" aria-labelledby="h-slide-23">
+<h2 id="h-slide-23">Slide 23: Conversational sources show what generated answers can cite</h2>
+<p>A <a href="https://www.semrush.com/blog/reddit-ai-search-visibility-study/">Semrush study</a> of AI search tools, covering 217,000 prompts and 248,000 Reddit URLs, motivates testing conversational explanations: it suggests that conversational explanations can enter generated answers. It does not show that a research blog inherits Reddit's visibility, or that informal language causes citations. The practical lesson is to test the route, not to imitate every cited domain. For a research site, I would test whether public explanations of my work are found and represented accurately.</p>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-24" aria-labelledby="h-slide-24">
+<h2 id="h-slide-24">Slide 24: Use generative AI to test the public discovery route</h2>
+<p>Run repeatable prompts and save the answer, the date, the product and the cited URLs. A profile test asks whether an agent can describe my work from public sources. A literature test asks whether a related proposal surfaces my papers or concepts. A website test asks which pages the agent uses and what fixes it suggests. A synthesis turns the three reports into a maintenance list. The original version of this slide carried a long Claude Code prompt with three subagents; the workflow is the part worth showing. Saved outputs let a later run be compared with this one.</p>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-25" aria-labelledby="h-slide-25">
+<h2 id="h-slide-25">Slide 25: Lab checkpoint: test the public discovery route</h2>
+<p>Eight minutes in the lab. At station 6, run the researcher test or the website test. Save the prompt, answer, date, product and cited URLs, and mark whether the answer preserved the source and its limits. The goal is a repeatable check, not a one-off search result.</p>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-26" aria-labelledby="h-slide-26">
+<h2 id="h-slide-26">Slide 26: Publishing a concept page or blog post</h2>
+<p>Make the page useful to a person first; that is also the part a system can read. Give it a descriptive title and a stable, topic-specific URL. Write readable text with examples and limits. Name the author, the sources and the publication status. Link to related concepts and relevant papers. Keep the dates accurate and give the page a route from the index. Use metadata that matches the visible content. Google's guidance says no special AI text file or special schema is required for its AI search features. Normal discovery practice comes before unsupported optimization tricks.</p>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-27" aria-labelledby="h-slide-27">
+<h2 id="h-slide-27">Slide 27: Measure the route, not the vibe</h2>
+<p>Keep a small, repeatable record of whether a change helped discovery and attribution. Can search find the page: URL inspection, indexing status, impressions. Does someone use it: visits to concept pages and onward visits to papers. Does AI search cite it: the question, date, product, answer and cited URL. Is the citation accurate: whether the answer preserves the source and its limits. Distinguish a mention from a clickable citation. This is a proposed measurement plan; no analytics, Search Console data or measured GEO outcomes were available for the talk. Search and model behaviour change, and the record lets you compare runs without overstating cause.</p>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-28" aria-labelledby="h-slide-28">
+<h2 id="h-slide-28">Slide 28: A maintenance routine keeps the public record coherent</h2>
+<p>The work is small if each publication and explanation is checked when it changes. After a publication or profile change, check the DOI record, the public author profiles, the paper page and the CV. After a new explanation, link it from the blog index and from any existing page where it helps the reader. Record the date, inspect the links and repeat the discovery checks, saving enough to tell a change in your own content from a correction in an external index. This is a suggested workflow, not a claim that this site already follows a measured schedule.</p>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-29" aria-labelledby="h-slide-29">
+<h2 id="h-slide-29">Slide 29: Lab checkpoint: measure and maintain</h2>
+<p>Five minutes in the lab. At station 7, copy the one-page discovery log pattern, add one trigger you will use after a new paper, a profile change or a blog post, and copy your next steps before the discussion. A small record makes future checks comparable.</p>
+</section>
+</div></section><section class="stripe"><div class="wrap">
+<section class="slide" id="slide-30" aria-labelledby="h-slide-30">
+<h2 id="h-slide-30">Slide 30: Sources</h2>
+<p>The profiles and examples are ORCID, Semantic Scholar, OpenAlex, Google Scholar and this website. The crawling and webmaster guidance is from Google Search Central, Search Console Help and OpenAI's crawler documentation. Each source is linked at the slide that uses it.</p>
+<p>Sam Gilson · <a href="mailto:sagilson@ncsu.edu">sagilson@ncsu.edu</a> · <a href="https://sgilson7.github.io/research-discovery-lab/">Research Discovery Lab</a> · <a href="/publications/">All research</a></p>
+</section>
+
+</div></section>
+</main>
+
+<footer class="band">
+  <div class="wrap">
+    <p class="ids">
+      <a href="mailto:sagilson@ncsu.edu">Email Sam Gilson</a> &middot;
+      <a href="https://orcid.org/0009-0002-2394-8649">ORCID 0009-0002-2394-8649</a> &middot;
+      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google Scholar</a> &middot;
+      <a href="https://www.semanticscholar.org/author/2387936753">Semantic Scholar</a> &middot;
+      <a href="https://openalex.org/A5125954125">OpenAlex</a> &middot;
+      <a href="https://github.com/sgilson7">GitHub</a> &middot;
+      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>
+    </p>
+    <p class="licence">Original website text by Sam Gilson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Papers, teaching materials, software, and quoted material retain their own notices.</p>
+    <p class="meta">Build <code>70c0ba4d</code></p>
+  </div>
+</footer>
+</body>
+</html>
