@@ -4,37 +4,37 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Galactic Survivors — Sam Gilson</title>
-<meta name="description" content="A survivors-like on an alien planet: steer through twelve minutes of waves, choose upgrades, and play alone or with a friend in co-op.">
+<meta name="description" content="A survivors-like on an alien planet: steer through twelve minutes of waves, build abilities from parts, and play alone or with a friend in co-op.">
 <link rel="canonical" href="https://sgilson7.github.io/projects/galactic-survivors/">
 
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Sam Gilson">
 <meta property="og:title" content="Galactic Survivors">
-<meta property="og:description" content="A survivors-like on an alien planet: steer through twelve minutes of waves, choose upgrades, and play alone or with a friend in co-op.">
+<meta property="og:description" content="A survivors-like on an alien planet: steer through twelve minutes of waves, build abilities from parts, and play alone or with a friend in co-op.">
 <meta property="og:url" content="https://sgilson7.github.io/projects/galactic-survivors/">
 <meta property="og:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
 <meta property="og:image:alt" content="Sam Gilson">
 <meta name="twitter:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Galactic Survivors">
-<meta name="twitter:description" content="A survivors-like on an alien planet: steer through twelve minutes of waves, choose upgrades, and play alone or with a friend in co-op.">
+<meta name="twitter:description" content="A survivors-like on an alien planet: steer through twelve minutes of waves, build abilities from parts, and play alone or with a friend in co-op.">
 <meta name="author" content="Sam Gilson">
 <meta name="google-site-verification" content="MSQ0LGD6_zGzbznBsabmPTIkp9ASxM_U04OJdrtKgis">
 
-<link rel="stylesheet" href="/styles.css?v=8fcf0029">
+<link rel="stylesheet" href="/styles.css?v=b63acf56">
 <link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "Galactic Survivors",
-  "description": "A survivors-like on an alien planet: steer through twelve minutes of waves, choose upgrades, and play alone or with a friend in co-op.",
+  "description": "A survivors-like on an alien planet: steer through twelve minutes of waves, build abilities from parts, and play alone or with a friend in co-op.",
   "url": "https://sgilson7.github.io/projects/galactic-survivors/",
   "about": {
     "@type": "VideoGame",
     "name": "Galactic Survivors",
-    "description": "A survivors-like on an alien planet: steer through twelve minutes of waves, choose upgrades, and play alone or with a friend in co-op.",
+    "description": "A survivors-like on an alien planet: steer through twelve minutes of waves, build abilities from parts, and play alone or with a friend in co-op.",
     "url": "https://sgilson7.github.io/galactic-survivors/",
     "sameAs": "https://github.com/sgilson7/galactic-survivors"
   }
@@ -65,14 +65,15 @@
 <section class="stripe"><div class="wrap">
 <h1>Galactic Survivors</h1>
 <p>Game</p>
-<p>Galactic Survivors is a survivors-like that runs in a browser: you land on an alien planet and survive twelve minutes of waves from its native creatures, then fight the hive's Matriarch. It started from a recorded conversation between two players of Vampire Survivors and Halls of Torment, who talked through what makes these games work while they played. I read the transcript for those points and turned each one into a rule the game enforces and a test checks.</p>
-<p>The main one is that, moment to moment, the whole job is moving. Your abilities aim and fire on their own, nothing needs reloading, and the camera never turns or shakes. The screen is kept calm on purpose: a dark ground, bright round characters, and one shape for every enemy shot, drawn on top of everything else. An enemy can hurt you at most once in a short window, so a crowd pressed against you lands one hit, not ten, and close-range fighting stays worth doing. No enemy is immune to anything, so no character is stuck against a boss. When an ability can evolve, the next level-up offers the evolution as a card.</p>
-<p>There are three characters: Pathfinder, whose shoulder drone aims for you; Breaker, who wades into the crowd and takes half damage from contact; and Vector, who is fast and fragile, aims with the pointer, and can dash. Rifts open during a run and take you into a small arena against one elite. Partway through, a corporate raid may land drones, troopers and a walking mech. Between runs you keep your gold, buy permanent upgrades, and spend tickets in a salvage cache for modules, with the odds on the screen and a rare certain within ten pulls. All twenty achievements are listed from the start with your progress, and each adds a little experience to every later run.</p>
-<p>Two players can play the same run, each in their own browser, joined by a room code or by a pasted invitation. Both browsers run the whole run from the same seed and inputs, so neither waits on a server. Every rule runs in a Rust core in integer maths, compiled to WebAssembly, and the art is drawn in TikZ.</p>
+<p>Galactic Survivors is a survivors-like that runs in a browser: you land on an alien planet, survive twelve minutes of its native creatures, and then fight the hive's Matriarch. It started from a recorded conversation between two players of Vampire Survivors and Halls of Torment, who talked through what makes these games work while they played. I read the transcript for those points and turned each one into a rule the game enforces and a test checks.</p>
+<p>Moment to moment, the whole job is moving. Your abilities aim and fire on their own, and the camera never turns or shakes. An enemy can hurt you at most once in a short window, so a crowd pressed against you lands one hit, and no enemy is immune to anything.</p>
+<p>Abilities are built as well as picked, after the wands in Noita. Each ability slot is a rig, a row of sockets read left to right, and level-up cards offer parts to put in it. A modifier changes the next ability, a formation fires it several times, and a trigger fires the rest of the rig where that ability hits, ends or defeats an enemy. Some abilities leave fire, frost, charge or slick on the ground, and two fields that meet react. Walking a closed loop draws a rune, which strikes everything inside it and gives a passive for a while.</p>
+<p>Between runs you keep your gold and spend it on permanent upgrades, and achievements open those upgrades one rank at a time. The 64 achievements sit on a grid where earning one shows its neighbours. Tickets from bosses, rifts and achievements buy modules and rare parts in a salvage cache, with the odds on the screen.</p>
+<p>Two players can play the same run, each in their own browser, joined by a room code or a pasted invitation. Each browser runs the whole run and sends only its key presses. Your own moves show at once, and your partner's are predicted and corrected when their keys arrive. Every rule runs in a Rust core in integer maths, compiled to WebAssembly, and the art is drawn in TikZ.</p>
 
 </div></section><section class="stripe"><div class="wrap">
 <h2>Playing it</h2>
-<p>WASD or the arrow keys move, and the mouse aims the few abilities that use it. Press 1, 2 or 3 to choose a level-up card, R for a new hand, Space to dash as Vector, and Esc to pause. Your progress is a file: after a run, download your save, and load it next time. The page keeps nothing in your browser.</p>
+<p>WASD or the arrow keys move, and the mouse aims the few abilities that use it. Press 1, 2 or 3 to choose a level-up card, E to open your rigs, Space to dash as Vector, and Esc to pause. Your progress is a file: after a run, download your save, and load it next time. The page keeps nothing in your browser.</p>
 <p class="engines">Checked in Chromium, Firefox and WebKit.</p>
 <p><a href="/galactic-survivors/">Open the project</a> · <a href="https://github.com/sgilson7/galactic-survivors">Source code</a></p>
 <p><a href="/projects/">All tools and games</a></p>
@@ -92,7 +93,7 @@
       <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>
     </p>
     <p class="licence">Original website text by Sam Gilson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Papers, teaching materials, software, and quoted material retain their own notices.</p>
-    <p class="meta">Build <code>8fcf0029</code></p>
+    <p class="meta">Build <code>b63acf56</code></p>
   </div>
 </footer>
 </body>
