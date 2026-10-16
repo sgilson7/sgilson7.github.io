@@ -22,7 +22,7 @@
 <meta name="author" content="Sam Gilson">
 <meta name="google-site-verification" content="MSQ0LGD6_zGzbznBsabmPTIkp9ASxM_U04OJdrtKgis">
 
-<link rel="stylesheet" href="/styles.css?v=7e58810a">
+<link rel="stylesheet" href="/styles.css?v=bb39ce2d">
 <link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
 <script type="application/ld+json">
 {
@@ -69,11 +69,12 @@
 <p>Each of the ten heroes carries a DotA hero's abilities and numbers under an original name and look: Ironvow after Sven, Rime after Crystal Maiden, Cinder after Lina, Thistle after Drow Ranger, Gristle after Pudge, Tectus after Earthshaker, Kestrel after Juggernaut, Hexwright after Lion, Longwick after Sniper, and Tempest after Zeus. The rules come from archived playdota.com mechanics pages and IceFrog's changelogs.</p>
 <p>Arcade has ten missions that teach the game, from last-hitting in one lane to five against five, and a custom match with up to four allies and up to five enemies, where the computer's skill is set separately for each side. The computer players run on behavior trees.</p>
 <p>Online, up to ten players join by room code. Browsers find each other through public Nostr relays and then connect directly, with rollback netcode. When a player drops, the computer takes their hero, and the player can rejoin from the room link. To test it, five browsers played one five-against-five match online for ten minutes, one of them dropping and rejoining, and their checksums agreed throughout.</p>
+<p>A second round gave it a rounder look. Every hero, creep and building is now built from spheres and soft shapes, the heroes with faces, under softer light, and every ability shows as it happens, from the glow in the caster's hands to the stars over a stunned head. The shop shows each item's build tree, and in a match the pointer stays locked to the window, so the camera pans at every edge. The five-browser test was run again after these changes, and the checksums still agreed.</p>
 <p>It is a Builder project: a Rust core holds every rule, a WebAssembly shim passes values to the page, and the page only draws what the core returns.</p>
 
 </div></section><section class="stripe"><div class="wrap">
 <h2>Playing it</h2>
-<p>Right-click the ground to walk, and an enemy to attack it. Q, W, E and R use abilities, and a targeted ability waits for a click. Press O and then an ability key to learn it. B opens the shop, Tab the score, and Space centres the camera on your hero. Gold comes only from the killing blow, so land the last hit on enemy creeps, and deny your own below half health.</p>
+<p>Right-click the ground to walk, and an enemy to attack it. Q, W, E and R use abilities, and a targeted ability waits for a click. Press O and then an ability key to learn it. B opens the shop, Tab the score, and Space centres the camera on your hero. Click an item in the shop to see what it is built from, then Buy. Clicking the battlefield locks the pointer to the window, and Esc lets it go. Gold comes only from the killing blow, so land the last hit on enemy creeps, and deny your own below half health.</p>
 <p class="engines">Checked in Chromium, Firefox and WebKit.</p>
 <p><a href="/pots/">Open the project</a> · <a href="https://github.com/sgilson7/pots">Source code</a></p>
 <p><a href="/projects/">All tools and games</a></p>
@@ -93,7 +94,7 @@
       <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>
     </p>
     <p class="licence">Original website text by Sam Gilson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Papers, teaching materials, software, and quoted material retain their own notices.</p>
-    <p class="meta">Build <code>7e58810a</code></p>
+    <p class="meta">Build <code>bb39ce2d</code></p>
   </div>
 </footer>
 </body>
