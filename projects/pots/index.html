@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Protection of the Spheres — Sam Gilson</title>
+<meta name="description" content="A browser game that plays like the Warcraft III map Defense of the Ancients, with ten heroes of its own: arcade missions against the computer, and five against five online.">
+<link rel="canonical" href="https://sgilson7.github.io/projects/pots/">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sam Gilson">
+<meta property="og:title" content="Protection of the Spheres">
+<meta property="og:description" content="A browser game that plays like the Warcraft III map Defense of the Ancients, with ten heroes of its own: arcade missions against the computer, and five against five online.">
+<meta property="og:url" content="https://sgilson7.github.io/projects/pots/">
+<meta property="og:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta property="og:image:alt" content="Sam Gilson">
+<meta name="twitter:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Protection of the Spheres">
+<meta name="twitter:description" content="A browser game that plays like the Warcraft III map Defense of the Ancients, with ten heroes of its own: arcade missions against the computer, and five against five online.">
+<meta name="author" content="Sam Gilson">
+<meta name="google-site-verification" content="MSQ0LGD6_zGzbznBsabmPTIkp9ASxM_U04OJdrtKgis">
+
+<link rel="stylesheet" href="/styles.css?v=7e58810a">
+<link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Protection of the Spheres",
+  "description": "A browser game that plays like the Warcraft III map Defense of the Ancients, with ten heroes of its own: arcade missions against the computer, and five against five online.",
+  "url": "https://sgilson7.github.io/projects/pots/",
+  "about": {
+    "@type": "VideoGame",
+    "name": "Protection of the Spheres",
+    "description": "A browser game that plays like the Warcraft III map Defense of the Ancients, with ten heroes of its own: arcade missions against the computer, and five against five online.",
+    "url": "https://sgilson7.github.io/pots/",
+    "sameAs": "https://github.com/sgilson7/pots"
+  }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="band">
+  <div class="wrap">
+    <p class="brand"><a href="/">Sam Gilson</a></p>
+    <nav aria-label="Sections">
+      <a href="/publications/">Research</a>
+      <a href="/dissertation/">Dissertation</a>
+      <a href="/concepts/">Concepts</a>
+      <a href="/teaching/">Teaching</a>
+      <a href="/materials/">Course materials</a>
+      <a href="/projects/">Tools and games</a>
+      <a href="/cv/">CV</a>
+      <a href="/positions/">Seeking work</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+  </div>
+</header>
+
+
+<main id="main">
+<section class="stripe"><div class="wrap">
+<h1>Protection of the Spheres</h1>
+<p>Game</p>
+<p>Protection of the Spheres is a browser game that plays like the Warcraft III map Defense of the Ancients, as it stood in DotA Allstars 6.72 and 6.73, with heroes, items and art of its own. Two sides of five heroes push three lanes of creeps toward the other side's Sphere, and the side whose Sphere breaks loses. I built it in one session with a coding agent, for a friend.</p>
+<p>Each of the ten heroes carries a DotA hero's abilities and numbers under an original name and look: Ironvow after Sven, Rime after Crystal Maiden, Cinder after Lina, Thistle after Drow Ranger, Gristle after Pudge, Tectus after Earthshaker, Kestrel after Juggernaut, Hexwright after Lion, Longwick after Sniper, and Tempest after Zeus. The rules come from archived playdota.com mechanics pages and IceFrog's changelogs.</p>
+<p>Arcade has ten missions that teach the game, from last-hitting in one lane to five against five, and a custom match with up to four allies and up to five enemies, where the computer's skill is set separately for each side. The computer players run on behavior trees.</p>
+<p>Online, up to ten players join by room code. Browsers find each other through public Nostr relays and then connect directly, with rollback netcode. When a player drops, the computer takes their hero, and the player can rejoin from the room link. To test it, five browsers played one five-against-five match online for ten minutes, one of them dropping and rejoining, and their checksums agreed throughout.</p>
+<p>It is a Builder project: a Rust core holds every rule, a WebAssembly shim passes values to the page, and the page only draws what the core returns.</p>
+
+</div></section><section class="stripe"><div class="wrap">
+<h2>Playing it</h2>
+<p>Right-click the ground to walk, and an enemy to attack it. Q, W, E and R use abilities, and a targeted ability waits for a click. Press O and then an ability key to learn it. B opens the shop, Tab the score, and Space centres the camera on your hero. Gold comes only from the killing blow, so land the last hit on enemy creeps, and deny your own below half health.</p>
+<p class="engines">Checked in Chromium, Firefox and WebKit.</p>
+<p><a href="/pots/">Open the project</a> · <a href="https://github.com/sgilson7/pots">Source code</a></p>
+<p><a href="/projects/">All tools and games</a></p>
+
+</div></section>
+</main>
+
+<footer class="band">
+  <div class="wrap">
+    <p class="ids">
+      <a href="mailto:sagilson@ncsu.edu">Email Sam Gilson</a> &middot;
+      <a href="https://orcid.org/0009-0002-2394-8649">ORCID 0009-0002-2394-8649</a> &middot;
+      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google Scholar</a> &middot;
+      <a href="https://www.semanticscholar.org/author/2387936753">Semantic Scholar</a> &middot;
+      <a href="https://openalex.org/A5125954125">OpenAlex</a> &middot;
+      <a href="https://github.com/sgilson7">GitHub</a> &middot;
+      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>
+    </p>
+    <p class="licence">Original website text by Sam Gilson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Papers, teaching materials, software, and quoted material retain their own notices.</p>
+    <p class="meta">Build <code>7e58810a</code></p>
+  </div>
+</footer>
+</body>
+</html>
