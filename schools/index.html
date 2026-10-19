@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Using these tools in a school — Sam Gilson</title>
+<meta name="description" content="What each of Sam Gilson&#39;s browser tools sends, keeps in the browser and needs from a school device, and a request a teacher can send to IT.">
+<link rel="canonical" href="https://sgilson7.github.io/schools/">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sam Gilson">
+<meta property="og:title" content="Using these tools in a school">
+<meta property="og:description" content="What each of Sam Gilson&#39;s browser tools sends, keeps in the browser and needs from a school device, and a request a teacher can send to IT.">
+<meta property="og:url" content="https://sgilson7.github.io/schools/">
+<meta property="og:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta property="og:image:alt" content="Sam Gilson">
+<meta name="twitter:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Using these tools in a school">
+<meta name="twitter:description" content="What each of Sam Gilson&#39;s browser tools sends, keeps in the browser and needs from a school device, and a request a teacher can send to IT.">
+<meta name="author" content="Sam Gilson">
+<meta name="google-site-verification" content="MSQ0LGD6_zGzbznBsabmPTIkp9ASxM_U04OJdrtKgis">
+
+<link rel="stylesheet" href="/styles.css?v=5e64a621">
+<link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Using these tools in a school",
+  "description": "What each of Sam Gilson's browser tools sends, keeps in the browser and needs from a school device, and a request a teacher can send to IT.",
+  "url": "https://sgilson7.github.io/schools/"
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="band">
+  <div class="wrap">
+    <p class="brand"><a href="/">Sam Gilson</a></p>
+    <nav aria-label="Sections">
+      <a href="/publications/">Research</a>
+      <a href="/dissertation/">Dissertation</a>
+      <a href="/concepts/">Concepts</a>
+      <a href="/teaching/">Teaching</a>
+      <a href="/materials/">Course materials</a>
+      <a href="/projects/">Tools and games</a>
+      <a href="/cv/">CV</a>
+      <a href="/positions/">Seeking work</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+  </div>
+</header>
+
+
+<main id="main">
+<section class="stripe"><div class="wrap">
+<h1>Using these tools in a school</h1>
+<p>This page is for a teacher, a school's IT staff or a district privacy reviewer deciding whether students may open one of the tools under <a href="/projects/">Tools and games</a>. For each tool it says what the page sends, what it keeps in the browser, what the device has to allow, and how that was checked.</p>
+
+</div></section><section class="stripe"><div class="wrap">
+<h2>What the tools have in common</h2>
+<p>Each tool is a static page that GitHub Pages serves from <code>sgilson7.github.io</code>. There is no account, no login and no server of mine behind any of them. Each tool page sets a Content-Security-Policy whose <code>connect-src</code> is <code>'self'</code> and whose <code>form-action</code> is <code>'none'</code>, so the browser refuses a request from the page to another origin; the policy is in the page source for anyone to read.</p>
+<p>GitHub logs the IP address of each visitor to a Pages site for security purposes, as <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages">GitHub's documentation</a> states. That record is the host's. The tools themselves receive nothing.</p>
+<p>The tools run their rules in WebAssembly. A Chrome policy that turns off JavaScript JIT (<code>DefaultJavaScriptJitSetting</code>) also turns off WebAssembly, and the student tools then show a message saying so. Where a tool saves or opens a file, Chrome's <code>DownloadRestrictions</code> and <code>AllowFileSelectionDialogs</code> policies can block that step, and the student tools say so beside the button.</p>
+<p>Browser storage belongs to the whole of <code>sgilson7.github.io</code>, which also serves the games. The table says which tools keep anything in the browser. On a shared student device, prefer the tools that keep nothing.</p>
+</div></section><section class="stripe"><div class="wrap">
+<h2>Asking IT to allow a tool</h2>
+<p>A teacher can send this, with the tool's address filled in:</p>
+<blockquote>
+<p>Please allow students to open https://sgilson7.github.io/TOOL/ during class. It is a static web page with no login and no account. Its Content-Security-Policy allows connections only to sgilson7.github.io, and what a student types or opens stays in their browser tab. It needs WebAssembly, and saving or opening files if the tool uses them. If the filter blocks github.io as a whole, an allow rule for the single host sgilson7.github.io is enough: github.io is on the Public Suffix List, so each user's host is its own site. What each tool sends and keeps is listed at https://sgilson7.github.io/schools/.</p>
+</blockquote>
+</div></section><section class="stripe"><div class="wrap">
+<h2>Tool by tool</h2>
+<table><thead><tr><th scope="col">Tool</th><th scope="col">For</th><th scope="col">What leaves the device</th><th scope="col">Kept in the browser</th><th scope="col">The device has to allow</th><th scope="col">How it was checked</th></tr></thead><tbody>
+<tr><td><a href="/projects/practice-results/">Practice Results</a></td><td>students, then the teacher</td><td>Nothing the student does. A result file is saved on the device under a nickname the student chooses</td><td>Nothing</td><td>WebAssembly; saving and opening files</td><td>A browser check in three engines fails on any request after the page is ready, any request to another origin, and anything left in browser storage; five planted leaks at two points were each caught</td></tr>
+<tr><td><a href="/projects/warmups-exit-tickets/">Warm-ups and Exit Tickets</a></td><td>the teacher builds a set, students answer</td><td>Nothing a student answers</td><td>Nothing</td><td>WebAssembly; saving and opening files</td><td>The same browser check and planted-leak proof</td></tr>
+<tr><td><a href="/projects/packet-alley/">Packet Alley</a></td><td>students</td><td>Nothing: the simulated network is values in the game's core, which cannot reach a real network</td><td>Stars earned</td><td>WebAssembly</td><td>A browser check in three engines fails on any request after the page is ready, any request to another origin, and any browser storage beyond the saved stars; five planted leaks were each caught</td></tr>
+<tr><td><a href="/projects/circus-math-lab/">Circus Math Lab</a></td><td>students</td><td>Nothing</td><td>The language choice</td><td>WebAssembly; WebGL 2</td><td>The same strict browser check, with storage allowed only for the language choice; five planted leaks were each caught</td></tr>
+<tr><td><a href="/projects/bt-lab/">BT Lab</a></td><td>the teacher demonstrates, students try</td><td>Nothing</td><td>The behaviour tree being edited</td><td>WebAssembly</td><td>A browser check in three engines fails on any Content-Security-Policy violation and on any request to another origin</td></tr>
+<tr><td><a href="/projects/feedback-drafts/">Feedback Drafts</a></td><td>teachers</td><td>Nothing: names and notes stay in the open page</td><td>Nothing</td><td>WebAssembly; saving a file</td><td>A browser check in three engines fails on any request to another origin, and a source test bans browser storage</td></tr>
+<tr><td><a href="/projects/status-trends/">Status Trends</a></td><td>teachers</td><td>Nothing: the file you open stays in the tab</td><td>Nothing</td><td>WebAssembly; opening a file</td><td>A browser check fails on any request after the page is ready and on anything left in storage; five planted leaks were each caught</td></tr>
+<tr><td><a href="/projects/pdf-signature-adder/">PDF Signature Adder</a></td><td>adults</td><td>Nothing: the PDF and the signature stay in the tab</td><td>Nothing</td><td>WebAssembly; opening and saving a file</td><td>The same strict browser check and planted-leak proof</td></tr>
+<tr><td><a href="/projects/pdf-redactor/">PDF Redactor</a></td><td>teachers and researchers</td><td>Nothing: the PDF is opened, redacted and saved in the tab. Text recognition loads its files from this site on first use</td><td>A record of each export made of hashes and counts, which by design holds no names or document text</td><td>WebAssembly; opening and saving a file</td><td>Browser tests of opening, recognition and export fail on any policy violation or request to another origin</td></tr>
+<tr><td><a href="/projects/perturbation-workbench/">Perturbation Workbench</a></td><td>instructors and researchers</td><td>Nothing</td><td>The session, including question text and notes</td><td>WebAssembly; opening a file</td><td>Browser tests fail on any policy violation or request to another origin. Use it on your own device</td></tr>
+<tr><td><a href="/projects/mp4-to-transcript/">MP4 to Transcript</a></td><td>researchers</td><td>Nothing: the recording stays on the computer, and the speech models load from this site</td><td>Nothing</td><td>WebAssembly; a large first download</td><td>A browser check in three engines</td></tr>
+<tr><td><a href="/projects/research-discovery-lab/">Research Discovery Lab</a></td><td>researchers</td><td>Nothing is sent by the page; links you choose open other sites</td><td>The profile IDs you type</td><td>nothing beyond a current browser</td><td>A browser check in three engines</td></tr>
+<tr><td><a href="/projects/youtube-to-mp3/">YouTube to MP3</a></td><td>adults preparing presentations</td><td>The page sends nothing. In <strong>Record it here</strong>, YouTube's embedded player loads from <code>youtube-nocookie.com</code> and makes its own requests</td><td>Nothing</td><td>screen sharing of a tab's sound; saving a file</td><td>Not meant for students: YouTube's terms limit downloading, and a school filter may class it as a downloader</td></tr>
+</tbody></table>
+<p>The accessibility of every tool page listed here was audited with axe-core against WCAG 2.1 A and AA on 19 October 2026, and the failures it found were fixed. That audit does not replace a test with a screen reader, which has not been done.</p>
+
+</div></section>
+</main>
+
+<footer class="band">
+  <div class="wrap">
+    <p class="ids">
+      <a href="mailto:sagilson@ncsu.edu">Email Sam Gilson</a> &middot;
+      <a href="https://orcid.org/0009-0002-2394-8649">ORCID 0009-0002-2394-8649</a> &middot;
+      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google Scholar</a> &middot;
+      <a href="https://www.semanticscholar.org/author/2387936753">Semantic Scholar</a> &middot;
+      <a href="https://openalex.org/A5125954125">OpenAlex</a> &middot;
+      <a href="https://github.com/sgilson7">GitHub</a> &middot;
+      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>
+    </p>
+    <p class="licence">Original website text by Sam Gilson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Papers, teaching materials, software, and quoted material retain their own notices.</p>
+    <p class="meta">Build <code>5e64a621</code></p>
+  </div>
+</footer>
+</body>
+</html>

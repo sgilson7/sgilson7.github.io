@@ -22,7 +22,7 @@
 <meta name="author" content="Sam Gilson">
 <meta name="google-site-verification" content="MSQ0LGD6_zGzbznBsabmPTIkp9ASxM_U04OJdrtKgis">
 
-<link rel="stylesheet" href="/styles.css?v=5ac9bfcd">
+<link rel="stylesheet" href="/styles.css?v=5e64a621">
 <link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
 <script type="application/ld+json">
 {
@@ -66,7 +66,7 @@
 <h1>YouTube to MP3</h1>
 <p>Research tool</p>
 <p>I use YouTube to MP3 to pull audio clips for presentations and other research materials. It records the sound of a YouTube video playing in another tab and saves it as an MP3, with no adverts and no server.</p>
-<p>A web page cannot download a YouTube video: the browser lets a page read another site's response only when that site allows it, and YouTube does not. Converter sites get around this with a server that downloads the video for you, and many of them carry advertising. This tool has no server. You choose the video's tab, the browser shares that tab's sound with the page, and the page encodes it as an MP3 in WebAssembly. The page makes no request to any other address while it records.</p>
+<p>A web page cannot download a YouTube video: the browser lets a page read another site's response only when that site allows it, and YouTube does not. Converter sites get around this with a server that downloads the video for you, and many of them carry advertising. This tool has no server. You choose the video's tab, the browser shares that tab's sound with the page, and the page encodes it as an MP3 in WebAssembly. The page requests nothing from any other address until you ask it to play a video inside it; then YouTube's embedded player loads in a frame, from <code>youtube-nocookie.com</code>, the one other address the page's security policy allows.</p>
 <p>Because it records what the tab plays, a recording takes as long as the clip. Silence before the first sound and after the last is left out, and recording can stop by itself after a few seconds of silence. An advert that plays in the tab is recorded too.</p>
 <p>Sharing a tab's sound needs a Chromium-based browser on a computer, such as Chrome, Edge or Opera. Safari and Firefox share no tab sound, and the page says so. Record only what you have the right to keep.</p>
 
@@ -91,7 +91,7 @@
       <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>
     </p>
     <p class="licence">Original website text by Sam Gilson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Papers, teaching materials, software, and quoted material retain their own notices.</p>
-    <p class="meta">Build <code>5ac9bfcd</code></p>
+    <p class="meta">Build <code>5e64a621</code></p>
   </div>
 </footer>
 </body>
