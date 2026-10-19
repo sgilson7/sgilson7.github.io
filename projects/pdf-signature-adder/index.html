@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PDF Signature Adder — Sam Gilson</title>
+<meta name="description" content="Sign a PDF on your iPad or laptop with a drawn or pasted signature, and save the signed copy, without uploading it anywhere.">
+<link rel="canonical" href="https://sgilson7.github.io/projects/pdf-signature-adder/">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sam Gilson">
+<meta property="og:title" content="PDF Signature Adder">
+<meta property="og:description" content="Sign a PDF on your iPad or laptop with a drawn or pasted signature, and save the signed copy, without uploading it anywhere.">
+<meta property="og:url" content="https://sgilson7.github.io/projects/pdf-signature-adder/">
+<meta property="og:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta property="og:image:alt" content="Sam Gilson">
+<meta name="twitter:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PDF Signature Adder">
+<meta name="twitter:description" content="Sign a PDF on your iPad or laptop with a drawn or pasted signature, and save the signed copy, without uploading it anywhere.">
+<meta name="author" content="Sam Gilson">
+<meta name="google-site-verification" content="MSQ0LGD6_zGzbznBsabmPTIkp9ASxM_U04OJdrtKgis">
+
+<link rel="stylesheet" href="/styles.css?v=5ac9bfcd">
+<link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "PDF Signature Adder",
+  "description": "Sign a PDF on your iPad or laptop with a drawn or pasted signature, and save the signed copy, without uploading it anywhere.",
+  "url": "https://sgilson7.github.io/projects/pdf-signature-adder/",
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "PDF Signature Adder",
+    "description": "Sign a PDF on your iPad or laptop with a drawn or pasted signature, and save the signed copy, without uploading it anywhere.",
+    "url": "https://sgilson7.github.io/pdf-signature-adder/",
+    "sameAs": "https://github.com/sgilson7/pdf-signature-adder"
+  }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="band">
+  <div class="wrap">
+    <p class="brand"><a href="/">Sam Gilson</a></p>
+    <nav aria-label="Sections">
+      <a href="/publications/">Research</a>
+      <a href="/dissertation/">Dissertation</a>
+      <a href="/concepts/">Concepts</a>
+      <a href="/teaching/">Teaching</a>
+      <a href="/materials/">Course materials</a>
+      <a href="/projects/">Tools and games</a>
+      <a href="/cv/">CV</a>
+      <a href="/positions/">Seeking work</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+  </div>
+</header>
+
+
+<main id="main">
+<section class="stripe"><div class="wrap">
+<h1>PDF Signature Adder</h1>
+<p>Research tool</p>
+<p>PDF Signature Adder signs a PDF you already have, on an iPad or a laptop. You open the PDF, draw a signature with an Apple Pencil, a finger or the mouse, or paste or open a picture of one, tap the page where it goes, and save a signed copy. On an iPad the copy goes to Files, or to Mail or AirDrop through Share.</p>
+<p>The PDF and the signature stay in the browser tab. The page loads once from GitHub Pages and then makes no further request, and it keeps nothing after the tab is closed. Its browser check fails if the page sends a request after it is ready or leaves anything in browser storage, and a script plants five leaks to show the check catches each one.</p>
+<p>The signed copy is the original file, byte for byte, with the signatures appended as an incremental update, the way Acrobat and Preview add annotations. Text stays selectable, and links and form fields are untouched. A drawn signature is written as vector paths; a picture is written as an image with a transparency mask. The signature is a picture of handwriting, not a cryptographic digital signature, and it certifies nothing. The tool refuses a PDF it cannot amend safely and says why: one that is encrypted or locked against editing, one certified against any change, or one too damaged to read.</p>
+<p>The rules (reading the PDF, where a signature sits on a rotated or cropped page, smoothing strokes, writing the update) run in a Rust core compiled to WebAssembly, and a vendored copy of pdf.js paints the pages. It is a Builder project.</p>
+
+</div></section><section class="stripe"><div class="wrap">
+<h2>Using the tool</h2>
+<p>Select <strong>Open PDF</strong> and choose the file. Select <strong>Add signature</strong>, then draw on the pad, or switch to <strong>Paste</strong> or <strong>Open image</strong> for a picture of a signature you already have. Select <strong>Use this signature</strong> and tap the page where it goes: its bottom edge lands where you tap, so a tap on a signature line puts it on the line. Drag it to move it, drag a corner to resize it, then select <strong>Save PDF</strong> and choose <strong>Download</strong> or <strong>Share</strong>.</p>
+<p><a href="/pdf-signature-adder/">Open the project</a> · <a href="https://github.com/sgilson7/pdf-signature-adder">Source code</a></p>
+<p><a href="/projects/">All tools and games</a></p>
+
+</div></section>
+</main>
+
+<footer class="band">
+  <div class="wrap">
+    <p class="ids">
+      <a href="mailto:sagilson@ncsu.edu">Email Sam Gilson</a> &middot;
+      <a href="https://orcid.org/0009-0002-2394-8649">ORCID 0009-0002-2394-8649</a> &middot;
+      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google Scholar</a> &middot;
+      <a href="https://www.semanticscholar.org/author/2387936753">Semantic Scholar</a> &middot;
+      <a href="https://openalex.org/A5125954125">OpenAlex</a> &middot;
+      <a href="https://github.com/sgilson7">GitHub</a> &middot;
+      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>
+    </p>
+    <p class="licence">Original website text by Sam Gilson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Papers, teaching materials, software, and quoted material retain their own notices.</p>
+    <p class="meta">Build <code>5ac9bfcd</code></p>
+  </div>
+</footer>
+</body>
+</html>
