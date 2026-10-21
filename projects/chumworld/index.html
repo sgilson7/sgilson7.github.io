@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CHUMWORLD — Sam Gilson</title>
+<meta name="description" content="A 3D open world of sword duels: steer a physics-simulated arm and its sword with the mouse, run from an orc raid on your village, and fight bandits and orcs across the plains.">
+<link rel="canonical" href="https://sgilson7.github.io/projects/chumworld/">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sam Gilson">
+<meta property="og:title" content="CHUMWORLD">
+<meta property="og:description" content="A 3D open world of sword duels: steer a physics-simulated arm and its sword with the mouse, run from an orc raid on your village, and fight bandits and orcs across the plains.">
+<meta property="og:url" content="https://sgilson7.github.io/projects/chumworld/">
+<meta property="og:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta property="og:image:alt" content="Sam Gilson">
+<meta name="twitter:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CHUMWORLD">
+<meta name="twitter:description" content="A 3D open world of sword duels: steer a physics-simulated arm and its sword with the mouse, run from an orc raid on your village, and fight bandits and orcs across the plains.">
+<meta name="author" content="Sam Gilson">
+<meta name="google-site-verification" content="MSQ0LGD6_zGzbznBsabmPTIkp9ASxM_U04OJdrtKgis">
+
+<link rel="stylesheet" href="/styles.css?v=6ba150b2">
+<link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "CHUMWORLD",
+  "description": "A 3D open world of sword duels: steer a physics-simulated arm and its sword with the mouse, run from an orc raid on your village, and fight bandits and orcs across the plains.",
+  "url": "https://sgilson7.github.io/projects/chumworld/",
+  "about": {
+    "@type": "VideoGame",
+    "name": "CHUMWORLD",
+    "description": "A 3D open world of sword duels: steer a physics-simulated arm and its sword with the mouse, run from an orc raid on your village, and fight bandits and orcs across the plains.",
+    "url": "https://sgilson7.github.io/chumworld/",
+    "sameAs": "https://github.com/sgilson7/chumworld"
+  }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="band">
+  <div class="wrap">
+    <p class="brand"><a href="/">Sam Gilson</a></p>
+    <nav aria-label="Sections">
+      <a href="/publications/">Research</a>
+      <a href="/dissertation/">Dissertation</a>
+      <a href="/concepts/">Concepts</a>
+      <a href="/teaching/">Teaching</a>
+      <a href="/materials/">Course materials</a>
+      <a href="/projects/">Tools and games</a>
+      <a href="/cv/">CV</a>
+      <a href="/positions/">Seeking work</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+  </div>
+</header>
+
+
+<main id="main">
+<section class="stripe"><div class="wrap">
+<h1>CHUMWORLD</h1>
+<p>Game</p>
+<p>CHUMWORLD is a 3D open-world exploration and sword-duel game that runs in a desktop browser. It takes its open world from Kenshi, its WASD-and-mouse sword fighting from Blade Symphony, and its arms from Vagrancy: the player's sword is held by a physics-simulated arm that the mouse steers, and every orc and bandit fights with the same arms, weapons and throwables, choosing what to do by behaviour tree. A duel is settled by where the blades and bodies actually meet.</p>
+<p>The game opens in bed during an orc raid on your village. Fall to an orc and you wake in bed again, thinking it was a funny dream; the way out is to run. Once you are 250 m from the village the opening ends and the land is yours: plains cut by a river, a trainer's hill, roads out of the village with carts, wells and stragglers beside them, a forest to the north-east with a bandit camp under a tall flag, and orc pairs, bandit patrols and ambushes in between.</p>
+<p>Every weapon and armour piece is found its own way, and each has one mechanic of its own. You start with a short sword. The bandits' leader drops a sword, and the key from the camp opens a chest that holds a boomerang, which flies an arc and always comes back. A merchant's donkey cart travels the road, and throwing something at it stops it so you can shop. The speedster's armour comes in five pieces, each adding 20% to your speed and making your footing more like ice. A trainer teaches an ability that imbues your sword for 10 seconds, with a 20 second cooldown, so it can turn magic back: magic flies in bullet patterns of coloured shapes, after Long Time Comin', and an imbued blade deflects them one orb at a time. Items live in an inventory ring with a map, quest and equipment screens, after Ocarina of Time and Majora's Mask.</p>
+<p>The world is built for a long draw distance: the land is drawn in tiles by level of detail out to a 16 km horizon, with dithered hand-overs between levels; grass, rocks and trees fade in by their distance, and the river is solved the way Extremely Lifelike Fishing solves its water. The game saves in the browser at waystones and on its own, and a save can be written to and read from a file. People along the roads tell rumours that start quest lines, and a flute learned from the trainer plays you back to a waystone.</p>
+<p>It is a Builder project: a Rust core holds every rule in integer maths, a WebAssembly shim passes values to the page, and the page only draws what the core returns. It is still being built; the first region is the whole of the game so far.</p>
+
+</div></section><section class="stripe"><div class="wrap">
+<h2>Playing it</h2>
+<p>Move with WASD or the arrow keys, run with Shift and dodge with Space. X draws the sword and the mouse steers it; hold the left button and move the mouse to swing. Q imbues the sword once the trainer has taught it, F throws the ready item, E uses or picks up whatever is nearest, and 1, 2 and 3 are quick items. Tab opens the inventory ring and M the map. The game needs a mouse captured by the page, so it plays on a desktop browser.</p>
+<p class="engines">Checked in Chromium, Firefox and WebKit.</p>
+<p><a href="/chumworld/">Open the project</a> · <a href="https://github.com/sgilson7/chumworld">Source code</a></p>
+<p><a href="/projects/">All tools and games</a></p>
+
+</div></section>
+</main>
+
+<footer class="band">
+  <div class="wrap">
+    <p class="ids">
+      <a href="mailto:sagilson@ncsu.edu">Email Sam Gilson</a> &middot;
+      <a href="https://orcid.org/0009-0002-2394-8649">ORCID 0009-0002-2394-8649</a> &middot;
+      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google Scholar</a> &middot;
+      <a href="https://www.semanticscholar.org/author/2387936753">Semantic Scholar</a> &middot;
+      <a href="https://openalex.org/A5125954125">OpenAlex</a> &middot;
+      <a href="https://github.com/sgilson7">GitHub</a> &middot;
+      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>
+    </p>
+    <p class="licence">Original website text by Sam Gilson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Papers, teaching materials, software, and quoted material retain their own notices.</p>
+    <p class="meta">Build <code>6ba150b2</code></p>
+  </div>
+</footer>
+</body>
+</html>
