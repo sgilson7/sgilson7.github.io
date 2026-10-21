@@ -691,3 +691,7 @@ a:hover .kc-elabel { fill: var(--panel); }
   .tile .plays .mobile { border: 1px solid; }
 }
 }
+
+/* The line on a game repeated under Multiplayer: how and how many. Set like
+   the browser line above it, so it reads as one more fact about the game. */
+.tile .together { margin: .45rem .7rem 0; font-size: .82rem; color: var(--ink); }
