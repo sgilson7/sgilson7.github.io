@@ -104,6 +104,8 @@ Teaching
 
 CSC 151, Java Programming — Instructor of record, Central Carolina Community College, Spring and Fall 2026.
 
+CIS 110, Introduction to Computers — Instructor, Central Carolina Community College, Fall 2026.
+
 CSC 226, Discrete Mathematics — Instructor of record, North Carolina State University, Summer 2025 and Summer 2026.
 
 CSC 216, Software Development Fundamentals — Instructor of record, North Carolina State University, Summer 2024.
