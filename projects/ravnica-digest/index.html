@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ravnica Digest — Sam Gilson</title>
+<meta name="description" content="A Hand of Fate-style adventure on Ravnica&#39;s grid where every fight is a game of Magic: build a deck from Return to Ravnica&#39;s cards, then face Niv-Mizzet or stop Rakdos before he razes New Prahv.">
+<link rel="canonical" href="https://sgilson7.github.io/projects/ravnica-digest/">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sam Gilson">
+<meta property="og:title" content="Ravnica Digest">
+<meta property="og:description" content="A Hand of Fate-style adventure on Ravnica&#39;s grid where every fight is a game of Magic: build a deck from Return to Ravnica&#39;s cards, then face Niv-Mizzet or stop Rakdos before he razes New Prahv.">
+<meta property="og:url" content="https://sgilson7.github.io/projects/ravnica-digest/">
+<meta property="og:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta property="og:image:alt" content="Sam Gilson">
+<meta name="twitter:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ravnica Digest">
+<meta name="twitter:description" content="A Hand of Fate-style adventure on Ravnica&#39;s grid where every fight is a game of Magic: build a deck from Return to Ravnica&#39;s cards, then face Niv-Mizzet or stop Rakdos before he razes New Prahv.">
+<meta name="author" content="Sam Gilson">
+<meta name="google-site-verification" content="MSQ0LGD6_zGzbznBsabmPTIkp9ASxM_U04OJdrtKgis">
+
+<link rel="stylesheet" href="/styles.css?v=beae38b5">
+<link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Ravnica Digest",
+  "description": "A Hand of Fate-style adventure on Ravnica's grid where every fight is a game of Magic: build a deck from Return to Ravnica's cards, then face Niv-Mizzet or stop Rakdos before he razes New Prahv.",
+  "url": "https://sgilson7.github.io/projects/ravnica-digest/",
+  "about": {
+    "@type": "VideoGame",
+    "name": "Ravnica Digest",
+    "description": "A Hand of Fate-style adventure on Ravnica's grid where every fight is a game of Magic: build a deck from Return to Ravnica's cards, then face Niv-Mizzet or stop Rakdos before he razes New Prahv.",
+    "url": "https://sgilson7.github.io/mtg-hand-of-fate/",
+    "sameAs": "https://github.com/sgilson7/mtg-hand-of-fate"
+  }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="band">
+  <div class="wrap">
+    <p class="brand"><a href="/">Sam Gilson</a></p>
+    <nav aria-label="Sections">
+      <a href="/publications/">Research</a>
+      <a href="/dissertation/">Dissertation</a>
+      <a href="/concepts/">Concepts</a>
+      <a href="/teaching/">Teaching</a>
+      <a href="/materials/">Course materials</a>
+      <a href="/games/">Games</a>
+      <a href="/tools/">Tools</a>
+      <a href="/cv/">CV</a>
+      <a href="/positions/">Seeking work</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+  </div>
+</header>
+
+
+<main id="main">
+<section class="stripe"><div class="wrap">
+<h1>Ravnica Digest</h1>
+<p>Game</p>
+<p>Ravnica Digest is a deck-building adventure in the style of Hand of Fate, set on the city-world of Ravnica from Magic: The Gathering's Return to Ravnica block, and it runs in a desktop browser. The map is a grid of tiles drawn in 3D, laid out in five-by-five chunks that open as you walk to their edges. Each tile holds a few cards from its terrain or its guild's district, and stepping onto one turns a card up: a creature to fight, a story to choose your way through, or a land to claim and set down on the map.</p>
+<p>Every fight is a game of Magic, played by its rules against a computer opponent: priority, the stack, targets, attacks and blocks are yours to choose. The decks are small and lands never sit in them. Instead each side has a land pile, the lands placed within reach of the fight, made up to five with basics, and plays one a turn, so a game is not lost to drawing too few lands or too many. The cards are all of Return to Ravnica, 254 of them, each with its rules, its own story on the map, a picture drawn in TikZ after its art, and a 3D model for every creature on the table.</p>
+<p>You start in one of the five guilds of the set, Azorius, Izzet, Rakdos, Golgari or Selesnya, with one of six starting decks: the guild's own and five rebuilt from the set's cards after decks Wizards of the Coast sold for it. Five cities hold an armourer, a card merchant, an inn, a trainer and a guild hall with quests. Creatures get stronger in rings out from where you start. A new game is one of two missions. In the Dracogenius you take a writ from New Prahv to Nivix and face Niv-Mizzet with a forty-card deck. In the Riot, Rakdos marches from Rix Maadi to New Prahv, razing each tile he walks onto and leaving one of his minions to hold it, and you are graded on how few steps it takes you to beat him. Each quest's next place shows on the map as a grey tile before you find it.</p>
+<p>It is a Builder project: a Rust core holds every rule in integer maths, a WebAssembly shim passes values to the page, and the page only draws what the core returns. Ravnica Digest is unofficial Fan Content permitted under the Fan Content Policy. Not approved or endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.</p>
+
+</div></section><section class="stripe"><div class="wrap">
+<h2>Playing it</h2>
+<p>Choose a mission, a guild and a starting deck. Walk with WASD or the arrow keys, or click a neighbouring tile, and press Tab to build your deck from the cards you have won. In a fight, click a card to cast it and a creature to choose it, and press Space to pass or confirm; drag the table, or press Q and E, to turn it, and press L for the whole log. Your game is saved in the browser you played in.</p>
+<p class="engines">Checked in Chromium, Firefox and WebKit.</p>
+<p><a href="/mtg-hand-of-fate/">Open the project</a> · <a href="https://github.com/sgilson7/mtg-hand-of-fate">Source code</a></p>
+<p><a href="/projects/">All tools and games</a></p>
+
+</div></section>
+</main>
+
+<footer class="band">
+  <div class="wrap">
+    <p class="ids">
+      <a href="mailto:sagilson@ncsu.edu">Email Sam Gilson</a> &middot;
+      <a href="https://orcid.org/0009-0002-2394-8649">ORCID 0009-0002-2394-8649</a> &middot;
+      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google Scholar</a> &middot;
+      <a href="https://www.semanticscholar.org/author/2387936753">Semantic Scholar</a> &middot;
+      <a href="https://openalex.org/A5125954125">OpenAlex</a> &middot;
+      <a href="https://github.com/sgilson7">GitHub</a> &middot;
+      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>
+    </p>
+    <p class="licence">Original website text by Sam Gilson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Papers, teaching materials, software, and quoted material retain their own notices.</p>
+    <p class="meta">Build <code>beae38b5</code></p>
+  </div>
+</footer>
+</body>
+</html>
