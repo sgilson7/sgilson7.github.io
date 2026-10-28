@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Formula Builder — Sam Gilson</title>
+<meta name="description" content="Mark the concepts in a formula and make it something students can hover, drag and step through, then export it as a PNG, SVG, GIF, LaTeX or an embed for another page.">
+<link rel="canonical" href="https://sgilson7.github.io/projects/formula-builder/">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sam Gilson">
+<meta property="og:title" content="Formula Builder">
+<meta property="og:description" content="Mark the concepts in a formula and make it something students can hover, drag and step through, then export it as a PNG, SVG, GIF, LaTeX or an embed for another page.">
+<meta property="og:url" content="https://sgilson7.github.io/projects/formula-builder/">
+<meta property="og:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta property="og:image:alt" content="Sam Gilson">
+<meta name="twitter:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Formula Builder">
+<meta name="twitter:description" content="Mark the concepts in a formula and make it something students can hover, drag and step through, then export it as a PNG, SVG, GIF, LaTeX or an embed for another page.">
+<meta name="author" content="Sam Gilson">
+<meta name="google-site-verification" content="MSQ0LGD6_zGzbznBsabmPTIkp9ASxM_U04OJdrtKgis">
+
+<link rel="stylesheet" href="/styles.css?v=a9b2ddd3">
+<link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Formula Builder",
+  "description": "Mark the concepts in a formula and make it something students can hover, drag and step through, then export it as a PNG, SVG, GIF, LaTeX or an embed for another page.",
+  "url": "https://sgilson7.github.io/projects/formula-builder/",
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "Formula Builder",
+    "description": "Mark the concepts in a formula and make it something students can hover, drag and step through, then export it as a PNG, SVG, GIF, LaTeX or an embed for another page.",
+    "url": "https://sgilson7.github.io/formula-builder/",
+    "sameAs": "https://github.com/sgilson7/formula-builder"
+  }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="band">
+  <div class="wrap">
+    <p class="brand"><a href="/">Sam Gilson</a></p>
+    <nav aria-label="Sections">
+      <a href="/publications/">Research</a>
+      <a href="/dissertation/">Dissertation</a>
+      <a href="/concepts/">Concepts</a>
+      <a href="/teaching/">Teaching</a>
+      <a href="/materials/">Course materials</a>
+      <a href="/games/">Games</a>
+      <a href="/tools/">Tools</a>
+      <a href="/cv/">CV</a>
+      <a href="/positions/">Seeking work</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+  </div>
+</header>
+
+
+<main id="main">
+<section class="stripe"><div class="wrap">
+<h1>Formula Builder</h1>
+<p>Classroom tool</p>
+<p>Formula Builder is a formula editor for teaching material. You type a formula in LaTeX and mark the concepts in it — a slope, a step size, a gradient — and each concept gets the augmentations that Head, Xie and Hearst catalogued in <em>Math Augmentation</em> (CHI 2022): a colour together with an underline pattern and a number, labels, braces, borders, tints, pointers and extra space, values a reader can drag or type, sliders, a plot whose marks follow the formula, and steps that play a derivation one move at a time. Hovering a concept in the formula, the prose or the plot lights it in all three and opens its definition.</p>
+<p>Colour is the paper's most common augmentation, so every concept also carries a pattern and a number, in every view and every export. There are four views: Colour; Deutan, which uses blue and orange only; Mono, in ink alone, with each concept's name beside its number; and a Deutan preview that shows the Colour view as a reader with deuteranopia would see it. A test measures the palettes under a deuteranopia simulation and checks their contrast against the canvas.</p>
+<p>The formula holds no styling. A separate sheet beside it names the concepts and says how each one looks and moves, so the LaTeX stays readable. The finished formula exports as a PNG, an SVG with one named group per concept, a GIF of its steps, LaTeX with one macro per concept, or an embed for another web page that keeps the dragging, the sliders, the plot and the steps. The embed carries the whole document after the <code>#</code> in its address, which a browser does not send to a server.</p>
+<p>The parser, the TeX-style layout, the values, the plot, the step animation and every export run in a Rust core in integer arithmetic, compiled to WebAssembly, with the STIX Two Math font converted to integer data. The page draws the picture the core returns. It is a Builder project, and the repository holds its brief, plan, notebook and checks.</p>
+
+</div></section><section class="stripe"><div class="wrap">
+<h2>Using the tool</h2>
+<p>Pick one of the five examples, or type your own formula under Formula. Click part of the formula in the reader view to select it, click again to select a larger part, and select <strong>Add concept from selection</strong>; the toggles under each concept add a label, a brace, a border, a tint, a pointer, space, or a value to drag or slide. Under Export, choose <strong>PNG</strong>, <strong>SVG</strong>, <strong>GIF of the steps</strong> or <strong>LaTeX</strong>, or <strong>Embed code</strong> for an iframe you paste into another page.</p>
+<p><a href="/formula-builder/">Open the project</a> · <a href="https://github.com/sgilson7/formula-builder">Source code</a></p>
+<p><a href="/projects/">All tools and games</a></p>
+
+</div></section>
+</main>
+
+<footer class="band">
+  <div class="wrap">
+    <p class="ids">
+      <a href="mailto:sagilson@ncsu.edu">Email Sam Gilson</a> &middot;
+      <a href="https://orcid.org/0009-0002-2394-8649">ORCID 0009-0002-2394-8649</a> &middot;
+      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google Scholar</a> &middot;
+      <a href="https://www.semanticscholar.org/author/2387936753">Semantic Scholar</a> &middot;
+      <a href="https://openalex.org/A5125954125">OpenAlex</a> &middot;
+      <a href="https://github.com/sgilson7">GitHub</a> &middot;
+      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>
+    </p>
+    <p class="licence">Original website text by Sam Gilson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Papers, teaching materials, software, and quoted material retain their own notices.</p>
+    <p class="meta">Build <code>a9b2ddd3</code></p>
+  </div>
+</footer>
+</body>
+</html>
