@@ -695,3 +695,250 @@ a:hover .kc-elabel { fill: var(--panel); }
 /* The line on a game repeated under Multiplayer: how and how many. Set like
    the browser line above it, so it reads as one more fact about the game. */
 .tile .together { margin: .45rem .7rem 0; font-size: .82rem; color: var(--ink); }
+
+/* --- the library: /games/ and /tools/ ------------------------------------
+   Sam, 2 November 2026: "a steam library setup", the list down the left and
+   the chosen game or tool filling the rest. Mockup A of three. Its band is
+   dark, which keeps the bands' rule: the step from the white band above is a
+   step in lightness, and the band still carries its top edge. Every colour
+   here was measured against the one it sits on:
+     --lib-ink on --lib-bg 15.6:1, --lib-muted on --lib-side 8.5:1,
+     --lib-group on --lib-side 5.6:1, white on --red 8.3:1. */
+.library {
+  --lib-bg: #121820;
+  --lib-side: #19212B;
+  --lib-line: #2B3644;
+  --lib-lit: #2E3B4B;
+  --lib-mark: #D46A6A;
+  --lib-ink: #E8ECEF;
+  --lib-muted: #AEB8C2;
+  --lib-group: #8794A1;
+  display: grid;
+  grid-template-columns: minmax(13.5rem, 20%) minmax(0, 1fr);
+  height: max(32rem, calc(100svh - 7.25rem));
+  background: var(--lib-bg);
+  color: var(--lib-ink);
+}
+.stripe:has(> .wrap > .library) { padding: 0; background: #121820; }
+/* Above a library the page's own band is one line, the name and the
+   introduction side by side, so the library starts near the top of the
+   window as it did in the mockup. The mockup had no name at all; a page needs
+   one. The header spans the width the library does. */
+body:has(.library) header.band .wrap { max-width: none; padding: 0 1.5rem; }
+.stripe:has(+ .stripe > .wrap > .library) { padding: .9rem 0 1rem; }
+.stripe:has(+ .stripe > .wrap > .library) > .wrap {
+  max-width: none; padding: 0 1.5rem;
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: .2rem 1.2rem;
+}
+.stripe:has(+ .stripe > .wrap > .library) > .wrap > h1 { margin: 0; font-size: 1.75rem; }
+.stripe:has(+ .stripe > .wrap > .library) > .wrap > p { margin: 0; font-size: .98rem; color: var(--grey); max-width: none; }
+.stripe:has(> .wrap > .library) > .wrap { max-width: none; padding: 0; }
+/* The band's heading names the region for a reader who is not looking; the
+   list's own labels say the same thing to one who is. */
+.stripe:has(> .wrap > .library) > .wrap > h2 {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+  overflow: hidden; clip-path: inset(50%); white-space: nowrap;
+}
+.library a:focus-visible { outline: 3px solid var(--lib-mark); outline-offset: -3px; }
+
+.lib-side {
+  background: var(--lib-side);
+  border-right: 1px solid var(--lib-line);
+  overflow-y: auto;
+  padding: .4rem 0 2rem;
+}
+.lib-group {
+  margin: 1rem 1rem .35rem;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--lib-group);
+}
+.lib-side ul { list-style: none; margin: 0; padding: 0; }
+.lib-side li { margin: 0; max-width: none; }
+.lib-side a {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: .65rem;
+  align-items: center;
+  padding: .3rem 1rem;
+  font-size: .88rem;
+  line-height: 1.25;
+  color: var(--lib-muted);
+  text-decoration: none;
+}
+.lib-side a:hover { background: #222C38; color: #fff; }
+.lib-thumb {
+  display: block; width: 52px; height: 32px; border-radius: 2px;
+  background: var(--lib-line) center / cover no-repeat;
+}
+
+.lib-main { position: relative; overflow: hidden; }
+/* One panel at a time: the chosen one, or the first when none is chosen. The
+   first is written last, so choosing any other hides it with a sibling rule.
+   The scroll margin stops a choice from scrolling the page: the browser would
+   bring the panel to the top of the window, and the margin moves that point
+   above the top of the page, where it stops. */
+.panel {
+  display: none;
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+  scroll-margin-top: 100vh;
+}
+.panel:target, .panel.default { display: block; }
+.panel:target ~ .panel.default { display: none; }
+
+.lib-top { position: relative; }
+.lib-hero img {
+  display: block;
+  width: 100%;
+  height: min(62vh, 35rem);
+  object-fit: cover;
+}
+.lib-top::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(18,24,32,0) 45%, var(--lib-bg) 98%);
+  pointer-events: none;
+}
+.lib-top h3 {
+  position: absolute;
+  left: 2.25rem; right: 2.25rem; bottom: .4rem;
+  z-index: 1;
+  margin: 0;
+  font: 700 clamp(1.9rem, 4vw, 3.25rem)/1.05 var(--serif);
+  color: #fff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, .6);
+}
+/* A tool, a drawing, or a project with no picture: framed, with its name
+   under it rather than over it. */
+.panel.framed .lib-top, .panel.bare .lib-top { padding: 2rem 2.25rem 0; }
+.panel.framed .lib-top::after, .panel.bare .lib-top::after { content: none; }
+.panel.framed .lib-hero img {
+  width: auto; max-width: 100%;
+  height: auto; max-height: 52vh;
+  object-fit: contain;
+  border: 1px solid #3A4757;
+  border-radius: 3px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .45);
+  background: #F4F6F7;
+}
+.panel.framed .lib-top h3, .panel.bare .lib-top h3 { position: static; margin-top: 1.1rem; text-shadow: none; }
+/* No picture yet: the name on a pale card, the size a picture would take,
+   rather than an empty space that reads as one that failed to load. The
+   thumbnail is the same card in small. */
+.panel.bare .lib-top h3 {
+  display: grid; place-items: center;
+  width: min(100%, 36rem); aspect-ratio: 8 / 5; margin: 0;
+  background: var(--panel); color: var(--ink);
+  border-radius: 3px; text-align: center; padding: 1rem;
+}
+.lib-thumb:not([style]) { background: var(--panel); }
+
+.lib-doors, .lib-tag, .lib-facts { margin: 1rem 2.25rem 0; max-width: 62rem; }
+.lib-doors { display: flex; flex-wrap: wrap; gap: .6rem; }
+.lib-doors .go {
+  padding: .55rem 1.1rem;
+  border-radius: 3px;
+  background: var(--lib-line);
+  color: var(--lib-ink);
+  font-weight: 700;
+  text-decoration: none;
+}
+.lib-doors .go:first-child {
+  background: var(--red);
+  color: #fff;
+  padding: .7rem 2.1rem;
+  font-size: 1.05rem;
+}
+.lib-doors .go:hover { filter: brightness(1.18); }
+.lib-tag { font-size: 1.05rem; line-height: 1.5; color: #C9D2DA; max-width: 70ch; }
+.lib-facts { list-style: none; padding: 0 0 2.5rem; display: flex; flex-wrap: wrap; gap: .5rem; }
+.lib-facts li {
+  margin: 0;
+  padding: .2rem .65rem;
+  border: 1px solid #3A4757;
+  border-radius: 999px;
+  font-size: .8rem;
+  color: var(--lib-muted);
+}
+.lib-facts .mobile { border-color: var(--lib-mark); color: #F2B8B8; }
+
+/* A phone: the list becomes a row of pictures to swipe, above the panel. The
+   Multiplayer group repeats entries the row already has, so it is left out
+   there; each panel still says how many can play. */
+@media (max-width: 760px) {
+  .stripe:has(> .wrap > .library) > .wrap { padding: 0 1rem; }
+  .library { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto; height: auto; margin: 0 -1rem; }
+  .lib-side { display: flex; overflow-x: auto; overflow-y: hidden; padding: .5rem; gap: .4rem; border: 0; border-bottom: 1px solid var(--lib-line); }
+  .lib-group, .lib-again { display: none; }
+  .lib-side ul { display: flex; gap: .4rem; }
+  .lib-side a { grid-template-columns: 1fr; width: 6rem; padding: 0 0 .3rem; gap: .25rem; font-size: .75rem; }
+  .lib-thumb { width: 6rem; height: 3.75rem; }
+  .lib-main { overflow: visible; }
+  .panel { position: static; }
+  .lib-hero img { height: 42vh; }
+  .lib-top h3 { left: 1rem; right: 1rem; }
+  .panel.framed .lib-top, .panel.bare .lib-top { padding: 1rem 1rem 0; }
+  .lib-doors, .lib-tag, .lib-facts { margin-left: 1rem; margin-right: 1rem; }
+}
+@media (forced-colors: active) {
+  .lib-facts li, .lib-doors .go { border: 1px solid CanvasText; }
+}
+
+/* --- dark mode ----------------------------------------------------------
+   Sam, 2 November 2026: "the entire site should have a darkmode". It follows
+   the reader's system setting: the site ships no script (D3), and a switch
+   without one could not be remembered from one page to the next.
+
+   The same rules as the light palette, measured rather than chosen by eye
+   (CLAUDE.md 4b). The two bands differ in lightness by 0.021, past the gate's
+   0.02, so they stay apart in greyscale; the tint keeps a trace of the red.
+     --ink on --page 15.3:1, on --tint 11.1:1
+     --grey 8.8:1 and 6.4:1     --blue 9.4:1 and 6.8:1
+     --red-ink 9.2:1 and 6.7:1  white on --red 8.3:1, unchanged
+     --edge on --page 4.0:1, past the 3:1 a rule needs
+   Figures drawn for paper (the concept map, slides, a post's TikZ) keep a
+   light card: their colours are drawn into them, so they are shown as
+   printed rather than recoloured. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --ink: #E6EAED;
+    --grey: #AAB4BD;
+    --rule: #3A4550;
+    --tint: #3B2A2F;
+    --edge: #6B7681;
+    --panel: #232A33;
+    --green: #7CC49A;
+    --blue: #9DB7FF;
+    --page: #101418;
+    --red-ink: #F0A3A3;
+  }
+  .band { background: #0A0D11; color: #E6EAED; }
+  .band a, footer.band .licence a, footer.band code { color: #E6EAED; }
+  footer.band .licence, footer.band .meta { color: #AAB4BD; }
+  pre { background: #0A0D11; color: #E6EAED; border: 1px solid var(--rule); }
+  .featured, .seeking a { color: var(--red-ink); }
+  .tile { background: #182029; }
+  .tile .plays .mobile { color: var(--red-ink); border-color: #D46A6A; }
+  .tile .go { background: var(--panel); }
+  /* Paper inside a dark page: the light palette again, on a white card. */
+  .kcfig, .slidefig img, .postfig img {
+    --ink: #1B2430; --grey: #5A646E; --rule: #C9CFD3; --edge: #9AA4AB;
+    --panel: #E6EAEC; --blue: #2F4BA0; --page: #FFFFFF;
+    background: #FFFFFF;
+    color: #1B2430;
+  }
+  .kcfig { padding: .75rem; border-radius: 4px; }
+  .postfig img { padding: .5rem; border-radius: 3px; }
+  /* Above a library the page's band would be as dark as the library, and two
+     dark bands side by side fail the lightness step; this one is lifted. */
+  .stripe:has(+ .stripe > .wrap > .library) { background: #2A3440; }
+}
+@media (prefers-color-scheme: dark) and (prefers-contrast: more) {
+  :root { --tint: #4A3238; --edge: #8A96A0; }
+}
