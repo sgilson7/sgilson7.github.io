@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Countless Days — Sam Gilson</title>
+<meta name="description" content="A rhythm game: press each circle as its ring closes, on the beat of songs from an album made by friends, alone or in a lobby reached by an invite link.">
+<link rel="canonical" href="https://sgilson7.github.io/projects/countless-days/">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sam Gilson">
+<meta property="og:title" content="Countless Days">
+<meta property="og:description" content="A rhythm game: press each circle as its ring closes, on the beat of songs from an album made by friends, alone or in a lobby reached by an invite link.">
+<meta property="og:url" content="https://sgilson7.github.io/projects/countless-days/">
+<meta property="og:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta property="og:image:alt" content="Sam Gilson">
+<meta name="twitter:image" content="https://sgilson7.github.io/img/sam-gilson.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Countless Days">
+<meta name="twitter:description" content="A rhythm game: press each circle as its ring closes, on the beat of songs from an album made by friends, alone or in a lobby reached by an invite link.">
+<meta name="author" content="Sam Gilson">
+<meta name="google-site-verification" content="MSQ0LGD6_zGzbznBsabmPTIkp9ASxM_U04OJdrtKgis">
+
+<link rel="stylesheet" href="/styles.css?v=b9bf0819">
+<link rel="alternate" type="application/atom+xml" title="Sam Gilson" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Countless Days",
+  "description": "A rhythm game: press each circle as its ring closes, on the beat of songs from an album made by friends, alone or in a lobby reached by an invite link.",
+  "url": "https://sgilson7.github.io/projects/countless-days/",
+  "about": {
+    "@type": "VideoGame",
+    "name": "Countless Days",
+    "description": "A rhythm game: press each circle as its ring closes, on the beat of songs from an album made by friends, alone or in a lobby reached by an invite link.",
+    "url": "https://sgilson7.github.io/BOSU/",
+    "sameAs": "https://github.com/sgilson7/BOSU"
+  }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="band">
+  <div class="wrap">
+    <p class="brand"><a href="/">Sam Gilson</a></p>
+    <nav aria-label="Sections">
+      <a href="/publications/">Research</a>
+      <a href="/dissertation/">Dissertation</a>
+      <a href="/concepts/">Concepts</a>
+      <a href="/teaching/">Teaching</a>
+      <a href="/materials/">Course materials</a>
+      <a href="/games/">Games</a>
+      <a href="/tools/">Tools</a>
+      <a href="/cv/">CV</a>
+      <a href="/positions/">Seeking work</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+  </div>
+</header>
+
+
+<main id="main">
+<section class="stripe"><div class="wrap">
+<h1>Countless Days</h1>
+<p>Game</p>
+<p>Countless Days is a 2D rhythm game that runs in a browser. Numbered circles appear on a playfield in time with the music, a ring closes in on each one, and you press it as the ring meets it, right on the beat. Holds ask you to keep pressing and follow a path to its end. Each press is judged by how close it came to the beat, and the score, combo and accuracy add up as the song plays.</p>
+<p>The songs are ten tracks from <em>countless days in ableton</em>, an album made by friends, and five songs of the game's own. Each has five difficulties, Easy to Master, and each step up is measurably harder than the one below it. Presses are judged against the time the music was heard rather than the time a frame was drawn, so a dropped frame does not move a judgement, and an audio offset and a visual offset in Settings tune the timing to a player's machine. Every judgement is shown as a word and a shape as well as a colour.</p>
+<p>Friends play together from a lobby. The host sends an invite link, up to eight players join, everyone plays the same song and sees each other's scores. The page makes no request to another site until someone presses Host or Join.</p>
+<p>It is a Builder project: a Rust core holds every rule, a WebAssembly shim passes values to the page, and the page only draws what the core returns.</p>
+
+</div></section><section class="stripe"><div class="wrap">
+<h2>Playing it</h2>
+<p>Choose a song and a difficulty, then press Play. Aim with the mouse and press with a click or with your keys: Z and X to start, and any keys you like in Settings. On a touch screen, tap. Escape pauses.</p>
+<p class="engines">Checked in Chromium, Firefox and WebKit.</p>
+<p><a href="/BOSU/">Open the project</a> · <a href="https://github.com/sgilson7/BOSU">Source code</a></p>
+<p><a href="/projects/">All tools and games</a></p>
+
+</div></section>
+</main>
+
+<footer class="band">
+  <div class="wrap">
+    <p class="ids">
+      <a href="mailto:sagilson@ncsu.edu">Email Sam Gilson</a> &middot;
+      <a href="https://orcid.org/0009-0002-2394-8649">ORCID 0009-0002-2394-8649</a> &middot;
+      <a href="https://scholar.google.com/citations?user=UIYAyjoAAAAJ&#38;hl=en">Google Scholar</a> &middot;
+      <a href="https://www.semanticscholar.org/author/2387936753">Semantic Scholar</a> &middot;
+      <a href="https://openalex.org/A5125954125">OpenAlex</a> &middot;
+      <a href="https://github.com/sgilson7">GitHub</a> &middot;
+      <a href="https://eliza.csc.ncsu.edu/">Game2Learn lab</a>
+    </p>
+    <p class="licence">Original website text by Sam Gilson is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Papers, teaching materials, software, and quoted material retain their own notices.</p>
+    <p class="meta">Build <code>b9bf0819</code></p>
+  </div>
+</footer>
+</body>
+</html>
