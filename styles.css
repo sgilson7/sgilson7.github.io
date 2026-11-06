@@ -889,6 +889,62 @@ body:has(.library) header.band .wrap { max-width: none; padding: 0 1.5rem; }
   .lib-facts li, .lib-doors .go { border: 1px solid CanvasText; }
 }
 
+/* A collection (Sam, 6 November 2026): "The Chum Collection", whose name in
+   the list opens a panel with Chumbles floating in it, turned by the pointer,
+   and the chum games below him. The turns and the sheets' layout are written
+   by the build beside the library (render::chum_collection); these are the
+   rules that do not depend on them. Colours are the library's own, measured
+   above. */
+.lib-coll a { display: block; margin: 0 -1rem; padding: .3rem 1rem; font: inherit; letter-spacing: inherit; text-transform: inherit; color: var(--lib-muted); }
+.lib-coll a .lib-thumb { display: none; }
+.lib-set a { padding-left: 1.6rem; }
+.panel.collection { padding: 1.6rem 2.25rem 2.5rem; }
+.panel.collection h3 { margin: 0; font: 700 clamp(1.9rem, 4vw, 3.25rem)/1.05 var(--serif); color: #fff; }
+.chum { display: grid; justify-items: center; gap: .6rem; margin: .6rem 0 1.4rem; }
+.chum-pick { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.chum-stage { position: relative; width: min(100%, 26rem); aspect-ratio: 590 / 560; }
+.chum-stage > i { position: absolute; top: 0; bottom: 0; z-index: 1; }
+.chum-float { position: absolute; inset: 0 0 6%; animation: chum-float 4.2s ease-in-out infinite; }
+.chum-fig { position: absolute; inset: 0; background-repeat: no-repeat; animation: chum-spin 9.6s step-end infinite; }
+.chum-shadow {
+  position: absolute; left: 22%; right: 22%; bottom: 1%; height: 7%;
+  border-radius: 50%; background: radial-gradient(closest-side, rgba(0,0,0,.55), rgba(0,0,0,0));
+  animation: chum-shadow 4.2s ease-in-out infinite;
+}
+@keyframes chum-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5%); } }
+@keyframes chum-shadow { 0%, 100% { transform: scaleX(1); opacity: 1; } 50% { transform: scaleX(.8); opacity: .6; } }
+.chum-poses { display: flex; gap: .4rem; }
+.chum-poses label {
+  padding: .45rem 1rem; border-radius: 3px; cursor: pointer;
+  background: var(--lib-line); color: var(--lib-ink); font-weight: 700; font-size: .9rem;
+}
+.chum-poses label:hover { filter: brightness(1.18); }
+.chum-hint { margin: 0; font-size: .85rem; color: var(--lib-muted); }
+.panel.collection h4 { margin: 0 0 .6rem; font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--lib-group); }
+.chum-games { list-style: none; margin: 0; padding: 0; display: grid; gap: .5rem; max-width: 62rem; }
+.chum-games li { margin: 0; max-width: none; }
+.chum-games a {
+  display: grid; grid-template-columns: 8rem minmax(0, 1fr); grid-template-rows: auto 1fr;
+  column-gap: 1rem; padding: .6rem; border-radius: 3px;
+  background: var(--lib-side); color: var(--lib-ink); text-decoration: none;
+}
+.chum-games a:hover { background: #222C38; }
+.chum-games .lib-thumb { grid-row: 1 / 3; width: 8rem; height: 5rem; }
+.chum-name { font-weight: 700; font-size: 1.05rem; }
+.chum-tag { font-size: .9rem; line-height: 1.45; color: #C9D2DA; }
+@media (prefers-reduced-motion: reduce) {
+  .chum-float, .chum-fig, .chum-shadow { animation: none; }
+}
+@media (max-width: 760px) {
+  .lib-group.lib-coll { display: block; margin: 0; }
+  .lib-coll a { display: grid; grid-template-columns: 1fr; width: 6rem; margin: 0; padding: 0 0 .3rem; gap: .25rem; font-size: .75rem; text-transform: none; letter-spacing: 0; font-weight: 400; }
+  .lib-coll a .lib-thumb { display: block; }
+  .lib-set a { padding-left: 0; }
+  .panel.collection { padding: 1rem; }
+  .chum-games a { grid-template-columns: 5rem minmax(0, 1fr); }
+  .chum-games .lib-thumb { width: 5rem; height: 3.1rem; }
+}
+
 /* --- dark mode ----------------------------------------------------------
    Sam, 2 November 2026: "the entire site should have a darkmode". It follows
    the reader's system setting: the site ships no script (D3), and a switch
