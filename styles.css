@@ -1,126 +1,90 @@
-/* The look follows the 17 September lecture deck: dark slate bands, white
-   pages, a serif for headings, a humanist sans for text, a mono for ids.
-   The deck's own faces cannot be redistributed, so these are the open
-   stand-ins confirmed in M0 recon (decision 32, PLAN.md D11).
-
-   Every page is now one Markdown body rendered into alternating bands, so the
-   rules below are nearly all element rules: a heading, a paragraph, a list, a
-   table, a figure. There are no per-page component classes left to drift. */
-
-/* TeX Gyre Schola stands in for Century Schoolbook. GUST Font License. */
 @font-face {
-  font-family: "Schola";
-  src: url("/fonts/tex-gyre-schola/texgyreschola-regular.otf") format("opentype");
-  font-weight: 400; font-style: normal; font-display: swap;
+font-family: "Schola";
+src: url("/fonts/tex-gyre-schola/texgyreschola-regular.otf") format("opentype");
+font-weight: 400; font-style: normal; font-display: swap;
 }
 @font-face {
-  font-family: "Schola";
-  src: url("/fonts/tex-gyre-schola/texgyreschola-bold.otf") format("opentype");
-  font-weight: 700; font-style: normal; font-display: swap;
+font-family: "Schola";
+src: url("/fonts/tex-gyre-schola/texgyreschola-bold.otf") format("opentype");
+font-weight: 700; font-style: normal; font-display: swap;
 }
 @font-face {
-  font-family: "Schola";
-  src: url("/fonts/tex-gyre-schola/texgyreschola-italic.otf") format("opentype");
-  font-weight: 400; font-style: italic; font-display: swap;
-}
-/* Carlito stands in for Calibri. SIL OFL 1.1, Reserved Font Name "Carlito". */
-@font-face {
-  font-family: "Carlito";
-  src: url("/fonts/carlito/Carlito-Regular.ttf") format("truetype");
-  font-weight: 400; font-style: normal; font-display: swap;
+font-family: "Schola";
+src: url("/fonts/tex-gyre-schola/texgyreschola-italic.otf") format("opentype");
+font-weight: 400; font-style: italic; font-display: swap;
 }
 @font-face {
-  font-family: "Carlito";
-  src: url("/fonts/carlito/Carlito-Bold.ttf") format("truetype");
-  font-weight: 700; font-style: normal; font-display: swap;
+font-family: "Carlito";
+src: url("/fonts/carlito/Carlito-Regular.ttf") format("truetype");
+font-weight: 400; font-style: normal; font-display: swap;
 }
 @font-face {
-  font-family: "Carlito";
-  src: url("/fonts/carlito/Carlito-Italic.ttf") format("truetype");
-  font-weight: 400; font-style: italic; font-display: swap;
+font-family: "Carlito";
+src: url("/fonts/carlito/Carlito-Bold.ttf") format("truetype");
+font-weight: 700; font-style: normal; font-display: swap;
 }
-/* Courier Prime stands in for Courier New. SIL OFL 1.1. */
 @font-face {
-  font-family: "Courier Prime";
-  src: url("/fonts/courier-prime/CourierPrime-Regular.ttf") format("truetype");
-  font-weight: 400; font-style: normal; font-display: swap;
+font-family: "Carlito";
+src: url("/fonts/carlito/Carlito-Italic.ttf") format("truetype");
+font-weight: 400; font-style: italic; font-display: swap;
 }
-
+@font-face {
+font-family: "Courier Prime";
+src: url("/fonts/courier-prime/CourierPrime-Regular.ttf") format("truetype");
+font-weight: 400; font-style: normal; font-display: swap;
+}
 :root {
-  --ink: #1B2430;
-  /* Was #6B7680, which measured 4.64:1 on white and would have been 3.93:1 on
-     the tinted band — under AA both ways once a tint existed. 6.03:1 and
-     5.11:1 now. */
-  --grey: #5A646E;
-  --rule: #C9CFD3;
-  /* A pale Wolfpack Red. Chosen for LUMINANCE, not hue: it is 1.18:1 against
-     white, which is a 20-step difference out of 255 in greyscale, so the band
-     edge is visible to somebody who sees no colour at all. A 6% tint looked
-     nicer and was invisible in monochrome. */
-  --tint: #F7E9E9;
-  /* The band boundary, drawn as a line so the sections are still separable
-     with no colour perception whatsoever. */
-  --edge: #9AA4AB;
-  --panel: #E6EAEC;
-  --green: #2A6B4A;
-  --red: #8B2E2E;
-  /* The same red with the lightness taken down, for a filled button's
-     hover. White on it is 11.11:1 against the base red's 8.31:1, so the
-     hover is never the weaker contrast — measured, not chosen by eye. */
-  --red-dark: #6B2323;
-  --blue: #2F4BA0;
-  --page: #FFFFFF;
-  --serif: "Schola", Georgia, "Times New Roman", serif;
-  --sans: "Carlito", "Segoe UI", Helvetica, Arial, sans-serif;
-  --mono: "Courier Prime", "SF Mono", Menlo, Consolas, monospace;
+--ink: #1B2430;
+--grey: #5A646E;
+--rule: #C9CFD3;
+--tint: #F7E9E9;
+--edge: #9AA4AB;
+--panel: #E6EAEC;
+--green: #2A6B4A;
+--red: #8B2E2E;
+--red-dark: #6B2323;
+--blue: #2F4BA0;
+--page: #FFFFFF;
+--serif: "Schola", Georgia, "Times New Roman", serif;
+--sans: "Carlito", "Segoe UI", Helvetica, Arial, sans-serif;
+--mono: "Courier Prime", "SF Mono", Menlo, Consolas, monospace;
 }
-
 * { box-sizing: border-box; }
-
 html { -webkit-text-size-adjust: 100%; }
-
 body {
-  margin: 0;
-  background: var(--page);
-  color: var(--ink);
-  font: 400 17px/1.6 var(--sans);
+margin: 0;
+background: var(--page);
+color: var(--ink);
+font: 400 17px/1.6 var(--sans);
 }
-
 .wrap {
-  max-width: 44rem;
-  margin: 0 auto;
-  padding: 0 1.25rem;
+max-width: 44rem;
+margin: 0 auto;
+padding: 0 1.25rem;
 }
-
-/* --- the header and the footer ---------------------------------------- */
-
 .band {
-  background: var(--ink);
-  color: var(--page);
+background: var(--ink);
+color: var(--page);
 }
 .band a { color: var(--page); }
 header.band { padding: 1rem 0; }
 header.band .wrap {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1.5rem;
-  align-items: baseline;
-  justify-content: space-between;
+display: flex;
+flex-wrap: wrap;
+gap: 0.5rem 1.5rem;
+align-items: baseline;
+justify-content: space-between;
 }
 .brand {
-  margin: 0;
-  font: 700 1.15rem/1.2 var(--serif);
-  letter-spacing: 0.01em;
+margin: 0;
+font: 700 1.15rem/1.2 var(--serif);
+letter-spacing: 0.01em;
 }
 .brand a { text-decoration: none; }
-/* Seven items, and a long label wraps rather than being clipped. */
 header.band nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; font-size: 0.95rem; }
-
 footer.band {
-  /* The bands provide the vertical rhythm; a margin here read as a stray
-     empty band between the last section and the footer. */
-  padding: 2rem 0 2.5rem;
-  font-size: 0.9rem;
+padding: 2rem 0 2.5rem;
+font-size: 0.9rem;
 }
 footer.band p { margin: 0 0 0.5rem; }
 footer.band .ids { display: flex; flex-wrap: wrap; gap: 0.3rem 0.5rem; }
@@ -128,773 +92,577 @@ footer.band .licence { color: var(--rule); max-width: 60ch; }
 footer.band .licence a { color: var(--page); }
 footer.band .meta { color: var(--rule); margin-top: 0.75rem; }
 footer.band code { font-family: var(--mono); color: var(--page); }
-
 .skip {
-  position: absolute; left: -9999px;
-  background: var(--page); color: var(--ink); padding: 0.5rem 1rem;
+position: absolute; left: -9999px;
+background: var(--page); color: var(--ink); padding: 0.5rem 1rem;
 }
 .skip:focus { left: 0.5rem; top: 0.5rem; z-index: 10; }
-
-/* Text for a reader that is not looking at the page. Not `display: none`,
-   which takes it out of the accessibility tree as well, and not a negative
-   text-indent, which a right-to-left reading would send the other way. */
 .vh {
-  position: absolute;
-  width: 1px; height: 1px;
-  margin: -1px; padding: 0; border: 0;
-  overflow: hidden;
-  clip-path: inset(50%);
-  white-space: nowrap;
+position: absolute;
+width: 1px; height: 1px;
+margin: -1px; padding: 0; border: 0;
+overflow: hidden;
+clip-path: inset(50%);
+white-space: nowrap;
 }
-
-/* --- alternating bands ------------------------------------------------
-   Sections alternate white and a pale red so a reader can tell where one part
-   of the page stops and the next begins. Colour is never the only cue: every
-   band also carries a rule along its top edge, and the two backgrounds differ
-   in lightness rather than only in hue. */
-
 main { padding-top: 0; }
-
 .stripe { padding: 2.1rem 0; }
 .stripe:nth-of-type(even) { background: var(--tint); }
 .stripe + .stripe { border-top: 1px solid var(--edge); }
 .stripe > .wrap > :first-child { margin-top: 0; }
 .stripe:first-of-type { padding-top: 2.4rem; }
 .stripe:last-of-type { padding-bottom: 3rem; }
-
-/* Somebody who has asked their system for more contrast gets a stronger step
-   and a heavier edge. */
 @media (prefers-contrast: more) {
-  :root { --tint: #F2DEDE; --edge: #6E7880; }
-  .stripe + .stripe { border-top-width: 2px; }
+:root { --tint: #F2DEDE; --edge: #6E7880; }
+.stripe + .stripe { border-top-width: 2px; }
 }
-
-/* Windows high-contrast mode drops background colours entirely, so the rule
-   is the only thing left holding the sections apart. Keep it. */
 @media (forced-colors: active) {
-  .stripe + .stripe { border-top: 1px solid CanvasText; }
+.stripe + .stripe { border-top: 1px solid CanvasText; }
 }
-
-/* --- type ------------------------------------------------------------- */
-
 h1 {
-  font: 700 2.1rem/1.15 var(--serif);
-  margin: 0 0 0.9rem;
-  letter-spacing: -0.01em;
-  /* A paper title is long and has to wrap, never be clipped or shortened. */
-  overflow-wrap: break-word;
+font: 700 2.1rem/1.15 var(--serif);
+margin: 0 0 0.9rem;
+letter-spacing: -0.01em;
+overflow-wrap: break-word;
 }
 h2 {
-  font: 700 1.3rem/1.25 var(--serif);
-  margin: 2.5rem 0 0.75rem;
-  padding-bottom: 0.3rem;
-  border-bottom: 1px solid var(--rule);
+font: 700 1.3rem/1.25 var(--serif);
+margin: 2.5rem 0 0.75rem;
+padding-bottom: 0.3rem;
+border-bottom: 1px solid var(--rule);
 }
-/* An h3 is a record in a list: a paper, a concept, a course, a file. It carries
-   the link, so it is set at reading size rather than as another heading step. */
 h3 {
-  font: 700 1.06rem/1.35 var(--serif);
-  margin: 1.9rem 0 0.4rem;
-  overflow-wrap: break-word;
+font: 700 1.06rem/1.35 var(--serif);
+margin: 1.9rem 0 0.4rem;
+overflow-wrap: break-word;
 }
 h3 + p { margin-top: 0; }
 p { margin: 0 0 1rem; max-width: 68ch; }
-
-/* The first paragraph of a page carries it, and on a paper page the first three
-   are the record: what the work is, who wrote it, and where it appeared. */
 .stripe:first-of-type > .wrap > p:first-of-type { font-size: 1.1rem; }
-
 a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 2px; }
 a:hover { color: var(--ink); }
 a:focus-visible, button:focus-visible, summary:focus-visible {
-  outline: 2px solid var(--blue);
-  outline-offset: 2px;
+outline: 2px solid var(--blue);
+outline-offset: 2px;
 }
-
 ul, ol { margin: 0 0 1rem; padding-left: 1.2rem; }
 li { margin-bottom: 0.3rem; max-width: 66ch; }
-
 strong { font-weight: 700; }
 em { font-style: italic; }
-
 code {
-  font: 400 0.9em/1.5 var(--mono);
+font: 400 0.9em/1.5 var(--mono);
 }
 pre {
-  background: var(--ink);
-  color: var(--page);
-  padding: 1rem 1.1rem;
-  overflow-x: auto;
-  border-radius: 2px;
-  margin: 0 0 1.2rem;
+background: var(--ink);
+color: var(--page);
+padding: 1rem 1.1rem;
+overflow-x: auto;
+border-radius: 2px;
+margin: 0 0 1.2rem;
 }
 pre code { font: 400 0.84rem/1.55 var(--mono); color: inherit; }
-
-/* --- tables ----------------------------------------------------------
-   The procedures and the map's relationship table. A table has to stay
-   readable on a narrow screen, so it scrolls sideways inside its own box
-   rather than being shrunk or clipped. */
-
 table {
-  border-collapse: collapse;
-  width: 100%;
-  margin: 0 0 1.3rem;
-  font-size: 0.95rem;
-  display: block;
-  overflow-x: auto;
+border-collapse: collapse;
+width: 100%;
+margin: 0 0 1.3rem;
+font-size: 0.95rem;
+display: block;
+overflow-x: auto;
 }
 thead th {
-  text-align: left;
-  font: 700 0.85rem/1.4 var(--sans);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--grey);
-  border-bottom: 1px solid var(--edge);
-  padding: 0.4rem 0.7rem 0.4rem 0;
+text-align: left;
+font: 700 0.85rem/1.4 var(--sans);
+text-transform: uppercase;
+letter-spacing: 0.04em;
+color: var(--grey);
+border-bottom: 1px solid var(--edge);
+padding: 0.4rem 0.7rem 0.4rem 0;
 }
 tbody td {
-  vertical-align: top;
-  padding: 0.55rem 0.7rem 0.55rem 0;
-  border-bottom: 1px solid var(--rule);
+vertical-align: top;
+padding: 0.55rem 0.7rem 0.55rem 0;
+border-bottom: 1px solid var(--rule);
 }
 tbody tr:last-child td { border-bottom: 0; }
-/* The first column is a label: A0, B1, Brief. Keep it from wrapping mid-word. */
 tbody td:first-child { white-space: nowrap; font-weight: 700; }
-
-/* --- quotations and source records ----------------------------------- */
-
 blockquote.student {
-  margin: 0.7rem 0 1.2rem;
-  padding: 0.75rem 1rem;
-  background: var(--panel);
-  border-left: 3px solid var(--green);
+margin: 0.7rem 0 1.2rem;
+padding: 0.75rem 1rem;
+background: var(--panel);
+border-left: 3px solid var(--green);
 }
 blockquote.student p {
-  margin: 0;
-  font: 400 1.02rem/1.55 var(--serif);
-  font-style: italic;
+margin: 0;
+font: 400 1.02rem/1.55 var(--serif);
+font-style: italic;
 }
 blockquote.student cite {
-  display: block;
-  margin-top: 0.45rem;
-  font: 400 0.82rem/1.4 var(--mono);
-  font-style: normal;
-  color: var(--grey);
+display: block;
+margin-top: 0.45rem;
+font: 400 0.82rem/1.4 var(--mono);
+font-style: normal;
+color: var(--grey);
 }
 blockquote {
-  margin: 0 0 1.2rem;
-  padding-left: 0.9rem;
-  border-left: 3px solid var(--rule);
-  color: var(--ink);
+margin: 0 0 1.2rem;
+padding-left: 0.9rem;
+border-left: 3px solid var(--rule);
+color: var(--ink);
 }
-
-/* An abstract is a source record, not site prose: it is set in the serif and
-   marked as a verbatim quotation in the markup. */
 .abstract {
-  border-left: 3px solid var(--edge);
-  padding-left: 0.9rem;
-  margin: 0 0 0.6rem;
+border-left: 3px solid var(--edge);
+padding-left: 0.9rem;
+margin: 0 0 0.6rem;
 }
 .abstract p { margin-bottom: 0.8rem; font-family: var(--serif); }
 p.provenance {
-  margin: 0 0 0.6rem;
-  font-size: 0.85rem;
-  color: var(--grey);
+margin: 0 0 0.6rem;
+font-size: 0.85rem;
+color: var(--grey);
 }
 ul.errata {
-  margin: 0 0 1.4rem;
-  padding-left: 1.1rem;
-  font-size: 0.88rem;
-  color: var(--grey);
+margin: 0 0 1.4rem;
+padding-left: 1.1rem;
+font-size: 0.88rem;
+color: var(--grey);
 }
-
-/* --- figures ---------------------------------------------------------- */
-
 figure { margin: 0 0 1.6rem; }
 img { max-width: 100%; height: auto; }
 figcaption {
-  margin-top: 0.6rem;
-  font-size: 0.88rem;
-  color: var(--grey);
-  line-height: 1.6;
-  max-width: 68ch;
+margin-top: 0.6rem;
+font-size: 0.88rem;
+color: var(--grey);
+line-height: 1.6;
+max-width: 68ch;
 }
 .slidefig img {
-  display: block;
-  border: 1px solid var(--rule);
-  background: var(--page);
+display: block;
+border: 1px solid var(--rule);
+background: var(--page);
 }
-
-/* --- a blog post's figures -------------------------------------------- */
-/* Compiled from TikZ, so they are line art rather than photographs: no border
-   and no background, because a rule around a drawing that already has its own
-   boxes reads as a second frame. They scale to the column and never exceed
-   their natural size, since an upscaled vector of 9pt labels is not more
-   readable, only larger. */
 .postfig {
-  margin: 1.6rem 0;
+margin: 1.6rem 0;
 }
 .postfig img {
-  display: block;
-  /* Natural size, capped at the column. These are line drawings whose labels
-     are set at one point size, so upscaling a narrow figure to fill the column
-     would make its text larger than the next figure's for no reason. A figure
-     is as wide as it was drawn to be. */
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
+display: block;
+max-width: 100%;
+height: auto;
+margin: 0 auto;
 }
 .postfig figcaption {
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-  color: var(--grey);
+margin-top: 0.5rem;
+font-size: 0.9rem;
+color: var(--grey);
 }
-
-/* --- the lecture ------------------------------------------------------ */
-
 section.slide { scroll-margin-top: 1rem; }
 section.slide > h2 { margin-top: 0; }
-
-/* --- the portrait ----------------------------------------------------- */
-
 .intro {
-  display: flex;
-  align-items: center;
-  gap: 1.1rem;
-  margin-bottom: 0.75rem;
+display: flex;
+align-items: center;
+gap: 1.1rem;
+margin-bottom: 0.75rem;
 }
 .intro h1 { margin: 0; }
 img.portrait {
-  width: 96px;
-  height: auto;
-  border-radius: 3px;
-  border: 1px solid var(--rule);
-  flex: none;
+width: 96px;
+height: auto;
+border-radius: 3px;
+border: 1px solid var(--rule);
+flex: none;
 }
 @media (max-width: 30rem) {
-  body { font-size: 16px; }
-  h1 { font-size: 1.7rem; }
-  .intro { gap: 0.8rem; }
-  img.portrait { width: 72px; }
+body { font-size: 16px; }
+h1 { font-size: 1.7rem; }
+.intro { gap: 0.8rem; }
+img.portrait { width: 72px; }
 }
-
-/* --- the concept map --------------------------------------------------
-   The picture is the optional half: every relationship it draws is also a row
-   in the table directly below it. The reader chooses the size, because there
-   is no one right one: scaled to the window, or drawn at the size it was laid
-   out and scrolled. The table says the same thing either way. */
-
-/* The map gets a wider window than the reading column, because the column is
-   sized for prose and this is a picture with 22 labelled boxes in it. It breaks
-   out of the column to the width of the viewport, bounded so that it can never
-   be the thing that makes the page scroll sideways: at 400px it is 375px wide,
-   inside the body's own padding. */
 .kcfig {
-  margin: 0 0 1.6rem;
-  width: min(calc(100vw - 2.5rem), 1600px);
-  margin-left: calc((100% - min(100vw - 2.5rem, 1600px)) / 2);
+margin: 0 0 1.6rem;
+width: min(calc(100vw - 2.5rem), 1600px);
+margin-left: calc((100% - min(100vw - 2.5rem, 1600px)) / 2);
 }
-
-/* Zoom, in three steps, with no JavaScript (D3). The radios are the state and
-   CSS reads them. Fit scales the whole map into the window, Full size draws it
-   at the size it was laid out, Larger draws it half again — and in both of
-   those the window scrolls rather than the labels shrinking. */
 .kczoom {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.35rem;
-  margin: 0 0 0.6rem;
-  font-size: 0.85rem;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+gap: 0.35rem;
+margin: 0 0 0.6rem;
+font-size: 0.85rem;
 }
 .kczoom input { position: absolute; opacity: 0; pointer-events: none; }
 .kczoom label {
-  border: 1px solid var(--rule);
-  border-radius: 3px;
-  padding: 0.2rem 0.6rem;
-  cursor: pointer;
-  color: var(--grey);
-  background: var(--page);
+border: 1px solid var(--rule);
+border-radius: 3px;
+padding: 0.2rem 0.6rem;
+cursor: pointer;
+color: var(--grey);
+background: var(--page);
 }
 .kczoom label:hover { color: var(--ink); border-color: var(--edge); }
 .kczoom input:checked + label {
-  background: var(--ink);
-  border-color: var(--ink);
-  color: var(--page);
+background: var(--ink);
+border-color: var(--ink);
+color: var(--page);
 }
-/* The control is operated by keyboard: the focus ring has to be on the label,
-   because the input itself is not where the eye is. */
 .kczoom input:focus-visible + label { outline: 2px solid var(--blue); outline-offset: 2px; }
-
 .kcscroll { overflow-x: auto; overflow-y: hidden; padding-bottom: 0.5rem; }
 svg.kcgraph { display: block; height: auto; }
-/* The radios live inside the control, so the picture is not their sibling and
-   `:has()` on the figure is what reaches it. A browser without `:has()` applies
-   none of the three and draws the map at the size it was laid out, inside a
-   window that scrolls — which is where this page was before the control
-   existed. Fit never upscales past that size, or the lines go soft. */
 .kcfig:has(#kc-fit:checked) svg.kcgraph { width: 100%; max-width: var(--kcw); }
 .kcfig:has(#kc-full:checked) svg.kcgraph { width: var(--kcw); max-width: none; }
 .kcfig:has(#kc-large:checked) svg.kcgraph { width: calc(var(--kcw) * 1.5); max-width: none; }
 @media (forced-colors: active) {
-  .kczoom label { border-color: CanvasText; }
-  .kczoom input:checked + label { background: Highlight; color: HighlightText; }
+.kczoom label { border-color: CanvasText; }
+.kczoom input:checked + label { background: Highlight; color: HighlightText; }
 }
-
 .kc-node { fill: #f7f7f7; stroke: var(--rule); stroke-width: 1; }
-/* A strategy is something you do rather than something you know. The caption
-   says so in words; this is the second cue, and it is a different shape of
-   information from the arrow colours. */
 .kc-node.kc-strategy { fill: #e8f5e9; stroke: #9ccc9f; }
 a:hover .kc-node { fill: var(--panel); stroke: var(--ink); }
 a:focus-visible .kc-node { stroke: var(--blue); stroke-width: 2; }
 .kc-ntext {
-  font: 700 12px/1.25 var(--sans);
-  fill: var(--ink);
-  text-anchor: middle;
+font: 700 12px/1.25 var(--sans);
+fill: var(--ink);
+text-anchor: middle;
 }
 .kc-edge { opacity: 0.85; }
-/* The two or three words drawn beside a line. The box is opaque so the label
-   stays readable where it crosses another curve. */
 .kc-elabel { fill: #ffffff; stroke: var(--rule); stroke-width: 0.75; }
 .kc-etext { font: 400 10.5px/1.2 var(--mono); }
 a:hover .kc-elabel { fill: var(--panel); }
-/* A label that could not sit beside its own curve gets a thread back to it,
-   and a dot on the curve it names. Three labels in one band can read the same
-   word, and the dot is what says which line each belongs to. It is a shape,
-   not a colour, so it survives greyscale and forced colours. */
 .kc-leader { stroke-width: 1.1; stroke-dasharray: 2 2; opacity: 0.95; }
 .kc-anchor { stroke: #fff; stroke-width: 0.8; }
-/* The legend's colour swatches. The kind is also a column in the table, so the
-   swatch is a convenience and never the only way to read the picture. */
 .key { white-space: nowrap; padding-left: 1.1rem; position: relative; }
 .key::before {
-  content: "";
-  position: absolute; left: 0; top: 0.45em;
-  width: 0.85rem; height: 2px; background: var(--c);
+content: "";
+position: absolute; left: 0; top: 0.45em;
+width: 0.85rem; height: 2px; background: var(--c);
 }
 @media (forced-colors: active) {
-  .kc-node { fill: Canvas; stroke: CanvasText; }
-  .kc-node.kc-strategy { fill: Canvas; stroke: CanvasText; stroke-dasharray: 4 2; }
-  .kc-ntext { fill: CanvasText; }
-  .kc-elabel { fill: Canvas; stroke: CanvasText; }
-  .kc-leader { stroke: CanvasText !important; opacity: 1; }
-  .kc-anchor { fill: CanvasText !important; stroke: Canvas !important; }
+.kc-node { fill: Canvas; stroke: CanvasText; }
+.kc-node.kc-strategy { fill: Canvas; stroke: CanvasText; stroke-dasharray: 4 2; }
+.kc-ntext { fill: CanvasText; }
+.kc-elabel { fill: Canvas; stroke: CanvasText; }
+.kc-leader { stroke: CanvasText !important; opacity: 1; }
+.kc-anchor { fill: CanvasText !important; stroke: Canvas !important; }
 }
-
-/* --- print: the CV page is meant to come out as a PDF ------------------ */
-
 @media print {
-  header.band, footer.band, .skip { display: none !important; }
-  /* Tinted bands waste ink and print grey. The rules keep the structure. */
-  .stripe { background: #fff !important; padding: 0.4rem 0; }
-  .stripe + .stripe { border-top: 1px solid #999; }
-  body { font-size: 11pt; color: #000; }
-  .wrap { max-width: none; padding: 0; }
-  main { padding-top: 0; }
-  a { color: #000; text-decoration: none; }
-  h1 { font-size: 20pt; }
-  h2 { font-size: 13pt; margin-top: 1.2rem; page-break-after: avoid; }
-  h3 { page-break-after: avoid; }
-  li, p { page-break-inside: avoid; }
-  pre { display: none; }
-  img.portrait { display: none; }
+header.band, footer.band, .skip { display: none !important; }
+.stripe { background: #fff !important; padding: 0.4rem 0; }
+.stripe + .stripe { border-top: 1px solid #999; }
+body { font-size: 11pt; color: #000; }
+.wrap { max-width: none; padding: 0; }
+main { padding-top: 0; }
+a { color: #000; text-decoration: none; }
+h1 { font-size: 20pt; }
+h2 { font-size: 13pt; margin-top: 1.2rem; page-break-after: avoid; }
+h3 { page-break-after: avoid; }
+li, p { page-break-inside: avoid; }
+pre { display: none; }
+img.portrait { display: none; }
 }
-
-/* Sam's pick on the project index. --red measures 8.3:1 on white and 7.0:1 on
-   the tint, so it clears AA in both bands; the gate checks that per band. The
-   star is decorative and aria-hidden, so the word carries the meaning on its
-   own, and in forced-colors the border is what survives the dropped colour. */
 .featured {
-  margin: 0.2rem 0 0;
-  font-family: var(--sans);
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--red);
+margin: 0.2rem 0 0;
+font-family: var(--sans);
+font-size: 0.8rem;
+font-weight: 700;
+letter-spacing: 0.04em;
+text-transform: uppercase;
+color: var(--red);
 }
 .featured span { font-size: 1rem; }
 @media (forced-colors: active) {
-  .featured { border: 1px solid; display: inline-block; padding: 0 0.35rem; }
+.featured { border: 1px solid; display: inline-block; padding: 0 0.35rem; }
 }
-
-/* The line a blog post ends on. The navigation already links /positions/ from
-   every page's header; this is the same link at the point a reader has just
-   finished reading, which is where they are. --red measures 8.3:1 on white and
-   7.0:1 on the tint, so the rule above it is visible in both bands. */
 .seeking {
-  margin: 1.4rem 0 0;
-  padding-top: .8rem;
-  border-top: 1px solid var(--rule);
-  font-size: .95rem;
-  color: var(--grey);
+margin: 1.4rem 0 0;
+padding-top: .8rem;
+border-top: 1px solid var(--rule);
+font-size: .95rem;
+color: var(--grey);
 }
 .seeking a { color: var(--red); font-weight: 600; }
-
-/* ------------------------------------------------- the tools and games grid
-   A tile is a still from the running application, its name and its one
-   sentence. Where an application moves on its own, resting a pointer on the
-   tile swaps the still for a short loop -- done by changing a background
-   image, because the site ships no script (D3) and an animated image needs
-   none. The still is what loads, so a reader who never hovers sees a picture
-   rather than a blank.
-
-   Motion is opt-out twice over: prefers-reduced-motion keeps the still, and a
-   tile without a loop never changes. The name and the sentence carry the tile
-   on their own, so a picture that fails to load costs nothing. */
 .tiles {
-  list-style: none;
-  margin: 1.2rem 0 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
-  gap: 1.4rem 1.2rem;
+list-style: none;
+margin: 1.2rem 0 0;
+padding: 0;
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+gap: 1.4rem 1.2rem;
 }
-/* A run of the games: Featured, 3D, 2D, Proof of concept. An h3 inside the
-   band the page already opened, so it starts no band of its own (CLAUDE.md
-   4b). */
 .run {
-  margin: 1.6rem 0 0;
-  font-size: 1.05rem;
-  padding-bottom: .3rem;
-  border-bottom: 1px solid var(--rule);
+margin: 1.6rem 0 0;
+font-size: 1.05rem;
+padding-bottom: .3rem;
+border-bottom: 1px solid var(--rule);
 }
 .run:first-child { margin-top: 1rem; }
-
 .tile {
-  display: flex;
-  flex-direction: column;
-  /* A tile is a card, not a line of prose. `li` carries the 66ch reading
-     measure, which ordinary tiles never reach and the lead, spanning the row,
-     hits at 569px of a 664px row -- the browser gate caught that; no core test
-     could. */
-  max-width: none;
-  border: 1px solid var(--rule);
-  border-radius: 6px;
-  overflow: hidden;
-  background: #fff;
+display: flex;
+flex-direction: column;
+max-width: none;
+border: 1px solid var(--rule);
+border-radius: 6px;
+overflow: hidden;
+background: #fff;
 }
 .tile .shot {
-  display: block;
-  aspect-ratio: 8 / 5;
-  background-image: var(--poster);
-  background-size: cover;
-  background-position: center;
-  background-color: var(--panel);
-  border-bottom: 1px solid var(--rule);
+display: block;
+aspect-ratio: 8 / 5;
+background-image: var(--poster);
+background-size: cover;
+background-position: center;
+background-color: var(--panel);
+border-bottom: 1px solid var(--rule);
 }
 .tile h3 { margin: 0; padding: .6rem .7rem .1rem; font-size: 1rem; }
 .tile h3 a {
-  color: inherit;
-  text-decoration: underline;
-  text-decoration-color: var(--rule);
+color: inherit;
+text-decoration: underline;
+text-decoration-color: var(--rule);
 }
 .tile h3 a:hover, .tile h3 a:focus-visible { text-decoration-color: var(--red); }
 .tile h3 a:focus-visible { outline: 3px solid var(--red); outline-offset: 2px; }
 .tile .featured { margin: .1rem .7rem 0; }
 .tile > p { margin: .35rem .7rem 0; font-size: .92rem; color: var(--grey); }
-/* Where it plays, and what it is played with. Two lines rather than one
-   sentence: a reader scanning a column of tiles reads the platform names and
-   nothing else, and the input only matters once one of them is theirs. */
 .tile .plays { margin: .5rem .7rem 0; font-size: .82rem; }
 .tile .plays .where {
-  display: block;
-  color: var(--ink);
-  letter-spacing: .01em;
+display: block;
+color: var(--ink);
+letter-spacing: .01em;
 }
 .tile .plays .how { display: block; color: var(--grey); font-size: .78rem; }
-/* The handheld callout. A pill rather than a colour, so it still reads as set
-   apart with no colour perception at all, and in forced colours it keeps its
-   border (the block at the end of this file). */
 .tile .plays .mobile {
-  display: inline-block;
-  margin-top: .35rem;
-  padding: .12rem .5rem;
-  border: 1px solid var(--red);
-  border-radius: 999px;
-  color: var(--red);
-  font-size: .76rem;
-  font-weight: 600;
+display: inline-block;
+margin-top: .35rem;
+padding: .12rem .5rem;
+border: 1px solid var(--red);
+border-radius: 999px;
+color: var(--red);
+font-size: .76rem;
+font-weight: 600;
 }
-/* The buttons sit on the floor of the card however long the sentence above
-   them runs, so a row of tiles has one line of buttons rather than a ragged
-   one. */
 .tile .go-row {
-  margin: auto .7rem .7rem;
-  padding-top: .7rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: .45rem;
+margin: auto .7rem .7rem;
+padding-top: .7rem;
+display: flex;
+flex-wrap: wrap;
+gap: .45rem;
 }
 .tile .go {
-  flex: 1 1 auto;
-  text-align: center;
-  padding: .4rem .7rem;
-  border: 1px solid var(--rule);
-  border-radius: 4px;
-  font-size: .92rem;
-  text-decoration: none;
-  color: inherit;
-  background: var(--panel);
+flex: 1 1 auto;
+text-align: center;
+padding: .4rem .7rem;
+border: 1px solid var(--rule);
+border-radius: 4px;
+font-size: .92rem;
+text-decoration: none;
+color: inherit;
+background: var(--panel);
 }
-/* The lead card: the one project the page is built around. It takes the whole
-   row, so the figure is read rather than glanced at, and it is the only tile
-   with a second rule around it -- emphasis by size and weight, not by colour
-   alone. */
 .tile.lead {
-  grid-column: 1 / -1;
-  border-width: 2px;
-  border-color: var(--red);
+grid-column: 1 / -1;
+border-width: 2px;
+border-color: var(--red);
 }
 @media (min-width: 46rem) {
-  .tile.lead { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); }
-  .tile.lead .shot {
-    grid-row: 1 / 6;
-    height: 100%;
-    aspect-ratio: auto;
-    border-bottom: 0;
-    border-right: 1px solid var(--rule);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: #fff;
-  }
-  .tile.lead h3 { padding-top: 1.1rem; font-size: 1.3rem; }
-  .tile.lead > p { font-size: 1rem; }
-  .tile.lead .go-row { margin-bottom: 1.1rem; }
+.tile.lead { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); }
+.tile.lead .shot {
+grid-row: 1 / 6;
+height: 100%;
+aspect-ratio: auto;
+border-bottom: 0;
+border-right: 1px solid var(--rule);
+background-size: contain;
+background-repeat: no-repeat;
+background-color: #fff;
 }
-
+.tile.lead h3 { padding-top: 1.1rem; font-size: 1.3rem; }
+.tile.lead > p { font-size: 1rem; }
+.tile.lead .go-row { margin-bottom: 1.1rem; }
+}
 .tile .go.play {
-  background: var(--red);
-  border-color: var(--red);
-  color: #fff;
-  font-weight: 600;
+background: var(--red);
+border-color: var(--red);
+color: #fff;
+font-weight: 600;
 }
 .tile .go:hover, .tile .go:focus-visible { border-color: var(--red); }
 .tile .go.play:hover, .tile .go.play:focus-visible { background: var(--red-dark); }
 .tile .go:focus-visible { outline: 3px solid var(--red); outline-offset: 2px; }
-/* The still becomes the clip when a pointer is over the card, and when the
-   keyboard reaches either button — `:focus-within`, because the card stopped
-   being a link and the buttons are what a keyboard lands on now. */
 @media (hover: hover) {
-  .tiles .tile:hover .shot.moves,
-  .tiles .tile:focus-within .shot.moves { background-image: var(--clip); }
+.tiles .tile:hover .shot.moves,
+.tiles .tile:focus-within .shot.moves { background-image: var(--clip); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .tiles .tile:hover .shot.moves,
-  .tiles .tile:focus-within .shot.moves { background-image: var(--poster); }
+.tiles .tile:hover .shot.moves,
+.tiles .tile:focus-within .shot.moves { background-image: var(--poster); }
 }
 @media (forced-colors: active) {
-  .tile { border: 1px solid; }
-  .tile .shot { border-bottom: 1px solid; }
-  .tile .go { border: 1px solid; }
-  .tile .plays .mobile { border: 1px solid; }
+.tile { border: 1px solid; }
+.tile .shot { border-bottom: 1px solid; }
+.tile .go { border: 1px solid; }
+.tile .plays .mobile { border: 1px solid; }
 }
 }
-
-/* The line on a game repeated under Multiplayer: how and how many. Set like
-   the browser line above it, so it reads as one more fact about the game. */
 .tile .together { margin: .45rem .7rem 0; font-size: .82rem; color: var(--ink); }
-
-/* --- the library: /games/ and /tools/ ------------------------------------
-   Sam, 2 November 2026: "a steam library setup", the list down the left and
-   the chosen game or tool filling the rest. Mockup A of three. Its band is
-   dark, which keeps the bands' rule: the step from the white band above is a
-   step in lightness, and the band still carries its top edge. Every colour
-   here was measured against the one it sits on:
-     --lib-ink on --lib-bg 15.6:1, --lib-muted on --lib-side 8.5:1,
-     --lib-group on --lib-side 5.6:1, white on --red 8.3:1. */
 .library {
-  --lib-bg: #121820;
-  --lib-side: #19212B;
-  --lib-line: #2B3644;
-  --lib-lit: #2E3B4B;
-  --lib-mark: #D46A6A;
-  --lib-ink: #E8ECEF;
-  --lib-muted: #AEB8C2;
-  --lib-group: #8794A1;
-  display: grid;
-  grid-template-columns: minmax(13.5rem, 20%) minmax(0, 1fr);
-  height: max(32rem, calc(100svh - 7.25rem));
-  background: var(--lib-bg);
-  color: var(--lib-ink);
+--lib-bg: #121820;
+--lib-side: #19212B;
+--lib-line: #2B3644;
+--lib-lit: #2E3B4B;
+--lib-mark: #D46A6A;
+--lib-ink: #E8ECEF;
+--lib-muted: #AEB8C2;
+--lib-group: #8794A1;
+display: grid;
+grid-template-columns: minmax(13.5rem, 20%) minmax(0, 1fr);
+height: max(32rem, calc(100svh - 7.25rem));
+background: var(--lib-bg);
+color: var(--lib-ink);
 }
 .stripe:has(> .wrap > .library) { padding: 0; background: #121820; }
-/* Above a library the page's own band is one line, the name and the
-   introduction side by side, so the library starts near the top of the
-   window as it did in the mockup. The mockup had no name at all; a page needs
-   one. The header spans the width the library does. */
 body:has(.library) header.band .wrap { max-width: none; padding: 0 1.5rem; }
 .stripe:has(+ .stripe > .wrap > .library) { padding: .9rem 0 1rem; }
 .stripe:has(+ .stripe > .wrap > .library) > .wrap {
-  max-width: none; padding: 0 1.5rem;
-  display: flex; flex-wrap: wrap; align-items: baseline; gap: .2rem 1.2rem;
+max-width: none; padding: 0 1.5rem;
+display: flex; flex-wrap: wrap; align-items: baseline; gap: .2rem 1.2rem;
 }
 .stripe:has(+ .stripe > .wrap > .library) > .wrap > h1 { margin: 0; font-size: 1.75rem; }
 .stripe:has(+ .stripe > .wrap > .library) > .wrap > p { margin: 0; font-size: .98rem; color: var(--grey); max-width: none; }
 .stripe:has(> .wrap > .library) > .wrap { max-width: none; padding: 0; }
-/* The band's heading names the region for a reader who is not looking; the
-   list's own labels say the same thing to one who is. */
 .stripe:has(> .wrap > .library) > .wrap > h2 {
-  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
-  overflow: hidden; clip-path: inset(50%); white-space: nowrap;
+position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+overflow: hidden; clip-path: inset(50%); white-space: nowrap;
 }
 .library a:focus-visible { outline: 3px solid var(--lib-mark); outline-offset: -3px; }
-
 .lib-side {
-  background: var(--lib-side);
-  border-right: 1px solid var(--lib-line);
-  overflow-y: auto;
-  padding: .4rem 0 2rem;
+background: var(--lib-side);
+border-right: 1px solid var(--lib-line);
+overflow-y: auto;
+padding: .4rem 0 2rem;
 }
 .lib-group {
-  margin: 1rem 1rem .35rem;
-  font-size: .7rem;
-  font-weight: 700;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--lib-group);
+margin: 1rem 1rem .35rem;
+font-size: .7rem;
+font-weight: 700;
+letter-spacing: .12em;
+text-transform: uppercase;
+color: var(--lib-group);
 }
 .lib-side ul { list-style: none; margin: 0; padding: 0; }
 .lib-side li { margin: 0; max-width: none; }
 .lib-side a {
-  display: grid;
-  grid-template-columns: 52px minmax(0, 1fr);
-  gap: .65rem;
-  align-items: center;
-  padding: .3rem 1rem;
-  font-size: .88rem;
-  line-height: 1.25;
-  color: var(--lib-muted);
-  text-decoration: none;
+display: grid;
+grid-template-columns: 52px minmax(0, 1fr);
+gap: .65rem;
+align-items: center;
+padding: .3rem 1rem;
+font-size: .88rem;
+line-height: 1.25;
+color: var(--lib-muted);
+text-decoration: none;
 }
 .lib-side a:hover { background: #222C38; color: #fff; }
 .lib-thumb {
-  display: block; width: 52px; height: 32px; border-radius: 2px;
-  background: var(--lib-line) center / cover no-repeat;
+display: block; width: 52px; height: 32px; border-radius: 2px;
+background: var(--lib-line) center / cover no-repeat;
 }
-
 .lib-main { position: relative; overflow: hidden; }
-/* One panel at a time: the chosen one, or the first when none is chosen. The
-   first is written last, so choosing any other hides it with a sibling rule.
-   The scroll margin stops a choice from scrolling the page: the browser would
-   bring the panel to the top of the window, and the margin moves that point
-   above the top of the page, where it stops. */
 .panel {
-  display: none;
-  position: absolute;
-  inset: 0;
-  overflow-y: auto;
-  scroll-margin-top: 100vh;
+display: none;
+position: absolute;
+inset: 0;
+overflow-y: auto;
+scroll-margin-top: 100vh;
 }
 .panel:target, .panel.default { display: block; }
 .panel:target ~ .panel.default { display: none; }
-
 .lib-top { position: relative; }
 .lib-hero img {
-  display: block;
-  width: 100%;
-  height: min(62vh, 35rem);
-  object-fit: cover;
+display: block;
+width: 100%;
+height: min(62vh, 35rem);
+object-fit: cover;
 }
 .lib-top::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(18,24,32,0) 45%, var(--lib-bg) 98%);
-  pointer-events: none;
+content: "";
+position: absolute;
+inset: 0;
+background: linear-gradient(180deg, rgba(18,24,32,0) 45%, var(--lib-bg) 98%);
+pointer-events: none;
 }
 .lib-top h3 {
-  position: absolute;
-  left: 2.25rem; right: 2.25rem; bottom: .4rem;
-  z-index: 1;
-  margin: 0;
-  font: 700 clamp(1.9rem, 4vw, 3.25rem)/1.05 var(--serif);
-  color: #fff;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, .6);
+position: absolute;
+left: 2.25rem; right: 2.25rem; bottom: .4rem;
+z-index: 1;
+margin: 0;
+font: 700 clamp(1.9rem, 4vw, 3.25rem)/1.05 var(--serif);
+color: #fff;
+text-shadow: 0 2px 12px rgba(0, 0, 0, .6);
 }
-/* A tool, a drawing, or a project with no picture: framed, with its name
-   under it rather than over it. */
 .panel.framed .lib-top, .panel.bare .lib-top { padding: 2rem 2.25rem 0; }
 .panel.framed .lib-top::after, .panel.bare .lib-top::after { content: none; }
 .panel.framed .lib-hero img {
-  width: auto; max-width: 100%;
-  height: auto; max-height: 52vh;
-  object-fit: contain;
-  border: 1px solid #3A4757;
-  border-radius: 3px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, .45);
-  background: #F4F6F7;
+width: auto; max-width: 100%;
+height: auto; max-height: 52vh;
+object-fit: contain;
+border: 1px solid #3A4757;
+border-radius: 3px;
+box-shadow: 0 10px 30px rgba(0, 0, 0, .45);
+background: #F4F6F7;
 }
 .panel.framed .lib-top h3, .panel.bare .lib-top h3 { position: static; margin-top: 1.1rem; text-shadow: none; }
-/* No picture yet: the name on a pale card, the size a picture would take,
-   rather than an empty space that reads as one that failed to load. The
-   thumbnail is the same card in small. */
 .panel.bare .lib-top h3 {
-  display: grid; place-items: center;
-  width: min(100%, 36rem); aspect-ratio: 8 / 5; margin: 0;
-  background: var(--panel); color: var(--ink);
-  border-radius: 3px; text-align: center; padding: 1rem;
+display: grid; place-items: center;
+width: min(100%, 36rem); aspect-ratio: 8 / 5; margin: 0;
+background: var(--panel); color: var(--ink);
+border-radius: 3px; text-align: center; padding: 1rem;
 }
 .lib-thumb:not([style]) { background: var(--panel); }
-
 .lib-doors, .lib-tag, .lib-facts { margin: 1rem 2.25rem 0; max-width: 62rem; }
 .lib-doors { display: flex; flex-wrap: wrap; gap: .6rem; }
 .lib-doors .go {
-  padding: .55rem 1.1rem;
-  border-radius: 3px;
-  background: var(--lib-line);
-  color: var(--lib-ink);
-  font-weight: 700;
-  text-decoration: none;
+padding: .55rem 1.1rem;
+border-radius: 3px;
+background: var(--lib-line);
+color: var(--lib-ink);
+font-weight: 700;
+text-decoration: none;
 }
 .lib-doors .go:first-child {
-  background: var(--red);
-  color: #fff;
-  padding: .7rem 2.1rem;
-  font-size: 1.05rem;
+background: var(--red);
+color: #fff;
+padding: .7rem 2.1rem;
+font-size: 1.05rem;
 }
 .lib-doors .go:hover { filter: brightness(1.18); }
 .lib-tag { font-size: 1.05rem; line-height: 1.5; color: #C9D2DA; max-width: 70ch; }
 .lib-facts { list-style: none; padding: 0 0 2.5rem; display: flex; flex-wrap: wrap; gap: .5rem; }
 .lib-facts li {
-  margin: 0;
-  padding: .2rem .65rem;
-  border: 1px solid #3A4757;
-  border-radius: 999px;
-  font-size: .8rem;
-  color: var(--lib-muted);
+margin: 0;
+padding: .2rem .65rem;
+border: 1px solid #3A4757;
+border-radius: 999px;
+font-size: .8rem;
+color: var(--lib-muted);
 }
 .lib-facts .mobile { border-color: var(--lib-mark); color: #F2B8B8; }
-
-/* A phone: the list becomes a row of pictures to swipe, above the panel. The
-   Multiplayer group repeats entries the row already has, so it is left out
-   there; each panel still says how many can play. */
 @media (max-width: 760px) {
-  .stripe:has(> .wrap > .library) > .wrap { padding: 0 1rem; }
-  .library { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto; height: auto; margin: 0 -1rem; }
-  .lib-side { display: flex; overflow-x: auto; overflow-y: hidden; padding: .5rem; gap: .4rem; border: 0; border-bottom: 1px solid var(--lib-line); }
-  .lib-group, .lib-again { display: none; }
-  .lib-side ul { display: flex; gap: .4rem; }
-  .lib-side a { grid-template-columns: 1fr; width: 6rem; padding: 0 0 .3rem; gap: .25rem; font-size: .75rem; }
-  .lib-thumb { width: 6rem; height: 3.75rem; }
-  .lib-main { overflow: visible; }
-  .panel { position: static; }
-  .lib-hero img { height: 42vh; }
-  .lib-top h3 { left: 1rem; right: 1rem; }
-  .panel.framed .lib-top, .panel.bare .lib-top { padding: 1rem 1rem 0; }
-  .lib-doors, .lib-tag, .lib-facts { margin-left: 1rem; margin-right: 1rem; }
+.stripe:has(> .wrap > .library) > .wrap { padding: 0 1rem; }
+.library { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto; height: auto; margin: 0 -1rem; }
+.lib-side { display: flex; overflow-x: auto; overflow-y: hidden; padding: .5rem; gap: .4rem; border: 0; border-bottom: 1px solid var(--lib-line); }
+.lib-group, .lib-again { display: none; }
+.lib-side ul { display: flex; gap: .4rem; }
+.lib-side a { grid-template-columns: 1fr; width: 6rem; padding: 0 0 .3rem; gap: .25rem; font-size: .75rem; }
+.lib-thumb { width: 6rem; height: 3.75rem; }
+.lib-main { overflow: visible; }
+.panel { position: static; }
+.lib-hero img { height: 42vh; }
+.lib-top h3 { left: 1rem; right: 1rem; }
+.panel.framed .lib-top, .panel.bare .lib-top { padding: 1rem 1rem 0; }
+.lib-doors, .lib-tag, .lib-facts { margin-left: 1rem; margin-right: 1rem; }
 }
 @media (forced-colors: active) {
-  .lib-facts li, .lib-doors .go { border: 1px solid CanvasText; }
+.lib-facts li, .lib-doors .go { border: 1px solid CanvasText; }
 }
-
-/* A collection (Sam, 6 November 2026): "The Chum Collection", whose name in
-   the list opens a panel with Chumbles floating in it, turned by the pointer,
-   and the chum games below him. The turns and the sheets' layout are written
-   by the build beside the library (render::chum_collection); these are the
-   rules that do not depend on them. Colours are the library's own, measured
-   above. */
 .lib-coll a { display: block; margin: 0 -1rem; padding: .3rem 1rem; font: inherit; letter-spacing: inherit; text-transform: inherit; color: var(--lib-muted); }
 .lib-coll a .lib-thumb { display: none; }
 .lib-set a { padding-left: 1.6rem; }
@@ -907,16 +675,16 @@ body:has(.library) header.band .wrap { max-width: none; padding: 0 1.5rem; }
 .chum-float { position: absolute; inset: 0 0 6%; animation: chum-float 4.2s ease-in-out infinite; }
 .chum-fig { position: absolute; inset: 0; background-repeat: no-repeat; animation: chum-spin 9.6s step-end infinite; }
 .chum-shadow {
-  position: absolute; left: 22%; right: 22%; bottom: 1%; height: 7%;
-  border-radius: 50%; background: radial-gradient(closest-side, rgba(0,0,0,.55), rgba(0,0,0,0));
-  animation: chum-shadow 4.2s ease-in-out infinite;
+position: absolute; left: 22%; right: 22%; bottom: 1%; height: 7%;
+border-radius: 50%; background: radial-gradient(closest-side, rgba(0,0,0,.55), rgba(0,0,0,0));
+animation: chum-shadow 4.2s ease-in-out infinite;
 }
 @keyframes chum-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5%); } }
 @keyframes chum-shadow { 0%, 100% { transform: scaleX(1); opacity: 1; } 50% { transform: scaleX(.8); opacity: .6; } }
 .chum-poses { display: flex; gap: .4rem; }
 .chum-poses label {
-  padding: .45rem 1rem; border-radius: 3px; cursor: pointer;
-  background: var(--lib-line); color: var(--lib-ink); font-weight: 700; font-size: .9rem;
+padding: .45rem 1rem; border-radius: 3px; cursor: pointer;
+background: var(--lib-line); color: var(--lib-ink); font-weight: 700; font-size: .9rem;
 }
 .chum-poses label:hover { filter: brightness(1.18); }
 .chum-hint { margin: 0; font-size: .85rem; color: var(--lib-muted); }
@@ -924,77 +692,58 @@ body:has(.library) header.band .wrap { max-width: none; padding: 0 1.5rem; }
 .chum-games { list-style: none; margin: 0; padding: 0; display: grid; gap: .5rem; max-width: 62rem; }
 .chum-games li { margin: 0; max-width: none; }
 .chum-games a {
-  display: grid; grid-template-columns: 8rem minmax(0, 1fr); grid-template-rows: auto 1fr;
-  column-gap: 1rem; padding: .6rem; border-radius: 3px;
-  background: var(--lib-side); color: var(--lib-ink); text-decoration: none;
+display: grid; grid-template-columns: 8rem minmax(0, 1fr); grid-template-rows: auto 1fr;
+column-gap: 1rem; padding: .6rem; border-radius: 3px;
+background: var(--lib-side); color: var(--lib-ink); text-decoration: none;
 }
 .chum-games a:hover { background: #222C38; }
 .chum-games .lib-thumb { grid-row: 1 / 3; width: 8rem; height: 5rem; }
 .chum-name { font-weight: 700; font-size: 1.05rem; }
 .chum-tag { font-size: .9rem; line-height: 1.45; color: #C9D2DA; }
 @media (prefers-reduced-motion: reduce) {
-  .chum-float, .chum-fig, .chum-shadow { animation: none; }
+.chum-float, .chum-fig, .chum-shadow { animation: none; }
 }
 @media (max-width: 760px) {
-  .lib-group.lib-coll { display: block; margin: 0; }
-  .lib-coll a { display: grid; grid-template-columns: 1fr; width: 6rem; margin: 0; padding: 0 0 .3rem; gap: .25rem; font-size: .75rem; text-transform: none; letter-spacing: 0; font-weight: 400; }
-  .lib-coll a .lib-thumb { display: block; }
-  .lib-set a { padding-left: 0; }
-  .panel.collection { padding: 1rem; }
-  .chum-games a { grid-template-columns: 5rem minmax(0, 1fr); }
-  .chum-games .lib-thumb { width: 5rem; height: 3.1rem; }
+.lib-group.lib-coll { display: block; margin: 0; }
+.lib-coll a { display: grid; grid-template-columns: 1fr; width: 6rem; margin: 0; padding: 0 0 .3rem; gap: .25rem; font-size: .75rem; text-transform: none; letter-spacing: 0; font-weight: 400; }
+.lib-coll a .lib-thumb { display: block; }
+.lib-set a { padding-left: 0; }
+.panel.collection { padding: 1rem; }
+.chum-games a { grid-template-columns: 5rem minmax(0, 1fr); }
+.chum-games .lib-thumb { width: 5rem; height: 3.1rem; }
 }
-
-/* --- dark mode ----------------------------------------------------------
-   Sam, 2 November 2026: "the entire site should have a darkmode". It follows
-   the reader's system setting: the site ships no script (D3), and a switch
-   without one could not be remembered from one page to the next.
-
-   The same rules as the light palette, measured rather than chosen by eye
-   (CLAUDE.md 4b). The two bands differ in lightness by 0.021, past the gate's
-   0.02, so they stay apart in greyscale; the tint keeps a trace of the red.
-     --ink on --page 15.3:1, on --tint 11.1:1
-     --grey 8.8:1 and 6.4:1     --blue 9.4:1 and 6.8:1
-     --red-ink 9.2:1 and 6.7:1  white on --red 8.3:1, unchanged
-     --edge on --page 4.0:1, past the 3:1 a rule needs
-   Figures drawn for paper (the concept map, slides, a post's TikZ) keep a
-   light card: their colours are drawn into them, so they are shown as
-   printed rather than recoloured. */
 @media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-    --ink: #E6EAED;
-    --grey: #AAB4BD;
-    --rule: #3A4550;
-    --tint: #3B2A2F;
-    --edge: #6B7681;
-    --panel: #232A33;
-    --green: #7CC49A;
-    --blue: #9DB7FF;
-    --page: #101418;
-    --red-ink: #F0A3A3;
-  }
-  .band { background: #0A0D11; color: #E6EAED; }
-  .band a, footer.band .licence a, footer.band code { color: #E6EAED; }
-  footer.band .licence, footer.band .meta { color: #AAB4BD; }
-  pre { background: #0A0D11; color: #E6EAED; border: 1px solid var(--rule); }
-  .featured, .seeking a { color: var(--red-ink); }
-  .tile { background: #182029; }
-  .tile .plays .mobile { color: var(--red-ink); border-color: #D46A6A; }
-  .tile .go { background: var(--panel); }
-  /* Paper inside a dark page: the light palette again, on a white card. */
-  .kcfig, .slidefig img, .postfig img {
-    --ink: #1B2430; --grey: #5A646E; --rule: #C9CFD3; --edge: #9AA4AB;
-    --panel: #E6EAEC; --blue: #2F4BA0; --page: #FFFFFF;
-    background: #FFFFFF;
-    color: #1B2430;
-  }
-  .kcfig { padding: .75rem; border-radius: 4px; }
-  .postfig img { padding: .5rem; border-radius: 3px; }
-  /* Above a library the page's band would be as dark as the library, and two
-     dark bands side by side fail the lightness step; this one is lifted. */
-  .stripe:has(+ .stripe > .wrap > .library) { background: #2A3440; }
+:root {
+color-scheme: dark;
+--ink: #E6EAED;
+--grey: #AAB4BD;
+--rule: #3A4550;
+--tint: #3B2A2F;
+--edge: #6B7681;
+--panel: #232A33;
+--green: #7CC49A;
+--blue: #9DB7FF;
+--page: #101418;
+--red-ink: #F0A3A3;
+}
+.band { background: #0A0D11; color: #E6EAED; }
+.band a, footer.band .licence a, footer.band code { color: #E6EAED; }
+footer.band .licence, footer.band .meta { color: #AAB4BD; }
+pre { background: #0A0D11; color: #E6EAED; border: 1px solid var(--rule); }
+.featured, .seeking a { color: var(--red-ink); }
+.tile { background: #182029; }
+.tile .plays .mobile { color: var(--red-ink); border-color: #D46A6A; }
+.tile .go { background: var(--panel); }
+.kcfig, .slidefig img, .postfig img {
+--ink: #1B2430; --grey: #5A646E; --rule: #C9CFD3; --edge: #9AA4AB;
+--panel: #E6EAEC; --blue: #2F4BA0; --page: #FFFFFF;
+background: #FFFFFF;
+color: #1B2430;
+}
+.kcfig { padding: .75rem; border-radius: 4px; }
+.postfig img { padding: .5rem; border-radius: 3px; }
+.stripe:has(+ .stripe > .wrap > .library) { background: #2A3440; }
 }
 @media (prefers-color-scheme: dark) and (prefers-contrast: more) {
-  :root { --tint: #4A3238; --edge: #8A96A0; }
+:root { --tint: #4A3238; --edge: #8A96A0; }
 }
